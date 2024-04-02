@@ -828,7 +828,7 @@ static bool8 DoesAbilityPreventStatus(struct Pokemon *mon, u32 status)
             ret = TRUE;
         break;
     case STATUS1_PARALYSIS:
-        if (ability == ABILITY_LIMBER)
+        if (ability == ABILITY_LIMBER || ABILITY_RUBBER_SKIN)
             ret = TRUE;
         break;
     case STATUS1_SLEEP:

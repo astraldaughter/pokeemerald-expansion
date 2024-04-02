@@ -2970,12 +2970,12 @@ void SetMoveEffect(bool32 primary, bool32 certain)
             statusChanged = TRUE;
             break;
         case STATUS1_PARALYSIS:
-            if (battlerAbility == ABILITY_LIMBER)
+            if (battlerAbility == ABILITY_LIMBER || battlerAbility == ABILITY_RUBBER_SKIN)
             {
                 if (primary == TRUE || certain == TRUE)
                 {
-                    gLastUsedAbility = ABILITY_LIMBER;
-                    RecordAbilityBattle(gEffectBattler, ABILITY_LIMBER);
+                    gLastUsedAbility = battlerAbility;
+                    RecordAbilityBattle(gEffectBattler, battlerAbility);
 
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_PRLZPrevention;

@@ -2551,7 +2551,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_TERA_SHIFT] =
     {
         .name = _("Tera Shift"),
-        .description = COMPOUND_STRING("Terasteralizes upon entry."),
+        .description = COMPOUND_STRING("Terastalizes upon entry."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
@@ -2594,6 +2594,20 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("PoisnPuppter"),
     #endif
         .description = COMPOUND_STRING("Confuses poisoned foes."),
+        .aiRating = 8,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+    },
+
+    [ABILITY_RUBBER_SKIN] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Rubber Skin"),
+    #else
+        .name = _("Rubber Skin"),
+    #endif
+        .description = COMPOUND_STRING("Shock protection."),
         .aiRating = 8,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,

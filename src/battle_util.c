@@ -5786,6 +5786,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 }
                 break;
             case ABILITY_LIMBER:
+            case ABILITY_RUBBER_SKIN:
                 if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
                 {
                     StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
@@ -6311,6 +6312,7 @@ bool32 CanBeParalyzed(u32 battler)
         || ability == ABILITY_LIMBER
         || ability == ABILITY_COMATOSE
         || ability == ABILITY_PURIFYING_SALT
+        || ability == ABILITY_RUBBER_SKIN
         || gBattleMons[battler].status1 & STATUS1_ANY
         || IsAbilityStatusProtected(battler)
         || IsBattlerTerrainAffected(battler, STATUS_FIELD_MISTY_TERRAIN))
@@ -9034,6 +9036,14 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
             if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
             && ((IS_MOVE_PHYSICAL(move) && defHighestStat == STAT_DEF) || (IS_MOVE_SPECIAL(move) && defHighestStat == STAT_SPDEF)))
                 modifier = uq4_12_multiply(modifier, UQ_4_12(0.7));
+        }
+        break;
+    case ABILITY_RUBBER_SKIN:
+        if (moveType == TYPE_ELECTRIC)
+        {
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, defAbility);
         }
         break;
     }
