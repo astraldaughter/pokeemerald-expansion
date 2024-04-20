@@ -4655,14 +4655,14 @@ const struct Item gItemsInfo[] =
 
 // Mega Stones
 
-    [ITEM_VENUSAURITE] =
+    [ITEM_TROPIKOEKAITE] =
     {
-        .name = _("Venusaurite"),
+        .name = _("Tropikoekaite"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "This stone enables\n"
-            "Venusaur to Mega\n"
+            "Tropikoeka to Mega\n"
             "Evolve in battle."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,

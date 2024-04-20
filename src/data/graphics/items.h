@@ -814,8 +814,8 @@ const u32 gItemIconPalette_BlueOrb[] = INCBIN_U32("graphics/items/icon_palettes/
 
 // Mega Stones
 
-const u32 gItemIcon_Venusaurite[] = INCBIN_U32("graphics/items/icons/venusaurite.4bpp.lz");
-const u32 gItemIconPalette_Venusaurite[] = INCBIN_U32("graphics/items/icon_palettes/venusaurite.gbapal.lz");
+const u32 gItemIcon_Tropikoekaite[] = INCBIN_U32("graphics/items/icons/tropikoekaite.4bpp.lz");
+const u32 gItemIconPalette_Tropikoekaite[] = INCBIN_U32("graphics/items/icon_palettes/tropikoekaite.gbapal.lz");
 
 const u32 gItemIcon_CharizarditeX[] = INCBIN_U32("graphics/items/icons/charizardite_x.4bpp.lz");
 const u32 gItemIconPalette_CharizarditeX[] = INCBIN_U32("graphics/items/icon_palettes/charizardite_x.gbapal.lz");

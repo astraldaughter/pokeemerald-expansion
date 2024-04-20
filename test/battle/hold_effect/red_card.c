@@ -12,7 +12,7 @@ SINGLE_BATTLE_TEST("Red Card switches the attacker with a random non-fainted rep
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_RED_CARD); }
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_CHARMANDER);
         OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
@@ -21,7 +21,7 @@ SINGLE_BATTLE_TEST("Red Card switches the attacker with a random non-fainted rep
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, player);
         MESSAGE("Wobbuffet held up its Red Card against Foe Wobbuffet!");
-        MESSAGE("Foe Bulbasaur was dragged out!");
+        MESSAGE("Foe Kiwee was dragged out!");
     } THEN {
         EXPECT(player->item == ITEM_NONE);
     }
@@ -35,7 +35,7 @@ DOUBLE_BATTLE_TEST("Red Card switches the target with a random non-battler, non-
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
-        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_CHARMANDER);
         OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
@@ -44,7 +44,7 @@ DOUBLE_BATTLE_TEST("Red Card switches the target with a random non-battler, non-
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponentLeft);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, playerLeft);
         MESSAGE("Wobbuffet held up its Red Card against Foe Wobbuffet!");
-        MESSAGE("Foe Bulbasaur was dragged out!");
+        MESSAGE("Foe Kiwee was dragged out!");
     } THEN {
         EXPECT(playerLeft->item == ITEM_NONE);
     }

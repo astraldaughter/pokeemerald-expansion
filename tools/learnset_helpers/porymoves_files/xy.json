@@ -1,5 +1,5 @@
 {
-  "BULBASAUR": {
+  "KIWEE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -111,7 +111,7 @@
       "MOVE_GRASS_PLEDGE"
     ]
   },
-  "IVYSAUR": {
+  "FRONDODO": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -233,7 +233,7 @@
       "MOVE_GRASS_PLEDGE"
     ]
   },
-  "VENUSAUR": {
+  "TROPIKOEKA": {
     "LevelMoves": [
       {
         "Level": 1,

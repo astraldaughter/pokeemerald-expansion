@@ -1,5 +1,5 @@
 {
-  "BULBASAUR": {
+  "KIWEE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -59,7 +59,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "IVYSAUR": {
+  "FRONDODO": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -123,7 +123,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "VENUSAUR": {
+  "TROPIKOEKA": {
     "LevelMoves": [
       {
         "Level": 1,

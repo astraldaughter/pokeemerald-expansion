@@ -2,9 +2,9 @@
 #define GUARD_CONSTANTS_SPECIES_H
 
 #define SPECIES_NONE                                    0
-#define SPECIES_BULBASAUR                               1
-#define SPECIES_IVYSAUR                                 2
-#define SPECIES_VENUSAUR                                3
+#define SPECIES_KIWEE                               1
+#define SPECIES_FRONDODO                                 2
+#define SPECIES_TROPIKOEKA                                3
 #define SPECIES_CHARMANDER                              4
 #define SPECIES_CHARMELEON                              5
 #define SPECIES_CHARIZARD                               6
@@ -964,7 +964,7 @@
 #define SPECIES_OVERQWIL                                904
 #define SPECIES_ENAMORUS                                SPECIES_ENAMORUS_INCARNATE
 #define SPECIES_ENAMORUS_INCARNATE                      905
-#define SPECIES_VENUSAUR_MEGA                           906
+#define SPECIES_TROPIKOEKA_MEGA                           906
 #define SPECIES_CHARIZARD_MEGA_X                        907
 #define SPECIES_CHARIZARD_MEGA_Y                        908
 #define SPECIES_BLASTOISE_MEGA                          909
@@ -1593,7 +1593,7 @@
 #define SPECIES_TOGEDEMARU_TOTEM                        1486
 #define SPECIES_PIKACHU_PARTNER                         1487
 #define SPECIES_EEVEE_PARTNER                           1488
-#define SPECIES_VENUSAUR_GIGANTAMAX                     1489
+#define SPECIES_TROPIKOEKA_GIGANTAMAX                     1489
 #define SPECIES_BLASTOISE_GIGANTAMAX                    1490
 #define SPECIES_CHARIZARD_GIGANTAMAX                    1491
 #define SPECIES_BUTTERFREE_GIGANTAMAX                   1492

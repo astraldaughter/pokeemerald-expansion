@@ -2452,7 +2452,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         gText_LaprasDoll128BP,
         gText_SnorlaxDoll128BP,
-        gText_VenusaurDoll256BP,
+        gText_TropikoekaDoll256BP,
         gText_CharizardDoll256BP,
         gText_BlastoiseDoll256BP,
         gText_Exit

@@ -640,7 +640,7 @@ const struct ContestPokemon gContestOpponents[] =
         .otId = CONTEST_AI_TRAINER_ID,
     },
     [CONTEST_OPPONENT_AGATHA] = {
-        .species = SPECIES_BULBASAUR,
+        .species = SPECIES_KIWEE,
         .nickname = _("BULBY"),
         .trainerName = _("AGATHA"),
         .trainerGfxId = OBJ_EVENT_GFX_WOMAN_2,

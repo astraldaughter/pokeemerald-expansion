@@ -5,8 +5,8 @@
 #define egg_moves(species, moves...) (SPECIES_##species + EGG_MOVES_SPECIES_OFFSET), moves
 
 const u16 gEggMoves[] = {
-#if P_FAMILY_BULBASAUR
-    egg_moves(BULBASAUR,
+#if P_FAMILY_KIWEE
+    egg_moves(KIWEE,
         MOVE_SKULL_BASH,
         MOVE_CHARM,
         MOVE_PETAL_DANCE,
@@ -22,7 +22,7 @@ const u16 gEggMoves[] = {
         MOVE_ENDURE,
         MOVE_GIGA_DRAIN,
         MOVE_GRASSY_TERRAIN),
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 
 #if P_FAMILY_CHARMANDER
     egg_moves(CHARMANDER,

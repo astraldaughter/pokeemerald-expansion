@@ -469,10 +469,10 @@ SINGLE_BATTLE_TEST("(DYNAMAX) Pokemon with Gigantamax forms change upon Dynamaxi
 {
     u32 species;
     bool32 gigantamaxFactor;
-    PARAMETRIZE { gigantamaxFactor = FALSE; species = SPECIES_VENUSAUR; }
-    PARAMETRIZE { gigantamaxFactor = TRUE; species = SPECIES_VENUSAUR_GIGANTAMAX; }
+    PARAMETRIZE { gigantamaxFactor = FALSE; species = SPECIES_TROPIKOEKA; }
+    PARAMETRIZE { gigantamaxFactor = TRUE; species = SPECIES_TROPIKOEKA_GIGANTAMAX; }
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { GigantamaxFactor(gigantamaxFactor); }
+        PLAYER(SPECIES_TROPIKOEKA) { GigantamaxFactor(gigantamaxFactor); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE, dynamax: TRUE); }
@@ -484,7 +484,7 @@ SINGLE_BATTLE_TEST("(DYNAMAX) Pokemon with Gigantamax forms change upon Dynamaxi
 SINGLE_BATTLE_TEST("(DYNAMAX) Pokemon with Gigantamax forms revert upon switching")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR);
+        PLAYER(SPECIES_TROPIKOEKA);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -492,7 +492,7 @@ SINGLE_BATTLE_TEST("(DYNAMAX) Pokemon with Gigantamax forms revert upon switchin
         TURN { SWITCH(player, 1); }
         TURN { SWITCH(player, 0); }
     } THEN {
-        EXPECT_EQ(player->species, SPECIES_VENUSAUR);
+        EXPECT_EQ(player->species, SPECIES_TROPIKOEKA);
     }
 }
 

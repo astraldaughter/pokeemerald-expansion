@@ -22,8 +22,8 @@ static const union AnimCmd sAnim_None_1[] =
     ANIMCMD_END,
 };
 
-#if P_FAMILY_BULBASAUR
-static const union AnimCmd sAnim_Bulbasaur_1[] =
+#if P_FAMILY_KIWEE
+static const union AnimCmd sAnim_Kiwee_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -31,7 +31,7 @@ static const union AnimCmd sAnim_Bulbasaur_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Ivysaur_1[] =
+static const union AnimCmd sAnim_Frondodo_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_FRAME(1, 36),
@@ -39,7 +39,7 @@ static const union AnimCmd sAnim_Ivysaur_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Venusaur_1[] =
+static const union AnimCmd sAnim_Tropikoeka_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 25),
@@ -48,13 +48,13 @@ static const union AnimCmd sAnim_Venusaur_1[] =
 };
 
 #if P_MEGA_EVOLUTIONS
-PLACEHOLDER_ANIM_SINGLE_FRAME(VenusaurMega);
+PLACEHOLDER_ANIM_SINGLE_FRAME(TropikoekaMega);
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
-PLACEHOLDER_ANIM_SINGLE_FRAME(VenusaurGigantamax);
+PLACEHOLDER_ANIM_SINGLE_FRAME(TropikoekaGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 
 #if P_FAMILY_CHARMANDER
 static const union AnimCmd sAnim_Charmander_1[] =
@@ -10153,17 +10153,17 @@ static const union AnimCmd *const sAnims_##name[] = \
 
 
 SINGLE_ANIMATION(None);
-#if P_FAMILY_BULBASAUR
-SINGLE_ANIMATION(Bulbasaur);
-SINGLE_ANIMATION(Ivysaur);
-SINGLE_ANIMATION(Venusaur);
+#if P_FAMILY_KIWEE
+SINGLE_ANIMATION(Kiwee);
+SINGLE_ANIMATION(Frondodo);
+SINGLE_ANIMATION(Tropikoeka);
 #if P_MEGA_EVOLUTIONS
-SINGLE_ANIMATION(VenusaurMega);
+SINGLE_ANIMATION(TropikoekaMega);
 #endif //P_MEGA_EVOLUTIONS
 #if P_GIGANTAMAX_FORMS
-SINGLE_ANIMATION(VenusaurGigantamax);
+SINGLE_ANIMATION(TropikoekaGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 #if P_FAMILY_CHARMANDER
 SINGLE_ANIMATION(Charmander);
 SINGLE_ANIMATION(Charmeleon);

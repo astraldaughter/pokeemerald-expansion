@@ -1,26 +1,26 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Venusaur can Mega Evolve holding Venusaurite")
+SINGLE_BATTLE_TEST("Tropikoeka can Mega Evolve holding Tropikoekaite")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); }
+        PLAYER(SPECIES_TROPIKOEKA) { Item(ITEM_TROPIKOEKAITE); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, megaEvolve: TRUE); }
     } SCENE {
-        MESSAGE("Venusaur's Venusaurite is reacting to 1's Mega Ring!");
+        MESSAGE("Tropikoeka's Tropikoekaite is reacting to 1's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, player);
-        MESSAGE("Venusaur has Mega Evolved into Mega Venusaur!");
+        MESSAGE("Tropikoeka has Mega Evolved into Mega Tropikoeka!");
     } THEN {
-        EXPECT_EQ(player->species, SPECIES_VENUSAUR_MEGA);
+        EXPECT_EQ(player->species, SPECIES_TROPIKOEKA_MEGA);
     }
 }
 
 DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - opponent faster")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); Speed(1); }
+        PLAYER(SPECIES_TROPIKOEKA) { Item(ITEM_TROPIKOEKAITE); Speed(1); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(3); }
         OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(3); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(4); }
@@ -30,25 +30,25 @@ DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - opponent fas
         MESSAGE("Foe Gardevoir's Gardevoirite is reacting to 2's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, opponentLeft);
         MESSAGE("Foe Gardevoir has Mega Evolved into Mega Gardevoir!");
-        MESSAGE("Venusaur's Venusaurite is reacting to 1's Mega Ring!");
+        MESSAGE("Tropikoeka's Tropikoekaite is reacting to 1's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, playerLeft);
-        MESSAGE("Venusaur has Mega Evolved into Mega Venusaur!");
+        MESSAGE("Tropikoeka has Mega Evolved into Mega Tropikoeka!");
     }
 }
 
 DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - player faster")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); Speed(5); }
+        PLAYER(SPECIES_TROPIKOEKA) { Item(ITEM_TROPIKOEKAITE); Speed(5); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(3); }
         OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(2); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(4); }
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_CELEBRATE, megaEvolve: TRUE); MOVE(playerLeft, MOVE_CELEBRATE, megaEvolve: TRUE); }
     } SCENE {
-        MESSAGE("Venusaur's Venusaurite is reacting to 1's Mega Ring!");
+        MESSAGE("Tropikoeka's Tropikoekaite is reacting to 1's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, playerLeft);
-        MESSAGE("Venusaur has Mega Evolved into Mega Venusaur!");
+        MESSAGE("Tropikoeka has Mega Evolved into Mega Tropikoeka!");
         MESSAGE("Foe Gardevoir's Gardevoirite is reacting to 2's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, opponentLeft);
         MESSAGE("Foe Gardevoir has Mega Evolved into Mega Gardevoir!");
@@ -110,7 +110,7 @@ DOUBLE_BATTLE_TEST("Mega Evolution happens after switching, but before Focus Pun
     GIVEN {
         ASSUME(gMovesInfo[MOVE_FOCUS_PUNCH].effect == EFFECT_FOCUS_PUNCH);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); }
+        PLAYER(SPECIES_TROPIKOEKA) { Item(ITEM_TROPIKOEKAITE); }
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
@@ -121,12 +121,12 @@ DOUBLE_BATTLE_TEST("Mega Evolution happens after switching, but before Focus Pun
         MESSAGE("2 withdrew Wobbuffet!");
         MESSAGE("2 sent out Wobbuffet!");
 
-        MESSAGE("Venusaur's Venusaurite is reacting to 1's Mega Ring!");
+        MESSAGE("Tropikoeka's Tropikoekaite is reacting to 1's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, playerRight);
-        MESSAGE("Venusaur has Mega Evolved into Mega Venusaur!");
+        MESSAGE("Tropikoeka has Mega Evolved into Mega Tropikoeka!");
 
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FOCUS_PUNCH_SETUP, playerRight);
-        MESSAGE("Venusaur is tightening its focus!");
+        MESSAGE("Tropikoeka is tightening its focus!");
 
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FOCUS_PUNCH_SETUP, playerLeft);
         MESSAGE("Wobbuffet is tightening its focus!");

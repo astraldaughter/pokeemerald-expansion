@@ -1,11 +1,11 @@
-#if P_FAMILY_BULBASAUR
-static const u16 sVenusaurFormSpeciesIdTable[] = {
-    SPECIES_VENUSAUR,
-    SPECIES_VENUSAUR_MEGA,
-    SPECIES_VENUSAUR_GIGANTAMAX,
+#if P_FAMILY_KIWEE
+static const u16 sTropikoekaFormSpeciesIdTable[] = {
+    SPECIES_TROPIKOEKA,
+    SPECIES_TROPIKOEKA_MEGA,
+    SPECIES_TROPIKOEKA_GIGANTAMAX,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 
 #if P_FAMILY_CHARMANDER
 static const u16 sCharizardFormSpeciesIdTable[] = {

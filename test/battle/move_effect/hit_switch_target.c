@@ -13,14 +13,14 @@ SINGLE_BATTLE_TEST("Dragon Tail switches the target with a random non-fainted re
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_CHARMANDER);
         OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
         TURN { MOVE(player, MOVE_DRAGON_TAIL); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_DRAGON_TAIL, player);
-        MESSAGE("Foe Bulbasaur was dragged out!");
+        MESSAGE("Foe Kiwee was dragged out!");
     }
 }
 
@@ -32,14 +32,14 @@ DOUBLE_BATTLE_TEST("Dragon Tail switches the target with a random non-battler, n
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
-        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_CHARMANDER);
         OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_DRAGON_TAIL, target: opponentRight); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_DRAGON_TAIL, playerLeft);
-        MESSAGE("Foe Bulbasaur was dragged out!");
+        MESSAGE("Foe Kiwee was dragged out!");
     }
 }
 

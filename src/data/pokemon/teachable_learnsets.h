@@ -112,8 +112,8 @@ static const u16 sNoneTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-#if P_FAMILY_BULBASAUR
-static const u16 sBulbasaurTeachableLearnset[] = {
+#if P_FAMILY_KIWEE
+static const u16 sKiweeTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
     MOVE_CUT,
@@ -145,7 +145,7 @@ static const u16 sBulbasaurTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sIvysaurTeachableLearnset[] = {
+static const u16 sFrondodoTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
     MOVE_CUT,
@@ -178,7 +178,7 @@ static const u16 sIvysaurTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sVenusaurTeachableLearnset[] = {
+static const u16 sTropikoekaTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
     MOVE_CUT,
@@ -212,7 +212,7 @@ static const u16 sVenusaurTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 
 #if P_FAMILY_CHARMANDER
 static const u16 sCharmanderTeachableLearnset[] = {

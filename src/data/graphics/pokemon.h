@@ -7,53 +7,53 @@ const u8 gMonIcon_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/ico
 const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-#if P_FAMILY_BULBASAUR
-    const u32 gMonFrontPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/anim_front.4bpp.lz");
-    const u32 gMonPalette_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/normal.gbapal.lz");
-    const u32 gMonBackPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/back.4bpp.lz");
-    const u32 gMonShinyPalette_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/shiny.gbapal.lz");
-    const u8 gMonIcon_Bulbasaur[] = INCBIN_U8("graphics/pokemon/bulbasaur/icon.4bpp");
+#if P_FAMILY_KIWEE
+    const u32 gMonFrontPic_Kiwee[] = INCBIN_U32("graphics/pokemon/kiwee/anim_front.4bpp.lz");
+    const u32 gMonPalette_Kiwee[] = INCBIN_U32("graphics/pokemon/kiwee/normal.gbapal.lz");
+    const u32 gMonBackPic_Kiwee[] = INCBIN_U32("graphics/pokemon/kiwee/back.4bpp.lz");
+    const u32 gMonShinyPalette_Kiwee[] = INCBIN_U32("graphics/pokemon/kiwee/shiny.gbapal.lz");
+    const u8 gMonIcon_Kiwee[] = INCBIN_U8("graphics/pokemon/kiwee/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Bulbasaur[] = INCBIN_U8("graphics/pokemon/bulbasaur/footprint.1bpp");
+    const u8 gMonFootprint_Kiwee[] = INCBIN_U8("graphics/pokemon/kiwee/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-    const u32 gMonFrontPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/anim_front.4bpp.lz");
-    const u32 gMonPalette_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/normal.gbapal.lz");
-    const u32 gMonBackPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/back.4bpp.lz");
-    const u32 gMonShinyPalette_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/shiny.gbapal.lz");
-    const u8 gMonIcon_Ivysaur[] = INCBIN_U8("graphics/pokemon/ivysaur/icon.4bpp");
+    const u32 gMonFrontPic_Frondodo[] = INCBIN_U32("graphics/pokemon/frondodo/anim_front.4bpp.lz");
+    const u32 gMonPalette_Frondodo[] = INCBIN_U32("graphics/pokemon/frondodo/normal.gbapal.lz");
+    const u32 gMonBackPic_Frondodo[] = INCBIN_U32("graphics/pokemon/frondodo/back.4bpp.lz");
+    const u32 gMonShinyPalette_Frondodo[] = INCBIN_U32("graphics/pokemon/frondodo/shiny.gbapal.lz");
+    const u8 gMonIcon_Frondodo[] = INCBIN_U8("graphics/pokemon/frondodo/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Ivysaur[] = INCBIN_U8("graphics/pokemon/ivysaur/footprint.1bpp");
+    const u8 gMonFootprint_Frondodo[] = INCBIN_U8("graphics/pokemon/frondodo/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-    const u32 gMonFrontPic_Venusaur[] = INCBIN_U32("graphics/pokemon/venusaur/anim_front.4bpp.lz");
-    const u32 gMonPalette_Venusaur[] = INCBIN_U32("graphics/pokemon/venusaur/normal.gbapal.lz");
-    const u32 gMonBackPic_Venusaur[] = INCBIN_U32("graphics/pokemon/venusaur/back.4bpp.lz");
-    const u32 gMonShinyPalette_Venusaur[] = INCBIN_U32("graphics/pokemon/venusaur/shiny.gbapal.lz");
-    const u8 gMonIcon_Venusaur[] = INCBIN_U8("graphics/pokemon/venusaur/icon.4bpp");
+    const u32 gMonFrontPic_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/anim_front.4bpp.lz");
+    const u32 gMonPalette_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/normal.gbapal.lz");
+    const u32 gMonBackPic_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/back.4bpp.lz");
+    const u32 gMonShinyPalette_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/shiny.gbapal.lz");
+    const u8 gMonIcon_Tropikoeka[] = INCBIN_U8("graphics/pokemon/tropikoeka/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Venusaur[] = INCBIN_U8("graphics/pokemon/venusaur/footprint.1bpp");
+    const u8 gMonFootprint_Tropikoeka[] = INCBIN_U8("graphics/pokemon/tropikoeka/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-    const u32 gMonFrontPic_VenusaurF[] = INCBIN_U32("graphics/pokemon/venusaur/anim_frontf.4bpp.lz");
-    const u32 gMonBackPic_VenusaurF[] = INCBIN_U32("graphics/pokemon/venusaur/backf.4bpp.lz");
+    const u32 gMonFrontPic_TropikoekaF[] = INCBIN_U32("graphics/pokemon/tropikoeka/anim_frontf.4bpp.lz");
+    const u32 gMonBackPic_TropikoekaF[] = INCBIN_U32("graphics/pokemon/tropikoeka/backf.4bpp.lz");
 
 #if P_MEGA_EVOLUTIONS
-    const u32 gMonFrontPic_VenusaurMega[] = INCBIN_U32("graphics/pokemon/venusaur/mega/front.4bpp.lz");
-    const u32 gMonPalette_VenusaurMega[] = INCBIN_U32("graphics/pokemon/venusaur/mega/normal.gbapal.lz");
-    const u32 gMonBackPic_VenusaurMega[] = INCBIN_U32("graphics/pokemon/venusaur/mega/back.4bpp.lz");
-    const u32 gMonShinyPalette_VenusaurMega[] = INCBIN_U32("graphics/pokemon/venusaur/mega/shiny.gbapal.lz");
-    const u8 gMonIcon_VenusaurMega[] = INCBIN_U8("graphics/pokemon/venusaur/mega/icon.4bpp");
+    const u32 gMonFrontPic_TropikoekaMega[] = INCBIN_U32("graphics/pokemon/tropikoeka/mega/front.4bpp.lz");
+    const u32 gMonPalette_TropikoekaMega[] = INCBIN_U32("graphics/pokemon/tropikoeka/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_TropikoekaMega[] = INCBIN_U32("graphics/pokemon/tropikoeka/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_TropikoekaMega[] = INCBIN_U32("graphics/pokemon/tropikoeka/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_TropikoekaMega[] = INCBIN_U8("graphics/pokemon/tropikoeka/mega/icon.4bpp");
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
-    const u32 gMonFrontPic_VenusaurGigantamax[] = INCBIN_U32("graphics/pokemon/venusaur/gigantamax/front.4bpp.lz");
-    const u32 gMonBackPic_VenusaurGigantamax[] = INCBIN_U32("graphics/pokemon/venusaur/gigantamax/back.4bpp.lz");
-    const u32 gMonPalette_VenusaurGigantamax[] = INCBIN_U32("graphics/pokemon/venusaur/gigantamax/normal.gbapal.lz");
-    const u32 gMonShinyPalette_VenusaurGigantamax[] = INCBIN_U32("graphics/pokemon/venusaur/gigantamax/shiny.gbapal.lz");
-    const u8 gMonIcon_VenusaurGigantamax[] = INCBIN_U8("graphics/pokemon/venusaur/gigantamax/icon.4bpp");
+    const u32 gMonFrontPic_TropikoekaGigantamax[] = INCBIN_U32("graphics/pokemon/tropikoeka/gigantamax/front.4bpp.lz");
+    const u32 gMonBackPic_TropikoekaGigantamax[] = INCBIN_U32("graphics/pokemon/tropikoeka/gigantamax/back.4bpp.lz");
+    const u32 gMonPalette_TropikoekaGigantamax[] = INCBIN_U32("graphics/pokemon/tropikoeka/gigantamax/normal.gbapal.lz");
+    const u32 gMonShinyPalette_TropikoekaGigantamax[] = INCBIN_U32("graphics/pokemon/tropikoeka/gigantamax/shiny.gbapal.lz");
+    const u8 gMonIcon_TropikoekaGigantamax[] = INCBIN_U8("graphics/pokemon/tropikoeka/gigantamax/icon.4bpp");
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_BULBASAUR
+#endif //P_FAMILY_KIWEE
 
 #if P_FAMILY_CHARMANDER
     const u32 gMonFrontPic_Charmander[] = INCBIN_U32("graphics/pokemon/charmander/anim_front.4bpp.lz");

@@ -317,7 +317,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_RED_ORB] = {gItemIcon_RedOrb, gItemIconPalette_RedOrb},
     [ITEM_BLUE_ORB] = {gItemIcon_BlueOrb, gItemIconPalette_BlueOrb},
     // Mega Stones
-    [ITEM_VENUSAURITE] = {gItemIcon_Venusaurite, gItemIconPalette_Venusaurite},
+    [ITEM_TROPIKOEKAITE] = {gItemIcon_Tropikoekaite, gItemIconPalette_Tropikoekaite},
     [ITEM_CHARIZARDITE_X] = {gItemIcon_CharizarditeX, gItemIconPalette_CharizarditeX},
     [ITEM_CHARIZARDITE_Y] = {gItemIcon_CharizarditeY, gItemIconPalette_CharizarditeY},
     [ITEM_BLASTOISINITE] = {gItemIcon_Blastoisinite, gItemIconPalette_Blastoisinite},

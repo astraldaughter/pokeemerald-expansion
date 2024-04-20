@@ -12,7 +12,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_BULBASAUR] = {
+    [SPECIES_KIWEE] = {
         { .songLengthId = 36 },
         { .songLengthId = 42 },
         { .songLengthId = 48 },
@@ -20,7 +20,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_IVYSAUR] = {
+    [SPECIES_FRONDODO] = {
         { .songLengthId = 20 },
         { .songLengthId = 12 },
         { .songLengthId = 50 },
@@ -28,7 +28,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_VENUSAUR] = {
+    [SPECIES_TROPIKOEKA] = {
         { .songLengthId = 12 },
         { .songLengthId = 44 },
         { .songLengthId = 48 },

@@ -293,11 +293,11 @@ $(UNUSEDGFXDIR)/obi_palpak3.gbapal: $(UNUSEDGFXDIR)/old_pal5.gbapal \
                                     $(UNUSEDGFXDIR)/old_pal7.gbapal
 	@cat $^ >$@
 
-$(UNUSEDGFXDIR)/obi1.4bpp: $(UNUSEDGFXDIR)/old_bulbasaur.4bpp \
+$(UNUSEDGFXDIR)/obi1.4bpp: $(UNUSEDGFXDIR)/old_kiwee.4bpp \
                            $(UNUSEDGFXDIR)/old_charizard.4bpp
 	@cat $^ >$@
 
-$(UNUSEDGFXDIR)/obi2.4bpp: $(UNUSEDGFXDIR)/old_bulbasaur2.4bpp \
+$(UNUSEDGFXDIR)/obi2.4bpp: $(UNUSEDGFXDIR)/old_kiwee2.4bpp \
                            $(UNUSEDGFXDIR)/old_battle_interface_1.4bpp \
                            $(UNUSEDGFXDIR)/old_battle_interface_2.4bpp \
                            $(UNUSEDGFXDIR)/old_battle_interface_3.4bpp

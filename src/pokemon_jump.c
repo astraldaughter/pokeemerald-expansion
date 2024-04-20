@@ -39,7 +39,7 @@
 enum {
     BG_INTERFACE,
     BG_BONUSES,
-    BG_VENUSAUR,
+    BG_TROPIKOEKA,
     BG_SCENERY,
 };
 
@@ -427,7 +427,7 @@ EWRAM_DATA static struct PokemonJumpGfx *sPokemonJumpGfx = NULL;
 */
 static const struct PokemonJumpMons sPokeJumpMons[] =
 {
-    { .species = SPECIES_BULBASAUR,                         .jumpType = JUMP_TYPE_SLOW, },
+    { .species = SPECIES_KIWEE,                         .jumpType = JUMP_TYPE_SLOW, },
     { .species = SPECIES_CHARMANDER,                        .jumpType = JUMP_TYPE_FAST, },
     { .species = SPECIES_SQUIRTLE,                          .jumpType = JUMP_TYPE_NORMAL, },
     { .species = SPECIES_CATERPIE,                          .jumpType = JUMP_TYPE_FAST, },
@@ -3325,9 +3325,9 @@ static const u16 sBg_Pal[] = INCBIN_U16("graphics/pokemon_jump/bg.gbapal");
 static const u32 sBg_Gfx[] = INCBIN_U32("graphics/pokemon_jump/bg.4bpp.lz");
 static const u32 sBg_Tilemap[] = INCBIN_U32("graphics/pokemon_jump/bg.bin.lz");
 
-static const u16 sVenusaur_Pal[] = INCBIN_U16("graphics/pokemon_jump/venusaur.gbapal");
-static const u32 sVenusaur_Gfx[] = INCBIN_U32("graphics/pokemon_jump/venusaur.4bpp.lz");
-static const u32 sVenusaur_Tilemap[] = INCBIN_U32("graphics/pokemon_jump/venusaur.bin.lz");
+static const u16 sTropikoeka_Pal[] = INCBIN_U16("graphics/pokemon_jump/tropikoeka.gbapal");
+static const u32 sTropikoeka_Gfx[] = INCBIN_U32("graphics/pokemon_jump/tropikoeka.4bpp.lz");
+static const u32 sTropikoeka_Tilemap[] = INCBIN_U32("graphics/pokemon_jump/tropikoeka.bin.lz");
 
 static const u16 sBonuses_Pal[] = INCBIN_U16("graphics/pokemon_jump/bonuses.gbapal");
 static const u32 sBonuses_Gfx[] = INCBIN_U32("graphics/pokemon_jump/bonuses.4bpp.lz");
@@ -3345,7 +3345,7 @@ static const struct BgTemplate sBgTemplates[] =
         .baseTile = 0
     },
     {
-        .bg = BG_VENUSAUR,
+        .bg = BG_TROPIKOEKA,
         .charBaseIndex = 1,
         .mapBaseIndex = 30,
         .screenSize = 2,
@@ -3462,9 +3462,9 @@ static void LoadPokeJumpGfx(void)
         LoadPalette(sBg_Pal, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
         DecompressAndCopyTileDataToVram(BG_SCENERY, sBg_Gfx, 0, 0, 0);
         DecompressAndCopyTileDataToVram(BG_SCENERY, sBg_Tilemap, 0, 0, 1);
-        LoadPalette(sVenusaur_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
-        DecompressAndCopyTileDataToVram(BG_VENUSAUR, sVenusaur_Gfx, 0, 0, 0);
-        DecompressAndCopyTileDataToVram(BG_VENUSAUR, sVenusaur_Tilemap, 0, 0, 1);
+        LoadPalette(sTropikoeka_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
+        DecompressAndCopyTileDataToVram(BG_TROPIKOEKA, sTropikoeka_Gfx, 0, 0, 0);
+        DecompressAndCopyTileDataToVram(BG_TROPIKOEKA, sTropikoeka_Tilemap, 0, 0, 1);
         LoadPalette(sBonuses_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         DecompressAndCopyTileDataToVram(BG_BONUSES, sBonuses_Gfx, 0, 0, 0);
         DecompressAndCopyTileDataToVram(BG_BONUSES, sBonuses_Tilemap, 0, 0, 1);
@@ -3475,7 +3475,7 @@ static void LoadPokeJumpGfx(void)
         PrintScore(0);
         LoadUserWindowBorderGfxOnBg(0, 1, BG_PLTT_ID(14));
         CopyBgTilemapBufferToVram(BG_INTERFACE);
-        CopyBgTilemapBufferToVram(BG_VENUSAUR);
+        CopyBgTilemapBufferToVram(BG_TROPIKOEKA);
         CopyBgTilemapBufferToVram(BG_BONUSES);
         ResetBgPositions();
         sPokemonJumpGfx->mainState++;
@@ -3488,7 +3488,7 @@ static void LoadPokeJumpGfx(void)
             UpdateVineAnim(sPokemonJumpGfx, VINE_UPSWING_LOWER);
             ShowBg(BG_SCENERY);
             ShowBg(BG_INTERFACE);
-            ShowBg(BG_VENUSAUR);
+            ShowBg(BG_TROPIKOEKA);
             HideBg(BG_BONUSES);
             sPokemonJumpGfx->mainState++;
         }
@@ -3913,27 +3913,27 @@ static void PrintScoreSuffixes(void)
     AddTextPrinterParameterized3(WIN_TIMES, FONT_SMALL, 0, 1, color, 0, gText_SpaceTimes3);
 }
 
-// The venusaurs in the background are actually an empty 256x512 bg with 3 pairs of venusaurs on it.
+// The tropikoekas in the background are actually an empty 256x512 bg with 3 pairs of tropikoekas on it.
 // The below array is used to get values for where to set the bg Y to show the corresponding
-// venusaur pair in their state of swinging the vine rope
-// NEUTRAL/DOWN/UP refers to which direction the Venusaur is facing as it swings the vine
+// tropikoeka pair in their state of swinging the vine rope
+// NEUTRAL/DOWN/UP refers to which direction the Tropikoeka is facing as it swings the vine
 enum {
-    VENUSAUR_NEUTRAL,
-    VENUSAUR_DOWN,
-    VENUSAUR_UP,
+    TROPIKOEKA_NEUTRAL,
+    TROPIKOEKA_DOWN,
+    TROPIKOEKA_UP,
 };
 
-static const u8 sVenusaurStates[] = {
-    [VINE_HIGHEST]          = VENUSAUR_UP,
-    [VINE_DOWNSWING_HIGHER] = VENUSAUR_UP,
-    [VINE_DOWNSWING_HIGH]   = VENUSAUR_NEUTRAL,
-    [VINE_DOWNSWING_LOW]    = VENUSAUR_NEUTRAL,
-    [VINE_DOWNSWING_LOWER]  = VENUSAUR_DOWN,
-    [VINE_LOWEST]           = VENUSAUR_DOWN,
-    [VINE_UPSWING_LOWER]    = VENUSAUR_DOWN,
-    [VINE_UPSWING_LOW]      = VENUSAUR_NEUTRAL,
-    [VINE_UPSWING_HIGH]     = VENUSAUR_NEUTRAL,
-    [VINE_UPSWING_HIGHER]   = VENUSAUR_UP,
+static const u8 sTropikoekaStates[] = {
+    [VINE_HIGHEST]          = TROPIKOEKA_UP,
+    [VINE_DOWNSWING_HIGHER] = TROPIKOEKA_UP,
+    [VINE_DOWNSWING_HIGH]   = TROPIKOEKA_NEUTRAL,
+    [VINE_DOWNSWING_LOW]    = TROPIKOEKA_NEUTRAL,
+    [VINE_DOWNSWING_LOWER]  = TROPIKOEKA_DOWN,
+    [VINE_LOWEST]           = TROPIKOEKA_DOWN,
+    [VINE_UPSWING_LOWER]    = TROPIKOEKA_DOWN,
+    [VINE_UPSWING_LOW]      = TROPIKOEKA_NEUTRAL,
+    [VINE_UPSWING_HIGH]     = TROPIKOEKA_NEUTRAL,
+    [VINE_UPSWING_HIGHER]   = TROPIKOEKA_UP,
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_Digits = {gMinigameDigits_Gfx, 0, TAG_DIGITS};
@@ -4007,7 +4007,7 @@ static void SetMonSpriteY(u32 id, s16 y)
 static void UpdateVineSwing(int vineState)
 {
     UpdateVineAnim(sPokemonJumpGfx, vineState);
-    ChangeBgY(BG_VENUSAUR, (sVenusaurStates[vineState] * 5) << 13, BG_COORD_SET);
+    ChangeBgY(BG_TROPIKOEKA, (sTropikoekaStates[vineState] * 5) << 13, BG_COORD_SET);
 }
 
 static int DoSameJumpTimeBonus(u8 flags)

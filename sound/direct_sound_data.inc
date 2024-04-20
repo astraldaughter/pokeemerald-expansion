@@ -386,25 +386,25 @@ DirectSoundWaveData_unknown_16::
 DirectSoundWaveData_unknown_17::
 	.incbin "sound/direct_sound_samples/unknown_17.bin"
 
-.if P_FAMILY_BULBASAUR == TRUE
+.if P_FAMILY_KIWEE == TRUE
 	.align 2
-Cry_Bulbasaur::
-	.incbin "sound/direct_sound_samples/cries/bulbasaur.bin"
+Cry_Kiwee::
+	.incbin "sound/direct_sound_samples/cries/kiwee.bin"
 
 	.align 2
-Cry_Ivysaur::
-	.incbin "sound/direct_sound_samples/cries/ivysaur.bin"
+Cry_Frondodo::
+	.incbin "sound/direct_sound_samples/cries/frondodo.bin"
 
 	.align 2
-Cry_Venusaur::
-	.incbin "sound/direct_sound_samples/cries/venusaur.bin"
+Cry_Tropikoeka::
+	.incbin "sound/direct_sound_samples/cries/tropikoeka.bin"
 
 .if P_MEGA_EVOLUTIONS == TRUE
 	.align 2
-Cry_VenusaurMega::
-	.incbin "sound/direct_sound_samples/cries/venusaur_mega.bin"
+Cry_TropikoekaMega::
+	.incbin "sound/direct_sound_samples/cries/tropikoeka_mega.bin"
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_BULBASAUR
+.endif @ P_FAMILY_KIWEE
 
 .if P_FAMILY_CHARMANDER == TRUE
 	.align 2
