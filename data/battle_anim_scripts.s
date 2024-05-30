@@ -875,6 +875,8 @@ gBattleAnims_Moves::
 	.4byte Move_PSYCHIC_NOISE
 	.4byte Move_UPPER_HAND
 	.4byte Move_MALIGNANT_CHAIN
+@@@@@@@@@@@@ CUSTOM @@@@@@@@@@@@
+	.4byte Move_ELECTROPLATE
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -17887,6 +17889,29 @@ Move_DRAGON_CHEER::
 Move_SUPERCELL_SLAM::
 Move_MALIGNANT_CHAIN::
 	end @to do
+
+Move_ELECTROPLATE:
+	loadspritegfx ANIM_TAG_SPARK_2
+	playsewithpan SE_M_THUNDERBOLT2, SOUND_PAN_ATTACKER
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, 5, 0, 5, 0, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, -5, 10, 5, 1, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, 15, 20, 5, 2, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, -15, -10, 5, 0, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, 25, 0, 5, 1, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, -8, 8, 5, 2, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, 2, -8, 5, 0, ANIM_ATTACKER
+	delay 2
+	createsprite gElectricitySpriteTemplate, ANIM_ATTACKER, 2, -20, 15, 5, 1, ANIM_ATTACKER
+	waitforvisualfinish
+	call ElectricityEffect
+	waitforvisualfinish
+	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
