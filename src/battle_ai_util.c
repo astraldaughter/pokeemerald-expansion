@@ -410,6 +410,10 @@ bool32 IsDamageMoveUsable(u32 move, u32 battlerAtk, u32 battlerDef)
         if (moveType == TYPE_GRASS)
             return TRUE;
         break;
+    case ABILITY_GOBSTOPPER:
+        if (gMovesInfo[move].bitingMove)
+            return TRUE;
+        break;
     }
 
     switch (gMovesInfo[move].effect)

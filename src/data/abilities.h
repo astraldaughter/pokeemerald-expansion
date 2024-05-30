@@ -2608,9 +2608,17 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Rubber Skin"),
     #endif
         .description = COMPOUND_STRING("Shock protection."),
-        .aiRating = 8,
-        .cantBeCopied = TRUE,
-        .cantBeSwapped = TRUE,
-        .cantBeTraced = TRUE,
+        .aiRating = 7,
+    },
+
+    [ABILITY_GOBSTOPPER] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Gobstopper"),
+    #else
+        .name = _("Gobstopper"),
+    #endif
+        .description = COMPOUND_STRING("Blocks biting attacks."),
+        .aiRating = 7,
     },
 };

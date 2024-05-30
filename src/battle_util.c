@@ -4957,7 +4957,8 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             u16 targetAbility = GetBattlerAbility(gBattlerTarget);
 
             if ((gLastUsedAbility == ABILITY_SOUNDPROOF && gMovesInfo[move].soundMove && !(moveTarget & MOVE_TARGET_USER))
-             || (gLastUsedAbility == ABILITY_BULLETPROOF && gMovesInfo[move].ballisticMove))
+             || (gLastUsedAbility == ABILITY_BULLETPROOF && gMovesInfo[move].ballisticMove)
+             || (gLastUsedAbility == ABILITY_GOBSTOPPER && gMovesInfo[move].bitingMove))
             {
                 if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
                     gHitMarker |= HITMARKER_NO_PPDEDUCT;
