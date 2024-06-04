@@ -371,7 +371,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_VISE_GRIP] =
     {
-        .name = COMPOUND_STRING("Vise Grip"),
+        .name = COMPOUND_STRING("Vice Grip"),
         .description = COMPOUND_STRING(
             "Grips the foe with large and\n"
             "powerful pincers."),
@@ -6447,7 +6447,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SMELLING_SALTS] =
     {
-        .name = HANDLE_EXPANDED_MOVE_NAME("SmellngSalts", "Smelling Salts"),
+        .name = HANDLE_EXPANDED_MOVE_NAME("SmellingSalt", "Smelling Salts"),
         .description = COMPOUND_STRING(
             "Powerful against paralyzed\n"
             "foes, but also heals them."),
@@ -8644,6 +8644,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MIRACLE_EYE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Miracle Eye"),
         .description = COMPOUND_STRING(
             "Negate evasiveness and\n"
@@ -8667,6 +8668,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WAKE_UP_SLAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wake-Up Slap"),
         .description = COMPOUND_STRING(
             "Powerful against sleeping\n"
@@ -8692,6 +8694,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HAMMER_ARM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hammer Arm"),
         .description = COMPOUND_STRING(
             "A swinging fist attack\n"
@@ -8718,6 +8721,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GYRO_BALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Gyro Ball"),
         .description = COMPOUND_STRING(
             "A high-speed spin that does\n"
@@ -8740,6 +8744,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEALING_WISH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Healing Wish"),
         .description = sHealingWishDescription,
         .effect = EFFECT_HEALING_WISH,
@@ -8782,6 +8787,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NATURAL_GIFT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Natural Gift"),
         .description = COMPOUND_STRING(
             "The effectiveness varies\n"
@@ -8802,6 +8808,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FEINT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Feint"),
         .description = COMPOUND_STRING(
             "An attack that hits foes\n"
@@ -8816,7 +8823,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_6,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
@@ -8830,6 +8837,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PLUCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pluck"),
         .description = sPluckDescription,
         .effect = EFFECT_HIT,
@@ -8852,6 +8860,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TAILWIND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tailwind"),
         .description = COMPOUND_STRING(
             "Whips up a turbulent breeze\n"
@@ -8877,6 +8886,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ACUPRESSURE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Acupressure"),
         .description = COMPOUND_STRING(
             "The user sharply raises\n"
@@ -8901,6 +8911,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_METAL_BURST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Metal Burst"),
         .description = COMPOUND_STRING(
             "Retaliates any hit with\n"
@@ -8922,6 +8933,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_U_TURN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("U-turn"),
         .description = sUTurnDescription,
         .effect = EFFECT_HIT_ESCAPE,
@@ -8941,6 +8953,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CLOSE_COMBAT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Close Combat"),
         .description = sCloseCombatDescription,
         .effect = EFFECT_HIT,
@@ -8964,6 +8977,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PAYBACK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Payback"),
         .description = COMPOUND_STRING(
             "An attack that gains power\n"
@@ -8985,6 +8999,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ASSURANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Assurance"),
         .description = COMPOUND_STRING(
             "An attack that gains power\n"
@@ -9006,6 +9021,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_EMBARGO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Embargo"),
         .description = COMPOUND_STRING(
             "Prevents the foe from\n"
@@ -9049,6 +9065,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYCHO_SHIFT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Psycho Shift"),
         .description = COMPOUND_STRING(
             "Transfers status problems\n"
@@ -9070,6 +9087,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRUMP_CARD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Trump Card"),
         .description = COMPOUND_STRING(
             "The less PP the move has\n"
@@ -9091,6 +9109,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEAL_BLOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Heal Block"),
         .description = COMPOUND_STRING(
             "Prevents the foe from\n"
@@ -9113,6 +9132,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WRING_OUT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wring Out"),
         .description = sWringOutDescription,
         .effect = EFFECT_VARY_POWER_BASED_ON_HP,
@@ -9133,6 +9153,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_TRICK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Trick"),
         .description = COMPOUND_STRING(
             "The user swaps its Attack\n"
@@ -9203,6 +9224,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ME_FIRST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Me First"),
         .description = COMPOUND_STRING(
             "Executes the foe's attack\n"
@@ -9217,7 +9239,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_SPD_UP_2 },
         .ignoresSubstitute = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .copycatBanned = TRUE,
@@ -9264,6 +9286,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_SWAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Swap"),
         .description = COMPOUND_STRING(
             "Swaps changes to Attack\n"
@@ -9286,6 +9309,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GUARD_SWAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Guard Swap"),
         .description = COMPOUND_STRING(
             "Swaps changes to Defense\n"
@@ -9308,6 +9332,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PUNISHMENT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Punishment"),
         .description = COMPOUND_STRING(
             "Does more damage if the\n"
@@ -9329,6 +9354,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LAST_RESORT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Last Resort"),
         .description = COMPOUND_STRING(
             "Can only be used if every\n"
@@ -9350,6 +9376,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WORRY_SEED] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Worry Seed"),
         .description = COMPOUND_STRING(
             "Plants a seed on the foe\n"
@@ -9372,6 +9399,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SUCKER_PUNCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sucker Punch"),
         .description = sSuckerPunchDescription,
         .effect = EFFECT_SUCKER_PUNCH,
@@ -9417,6 +9445,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEART_SWAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Heart Swap"),
         .description = COMPOUND_STRING(
             "Swaps any stat changes\n"
@@ -9439,6 +9468,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AQUA_RING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aqua Ring"),
         .description = COMPOUND_STRING(
             "Forms a veil of water\n"
@@ -9488,6 +9518,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLARE_BLITZ] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flare Blitz"),
         .description = COMPOUND_STRING(
             "A charge that may burn the\n"
@@ -9515,6 +9546,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FORCE_PALM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Force Palm"),
         .description = COMPOUND_STRING(
             "A shock wave attack that\n"
@@ -9540,6 +9572,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AURA_SPHERE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aura Sphere"),
         .description = COMPOUND_STRING(
             "Attacks with an aura blast\n"
@@ -9659,6 +9692,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AQUA_TAIL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aqua Tail"),
         .description = COMPOUND_STRING(
             "The user swings its tail\n"
@@ -9680,6 +9714,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SEED_BOMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Seed Bomb"),
         .description = COMPOUND_STRING(
             "A barrage of hard seeds\n"
@@ -9701,6 +9736,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AIR_SLASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Air Slash"),
         .description = COMPOUND_STRING(
             "Attacks with a blade of\n"
@@ -9726,6 +9762,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_X_SCISSOR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("X-Scissor"),
         .description = COMPOUND_STRING(
             "Slashes the foe with crossed\n"
@@ -9774,6 +9811,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_PULSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dragon Pulse"),
         .description = COMPOUND_STRING(
             "Generates a shock wave to\n"
@@ -9841,6 +9879,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAIN_PUNCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Drain Punch"),
         .description = sMegaDrainDescription,
         .effect = EFFECT_ABSORB,
@@ -9862,6 +9901,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_VACUUM_WAVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Vacuum Wave"),
         .description = COMPOUND_STRING(
             "Whirls its fists to send\n"
@@ -9907,6 +9947,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ENERGY_BALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Energy Ball"),
         .description = COMPOUND_STRING(
             "Draws power from nature to\n"
@@ -9932,6 +9973,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BRAVE_BIRD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Brave Bird"),
         .description = COMPOUND_STRING(
             "A low altitude charge that\n"
@@ -9979,6 +10021,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SWITCHEROO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Switcheroo"),
         .description = COMPOUND_STRING(
             "Swaps items with the foe\n"
@@ -9992,7 +10035,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_SPD_UP_2 },
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
@@ -10003,6 +10046,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GIGA_IMPACT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Giga Impact"),
         .description = sHyperBeamDescription,
         .effect = EFFECT_HIT,
@@ -10050,6 +10094,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BULLET_PUNCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bullet Punch"),
         .description = COMPOUND_STRING(
             "Punches as fast as a bul-\n"
@@ -10244,6 +10289,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MUD_BOMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Mud Bomb"),
         .description = COMPOUND_STRING(
             "Throws a blob of mud to\n"
@@ -10269,6 +10315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYCHO_CUT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Psycho Cut"),
         .description = COMPOUND_STRING(
             "Tears with psychic blades.\n"
@@ -10316,6 +10363,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MIRROR_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Mirror Shot"),
         .description = COMPOUND_STRING(
             "Emits a flash of energy to\n"
@@ -10364,6 +10412,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ROCK_CLIMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Rock Climb"),
         .description = COMPOUND_STRING(
             "A charging attack that may\n"
@@ -10389,6 +10438,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DEFOG] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Defog"),
         .description = COMPOUND_STRING(
             "Removes obstacles and\n"
@@ -10412,6 +10462,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRICK_ROOM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Trick Room"),
         .description = COMPOUND_STRING(
             "Slower Pokémon get to move\n"
@@ -10434,6 +10485,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRACO_METEOR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Draco Meteor"),
         .description = COMPOUND_STRING(
             "Casts comets onto the foe.\n"
@@ -10482,6 +10534,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LAVA_PLUME] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Lava Plume"),
         .description = sLavaPlumeDescription,
         .effect = EFFECT_HIT,
@@ -10528,6 +10581,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_WHIP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Whip"),
         .description = COMPOUND_STRING(
             "Violently lashes the foe\n"
@@ -10549,6 +10603,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ROCK_WRECKER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Rock Wrecker"),
         .description = sHyperBeamDescription,
         .effect = EFFECT_HIT,
@@ -10572,6 +10627,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CROSS_POISON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Cross Poison"),
         .description = COMPOUND_STRING(
             "A slash that may poison a\n"
@@ -10648,6 +10704,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGNET_BOMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Magnet Bomb"),
         .description = COMPOUND_STRING(
             "Launches a magnet that\n"
@@ -10669,6 +10726,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STONE_EDGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stone Edge"),
         .description = COMPOUND_STRING(
             "Stabs the foe with stones.\n"
@@ -10690,6 +10748,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CAPTIVATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Captivate"),
         .description = COMPOUND_STRING(
             "Makes the opposite gender\n"
@@ -10712,6 +10771,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STEALTH_ROCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stealth Rock"),
         .description = COMPOUND_STRING(
             "Sets floating stones that\n"
@@ -10759,6 +10819,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CHATTER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Chatter"),
         .description = COMPOUND_STRING(
             "Attacks with a sound wave\n"
@@ -10775,7 +10836,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .soundMove = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_6,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -10798,6 +10859,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_JUDGMENT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Judgment"),
         .description = COMPOUND_STRING(
             "The type varies with the\n"
@@ -10819,6 +10881,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BUG_BITE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bug Bite"),
         .description = sPluckDescription,
         .effect = EFFECT_HIT,
@@ -10867,6 +10930,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WOOD_HAMMER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wood Hammer"),
         .description = COMPOUND_STRING(
             "Slams the body into a foe.\n"
@@ -10910,6 +10974,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ATTACK_ORDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Attack Order"),
         .description = COMPOUND_STRING(
             "Underlings pummel the foe.\n"
@@ -10931,6 +10996,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DEFEND_ORDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Defend Order"),
         .description = COMPOUND_STRING(
             "Raises Defense and Sp. Def\n"
@@ -10955,6 +11021,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEAL_ORDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Heal Order"),
         .description = COMPOUND_STRING(
             "The user's underlings show\n"
@@ -10980,6 +11047,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEAD_SMASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Head Smash"),
         .description = COMPOUND_STRING(
             "A life-risking headbutt that\n"
@@ -11002,6 +11070,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DOUBLE_HIT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Double Hit"),
         .description = COMPOUND_STRING(
             "Slams the foe with a tail\n"
@@ -11024,6 +11093,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ROAR_OF_TIME] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Roar of Time"),
         .description = COMPOUND_STRING(
             "Powerful, but leaves the\n"
@@ -11048,6 +11118,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPACIAL_REND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Spacial Rend"),
         .description = COMPOUND_STRING(
             "Tears the foe, and space.\n"
@@ -11069,6 +11140,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LUNAR_DANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Lunar Dance"),
         .description = sHealingWishDescription,
         .effect = EFFECT_HEALING_WISH,
@@ -11092,6 +11164,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CRUSH_GRIP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Crush Grip"),
         .description = sWringOutDescription,
         .effect = EFFECT_VARY_POWER_BASED_ON_HP,
@@ -11112,6 +11185,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGMA_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Magma Storm"),
         .description = COMPOUND_STRING(
             "Traps the foe in a vortex\n"
@@ -11135,6 +11209,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DARK_VOID] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dark Void"),
         .description = COMPOUND_STRING(
             "Drags the foe into total\n"
@@ -11158,6 +11233,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SEED_FLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Seed Flare"),
         .description = COMPOUND_STRING(
             "Generates a shock wave that\n"
@@ -11182,6 +11258,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_OMINOUS_WIND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ominous Wind"),
         .description = COMPOUND_STRING(
             "A repulsive attack that may\n"
@@ -11208,6 +11285,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHADOW_FORCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shadow Force"),
         .description = sShadowForceDescription,
         .effect = EFFECT_SEMI_INVULNERABLE,
@@ -11236,6 +11314,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HONE_CLAWS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hone Claws"),
         .description = COMPOUND_STRING(
             "Sharpens its claws to raise\n"
@@ -11286,6 +11365,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GUARD_SPLIT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Guard Split"),
         .description = COMPOUND_STRING(
             "Averages changes to Defense\n"
@@ -11308,6 +11388,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_SPLIT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Split"),
         .description = COMPOUND_STRING(
             "Averages changes to Attack\n"
@@ -11330,6 +11411,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WONDER_ROOM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wonder Room"),
         .description = COMPOUND_STRING(
             "Defense and Sp. Def stats\n"
@@ -11352,6 +11434,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYSHOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Psyshock"),
         .description = sPsyshockDescription,
         .effect = EFFECT_PSYSHOCK,
@@ -11391,6 +11474,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AUTOTOMIZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Autotomize"),
         .description = COMPOUND_STRING(
             "Sheds additional weight to\n"
@@ -11442,6 +11526,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TELEKINESIS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Telekinesis"),
         .description = COMPOUND_STRING(
             "Makes the foe float. It is\n"
@@ -11465,6 +11550,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGIC_ROOM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Magic Room"),
         .description = COMPOUND_STRING(
             "Hold items lose their\n"
@@ -11487,6 +11573,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SMACK_DOWN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Smack Down"),
         .description = COMPOUND_STRING(
             "Throws a rock to knock the\n"
@@ -11512,6 +11599,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STORM_THROW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Storm Throw"),
         .description = sStormThrowDescription,
         .effect = EFFECT_HIT,
@@ -11532,6 +11620,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLAME_BURST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flame Burst"),
         .description = COMPOUND_STRING(
             "A bursting flame that does\n"
@@ -11556,6 +11645,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SLUDGE_WAVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sludge Wave"),
         .description = COMPOUND_STRING(
             "Swamps the foe with a wave\n"
@@ -11580,6 +11670,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_QUIVER_DANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Quiver Dance"),
         .description = COMPOUND_STRING(
             "Dances to raise Sp. Atk\n"
@@ -11626,6 +11717,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SYNCHRONOISE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Synchronoise"),
         .description = COMPOUND_STRING(
             "An odd shock wave that only\n"
@@ -11646,6 +11738,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ELECTRO_BALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Electro Ball"),
         .description = COMPOUND_STRING(
             "Hurls an orb that does more\n"
@@ -11667,6 +11760,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SOAK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Soak"),
         .description = COMPOUND_STRING(
             "Sprays water at the foe\n"
@@ -11689,6 +11783,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLAME_CHARGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flame Charge"),
         .description = COMPOUND_STRING(
             "Attacks in a cloak of\n"
@@ -11739,6 +11834,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LOW_SWEEP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Low Sweep"),
         .description = COMPOUND_STRING(
             "Attacks the foe's legs\n"
@@ -11764,6 +11860,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ACID_SPRAY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Acid Spray"),
         .description = COMPOUND_STRING(
             "Sprays a hide-melting acid.\n"
@@ -11789,6 +11886,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FOUL_PLAY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Foul Play"),
         .description = COMPOUND_STRING(
             "The higher the foe's Attack\n"
@@ -11810,6 +11908,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SIMPLE_BEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Simple Beam"),
         .description = COMPOUND_STRING(
             "A beam that changes the\n"
@@ -11879,6 +11978,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ROUND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Round"),
         .description = COMPOUND_STRING(
             "A song that inflicts damage.\n"
@@ -11926,6 +12026,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CHIP_AWAY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Chip Away"),
         .description = sChipAwayDescription,
         .effect = EFFECT_HIT,
@@ -11946,6 +12047,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CLEAR_SMOG] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Clear Smog"),
         .description = COMPOUND_STRING(
             "Attacks with white haze that\n"
@@ -11969,6 +12071,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STORED_POWER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stored Power"),
         .description = COMPOUND_STRING(
             "The higher the user's stats\n"
@@ -11989,6 +12092,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_QUICK_GUARD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Quick Guard"),
         .description = COMPOUND_STRING(
             "Evades priority attacks\n"
@@ -12006,7 +12110,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -12038,6 +12142,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SCALD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Scald"),
         .description = COMPOUND_STRING(
             "Shoots boiling water at the\n"
@@ -12063,6 +12168,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHELL_SMASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shell Smash"),
         .description = COMPOUND_STRING(
             "Raises offensive stats, but\n"
@@ -12134,6 +12240,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SKY_DROP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sky Drop"),
         .description = COMPOUND_STRING(
             "Takes the foe into the sky\n"
@@ -12160,6 +12267,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHIFT_GEAR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shift Gear"),
         .description = COMPOUND_STRING(
             "Rotates its gears to raise\n"
@@ -12184,6 +12292,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CIRCLE_THROW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Circle Throw"),
         .description = sCircleThrowDescription,
         .effect = EFFECT_HIT_SWITCH_TARGET,
@@ -12205,6 +12314,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_INCINERATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Incinerate"),
         .description = COMPOUND_STRING(
             "Burns up Berries and Gems\n"
@@ -12228,6 +12338,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_QUASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Quash"),
         .description = COMPOUND_STRING(
             "Suppresses the foe, making\n"
@@ -12241,7 +12352,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_NEXT_APPEAL_LATER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -12250,6 +12361,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ACROBATICS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Acrobatics"),
         .description = COMPOUND_STRING(
             "Does double damage if the\n"
@@ -12294,6 +12406,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RETALIATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Retaliate"),
         .description = COMPOUND_STRING(
             "An attack that does more\n"
@@ -12315,6 +12428,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FINAL_GAMBIT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Final Gambit"),
         .description = COMPOUND_STRING(
             "The user faints to damage\n"
@@ -12337,6 +12451,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BESTOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bestow"),
         .description = COMPOUND_STRING(
             "The user gives its held\n"
@@ -12352,7 +12467,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPD_UP_2 },
         .ignoresProtect = B_UPDATED_MOVE_FLAGS >= GEN_6,
         .ignoresSubstitute = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
@@ -12363,6 +12478,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_INFERNO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Inferno"),
         .description = COMPOUND_STRING(
             "Powerful and sure to inflict\n"
@@ -12387,6 +12503,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WATER_PLEDGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Water Pledge"),
         .description = COMPOUND_STRING(
             "Attacks with a column of\n"
@@ -12408,6 +12525,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FIRE_PLEDGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fire Pledge"),
         .description = COMPOUND_STRING(
             "Attacks with a column of\n"
@@ -12429,6 +12547,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GRASS_PLEDGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Grass Pledge"),
         .description = COMPOUND_STRING(
             "Attacks with a column of\n"
@@ -12450,6 +12569,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_VOLT_SWITCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Volt Switch"),
         .description = sUTurnDescription,
         .effect = EFFECT_HIT_ESCAPE,
@@ -12468,6 +12588,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STRUGGLE_BUG] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Struggle Bug"),
         .description = COMPOUND_STRING(
             "Resisting, the user attacks\n"
@@ -12492,6 +12613,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BULLDOZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bulldoze"),
         .description = COMPOUND_STRING(
             "Stomps down on the ground.\n"
@@ -12517,6 +12639,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FROST_BREATH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Frost Breath"),
         .description = sStormThrowDescription,
         .effect = EFFECT_HIT,
@@ -12557,6 +12680,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WORK_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Work Up"),
         .description = COMPOUND_STRING(
             "The user is roused.\n"
@@ -12581,6 +12705,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ELECTROWEB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Electroweb"),
         .description = COMPOUND_STRING(
             "Snares the foe with an\n"
@@ -12605,6 +12730,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WILD_CHARGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wild Charge"),
         .description = COMPOUND_STRING(
             "An electrical tackle that\n"
@@ -12627,6 +12753,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRILL_RUN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Drill Run"),
         .description = COMPOUND_STRING(
             "Spins its body like a drill.\n"
@@ -12649,6 +12776,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DUAL_CHOP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dual Chop"),
         .description = COMPOUND_STRING(
             "Attacks with brutal hits\n"
@@ -12671,6 +12799,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEART_STAMP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Heart Stamp"),
         .description = COMPOUND_STRING(
             "A sudden blow after a cute\n"
@@ -12696,6 +12825,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HORN_LEECH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Horn Leech"),
         .description = sMegaDrainDescription,
         .effect = EFFECT_ABSORB,
@@ -12716,6 +12846,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SACRED_SWORD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sacred Sword"),
         .description = sChipAwayDescription,
         .effect = EFFECT_HIT,
@@ -12783,6 +12914,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LEAF_TORNADO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Leaf Tornado"),
         .description = COMPOUND_STRING(
             "Circles the foe with leaves\n"
@@ -12808,6 +12940,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STEAMROLLER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Steamroller"),
         .description = COMPOUND_STRING(
             "Crushes the foe with its\n"
@@ -12834,6 +12967,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COTTON_GUARD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Cotton Guard"),
         .description = COMPOUND_STRING(
             "Wraps its body in cotton.\n"
@@ -12858,6 +12992,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NIGHT_DAZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Night Daze"),
         .description = COMPOUND_STRING(
             "Looses a pitch-black shock\n"
@@ -12882,6 +13017,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYSTRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Psystrike"),
         .description = sPsyshockDescription,
         .effect = EFFECT_PSYSHOCK,
@@ -12900,6 +13036,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TAIL_SLAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tail Slap"),
         .description = COMPOUND_STRING(
             "Strikes the foe with its\n"
@@ -12921,6 +13058,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HURRICANE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hurricane"),
         .description = COMPOUND_STRING(
             "Traps the foe in a fierce\n"
@@ -12947,6 +13085,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEAD_CHARGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Head Charge"),
         .description = COMPOUND_STRING(
             "A charge using guard hair.\n"
@@ -12969,6 +13108,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GEAR_GRIND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Gear Grind"),
         .description = COMPOUND_STRING(
             "Throws two steel gears\n"
@@ -12992,6 +13132,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SEARING_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Searing Shot"),
         .description = sLavaPlumeDescription,
         .effect = EFFECT_HIT,
@@ -13015,6 +13156,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TECHNO_BLAST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Techno Blast"),
         .description = COMPOUND_STRING(
             "The type varies with the\n"
@@ -13028,7 +13170,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .argument = HOLD_EFFECT_DRIVE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_EXCITE_AUDIENCE_IN_ANY_CONTEST,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -13037,6 +13179,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RELIC_SONG] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Relic Song"),
         .description = COMPOUND_STRING(
             "Attacks with an ancient\n"
@@ -13052,7 +13195,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .argument = STATUS1_SLEEP,
         .ignoresSubstitute = B_UPDATED_MOVE_FLAGS >= GEN_6,
         .soundMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SLEEP,
             .chance = 10,
@@ -13065,6 +13208,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SECRET_SWORD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Secret Sword"),
         .description = COMPOUND_STRING(
             "Cuts with a long horn that\n"
@@ -13078,7 +13222,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .slicingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -13087,6 +13231,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GLACIATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Glaciate"),
         .description = COMPOUND_STRING(
             "Blows very cold air at the\n"
@@ -13111,6 +13256,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BOLT_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bolt Strike"),
         .description = COMPOUND_STRING(
             "Strikes with a great amount\n"
@@ -13136,6 +13282,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BLUE_FLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Blue Flare"),
         .description = COMPOUND_STRING(
             "Engulfs the foe in a blue\n"
@@ -13160,6 +13307,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FIERY_DANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fiery Dance"),
         .description = COMPOUND_STRING(
             "Dances cloaked in flames.\n"
@@ -13186,6 +13334,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FREEZE_SHOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Freeze Shock"),
         .description = COMPOUND_STRING(
             "A powerful 2-turn move that\n"
@@ -13198,7 +13347,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
         .argument = TWO_TURN_ARG(STRINGID_CLOAKEDINAFREEZINGLIGHT),
@@ -13214,6 +13363,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ICE_BURN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ice Burn"),
         .description = COMPOUND_STRING(
             "A powerful 2-turn move that\n"
@@ -13226,7 +13376,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
         .argument = TWO_TURN_ARG(STRINGID_CLOAKEDINAFREEZINGLIGHT),
@@ -13256,7 +13406,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .ignoresSubstitute = B_UPDATED_MOVE_FLAGS >= GEN_6,
         .soundMove = TRUE,
-        .metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_ATK_MINUS_1,
             .chance = 100,
@@ -13293,6 +13442,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_V_CREATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("V-create"),
         .description = COMPOUND_STRING(
             "Very powerful, but lowers\n"
@@ -13307,7 +13457,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .zMove = { .powerOverride = 220 },
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_V_CREATE,
             .self = TRUE,
@@ -13320,6 +13470,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FUSION_FLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fusion Flare"),
         .description = COMPOUND_STRING(
             "Summons a fireball. Works\n"
@@ -13341,6 +13492,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FUSION_BOLT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fusion Bolt"),
         .description = COMPOUND_STRING(
             "Summons a thunderbolt.\n"
@@ -13361,6 +13513,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLYING_PRESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flying Press"),
         .description = COMPOUND_STRING(
             "This attack does Fighting\n"
@@ -13387,6 +13540,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAT_BLOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Mat Block"),
         .description = COMPOUND_STRING(
             "Evades damaging moves\n"
@@ -13404,7 +13558,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .skyBattleBanned = TRUE,
@@ -13416,6 +13570,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BELCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Belch"),
         .description = COMPOUND_STRING(
             "Lets out a loud belch.\n"
@@ -13430,7 +13585,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .mimicBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
@@ -13444,6 +13599,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ROTOTILLER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Rototiller"),
         .description = COMPOUND_STRING(
             "Ups the Attack and Sp. Atk\n"
@@ -13468,6 +13624,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STICKY_WEB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sticky Web"),
         .description = COMPOUND_STRING(
             "Weaves a sticky net that\n"
@@ -13542,6 +13699,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRICK_OR_TREAT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("TrickOrTreat", "Trick-or-Treat"),
         .description = COMPOUND_STRING(
             "Goes trick-or-treating\n"
@@ -13565,6 +13723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NOBLE_ROAR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Noble Roar"),
         .description = COMPOUND_STRING(
             "Intimidates the foe, to cut\n"
@@ -13589,6 +13748,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ION_DELUGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ion Deluge"),
         .description = COMPOUND_STRING(
             "Electrifies Normal-type\n"
@@ -13612,6 +13772,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PARABOLIC_CHARGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ParabolcChrg", "Parabolic Charge"),
         .description = COMPOUND_STRING(
             "Damages adjacent Pokémon and\n"
@@ -13633,6 +13794,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FORESTS_CURSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("Forest'sCurs", "Forest's Curse"),
         .description = COMPOUND_STRING(
             "Puts a curse on the foe\n"
@@ -13656,6 +13818,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PETAL_BLIZZARD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PetalBlizzrd", "Petal Blizzard"),
         .description = COMPOUND_STRING(
             "Stirs up a violent storm\n"
@@ -13677,6 +13840,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FREEZE_DRY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Freeze-Dry"),
         .description = COMPOUND_STRING(
             "Super effective on Water-\n"
@@ -13701,6 +13865,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DISARMING_VOICE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DisrmngVoice", "Disarming Voice"),
         .description = COMPOUND_STRING(
             "Lets out a charming cry\n"
@@ -13723,6 +13888,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PARTING_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Parting Shot"),
         .description = COMPOUND_STRING(
             "Lowers the foe's Attack and\n"
@@ -13747,6 +13913,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TOPSY_TURVY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Topsy-Turvy"),
         .description = COMPOUND_STRING(
             "Swaps all stat changes that\n"
@@ -13790,6 +13957,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CRAFTY_SHIELD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("CraftyShield", "Crafty Shield"),
         .description = COMPOUND_STRING(
             "Evades status moves for\n"
@@ -13806,7 +13974,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPDEF_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -13815,6 +13983,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLOWER_SHIELD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FlowerShield", "Flower Shield"),
         .description = COMPOUND_STRING(
             "Raises the Defense of\n"
@@ -13838,6 +14007,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GRASSY_TERRAIN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("GrssyTerrain", "Grassy Terrain"),
         .description = COMPOUND_STRING(
             "The ground turns to grass\n"
@@ -13886,6 +14056,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ELECTRIFY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Electrify"),
         .description = COMPOUND_STRING(
             "Electrifies the foe, making\n"
@@ -13932,6 +14103,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FAIRY_WIND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fairy Wind"),
         .description = COMPOUND_STRING(
             "Stirs up a fairy wind to\n"
@@ -13977,6 +14149,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BOOMBURST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Boomburst"),
         .description = COMPOUND_STRING(
             "Attacks everything with a\n"
@@ -13999,6 +14172,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FAIRY_LOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fairy Lock"),
         .description = COMPOUND_STRING(
             "Locks down the battlefield\n"
@@ -14022,6 +14196,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_KINGS_SHIELD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("King'sShield", "King's Shield"),
         .description = COMPOUND_STRING(
             "Evades damage, and sharply\n"
@@ -14037,7 +14212,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_RESET_STATS },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .instructBanned = TRUE,
         .assistBanned = TRUE,
@@ -14049,6 +14224,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PLAY_NICE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Play Nice"),
         .description = COMPOUND_STRING(
             "Befriend the foe, lowering\n"
@@ -14073,6 +14249,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CONFIDE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Confide"),
         .description = COMPOUND_STRING(
             "Shares a secret with the\n"
@@ -14098,6 +14275,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DIAMOND_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DiamondStorm", "Diamond Storm"),
         .description = COMPOUND_STRING(
             "Whips up a storm of\n"
@@ -14109,7 +14287,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = B_UPDATED_MOVE_DATA >= GEN_7 ? MOVE_EFFECT_DEF_PLUS_2:  MOVE_EFFECT_DEF_PLUS_1,
             .chance = 50,
@@ -14122,6 +14300,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STEAM_ERUPTION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SteamErption", "Steam Eruption"),
         .description = COMPOUND_STRING(
             "Immerses the foe in heated\n"
@@ -14135,7 +14314,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .thawsUser = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
             .chance = 30,
@@ -14148,6 +14327,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HYPERSPACE_HOLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("HyprspceHole", "Hyprspace Hole"),
         .description = sHyperspaceHoleDescription,
         .effect = EFFECT_HIT,
@@ -14160,7 +14340,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .ignoresProtect = TRUE,
         .ignoresSubstitute = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FEINT,
         }),
@@ -14172,6 +14352,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WATER_SHURIKEN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("WatrShuriken", "Water Shuriken"),
         .description = COMPOUND_STRING(
             "Throws 2 to 5 stars that\n"
@@ -14192,6 +14373,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MYSTICAL_FIRE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MysticalFire", "Mystical Fire"),
         .description = COMPOUND_STRING(
             "Breathes a special, hot\n"
@@ -14216,6 +14398,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPIKY_SHIELD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Spiky Shield"),
         .description = COMPOUND_STRING(
             "Evades attack, and damages\n"
@@ -14231,7 +14414,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
@@ -14242,6 +14425,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AROMATIC_MIST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("AromaticMist", "Aromatic Mist"),
         .description = COMPOUND_STRING(
             "Raises the Sp. Def of a\n"
@@ -14266,6 +14450,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_EERIE_IMPULSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("EerieImpulse", "Eerie Impulse"),
         .description = COMPOUND_STRING(
             "Exposes the foe to a pulse\n"
@@ -14288,6 +14473,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_VENOM_DRENCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Venom Drench"),
         .description = COMPOUND_STRING(
             "Lowers the Attack, Sp. Atk\n"
@@ -14310,6 +14496,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Powder"),
         .description = COMPOUND_STRING(
             "Damages the foe if it uses\n"
@@ -14333,6 +14520,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GEOMANCY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Geomancy"),
         .description = COMPOUND_STRING(
             "Raises Sp. Atk, Sp. Def and\n"
@@ -14358,6 +14546,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGNETIC_FLUX] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MagneticFlux", "Magnetic Flux"),
         .description = COMPOUND_STRING(
             "Boosts the defenses of\n"
@@ -14383,6 +14572,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HAPPY_HOUR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Happy Hour"),
         .description = COMPOUND_STRING(
             "Doubles the amount of\n"
@@ -14430,6 +14620,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DAZZLING_GLEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DazzlngGleam", "Dazzling Gleam"),
         .description = COMPOUND_STRING(
             "Damages foes by emitting\n"
@@ -14450,6 +14641,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CELEBRATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Celebrate"),
         .description = COMPOUND_STRING(
             "Congratulates you on your\n"
@@ -14465,7 +14657,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .mimicBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
@@ -14479,6 +14671,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HOLD_HANDS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hold Hands"),
         .description = COMPOUND_STRING(
             "The user and ally hold hands\n"
@@ -14494,7 +14687,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
         .ignoresProtect = TRUE,
         .ignoresSubstitute = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .mimicBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
@@ -14530,6 +14723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NUZZLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Nuzzle"),
         .description = COMPOUND_STRING(
             "Rubs its cheecks against\n"
@@ -14555,6 +14749,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HOLD_BACK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hold Back"),
         .description = sFalseSwipeDescription,
         .effect = EFFECT_FALSE_SWIPE,
@@ -14598,6 +14793,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_UP_PUNCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PowerUpPunch", "Power-Up Punch"),
         .description = COMPOUND_STRING(
             "A hard punch that raises\n"
@@ -14625,6 +14821,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_OBLIVION_WING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("OblivionWing", "Oblivion Wing"),
         .description = sDrainingKissDescription,
         .effect = EFFECT_ABSORB,
@@ -14645,6 +14842,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_THOUSAND_ARROWS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ThousndArrws", "Thousand Arrows"),
         .description = COMPOUND_STRING(
             "Can hit Flying foes, then\n"
@@ -14659,7 +14857,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .damagesAirborne = TRUE,
         .ignoreTypeIfFlyingAndUngrounded = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .skyBattleBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SMACK_DOWN,
@@ -14672,6 +14870,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_THOUSAND_WAVES] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ThousndWaves", "Thousand Waves"),
         .description = COMPOUND_STRING(
             "Those hit by the wave can\n"
@@ -14684,7 +14883,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .skyBattleBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_PREVENT_ESCAPE,
@@ -14697,6 +14896,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LANDS_WRATH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Land's Wrath"),
         .description = COMPOUND_STRING(
             "Gathers the energy of the\n"
@@ -14718,6 +14918,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LIGHT_OF_RUIN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("LightOfRuin", "Light Of Ruin"),
         .description = COMPOUND_STRING(
             "Fires a great beam of light\n"
@@ -14731,11 +14932,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_ORIGIN_PULSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Origin Pulse"),
         .description = COMPOUND_STRING(
             "Beams of glowing blue light\n"
@@ -14749,7 +14951,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .pulseMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -14758,6 +14960,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PRECIPICE_BLADES] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PrcipceBldes", "Precipice Blades"),
         .description = COMPOUND_STRING(
             "Fearsome blades of stone\n"
@@ -14770,7 +14973,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
@@ -14779,6 +14982,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_ASCENT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DragonAscent", "Dragon Ascent"),
         .description = sCloseCombatDescription,
         .effect = EFFECT_HIT,
@@ -14790,7 +14994,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_SPDEF_DOWN,
             .self = TRUE,
@@ -14803,6 +15007,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HYPERSPACE_FURY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("HyprspceFury", "Hyperspace Fury"),
         .description = sHyperspaceHoleDescription,
         .effect = EFFECT_HYPERSPACE_FURY,
@@ -14815,7 +15020,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .ignoresProtect = TRUE,
         .ignoresSubstitute = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .sketchBanned = (B_SKETCH_BANS >= GEN_9),
         .additionalEffects = ADDITIONAL_EFFECTS({
             // Feint move effect handled in script as it goes before animation
@@ -14830,6 +15035,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHORE_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shore Up"),
         .description = COMPOUND_STRING(
             "Restores the user's HP.\n"
@@ -14855,6 +15061,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FIRST_IMPRESSION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FrstImpressn", "First Impression"),
         .description = COMPOUND_STRING(
             "Hits hard and first.\n"
@@ -14877,6 +15084,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BANEFUL_BUNKER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BanefulBunkr", "Baneful Bunker"),
         .description = COMPOUND_STRING(
             "Protects user and poisons\n"
@@ -14892,7 +15100,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
@@ -14903,6 +15111,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPIRIT_SHACKLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SpiritShackl", "Spirit Shackle"),
         .description = COMPOUND_STRING(
             "After being hit, foes can\n"
@@ -14927,6 +15136,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DARKEST_LARIAT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DarkstLariat", "Darkest Lariat"),
         .description = COMPOUND_STRING(
             "Swings the arms to strike\n"
@@ -14949,6 +15159,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPARKLING_ARIA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SparklngAria", "Sparkling Aria"),
         .description = COMPOUND_STRING(
             "Sings with bubbles. Cures\n"
@@ -14976,6 +15187,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ICE_HAMMER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ice Hammer"),
         .description = COMPOUND_STRING(
             "Swings the fist to strike.\n"
@@ -15002,6 +15214,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLORAL_HEALING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FloralHealng", "Floral Healng"),
         .description = COMPOUND_STRING(
             "Restores an ally's HP.\n"
@@ -15027,6 +15240,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HIGH_HORSEPOWER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("HighHorsepwr", "High Horsepower"),
         .description = COMPOUND_STRING(
             "Slams hard into the foe with\n"
@@ -15071,6 +15285,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SOLAR_BLADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Solar Blade"),
         .description = COMPOUND_STRING(
             "Charges first turn, then\n"
@@ -15096,6 +15311,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LEAFAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Leafage"),
         .description = COMPOUND_STRING(
             "Attacks with a flurry of\n"
@@ -15116,6 +15332,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPOTLIGHT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Spotlight"),
         .description = COMPOUND_STRING(
             "Makes the foe attack the\n"
@@ -15131,7 +15348,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPDEF_UP_1 },
         .magicCoatAffected = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
@@ -15142,6 +15359,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TOXIC_THREAD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Toxic Thread"),
         .description = COMPOUND_STRING(
             "Attacks with a thread that\n"
@@ -15164,6 +15382,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LASER_FOCUS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Laser Focus"),
         .description = COMPOUND_STRING(
             "Guarantees the next move\n"
@@ -15188,6 +15407,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GEAR_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Gear Up"),
         .description = COMPOUND_STRING(
             "Boosts the attacks of\n"
@@ -15213,6 +15433,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_THROAT_CHOP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Throat Chop"),
         .description = COMPOUND_STRING(
             "Chops the throat to disable\n"
@@ -15238,6 +15459,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POLLEN_PUFF] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pollen Puff"),
         .description = COMPOUND_STRING(
             "Explodes on foes, but\n"
@@ -15259,6 +15481,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ANCHOR_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Anchor Shot"),
         .description = COMPOUND_STRING(
             "Strangles the foe with a\n"
@@ -15307,6 +15530,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LUNGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Lunge"),
         .description = COMPOUND_STRING(
             "Lunges at the foe to lower\n"
@@ -15332,6 +15556,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FIRE_LASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fire Lash"),
         .description = COMPOUND_STRING(
             "Whips the foe with fire\n"
@@ -15357,6 +15582,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_TRIP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Trip"),
         .description = COMPOUND_STRING(
             "It hits harder the more\n"
@@ -15378,6 +15604,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BURN_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Burn Up"),
         .description = COMPOUND_STRING(
             "Burns out the user fully\n"
@@ -15404,6 +15631,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPEED_SWAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Speed Swap"),
         .description = COMPOUND_STRING(
             "Swaps user's Speed with\n"
@@ -15426,6 +15654,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SMART_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Smart Strike"),
         .description = COMPOUND_STRING(
             "Hits with an accurate\n"
@@ -15447,6 +15676,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PURIFY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Purify"),
         .description = COMPOUND_STRING(
             "Cures the foe's status\n"
@@ -15471,6 +15701,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_REVELATION_DANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("RvlationDnce", "Revelation Dance"),
         .description = COMPOUND_STRING(
             "Dances with mystical power.\n"
@@ -15492,6 +15723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CORE_ENFORCER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("CoreEnforcer", "Core Enforcer"),
         .description = COMPOUND_STRING(
             "Hits with a ray that\n"
@@ -15541,6 +15773,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_INSTRUCT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Instruct"),
         .description = COMPOUND_STRING(
             "Orders the target to use\n"
@@ -15556,7 +15789,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPATK_UP_1 },
         .ignoresSubstitute = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .instructBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONE,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -15566,6 +15799,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BEAK_BLAST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Beak Blast"),
         .description = COMPOUND_STRING(
             "Heats up beak to attack.\n"
@@ -15581,7 +15815,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .ballisticMove = TRUE,
         .meFirstBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -15594,6 +15828,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CLANGING_SCALES] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ClngngScales", "Clanging Scales"),
         .description = COMPOUND_STRING(
             "Makes a big noise with\n"
@@ -15620,6 +15855,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_HAMMER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DragonHammer", "Dragon Hammer"),
         .description = COMPOUND_STRING(
             "Swings its whole body\n"
@@ -15641,6 +15877,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BRUTAL_SWING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Brutal Swing"),
         .description = COMPOUND_STRING(
             "Violently swings around\n"
@@ -15662,6 +15899,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AURORA_VEIL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aurora Veil"),
         .description = COMPOUND_STRING(
             "Weakens all attacks, but\n"
@@ -15686,6 +15924,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHELL_TRAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shell Trap"),
         .description = COMPOUND_STRING(
             "Sets a shell trap that\n"
@@ -15700,7 +15939,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -15713,6 +15952,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLEUR_CANNON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fleur Cannon"),
         .description = COMPOUND_STRING(
             "A strong ray that harshly\n"
@@ -15725,7 +15965,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_ATK_TWO_DOWN,
             .self = TRUE,
@@ -15738,6 +15978,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYCHIC_FANGS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PsychicFangs", "Psychic Fangs"),
         .description = COMPOUND_STRING(
             "Chomps with psychic fangs.\n"
@@ -15760,6 +16001,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STOMPING_TANTRUM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("StmpngTantrm", "Stomping Tantrum"),
         .description = COMPOUND_STRING(
             "Stomps around angrily.\n"
@@ -15782,6 +16024,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHADOW_BONE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shadow Bone"),
         .description = COMPOUND_STRING(
             "Strikes with a haunted\n"
@@ -15852,6 +16095,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PRISMATIC_LASER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PrsmaticLasr", "Prismatic Laser"),
         .description = COMPOUND_STRING(
             "A high power laser that\n"
@@ -15876,6 +16120,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPECTRAL_THIEF] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SpectrlThief", "Spectral Thief"),
         .description = COMPOUND_STRING(
             "Steals the target's stat\n"
@@ -15890,7 +16135,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .ignoresSubstitute = TRUE,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPECTRAL_THIEF,
         }),
@@ -15902,6 +16147,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SUNSTEEL_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SnsteelStrke", "Sunsteel Strike"),
         .description = COMPOUND_STRING(
             "A sun-fueled strike that\n"
@@ -15925,6 +16171,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MOONGEIST_BEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MoongestBeam", "Moongeist Beam"),
         .description = COMPOUND_STRING(
             "A moon-powered beam that\n"
@@ -15947,6 +16194,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TEARFUL_LOOK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tearful Look"),
         .description = COMPOUND_STRING(
             "The user tears up, dropping\n"
@@ -15970,6 +16218,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ZING_ZAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Zing Zap"),
         .description = COMPOUND_STRING(
             "An electrified impact that\n"
@@ -15995,6 +16244,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NATURES_MADNESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("Natur'sMadns", "Nature's Madness"),
         .description = COMPOUND_STRING(
             "Halves the foe's HP with\n"
@@ -16016,6 +16266,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MULTI_ATTACK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Multi-Attack"),
         .description = COMPOUND_STRING(
             "An attack that changes\n"
@@ -16038,6 +16289,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MIND_BLOWN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Mind Blown"),
         .description = COMPOUND_STRING(
             "It explodes the user's head\n"
@@ -16050,7 +16302,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_FOES_AND_ALLY,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -16059,6 +16311,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PLASMA_FISTS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Plasma Fists"),
         .description = COMPOUND_STRING(
             "Hits with electrical fists.\n"
@@ -16073,7 +16326,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .punchingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -16082,6 +16335,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PHOTON_GEYSER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PhotonGeyser", "Photon Geyser"),
         .description = COMPOUND_STRING(
             "User's highest attack stat\n"
@@ -16095,7 +16349,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .ignoresTargetAbility = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -16104,6 +16358,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ZIPPY_ZAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Zippy Zap"),
         .description = COMPOUND_STRING(
             "Electric bursts always go\n"
@@ -16119,7 +16374,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
         .alwaysCriticalHit = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         #if B_UPDATED_MOVE_DATA >= GEN_8
             .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_EVS_PLUS_1,
@@ -16130,6 +16385,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPLISHY_SPLASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SplishySplsh", "Splishy Splash"),
         .description = COMPOUND_STRING(
             "A huge electrified wave that\n"
@@ -16143,7 +16399,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_PARALYSIS,
             .chance = 30,
@@ -16152,6 +16408,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLOATY_FALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Floaty Fall"),
         .description = COMPOUND_STRING(
             "Floats in air and dives at\n"
@@ -16167,7 +16424,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
         .gravityBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 30,
@@ -16176,6 +16433,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PIKA_PAPOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pika Papow"),
         .description = COMPOUND_STRING(
             "Pikachu's love increases its\n"
@@ -16189,11 +16447,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_BOUNCY_BUBBLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BouncyBubble", "Bouncy Bubble"),
         .description = COMPOUND_STRING(
             "An attack that absorbs\n"
@@ -16212,12 +16471,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .argument = B_UPDATED_MOVE_DATA >= GEN_8 ? 100 : 50, // restores 100% HP instead of 50% HP
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .healingMove = B_HEAL_BLOCKING >= GEN_6,
     },
 
     [MOVE_BUZZY_BUZZ] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Buzzy Buzz"),
         .description = COMPOUND_STRING(
             "Shoots a jolt of electricity\n"
@@ -16231,7 +16491,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_PARALYSIS,
             .chance = 100,
@@ -16240,6 +16500,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SIZZLY_SLIDE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sizzly Slide"),
         .description = COMPOUND_STRING(
             "User cloaked in fire charges.\n"
@@ -16255,7 +16516,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
         .thawsUser = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
             .chance = 100,
@@ -16264,6 +16525,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GLITZY_GLOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Glitzy Glow"),
         .description = COMPOUND_STRING(
             "Telekinetic force that sets\n"
@@ -16277,11 +16539,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_BADDY_BAD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Baddy Bad"),
         .description = COMPOUND_STRING(
             "Acting badly, attacks. Sets\n"
@@ -16295,11 +16558,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SAPPY_SEED] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sappy Seed"),
         .description = COMPOUND_STRING(
             "Giant stalk scatters seeds\n"
@@ -16314,11 +16578,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
         .magicCoatAffected = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_FREEZY_FROST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Freezy Frost"),
         .description = COMPOUND_STRING(
             "Crystal from cold haze hits.\n"
@@ -16332,11 +16597,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SPARKLY_SWIRL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SparklySwirl", "Sparkly Swirl"),
         .description = COMPOUND_STRING(
             "Wrap foe with whirlwind of\n"
@@ -16350,11 +16616,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_VEEVEE_VOLLEY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("VeeveeVolley", "Veevee Volley"),
         .description = COMPOUND_STRING(
             "Eevee's love increases its\n"
@@ -16369,11 +16636,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .mirrorMoveBanned = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_DOUBLE_IRON_BASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DublIronBash", "Double Iron Bash"),
         .description = COMPOUND_STRING(
             "The user spins and hits with\n"
@@ -16390,7 +16658,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .punchingMove = TRUE,
         .strikeCount = 2,
         .minimizeDoubleDamage = B_UPDATED_MOVE_FLAGS < GEN_8,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 30,
@@ -16403,6 +16671,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DYNAMAX_CANNON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DynamxCannon", "Dynamax Cannon"),
         .description = COMPOUND_STRING(
             "Fires a strong beam. Deals\n"
@@ -16416,7 +16685,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -16432,6 +16701,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SNIPE_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Snipe Shot"),
         .description = COMPOUND_STRING(
             "The user ignores effects\n"
@@ -16453,6 +16723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_JAW_LOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Jaw Lock"),
         .description = COMPOUND_STRING(
             "Prevents the user and\n"
@@ -16478,6 +16749,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STUFF_CHEEKS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stuff Cheeks"),
         .description = COMPOUND_STRING(
             "Consumes the user's Berry,\n"
@@ -16501,6 +16773,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NO_RETREAT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("No Retreat"),
         .description = COMPOUND_STRING(
             "Raises all of the user's\n"
@@ -16524,6 +16797,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TAR_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tar Shot"),
         .description = COMPOUND_STRING(
             "Lowers the foe's Speed and\n"
@@ -16545,6 +16819,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGIC_POWDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Magic Powder"),
         .description = COMPOUND_STRING(
             "Magic powder changes the\n"
@@ -16568,6 +16843,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_DARTS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dragon Darts"),
         .description = COMPOUND_STRING(
             "The user attacks twice. Two\n"
@@ -16590,6 +16866,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TEATIME] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Teatime"),
         .description = COMPOUND_STRING(
             "All Pokémon have teatime\n"
@@ -16613,6 +16890,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_OCTOLOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Octolock"),
         .description = COMPOUND_STRING(
             "Traps the foe to lower Def\n"
@@ -16633,6 +16911,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BOLT_BEAK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bolt Beak"),
         .description = COMPOUND_STRING(
             "Double power if the user\n"
@@ -16654,6 +16933,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FISHIOUS_REND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FishiousRend", "Fishious Rend"),
         .description = COMPOUND_STRING(
             "Double power if the user\n"
@@ -16676,6 +16956,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COURT_CHANGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Court Change"),
         .description = COMPOUND_STRING(
             "The user swaps effects on\n"
@@ -16697,6 +16978,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CLANGOROUS_SOUL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ClngrousSoul", "Clangorous Soul"),
         .description = COMPOUND_STRING(
             "The user uses some of its\n"
@@ -16714,7 +16996,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .soundMove = TRUE,
         .danceMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -16723,6 +17005,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BODY_PRESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Body Press"),
         .description = COMPOUND_STRING(
             "Does more damage the\n"
@@ -16736,7 +17019,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .skyBattleBanned = B_EXTRAPOLATED_MOVE_FLAGS,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -16746,6 +17029,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DECORATE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Decorate"),
         .description = COMPOUND_STRING(
             "The user sharply raises\n"
@@ -16760,7 +17044,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
@@ -16769,6 +17053,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRUM_BEATING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Drum Beating"),
         .description = COMPOUND_STRING(
             "Plays a drum to attack.\n"
@@ -16781,7 +17066,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
             .chance = 100,
@@ -16794,6 +17079,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SNAP_TRAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Snap Trap"),
         .description = COMPOUND_STRING(
             "Snares the target in a snap\n"
@@ -16807,7 +17093,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .skyBattleBanned = B_EXTRAPOLATED_MOVE_FLAGS,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_WRAP,
@@ -16820,6 +17106,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PYRO_BALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pyro Ball"),
         .description = COMPOUND_STRING(
             "Launches a fiery ball at the\n"
@@ -16834,7 +17121,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .thawsUser = TRUE,
         .ballisticMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
             .chance = 10,
@@ -16847,6 +17134,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BEHEMOTH_BLADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BehemthBlade", "Behemoth Blade"),
         .description = COMPOUND_STRING(
             "Strikes as a sword. Deals 2x\n"
@@ -16861,7 +17149,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .slicingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .mimicBanned = TRUE,
         .assistBanned = B_EXTRAPOLATED_MOVE_FLAGS,
@@ -16873,6 +17161,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BEHEMOTH_BASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BehemothBash", "Behemoth Bash"),
         .description = COMPOUND_STRING(
             "Attacks as a shield. Deals 2x\n"
@@ -16886,7 +17175,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .mimicBanned = TRUE,
         .assistBanned = B_EXTRAPOLATED_MOVE_FLAGS,
@@ -16898,6 +17187,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AURA_WHEEL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aura Wheel"),
         .description = COMPOUND_STRING(
             "Raises Speed to attack. The\n"
@@ -16910,7 +17200,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_PLUS_1,
             .self = TRUE,
@@ -16924,6 +17214,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BREAKING_SWIPE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BreakngSwipe", "Breaking Swipe"),
         .description = COMPOUND_STRING(
             "Swings its tail to attack.\n"
@@ -16937,7 +17228,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ATK_MINUS_1,
             .chance = 100,
@@ -16950,6 +17241,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BRANCH_POKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Branch Poke"),
         .description = COMPOUND_STRING(
             "The user pokes the target\n"
@@ -16963,7 +17255,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -16972,6 +17264,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_OVERDRIVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Overdrive"),
         .description = COMPOUND_STRING(
             "The user twangs its guitar,\n"
@@ -16986,7 +17279,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .soundMove = TRUE,
         .ignoresSubstitute = B_UPDATED_MOVE_FLAGS >= GEN_6,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -16995,6 +17288,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_APPLE_ACID] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Apple Acid"),
         .description = COMPOUND_STRING(
             "Attacks with tart apple acid\n"
@@ -17007,7 +17301,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
             .chance = 100,
@@ -17020,6 +17314,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GRAV_APPLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Grav Apple"),
         .description = COMPOUND_STRING(
             "Drops an apple from above.\n"
@@ -17032,7 +17327,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
             .chance = 100,
@@ -17045,6 +17340,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPIRIT_BREAK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Spirit Break"),
         .description = COMPOUND_STRING(
             "Attacks with spirit-breaking\n"
@@ -17058,7 +17354,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_ATK_MINUS_1,
             .chance = 100,
@@ -17071,6 +17367,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STRANGE_STEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("StrangeSteam", "Strange Steam"),
         .description = COMPOUND_STRING(
             "Emits a strange steam to\n"
@@ -17083,7 +17380,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_CONFUSION,
             .chance = 20,
@@ -17096,6 +17393,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LIFE_DEW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Life Dew"),
         .description = COMPOUND_STRING(
             "Scatters water to restore\n"
@@ -17113,7 +17411,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .ignoresSubstitute = TRUE,
         .mirrorMoveBanned = TRUE,
         .healingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
@@ -17122,6 +17420,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_OBSTRUCT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Obstruct"),
         .description = COMPOUND_STRING(
             "Protects itself, harshly\n"
@@ -17136,7 +17435,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .instructBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -17146,6 +17445,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FALSE_SURRENDER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FalsSurrendr", "False Surrender"),
         .description = COMPOUND_STRING(
             "Bows to stab the foe\n"
@@ -17159,7 +17459,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -17168,6 +17468,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_METEOR_ASSAULT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MeteorAssalt", "Meteor Assault"),
         .description = COMPOUND_STRING(
             "Attacks with a thick leek.\n"
@@ -17180,7 +17481,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .instructBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_RECHARGE,
@@ -17194,6 +17495,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ETERNABEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Eternabeam"),
         .description = COMPOUND_STRING(
             "Eternatus' strongest move.\n"
@@ -17206,7 +17508,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_RECHARGE,
             .self = TRUE,
@@ -17219,6 +17521,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STEEL_BEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Steel Beam"),
         .description = COMPOUND_STRING(
             "Fires a beam of steel from\n"
@@ -17231,7 +17534,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -17240,6 +17543,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_EXPANDING_FORCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ExpandngForc", "Expanding Force"),
         .description = COMPOUND_STRING(
             "Power goes up and damages\n"
@@ -17260,6 +17564,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STEEL_ROLLER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Steel Roller"),
         .description = COMPOUND_STRING(
             "Destroys terrain. Fails if\n"
@@ -17283,6 +17588,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SCALE_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Scale Shot"),
         .description = COMPOUND_STRING(
             "Shoots scales 2 to 5 times.\n"
@@ -17331,6 +17637,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHELL_SIDE_ARM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ShellSideArm", "Shell Side Arm"),
         .description = COMPOUND_STRING(
             "Deals better of physical and\n"
@@ -17355,6 +17662,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MISTY_EXPLOSION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MstyExplsion", "Misty Explosion"),
         .description = COMPOUND_STRING(
             "Hit everything and faint.\n"
@@ -17375,6 +17683,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GRASSY_GLIDE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Grassy Glide"),
         .description = COMPOUND_STRING(
             "Gliding on ground, hits. Goes\n"
@@ -17397,6 +17706,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RISING_VOLTAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("RisngVoltage", "Rising Voltage"),
         .description = COMPOUND_STRING(
             "This move's power doubles\n"
@@ -17417,6 +17727,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TERRAIN_PULSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("TerrainPulse", "Terrain Pulse"),
         .description = COMPOUND_STRING(
             "Type and power changes\n"
@@ -17438,6 +17749,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SKITTER_SMACK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SkitterSmack", "Skitter Smack"),
         .description = COMPOUND_STRING(
             "User skitters behind foe to\n"
@@ -17463,6 +17775,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BURNING_JEALOUSY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BrningJelosy", "Burning Jealousy"),
         .description = COMPOUND_STRING(
             "Foes that have stats upped\n"
@@ -17488,6 +17801,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LASH_OUT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Lash Out"),
         .description = COMPOUND_STRING(
             "If stats lowered during this\n"
@@ -17509,6 +17823,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POLTERGEIST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Poltergeist"),
         .description = COMPOUND_STRING(
             "Control foe's item to attack.\n"
@@ -17529,6 +17844,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CORROSIVE_GAS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("CorrosiveGas", "Corrosive Gas"),
         .description = COMPOUND_STRING(
             "Highly acidic gas melts items\n"
@@ -17550,6 +17866,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COACHING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Coaching"),
         .description = COMPOUND_STRING(
             "Properly coaches allies to\n"
@@ -17573,6 +17890,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLIP_TURN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flip Turn"),
         .description = COMPOUND_STRING(
             "Attacks and rushes back to\n"
@@ -17594,6 +17912,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRIPLE_AXEL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Triple Axel"),
         .description = COMPOUND_STRING(
             "A 3-kick attack that gets\n"
@@ -17616,6 +17935,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DUAL_WINGBEAT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DualWingbeat", "Dual Wingbeat"),
         .description = COMPOUND_STRING(
             "User slams the target with\n"
@@ -17638,6 +17958,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SCORCHING_SANDS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ScorchngSnds", "Scorching Sands"),
         .description = COMPOUND_STRING(
             "Throws scorching sand at\n"
@@ -17663,6 +17984,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_JUNGLE_HEALING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("JungleHealng", "Jungle Healng"),
         .description = COMPOUND_STRING(
             "Heals HP and status of\n"
@@ -17679,7 +18001,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .ignoresSubstitute = TRUE,
         .mirrorMoveBanned = TRUE,
         .healingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -17688,6 +18010,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WICKED_BLOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wicked Blow"),
         .description = COMPOUND_STRING(
             "Mastering the Dark style,\n"
@@ -17703,7 +18026,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .alwaysCriticalHit = TRUE,
         .punchingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -17712,6 +18035,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SURGING_STRIKES] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SurgngStrkes", "Surging Strikes"),
         .description = COMPOUND_STRING(
             "Mastering the Water style,\n"
@@ -17728,7 +18052,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .alwaysCriticalHit = TRUE,
         .punchingMove = TRUE,
         .strikeCount = 3,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -17737,6 +18061,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_THUNDER_CAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Thunder Cage"),
         .description = COMPOUND_STRING(
             "Traps the foe in a cage of\n"
@@ -17749,7 +18074,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_WRAP,
         }),
@@ -17761,6 +18086,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_ENERGY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("DragonEnergy", "Dragon Energy"),
         .description = COMPOUND_STRING(
             "The higher the user's HP\n"
@@ -17773,7 +18099,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -17782,6 +18108,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FREEZING_GLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("FreezngGlare", "Freezing Glare"),
         .description = COMPOUND_STRING(
             "Shoots psychic power from\n"
@@ -17798,7 +18125,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
             .chance = 10,
@@ -17811,6 +18138,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FIERY_WRATH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fiery Wrath"),
         .description = COMPOUND_STRING(
             "An attack fueled by your\n"
@@ -17823,7 +18151,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 20,
@@ -17836,6 +18164,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_THUNDEROUS_KICK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ThnderusKick", "Thunderous Kick"),
         .description = COMPOUND_STRING(
             "Uses a lightning-like kick\n"
@@ -17849,7 +18178,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
             .chance = 100,
@@ -17862,6 +18191,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GLACIAL_LANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("GlacialLance", "Glacial Lance"),
         .description = COMPOUND_STRING(
             "Strikes by hurling a blizzard-\n"
@@ -17874,7 +18204,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -17883,6 +18213,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ASTRAL_BARRAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("AstrlBarrage", "Astral Barrage"),
         .description = COMPOUND_STRING(
             "Strikes by sending a frightful\n"
@@ -17895,7 +18226,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -17904,6 +18235,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_EERIE_SPELL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Eerie Spell"),
         .description = COMPOUND_STRING(
             "Attacks with psychic power.\n"
@@ -17926,6 +18258,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DIRE_CLAW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dire Claw"),
         .description = COMPOUND_STRING(
             "High critical hit chance. May\n"
@@ -17947,6 +18280,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYSHIELD_BASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PsyshieldBsh", "Psyshield Bash"),
         .description = COMPOUND_STRING(
             "Hits a foe with psychic\n"
@@ -17969,6 +18303,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POWER_SHIFT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Power Shift"),
         .description = COMPOUND_STRING(
             "The user swaps its Attack\n"
@@ -17984,11 +18319,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
 },
 
     [MOVE_STONE_AXE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stone Axe"),
         .description = COMPOUND_STRING(
             "High critical hit ratio. Sets\n"
@@ -18011,6 +18347,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SPRINGTIDE_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SprngtdeStrm", "Springtide Storm"),
         .description = COMPOUND_STRING(
             "Wraps a foe in fierce winds.\n"
@@ -18024,7 +18361,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .windMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ATK_MINUS_1,
             .chance = 30,
@@ -18033,6 +18370,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MYSTICAL_POWER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MystcalPower", "Mystical Power"),
         .description = COMPOUND_STRING(
             "A mysterious power strikes,\n"
@@ -18054,6 +18392,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RAGING_FURY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Raging Fury"),
         .description = COMPOUND_STRING(
             "A rampage of 2 to 3 turns\n"
@@ -18066,7 +18405,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_RANDOM,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_THRASH,
             .self = TRUE,
@@ -18075,6 +18414,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WAVE_CRASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wave Crash"),
         .description = COMPOUND_STRING(
             "A slam shrouded in water.\n"
@@ -18094,6 +18434,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CHLOROBLAST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Chloroblast"),
         .description = COMPOUND_STRING(
             "A user-hurting blast of\n"
@@ -18110,6 +18451,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MOUNTAIN_GALE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MountainGale", "Mountain Gale"),
         .description = COMPOUND_STRING(
             "Giant chunks of ice damage\n"
@@ -18130,6 +18472,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_VICTORY_DANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("VictoryDance", "Victory Dance"),
         .description = COMPOUND_STRING(
             "Dances to raise Attack,\n"
@@ -18150,6 +18493,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEADLONG_RUSH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("HeadlongRush", "Headlong Rush"),
         .description = COMPOUND_STRING(
             "Hits with a full-body tackle.\n"
@@ -18172,6 +18516,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BARB_BARRAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Barb Barrage"),
         .description = COMPOUND_STRING(
             "Can poison on impact. Powers\n"
@@ -18193,6 +18538,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ESPER_WING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Esper Wing"),
         .description = COMPOUND_STRING(
             "High critical hit ratio.\n"
@@ -18215,6 +18561,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BITTER_MALICE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BitterMalice", "Bitter Malice"),
         .description = COMPOUND_STRING(
             "A spine-chilling resentment.\n"
@@ -18235,6 +18582,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SHELTER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shelter"),
         .description = COMPOUND_STRING(
             "The user hardens their skin,\n"
@@ -18254,6 +18602,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRIPLE_ARROWS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("TripleArrows", "Triple Arrows"),
         .description = COMPOUND_STRING(
             "High critical hit ratio.\n"
@@ -18279,6 +18628,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_INFERNAL_PARADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("InfrnlParade", "Infernal Parade"),
         .description = COMPOUND_STRING(
             "Hurts a foe harder if it has\n"
@@ -18300,6 +18650,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CEASELESS_EDGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("CeaslessEdge", "Ceaseless Edge"),
         .description = COMPOUND_STRING(
             "High critical hit ratio. Sets\n"
@@ -18322,6 +18673,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BLEAKWIND_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BlekwndStorm", "Bleakwind Storm"),
         .description = COMPOUND_STRING(
             "Hits with brutal, cold winds.\n"
@@ -18343,6 +18695,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WILDBOLT_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("WildbltStorm", "Wildbolt Storm"),
         .description = COMPOUND_STRING(
             "Hits with a brutal tempest.\n"
@@ -18364,6 +18717,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SANDSEAR_STORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SndsearStorm", "Sandsear Storm"),
         .description = COMPOUND_STRING(
             "Hits with brutally hot sand.\n"
@@ -18385,6 +18739,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LUNAR_BLESSING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("LunarBlessng", "Lunar Blessing"),
         .description = COMPOUND_STRING(
             "The user heals and cures\n"
@@ -18405,6 +18760,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TAKE_HEART] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Take Heart"),
         .description = COMPOUND_STRING(
             "The user lifts its spirits to\n"
@@ -18424,6 +18780,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TERA_BLAST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tera Blast"),
         .description = COMPOUND_STRING(
             "If the user's Terastallized,\n"
@@ -18441,6 +18798,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SILK_TRAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Silk Trap"),
         .description = COMPOUND_STRING(
             "Protects itself, lowering\n"
@@ -18455,11 +18813,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_AXE_KICK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Axe Kick"),
         .description = COMPOUND_STRING(
             "May miss and hurt the kicker.\n"
@@ -18481,6 +18840,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LAST_RESPECTS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("LastRespects", "Last Respects"),
         .description = COMPOUND_STRING(
             "This move deals more damage\n"
@@ -18493,11 +18853,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE, // Only since it isn't implemented yet
+        //.metronomeBanned = TRUE, // Only since it isn't implemented yet
     },
 
     [MOVE_LUMINA_CRASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Lumina Crash"),
         .description = COMPOUND_STRING(
             "A mind-affecting light\n"
@@ -18518,6 +18879,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ORDER_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Order Up"),
         .description = COMPOUND_STRING(
             "Boosts a user's stats\n"
@@ -18531,11 +18893,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_JET_PUNCH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Jet Punch"),
         .description = COMPOUND_STRING(
             "A punch is thrown at blinding\n"
@@ -18550,11 +18913,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .punchingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SPICY_EXTRACT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SpicyExtract", "Spicy Extract"),
         .description = COMPOUND_STRING(
             "Sharply ups target's Attack,\n"
@@ -18568,11 +18932,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .magicCoatAffected = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SPIN_OUT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Spin Out"),
         .description = COMPOUND_STRING(
             "Furiously strains its legs.\n"
@@ -18595,6 +18960,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_POPULATION_BOMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PoplatinBomb", "Population Bomb"),
         .description = COMPOUND_STRING(
             "The user's fellows hit one\n"
@@ -18609,12 +18975,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .slicingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .strikeCount = 10,
     },
 
     [MOVE_ICE_SPINNER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ice Spinner"),
         .description = COMPOUND_STRING(
             "Ice-covered feet hit a foe\n"
@@ -18634,6 +19001,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GLAIVE_RUSH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Glaive Rush"),
         .description = COMPOUND_STRING(
             "Foe attacks next turn can't\n"
@@ -18651,6 +19019,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_REVIVAL_BLESSING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("RevivlBlesng", "Revival Blessing"),
         .description = COMPOUND_STRING(
             "Revives a fainted party {PKMN}\n"
@@ -18665,13 +19034,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .healingMove = TRUE,
         .sketchBanned = (B_SKETCH_BANS >= GEN_9),
     },
 
     [MOVE_SALT_CURE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Salt Cure"),
         .description = COMPOUND_STRING(
             "Hurts foe every turn. Double\n"
@@ -18684,11 +19054,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_TRIPLE_DIVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Triple Dive"),
         .description = COMPOUND_STRING(
             "Hits target with splashes\n"
@@ -18707,6 +19078,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MORTAL_SPIN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Mortal Spin"),
         .description = COMPOUND_STRING(
             "Erases trap moves and Leech\n"
@@ -18732,6 +19104,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DOODLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Doodle"),
         .description = COMPOUND_STRING(
             "Changes user's and ally's\n"
@@ -18746,11 +19119,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_FILLET_AWAY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fillet Away"),
         .description = COMPOUND_STRING(
             "Sharply boosts offenses and\n"
@@ -18767,11 +19141,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_KOWTOW_CLEAVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("KowtowCleave", "Kowtow Cleave"),
         .description = COMPOUND_STRING(
             "User slashes the foe after\n"
@@ -18790,6 +19165,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLOWER_TRICK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flower Trick"),
         .description = COMPOUND_STRING(
             "Rigged bouquet. Always gets\n"
@@ -18807,6 +19183,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TORCH_SONG] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Torch Song"),
         .description = COMPOUND_STRING(
             "Flames scorch the target.\n"
@@ -18830,6 +19207,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_AQUA_STEP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aqua Step"),
         .description = COMPOUND_STRING(
             "Hits with light, fluid dance\n"
@@ -18853,6 +19231,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RAGING_BULL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Raging Bull"),
         .description = COMPOUND_STRING(
             "Tackle that breaks barriers.\n"
@@ -18866,11 +19245,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_MAKE_IT_RAIN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Make It Rain"),
         .description = COMPOUND_STRING(
             "Lowers the user's Sp. Atk.\n"
@@ -18883,7 +19263,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_PAYDAY,
         },
@@ -18895,6 +19275,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RUINATION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ruination"),
         .description = COMPOUND_STRING(
             "Summons a ruinous disaster\n"
@@ -18907,11 +19288,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_COLLISION_COURSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ColisinCours", "Collision Course"),
         .description = COMPOUND_STRING(
             "Prehistoric explosion that's\n"
@@ -18925,11 +19307,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_ELECTRO_DRIFT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ElectroDrift", "Electro Drift"),
         .description = COMPOUND_STRING(
             "Futuristic electricity. It's\n"
@@ -18943,11 +19326,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SHED_TAIL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shed Tail"),
         .description = COMPOUND_STRING(
             "Creates a Substitute for\n"
@@ -18963,11 +19347,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_RESET_STATS },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_CHILLY_RECEPTION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ChilReceptin", "Chilly Reception"),
         .description = COMPOUND_STRING(
             "Bad joke summons snowstorm.\n"
@@ -18983,11 +19368,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_TIDY_UP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tidy Up"),
         .description = COMPOUND_STRING(
             "User tidies up hazards and\n"
@@ -19002,11 +19388,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_SNOWSCAPE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Snowscape"),
         .description = COMPOUND_STRING(
             "Summons a snowstorm that\n"
@@ -19022,11 +19409,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_POUNCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pounce"),
         .description = COMPOUND_STRING(
             "The user pounces on the foe,\n"
@@ -19040,7 +19428,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
             .chance = 100,
@@ -19049,6 +19437,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TRAILBLAZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Trailblaze"),
         .description = COMPOUND_STRING(
             "The user attacks suddenly,\n"
@@ -19062,7 +19451,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_PLUS_1,
             .self = TRUE,
@@ -19072,6 +19461,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_CHILLING_WATER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("ChillingWatr", "Chilling Water"),
         .description = COMPOUND_STRING(
             "A shower with ice-cold water\n"
@@ -19084,7 +19474,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ATK_MINUS_1,
             .chance = 100,
@@ -19093,6 +19483,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HYPER_DRILL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hyper Drill"),
         .description = COMPOUND_STRING(
             "A spinning pointed part\n"
@@ -19107,11 +19498,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .ignoresProtect = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_TWIN_BEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Twin Beam"),
         .description = COMPOUND_STRING(
             "Mystical eye-beams that hit\n"
@@ -19125,11 +19517,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .strikeCount = 2,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_RAGE_FIST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Rage Fist"),
         .description = COMPOUND_STRING(
             "The more the user has been\n"
@@ -19144,11 +19537,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .punchingMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_ARMOR_CANNON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Armor Cannon"),
         .description = COMPOUND_STRING(
             "A strong attack but lowers\n"
@@ -19161,7 +19555,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_SPDEF_DOWN,
             .self = TRUE,
@@ -19170,6 +19564,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BITTER_BLADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bitter Blade"),
         .description = COMPOUND_STRING(
             "An attack that absorbs\n"
@@ -19189,6 +19584,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DOUBLE_SHOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Double Shock"),
         .description = COMPOUND_STRING(
             "Discharges all electricity,\n"
@@ -19202,7 +19598,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .argument = TYPE_ELECTRIC,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_REMOVE_ARG_TYPE,
@@ -19212,6 +19608,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_GIGATON_HAMMER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("GigatonHammr", "Gigaton Hammer"),
         .description = COMPOUND_STRING(
             "Swings a huge hammer. Can't\n"
@@ -19229,6 +19626,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COMEUPPANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Comeuppance"),
         .description = COMPOUND_STRING(
             "Retaliates strongly against\n"
@@ -19243,11 +19641,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .meFirstBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_AQUA_CUTTER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Aqua Cutter"),
         .description = COMPOUND_STRING(
             "Pressurized water cut with a\n"
@@ -19266,6 +19665,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BLAZING_TORQUE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BlazngTorque", "Blazing Torque"),
         .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
@@ -19279,7 +19679,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -19294,6 +19694,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WICKED_TORQUE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("WickedTorque", "Wicked Torque"),
         .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
@@ -19307,7 +19708,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -19322,6 +19723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_NOXIOUS_TORQUE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("NoxiusTorque", "Noxious Torque"),
         .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
@@ -19335,7 +19737,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -19350,6 +19752,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COMBAT_TORQUE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("CombatTorque", "Combat Torque"),
         .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
@@ -19363,7 +19766,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -19378,6 +19781,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAGICAL_TORQUE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MagiclTorque", "Magical Torque"),
         .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
@@ -19391,7 +19795,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .meFirstBanned = TRUE,
         .mimicBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
@@ -19406,6 +19810,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYBLADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Psyblade"),
         .description = COMPOUND_STRING(
             "This move's power increases\n"
@@ -19424,6 +19829,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HYDRO_STEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hydro Steam"),
         .description = COMPOUND_STRING(
             "This move's power increases\n"
@@ -19441,6 +19847,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BLOOD_MOON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Blood Moon"),
         .description = COMPOUND_STRING(
             "Unleashes the blood moon.\n"
@@ -19458,6 +19865,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MATCHA_GOTCHA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MatchaGotcha", "Matcha Gotcha"),
         .description = COMPOUND_STRING(
             "Absorbs half the damage\n"
@@ -19471,7 +19879,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .thawsUser = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .healingMove = B_EXTRAPOLATED_MOVE_FLAGS,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
@@ -19481,6 +19889,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SYRUP_BOMB] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Syrup Bomb"),
         .description = COMPOUND_STRING(
             "Lowers the foe's speed\n"
@@ -19494,7 +19903,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .ballisticMove = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SYRUP_BOMB,
             .chance = 100,
@@ -19503,6 +19912,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_IVY_CUDGEL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Ivy Cudgel"),
         .description = COMPOUND_STRING(
             "Type changes with held mask.\n"
@@ -19516,11 +19926,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
     },
 
     [MOVE_ELECTRO_SHOT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Electro Shot"),
         .description = COMPOUND_STRING(
             "Absorbs electricity in one turn,\n"
@@ -19543,6 +19954,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TERA_STARSTORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("TeraStarstrm", "Tera Starstorm"),
         .description = COMPOUND_STRING(
             "Damages all opponents if user is\n"
@@ -19563,6 +19975,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FICKLE_BEAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Fickle Beam"),
         .description = COMPOUND_STRING(
             "Shoots a beam of light. Sometimes\n"
@@ -19579,6 +19992,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BURNING_BULWARK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("BurnngBulwrk", "Burning Bulwark"),
         .description = COMPOUND_STRING(
             "Evades attack, and burns\n"
@@ -19594,13 +20008,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .zMove = { .effect = Z_EFFECT_RESET_STATS },
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        //.metronomeBanned = TRUE,
         .copycatBanned = TRUE,
         .assistBanned = TRUE,
     },
 
     [MOVE_THUNDERCLAP] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Thunderclap"),
         .description = sSuckerPunchDescription,
         .effect = EFFECT_SUCKER_PUNCH,
@@ -19615,6 +20030,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MIGHTY_CLEAVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MightyCleave", "Mighty Cleave"),
         .description = sFeintDescription,
         .effect = EFFECT_HIT,
@@ -19632,6 +20048,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TACHYON_CUTTER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("TachyonCuttr", "Tachyon Cutter"),
         .description = COMPOUND_STRING(
             "Launches particle blades at\n"
@@ -19650,6 +20067,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HARD_PRESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hard Press"),
         .description = sWringOutDescription,
         .effect = EFFECT_VARY_POWER_BASED_ON_HP,
@@ -19666,6 +20084,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DRAGON_CHEER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dragon Cheer"),
         .description = COMPOUND_STRING(
             "Increases allies' critical hit\n"
@@ -19683,6 +20102,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_ALLURING_VOICE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("AllurngVoice", "Alluring Voice"),
         .description = COMPOUND_STRING(
             "Confuses the target if their\n"
@@ -19706,6 +20126,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TEMPER_FLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Temper Flare"),
         .description = COMPOUND_STRING(
             "A desperation attack. Power\n"
@@ -19723,6 +20144,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SUPERCELL_SLAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("SuprcellSlam", "Supercell Slam"),
         .description = COMPOUND_STRING(
             "An electrified slam. If it\n"
@@ -19740,6 +20162,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PSYCHIC_NOISE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("PsychicNoise", "Psychic Noise"),
         .description = COMPOUND_STRING(
             "Unpleasant sound waves that\n"
@@ -19763,6 +20186,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_UPPER_HAND] =
     {
         .effect = EFFECT_UPPER_HAND,
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Upper Hand"),
         .description = COMPOUND_STRING(
             "Makes the target flinch if\n"
@@ -19783,6 +20207,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MALIGNANT_CHAIN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = HANDLE_EXPANDED_MOVE_NAME("MalignntChan", "Malignant Chain"),
         .description = COMPOUND_STRING(
             "A corrosive chain attack\n"
@@ -19828,6 +20253,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Breakneck Blitz"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19841,6 +20267,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_ALL_OUT_PUMMELING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("All Out Pummeling"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19854,6 +20281,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SUPERSONIC_SKYSTRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Supersonic Skystrike"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19867,6 +20295,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_ACID_DOWNPOUR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Acid Downpour"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19880,6 +20309,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_TECTONIC_RAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Tectonic Rage"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19894,6 +20324,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_CONTINENTAL_CRUSH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Continental Crush"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19907,6 +20338,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SAVAGE_SPIN_OUT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Savage Spin Out"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19920,6 +20352,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_NEVER_ENDING_NIGHTMARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Never Ending Nightmare"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19933,6 +20366,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_CORKSCREW_CRASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Corkscrew Crash"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19946,6 +20380,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_INFERNO_OVERDRIVE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Inferno Overdrive"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19959,6 +20394,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_HYDRO_VORTEX] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Hydro Vortex"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19972,6 +20408,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_BLOOM_DOOM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Bloom Doom"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19985,6 +20422,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_GIGAVOLT_HAVOC] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Gigavolt Havoc"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -19998,6 +20436,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SHATTERED_PSYCHE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Shattered Psyche"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20011,6 +20450,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SUBZERO_SLAMMER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Subzero Slammer"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20024,6 +20464,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_DEVASTATING_DRAKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Devastating Drake"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20037,6 +20478,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_BLACK_HOLE_ECLIPSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Black Hole Eclipse"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20050,6 +20492,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_TWINKLE_TACKLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Twinkle Tackle"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20063,6 +20506,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_CATASTROPIKA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Catastropika"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20076,6 +20520,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_10000000_VOLT_THUNDERBOLT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("10000000 Volt Thunderbolt"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20090,6 +20535,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_STOKED_SPARKSURFER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Stoked Sparksurfer"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20107,6 +20553,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_EXTREME_EVOBOOST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Extreme Evoboost"),
         .description = sNullDescription,
         .effect = EFFECT_EXTREME_EVOBOOST,
@@ -20120,6 +20567,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_PULVERIZING_PANCAKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pulverizing Pancake"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20133,6 +20581,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_GENESIS_SUPERNOVA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Genesis Supernova"),
         .description = sNullDescription,
         .effect = EFFECT_HIT_SET_REMOVE_TERRAIN,
@@ -20147,6 +20596,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SINISTER_ARROW_RAID] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sinister Arrow Raid"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20160,6 +20610,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_MALICIOUS_MOONSAULT] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Malicious Moonsault"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20173,6 +20624,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_OCEANIC_OPERETTA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Oceaning Operetta"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20186,6 +20638,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SPLINTERED_STORMSHARDS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Splintered Stormshards"),
         .description = sNullDescription,
         .effect = EFFECT_HIT_SET_REMOVE_TERRAIN,
@@ -20200,6 +20653,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_LETS_SNUGGLE_FOREVER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Let's Snuggle Forever"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20213,6 +20667,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_CLANGOROUS_SOULBLAZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Clangorous Soulblaze"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20233,6 +20688,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_GUARDIAN_OF_ALOLA] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Guardian Of Alola"),
         .description = sNullDescription,
         .effect = EFFECT_SUPER_FANG,
@@ -20246,6 +20702,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SEARING_SUNRAZE_SMASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Searing Sunraze Smash"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20259,6 +20716,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_MENACING_MOONRAZE_MAELSTROM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Menacing Moonraze Maelstrom"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20272,6 +20730,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_LIGHT_THAT_BURNS_THE_SKY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Light That Burns The Sky"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20285,6 +20744,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_SOUL_STEALING_7_STAR_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Soul Stealing 7 Star Strike"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
@@ -20299,6 +20759,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_GUARD] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Guard"),
         .description = sNullDescription,
         .effect = EFFECT_PROTECT,
@@ -20313,6 +20774,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_FLARE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Flare"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20328,6 +20790,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_FLUTTERBY] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Flutterby"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20343,6 +20806,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_LIGHTNING] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Lightning"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20358,6 +20822,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Strike"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20373,6 +20838,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_KNUCKLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Knuckle"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20388,6 +20854,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_PHANTASM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Phantasm"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20403,6 +20870,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_HAILSTORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Hailstorm"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20418,6 +20886,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_OOZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Ooze"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20433,6 +20902,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_GEYSER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Geyser"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20448,6 +20918,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_AIRSTREAM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Airstream"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20463,6 +20934,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_STARFALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Starfall"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20478,6 +20950,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_WYRMWIND] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Wyrmwind"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20493,6 +20966,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_MINDSTORM] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Mindstorm"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20508,6 +20982,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_ROCKFALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Rockfall"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20523,6 +20998,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_QUAKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Quake"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20539,6 +21015,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_DARKNESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Darkness"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20554,6 +21031,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_OVERGROWTH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Overgrowth"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20569,6 +21047,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MAX_STEELSPIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Max Steelspike"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20584,6 +21063,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_VINE_LASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Vine Lash"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
@@ -20599,6 +21079,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_WILDFIRE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Wildfire"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20614,6 +21095,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_CANNONADE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Canonade"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
@@ -20629,6 +21111,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_BEFUDDLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Befuddle"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20644,6 +21127,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_VOLT_CRASH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Volt Crash"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20659,6 +21143,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_GOLD_RUSH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Gold Rush"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20674,6 +21159,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_CHI_STRIKE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Chi Strike"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20689,6 +21175,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_TERROR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Terror"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20704,6 +21191,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_FOAM_BURST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Foam Burst"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20719,6 +21207,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_RESONANCE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Resonance"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20734,6 +21223,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_CUDDLE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Cuddle"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20749,6 +21239,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_REPLENISH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Replenish"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20764,6 +21255,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_MALODOR] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Malodor"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20779,6 +21271,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_MELTDOWN] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Meltdown"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20794,6 +21287,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_DRUM_SOLO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Drum Solo"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
@@ -20810,6 +21304,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_FIREBALL] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Fireball"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
@@ -20826,6 +21321,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_HYDROSNIPE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Hydrosnipe"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
@@ -20842,6 +21338,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_WIND_RAGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Wind Rage"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20857,6 +21354,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_GRAVITAS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Gravitas"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20872,6 +21370,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_STONESURGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Stonesurge"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20887,6 +21386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_VOLCALITH] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Volcalith"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20902,6 +21402,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_TARTNESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Tartness"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20917,6 +21418,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_SWEETNESS] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Sweetness"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20932,6 +21434,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_SANDBLAST] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Sandblast"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20947,6 +21450,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_STUN_SHOCK] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Stun Shock"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20962,6 +21466,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_CENTIFERNO] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Centiferno"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20977,6 +21482,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_SMITE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Smite"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -20993,6 +21499,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_SNOOZE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Snooze"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -21008,6 +21515,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_FINALE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Finale"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -21023,6 +21531,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_STEELSURGE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Steelsurge"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -21038,6 +21547,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_DEPLETION] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Depletion"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -21053,6 +21563,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_ONE_BLOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max One Blow"),
         .description = sNullDescription,
         .effect = EFFECT_MAX_MOVE,
@@ -21068,6 +21579,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_G_MAX_RAPID_FLOW] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("G-Max Rapid Flow"),
         .description = sNullDescription,    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
