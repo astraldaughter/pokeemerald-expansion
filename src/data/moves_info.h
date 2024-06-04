@@ -8837,7 +8837,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PLUCK] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pluck"),
         .description = sPluckDescription,
         .effect = EFFECT_HIT,
@@ -9399,11 +9398,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SUCKER_PUNCH] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sucker Punch"),
         .description = sSuckerPunchDescription,
         .effect = EFFECT_SUCKER_PUNCH,
-        .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 70 : 80,
+        .power = 70
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 5,
