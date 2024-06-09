@@ -140,7 +140,7 @@
 #define B_TRANSISTOR_BOOST          GEN_LATEST // In Gen9+, Transistor will only boost Electric-type moves by 1.3x as opposed to 1.5x.
 #define B_ILLUMINATE_EFFECT         GEN_LATEST // In Gen9+, Illuminate prevents accuracy reductions and ignores the target's evasion.
 #define B_WEAK_ARMOR_SPEED          GEN_LATEST // In Gen7+, Weak Armor raises Speed by 2 stages instead of 1 when hit by a physical move.
-#define B_PROTEAN_LIBERO            GEN_LATEST // In Gen9+, Protean and Libero change the user's type only once per Battle.
+#define B_PROTEAN_LIBERO            GEN_8      // In Gen9+, Protean and Libero change the user's type only once per Battle.
 #define B_INTREPID_SWORD            GEN_LATEST // In Gen9+, Intrepid Sword raises Attack by one stage only once per Battle.
 #define B_DAUNTLESS_SHIELD          GEN_LATEST // In Gen9+, Dauntless Shield raises Defense by one stage only once per Battle.
 
@@ -233,23 +233,23 @@
 #define B_TRAINER_MON_RANDOM_ABILITY    FALSE      // If this is set to TRUE a random legal ability will be generated for a trainer mon
 #define B_OBEDIENCE_MECHANICS           GEN_LATEST // In PLA+ (here Gen8+), obedience restrictions also apply to non-outsider Pokémon, albeit based on their level met rather than actual level
 #define B_USE_FROSTBITE                 FALSE      // In PLA, Frostbite replaces Freeze. Enabling this flag does the same here. Moves can still be cherry-picked to either Freeze or Frostbite. Freeze-Dry, Secret Power & Tri Attack depend on this config.
-#define B_OVERWORLD_SNOW                GEN_LATEST // In Gen9+, overworld Snow will summon snow instead of hail.
+#define B_OVERWORLD_SNOW                GEN_8      // In Gen9+, overworld Snow will summon snow instead of hail.
 #define B_TOXIC_REVERSAL                GEN_LATEST // In Gen5+, bad poison will change to regular poison at the end of battles.
 #define B_TRY_CATCH_TRAINER_BALL        GEN_LATEST // In Gen4+, trying to catch a Trainer's Pokémon does not consume the Poké Ball.
 
 // Animation Settings
-#define B_NEW_SWORD_PARTICLE            TRUE    // If set to TRUE, it updates Swords Dance's particle.
-#define B_NEW_LEECH_SEED_PARTICLE       TRUE    // If set to TRUE, it updates Leech Seed's animation particle.
+#define B_NEW_SWORD_PARTICLE            FALSE   // If set to TRUE, it updates Swords Dance's particle.
+#define B_NEW_LEECH_SEED_PARTICLE       FALSE   // If set to TRUE, it updates Leech Seed's animation particle.
 #define B_NEW_HORN_ATTACK_PARTICLE      TRUE    // If set to TRUE, it updates Horn Attack's horn particle.
-#define B_NEW_ROCKS_PARTICLE            TRUE    // If set to TRUE, it updates rock particles.
-#define B_NEW_LEAF_PARTICLE             TRUE    // If set to TRUE, it updates leaf particle.
-#define B_NEW_EMBER_PARTICLES           TRUE    // If set to TRUE, it updates Ember's fire particle.
+#define B_NEW_ROCKS_PARTICLE            FALSE   // If set to TRUE, it updates rock particles.
+#define B_NEW_LEAF_PARTICLE             FALSE   // If set to TRUE, it updates leaf particle.
+#define B_NEW_EMBER_PARTICLES           FALSE   // If set to TRUE, it updates Ember's fire particle.
 #define B_NEW_MEAN_LOOK_PARTICLE        TRUE    // If set to TRUE, it updates Mean Look's eye particle.
-#define B_NEW_TEETH_PARTICLE            TRUE    // If set to TRUE, it updates Bite/Crunch teeth particle.
-#define B_NEW_HANDS_FEET_PARTICLE       TRUE    // If set to TRUE, it updates chop/kick/punch particles.
+#define B_NEW_TEETH_PARTICLE            FALSE   // If set to TRUE, it updates Bite/Crunch teeth particle.
+#define B_NEW_HANDS_FEET_PARTICLE       FALSE   // If set to TRUE, it updates chop/kick/punch particles.
 #define B_NEW_SPIKES_PARTICLE           TRUE    // If set to TRUE, it updates Spikes particle.
 #define B_NEW_FLY_BUBBLE_PARTICLE       TRUE    // If set to TRUE, it updates Fly's 'bubble' particle.
-#define B_NEW_CURSE_NAIL_PARTICLE       TRUE    // If set to TRUE, it updates Curse's nail.
+#define B_NEW_CURSE_NAIL_PARTICLE       FALSE   // If set to TRUE, it updates Curse's nail.
 #define B_NEW_BATON_PASS_BALL_PARTICLE  TRUE    // If set to TRUE, it updates Baton Pass' Poké Ball sprite.
 #define B_NEW_MORNING_SUN_STAR_PARTICLE TRUE    // If set to TRUE, it updates Morning Sun's star particles.
 #define B_NEW_IMPACT_PALETTE            TRUE    // If set to TRUE, it updates the basic 'hit' palette.

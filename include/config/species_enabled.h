@@ -42,7 +42,7 @@
 #define P_CAP_PIKACHU_FORMS              P_PIKACHU_EXTRA_FORMS
 
 // Cross-generation evolutions. Includes pre-evolutions.
-#define P_CROSS_GENERATION_EVOS          TRUE
+#define P_CROSS_GENERATION_EVOS          FALSE
 #define P_GEN_2_CROSS_EVOS               P_CROSS_GENERATION_EVOS
 #define P_GEN_3_CROSS_EVOS               P_CROSS_GENERATION_EVOS
 #define P_GEN_4_CROSS_EVOS               P_CROSS_GENERATION_EVOS
