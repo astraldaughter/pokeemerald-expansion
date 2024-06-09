@@ -5045,6 +5045,10 @@ s8 GetMovePriority(u32 battler, u16 move)
     {
         priority++;
     }
+    else if (gMovesInfo[move].effect == EFFECT_STAR_DROP && gFieldStatuses & STATUS_FIELD_GRAVITY)
+    {
+        priority++;
+    }
     else if (ability == ABILITY_TRIAGE && IsHealingMove(move))
         priority += 3;
 

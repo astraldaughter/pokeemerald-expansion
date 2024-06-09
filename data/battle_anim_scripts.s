@@ -877,6 +877,8 @@ gBattleAnims_Moves::
 	.4byte Move_MALIGNANT_CHAIN
 @@@@@@@@@@@@ CUSTOM @@@@@@@@@@@@
 	.4byte Move_ELECTROPLATE
+	.4byte Move_STAR_DROP
+	.4byte Move_UPROOT
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -17911,6 +17913,55 @@ Move_ELECTROPLATE:
 	waitforvisualfinish
 	call ElectricityEffect
 	waitforvisualfinish
+	end
+
+Move_STAR_DROP::
+	loadspritegfx ANIM_TAG_ROUND_SHADOW @fly and bounce animation
+	loadspritegfx ANIM_TAG_GRAY_SMOKE @smoke
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_ROUND_SHADOW, 0, 0xD, 0xD, 0x7DDE  @Pink
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 0x6, 0x1, 0x0
+	delay 0x7
+	createsprite gFlyBallUpSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0x0, 0xd, 0x150   @Fly up
+	waitforvisualfinish
+	delay 0x2F
+	createsprite gBounceBallLandSpriteTemplate, ANIM_TARGET, 3   @Bounce down
+	delay 0x2
+	playsewithpan SE_M_MORNING_SUN, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_SquishTarget, 0x2
+	waitforvisualfinish
+	end
+
+Move_UPROOT::
+	loadspritegfx ANIM_TAG_MUD_SAND
+	loadspritegfx ANIM_TAG_IMPACT
+	createsprite gDirtPlumeSpriteTemplate, ANIM_TARGET, 2, 0x1, 0x0, 0xc, 0xffe8, 0xfff0, 0x18
+	createsprite gDirtPlumeSpriteTemplate, ANIM_TARGET, 2, 0x1, 0x0, 0x10, 0xffda, 0xfff6, 0x18
+	createsprite gDirtPlumeSpriteTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0xe, 0xffec, 0xffee, 0x18
+	createsprite gDirtPlumeSpriteTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0xc, 0xffdc, 0xfff0, 0x18
+	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
+	delay 16
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 4, 0, 17, 1
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 15, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 10, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 5, ANIM_TARGET, 2
+	delay 2
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -5, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, ANIM_TARGET, 2
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -15, ANIM_TARGET, 2
+	delay 2
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -20, ANIM_TARGET, 2
 	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@

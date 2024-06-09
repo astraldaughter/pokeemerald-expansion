@@ -20248,6 +20248,41 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0}
     },
 
+    [MOVE_STAR_DROP] =
+    {
+        .name = COMPOUND_STRING("Star Drop"),
+        .description = COMPOUND_STRING(
+            "Crashes like a falling star.\n"
+            "Moves first under Gravity."),
+        .effect = EFFECT_STAR_DROP,
+        .power = 70,
+        .type = TYPE_FAIRY,
+        .accuracy = 95,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+    },
+
+    [MOVE_UPROOT] =
+    {
+        .name = COMPOUND_STRING("Uproot"),
+        .description = COMPOUND_STRING(
+            "Uproots the target,\n"
+            "destroying the terrain."),
+        .effect = EFFECT_HIT_SET_REMOVE_TERRAIN,
+        .power = 50,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .damagesUnderground = TRUE,
+        .argument = ARG_TRY_REMOVE_TERRAIN_HIT, // Remove the active field terrain if there is one.
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

@@ -910,8 +910,10 @@
 
 // Customs
 #define MOVE_ELECTROPLATE 848
+#define MOVE_STAR_DROP 849
+#define MOVE_UPROOT 850
 
-#define MOVES_COUNT_GEN9 849
+#define MOVES_COUNT_GEN9 851
 
 #define MOVES_COUNT         MOVES_COUNT_GEN9
 
