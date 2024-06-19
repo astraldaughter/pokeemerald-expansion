@@ -20254,6 +20254,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .accuracy = 95,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
+        .makesContact = TRUE,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
     },
@@ -20275,6 +20276,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .damagesUnderground = TRUE,
         .argument = ARG_TRY_REMOVE_TERRAIN_HIT, // Remove the active field terrain if there is one.
+    },
+
+    [MOVE_NECTAR_SPRAY] =
+    {
+        .name = COMPOUND_STRING("Nectar Spray"),
+        .description = COMPOUND_STRING(
+            "Sprays sticky nectar at the\n"
+            "foe that reduces Speed."),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_BUG,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
     },
 
     // Z-Moves
