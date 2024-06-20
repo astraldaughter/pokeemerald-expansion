@@ -406,29 +406,29 @@ Cry_TropikoekaMega::
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KIWEE
 
-.if P_FAMILY_CHARMANDER == TRUE
+.if P_FAMILY_KINDLANT == TRUE
 	.align 2
-Cry_Charmander::
-	.incbin "sound/direct_sound_samples/cries/charmander.bin"
+Cry_Kindlant::
+	.incbin "sound/direct_sound_samples/cries/kindlant.bin"
 
 	.align 2
-Cry_Charmeleon::
-	.incbin "sound/direct_sound_samples/cries/charmeleon.bin"
+Cry_Caliante::
+	.incbin "sound/direct_sound_samples/cries/caliante.bin"
 
 	.align 2
-Cry_Charizard::
-	.incbin "sound/direct_sound_samples/cries/charizard.bin"
+Cry_Scornet::
+	.incbin "sound/direct_sound_samples/cries/scornet.bin"
 
 .if P_MEGA_EVOLUTIONS == TRUE
 	.align 2
-Cry_CharizardMegaX::
-	.incbin "sound/direct_sound_samples/cries/charizard_mega_x.bin"
+Cry_ScornetMegaX::
+	.incbin "sound/direct_sound_samples/cries/scornet_mega_x.bin"
 
 	.align 2
-Cry_CharizardMegaY::
-	.incbin "sound/direct_sound_samples/cries/charizard_mega_y.bin"
+Cry_ScornetMegaY::
+	.incbin "sound/direct_sound_samples/cries/scornet_mega_y.bin"
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_CHARMANDER
+.endif @ P_FAMILY_KINDLANT
 
 .if P_FAMILY_SQUIRTLE == TRUE
 	.align 2

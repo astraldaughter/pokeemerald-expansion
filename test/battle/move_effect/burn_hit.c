@@ -24,9 +24,9 @@ SINGLE_BATTLE_TEST("Ember inflicts burn")
 SINGLE_BATTLE_TEST("Ember cannot burn a Fire-type Pokémon")
 {
     GIVEN {
-        ASSUME(gSpeciesInfo[SPECIES_CHARMANDER].types[0] == TYPE_FIRE);
+        ASSUME(gSpeciesInfo[SPECIES_KINDLANT].types[0] == TYPE_FIRE);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_CHARMANDER);
+        OPPONENT(SPECIES_KINDLANT);
     } WHEN {
         TURN { MOVE(player, MOVE_EMBER); }
     } SCENE {

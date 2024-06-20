@@ -24,8 +24,8 @@ const u16 gEggMoves[] = {
         MOVE_GRASSY_TERRAIN),
 #endif //P_FAMILY_KIWEE
 
-#if P_FAMILY_CHARMANDER
-    egg_moves(CHARMANDER,
+#if P_FAMILY_KINDLANT
+    egg_moves(KINDLANT,
         MOVE_BELLY_DRUM,
         MOVE_ANCIENT_POWER,
         MOVE_BITE,
@@ -40,7 +40,7 @@ const u16 gEggMoves[] = {
         MOVE_DRAGON_PULSE,
         MOVE_FOCUS_PUNCH,
         MOVE_AIR_CUTTER),
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 
 #if P_FAMILY_SQUIRTLE
     egg_moves(SQUIRTLE,

@@ -338,7 +338,7 @@ SINGLE_BATTLE_TEST("Embargo doesn't prevent Mega Evolution")
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_CHARIZARD) { Item(ITEM_CHARIZARDITE_Y); };
+        OPPONENT(SPECIES_SCORNET) { Item(ITEM_SCORNETITE_Y); };
     } WHEN {
         TURN { MOVE(player, MOVE_EMBARGO); }
         TURN { MOVE(opponent, MOVE_BATON_PASS); SEND_OUT(opponent, 1); }
@@ -350,11 +350,11 @@ SINGLE_BATTLE_TEST("Embargo doesn't prevent Mega Evolution")
         // Turn 2
         MESSAGE("Foe Wobbuffet used Baton Pass!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BATON_PASS, opponent);
-        MESSAGE("2 sent out Charizard!");
+        MESSAGE("2 sent out Scornet!");
         // Turn 3
-        MESSAGE("Foe Charizard's CharizarditeY is reacting to 2's Mega Ring!");
+        MESSAGE("Foe Scornet's ScornetiteY is reacting to 2's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, opponent);
-        MESSAGE("Foe Charizard has Mega Evolved into Mega Charizard!");
+        MESSAGE("Foe Scornet has Mega Evolved into Mega Scornet!");
     }
 }
 

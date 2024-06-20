@@ -7,15 +7,15 @@ static const u16 sTropikoekaFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_KIWEE
 
-#if P_FAMILY_CHARMANDER
-static const u16 sCharizardFormSpeciesIdTable[] = {
-    SPECIES_CHARIZARD,
-    SPECIES_CHARIZARD_MEGA_X,
-    SPECIES_CHARIZARD_MEGA_Y,
-    SPECIES_CHARIZARD_GIGANTAMAX,
+#if P_FAMILY_KINDLANT
+static const u16 sScornetFormSpeciesIdTable[] = {
+    SPECIES_SCORNET,
+    SPECIES_SCORNET_MEGA_X,
+    SPECIES_SCORNET_MEGA_Y,
+    SPECIES_SCORNET_GIGANTAMAX,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 
 #if P_FAMILY_SQUIRTLE
 static const u16 sBlastoiseFormSpeciesIdTable[] = {

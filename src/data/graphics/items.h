@@ -817,11 +817,11 @@ const u32 gItemIconPalette_BlueOrb[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIcon_Tropikoekaite[] = INCBIN_U32("graphics/items/icons/tropikoekaite.4bpp.lz");
 const u32 gItemIconPalette_Tropikoekaite[] = INCBIN_U32("graphics/items/icon_palettes/tropikoekaite.gbapal.lz");
 
-const u32 gItemIcon_CharizarditeX[] = INCBIN_U32("graphics/items/icons/charizardite_x.4bpp.lz");
-const u32 gItemIconPalette_CharizarditeX[] = INCBIN_U32("graphics/items/icon_palettes/charizardite_x.gbapal.lz");
+const u32 gItemIcon_ScornetiteX[] = INCBIN_U32("graphics/items/icons/scornetite_x.4bpp.lz");
+const u32 gItemIconPalette_ScornetiteX[] = INCBIN_U32("graphics/items/icon_palettes/scornetite_x.gbapal.lz");
 
-const u32 gItemIcon_CharizarditeY[] = INCBIN_U32("graphics/items/icons/charizardite_y.4bpp.lz");
-const u32 gItemIconPalette_CharizarditeY[] = INCBIN_U32("graphics/items/icon_palettes/charizardite_y.gbapal.lz");
+const u32 gItemIcon_ScornetiteY[] = INCBIN_U32("graphics/items/icons/scornetite_y.4bpp.lz");
+const u32 gItemIconPalette_ScornetiteY[] = INCBIN_U32("graphics/items/icon_palettes/scornetite_y.gbapal.lz");
 
 const u32 gItemIcon_Blastoisinite[] = INCBIN_U32("graphics/items/icons/blastoisinite.4bpp.lz");
 const u32 gItemIconPalette_Blastoisinite[] = INCBIN_U32("graphics/items/icon_palettes/blastoisinite.gbapal.lz");

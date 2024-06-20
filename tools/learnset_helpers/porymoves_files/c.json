@@ -267,7 +267,7 @@
     ],
     "TutorMoves": []
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -353,7 +353,7 @@
       "MOVE_FLAMETHROWER"
     ]
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -443,7 +443,7 @@
       "MOVE_FLAMETHROWER"
     ]
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 1,

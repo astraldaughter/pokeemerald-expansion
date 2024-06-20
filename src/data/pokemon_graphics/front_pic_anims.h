@@ -56,8 +56,8 @@ PLACEHOLDER_ANIM_SINGLE_FRAME(TropikoekaGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KIWEE
 
-#if P_FAMILY_CHARMANDER
-static const union AnimCmd sAnim_Charmander_1[] =
+#if P_FAMILY_KINDLANT
+static const union AnimCmd sAnim_Kindlant_1[] =
 {
     ANIMCMD_FRAME(0, 2),
     ANIMCMD_FRAME(1, 46),
@@ -65,7 +65,7 @@ static const union AnimCmd sAnim_Charmander_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Charmeleon_1[] =
+static const union AnimCmd sAnim_Caliante_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 25),
@@ -73,7 +73,7 @@ static const union AnimCmd sAnim_Charmeleon_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Charizard_1[] =
+static const union AnimCmd sAnim_Scornet_1[] =
 {
     ANIMCMD_FRAME(1, 20),
     ANIMCMD_FRAME(0, 10),
@@ -81,17 +81,17 @@ static const union AnimCmd sAnim_Charizard_1[] =
 };
 
 #if P_MEGA_EVOLUTIONS
-PLACEHOLDER_ANIM_SINGLE_FRAME(CharizardMegaX);
+PLACEHOLDER_ANIM_SINGLE_FRAME(ScornetMegaX);
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_MEGA_EVOLUTIONS
-PLACEHOLDER_ANIM_SINGLE_FRAME(CharizardMegaY);
+PLACEHOLDER_ANIM_SINGLE_FRAME(ScornetMegaY);
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
-PLACEHOLDER_ANIM_SINGLE_FRAME(CharizardGigantamax);
+PLACEHOLDER_ANIM_SINGLE_FRAME(ScornetGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 
 #if P_FAMILY_SQUIRTLE
 static const union AnimCmd sAnim_Squirtle_1[] =
@@ -10164,18 +10164,18 @@ SINGLE_ANIMATION(TropikoekaMega);
 SINGLE_ANIMATION(TropikoekaGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KIWEE
-#if P_FAMILY_CHARMANDER
-SINGLE_ANIMATION(Charmander);
-SINGLE_ANIMATION(Charmeleon);
-SINGLE_ANIMATION(Charizard);
+#if P_FAMILY_KINDLANT
+SINGLE_ANIMATION(Kindlant);
+SINGLE_ANIMATION(Caliante);
+SINGLE_ANIMATION(Scornet);
 #if P_MEGA_EVOLUTIONS
-SINGLE_ANIMATION(CharizardMegaX);
-SINGLE_ANIMATION(CharizardMegaY);
+SINGLE_ANIMATION(ScornetMegaX);
+SINGLE_ANIMATION(ScornetMegaY);
 #endif //P_MEGA_EVOLUTIONS
 #if P_GIGANTAMAX_FORMS
-SINGLE_ANIMATION(CharizardGigantamax);
+SINGLE_ANIMATION(ScornetGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 #if P_FAMILY_SQUIRTLE
 SINGLE_ANIMATION(Squirtle);
 SINGLE_ANIMATION(Wartortle);

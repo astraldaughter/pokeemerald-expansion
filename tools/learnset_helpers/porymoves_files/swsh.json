@@ -353,7 +353,7 @@
       "MOVE_GRASSY_GLIDE"
     ]
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -465,7 +465,7 @@
       "MOVE_FIRE_PLEDGE"
     ]
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -577,7 +577,7 @@
       "MOVE_FIRE_PLEDGE"
     ]
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 0,

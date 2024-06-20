@@ -1380,16 +1380,16 @@ const struct Decoration gDecorations[] =
         .tiles = DecorGfx_TROPIKOEKA_DOLL,
     },
 
-    [DECOR_CHARIZARD_DOLL] =
+    [DECOR_SCORNET_DOLL] =
     {
-        .id = DECOR_CHARIZARD_DOLL,
-        .name = _("CHARIZARD DOLL"),
+        .id = DECOR_SCORNET_DOLL,
+        .name = _("SCORNET DOLL"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x2,
         .category = DECORCAT_DOLL,
         .price = 10000,
-        .description = DecorDesc_CHARIZARD_DOLL,
-        .tiles = DecorGfx_CHARIZARD_DOLL,
+        .description = DecorDesc_SCORNET_DOLL,
+        .tiles = DecorGfx_SCORNET_DOLL,
     },
 
     [DECOR_BLASTOISE_DOLL] =

@@ -304,7 +304,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -406,7 +406,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -512,7 +512,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 1,

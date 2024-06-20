@@ -82,8 +82,8 @@ static const u8 sNectarDesc[]         = _("Flower nectar that\n"
                                           "changes the form\n"
                                           "of certain Pokémon.");
 
-static const u8 sCharizarditeDesc[]   = _("This stone enables\n"
-                                          "Charizard to Mega\n"
+static const u8 sScornetiteDesc[]   = _("This stone enables\n"
+                                          "Scornet to Mega\n"
                                           "Evolve in battle.");
 
 static const u8 sMewtwoniteDesc[]     = _("This stone enables\n"
@@ -4670,26 +4670,26 @@ const struct Item gItemsInfo[] =
         .flingPower = 80,
     },
 
-    [ITEM_CHARIZARDITE_X] =
+    [ITEM_SCORNETITE_X] =
     {
-        .name = _("CharizarditeX"),
-        .pluralName = _("Charizardites X"),
+        .name = _("ScornetiteX"),
+        .pluralName = _("Scornetites X"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = sCharizarditeDesc,
+        .description = sScornetiteDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
     },
 
-    [ITEM_CHARIZARDITE_Y] =
+    [ITEM_SCORNETITE_Y] =
     {
-        .name = _("CharizarditeY"),
-        .pluralName = _("Charizardites Y"),
+        .name = _("ScornetiteY"),
+        .pluralName = _("Scornetites Y"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = sCharizarditeDesc,
+        .description = sScornetiteDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

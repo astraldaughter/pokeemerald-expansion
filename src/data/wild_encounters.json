@@ -11510,7 +11510,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
@@ -11520,7 +11520,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               }
             ]
           }
@@ -11563,32 +11563,32 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               }
             ]
           }
@@ -11621,42 +11621,42 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               }
             ]
           }
@@ -11669,47 +11669,47 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_KINDLANT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
@@ -11719,7 +11719,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
@@ -11737,32 +11737,32 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
@@ -11805,22 +11805,22 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
@@ -11898,37 +11898,37 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARIZARD"
+                "species": "SPECIES_SCORNET"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_CALIANTE"
               }
             ]
           }

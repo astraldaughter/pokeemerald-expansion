@@ -214,8 +214,8 @@ static const u16 sTropikoekaTeachableLearnset[] = {
 };
 #endif //P_FAMILY_KIWEE
 
-#if P_FAMILY_CHARMANDER
-static const u16 sCharmanderTeachableLearnset[] = {
+#if P_FAMILY_KINDLANT
+static const u16 sKindlantTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
@@ -260,7 +260,7 @@ static const u16 sCharmanderTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sCharmeleonTeachableLearnset[] = {
+static const u16 sCalianteTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
@@ -305,7 +305,7 @@ static const u16 sCharmeleonTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sCharizardTeachableLearnset[] = {
+static const u16 sScornetTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
@@ -355,7 +355,7 @@ static const u16 sCharizardTeachableLearnset[] = {
     MOVE_THUNDER_PUNCH,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 
 #if P_FAMILY_SQUIRTLE
 static const u16 sSquirtleTeachableLearnset[] = {

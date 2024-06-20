@@ -36,7 +36,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_CHARMANDER] = {
+    [SPECIES_KINDLANT] = {
         { .songLengthId = 6 },
         { .songLengthId =  2 },
         { .songLengthId = 50 },
@@ -44,7 +44,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_CHARMELEON] = {
+    [SPECIES_CALIANTE] = {
         { .songLengthId = 6 },
         { .songLengthId = 12 },
         { .songLengthId = 12 },
@@ -52,7 +52,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         { .songLengthId = 51 },
         NULL_BARD_SOUND,
     },
-    [SPECIES_CHARIZARD] = {
+    [SPECIES_SCORNET] = {
         { .songLengthId = 6 },
         { .songLengthId = 17 },
         { .songLengthId = 50 },

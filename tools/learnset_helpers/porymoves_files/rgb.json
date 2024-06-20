@@ -192,7 +192,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -257,7 +257,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -326,7 +326,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 1,

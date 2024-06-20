@@ -343,7 +343,7 @@
       "MOVE_FRENZY_PLANT"
     ]
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -446,7 +446,7 @@
     ],
     "TutorMoves": []
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -549,7 +549,7 @@
     ],
     "TutorMoves": []
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 0,

@@ -389,7 +389,7 @@
       "MOVE_WORRY_SEED"
     ]
   },
-  "CHARMANDER": {
+  "KINDLANT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -496,7 +496,7 @@
       "MOVE_THUNDER_PUNCH"
     ]
   },
-  "CHARMELEON": {
+  "CALIANTE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -607,7 +607,7 @@
       "MOVE_THUNDER_PUNCH"
     ]
   },
-  "CHARIZARD": {
+  "SCORNET": {
     "LevelMoves": [
       {
         "Level": 1,

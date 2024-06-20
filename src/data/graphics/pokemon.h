@@ -55,56 +55,56 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KIWEE
 
-#if P_FAMILY_CHARMANDER
-    const u32 gMonFrontPic_Charmander[] = INCBIN_U32("graphics/pokemon/charmander/anim_front.4bpp.lz");
-    const u32 gMonPalette_Charmander[] = INCBIN_U32("graphics/pokemon/charmander/normal.gbapal.lz");
-    const u32 gMonBackPic_Charmander[] = INCBIN_U32("graphics/pokemon/charmander/back.4bpp.lz");
-    const u32 gMonShinyPalette_Charmander[] = INCBIN_U32("graphics/pokemon/charmander/shiny.gbapal.lz");
-    const u8 gMonIcon_Charmander[] = INCBIN_U8("graphics/pokemon/charmander/icon.4bpp");
+#if P_FAMILY_KINDLANT
+    const u32 gMonFrontPic_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/anim_front.4bpp.lz");
+    const u32 gMonPalette_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/normal.gbapal.lz");
+    const u32 gMonBackPic_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/back.4bpp.lz");
+    const u32 gMonShinyPalette_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/shiny.gbapal.lz");
+    const u8 gMonIcon_Kindlant[] = INCBIN_U8("graphics/pokemon/kindlant/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Charmander[] = INCBIN_U8("graphics/pokemon/charmander/footprint.1bpp");
+    const u8 gMonFootprint_Kindlant[] = INCBIN_U8("graphics/pokemon/kindlant/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-    const u32 gMonFrontPic_Charmeleon[] = INCBIN_U32("graphics/pokemon/charmeleon/anim_front.4bpp.lz");
-    const u32 gMonPalette_Charmeleon[] = INCBIN_U32("graphics/pokemon/charmeleon/normal.gbapal.lz");
-    const u32 gMonBackPic_Charmeleon[] = INCBIN_U32("graphics/pokemon/charmeleon/back.4bpp.lz");
-    const u32 gMonShinyPalette_Charmeleon[] = INCBIN_U32("graphics/pokemon/charmeleon/shiny.gbapal.lz");
-    const u8 gMonIcon_Charmeleon[] = INCBIN_U8("graphics/pokemon/charmeleon/icon.4bpp");
+    const u32 gMonFrontPic_Caliante[] = INCBIN_U32("graphics/pokemon/caliante/anim_front.4bpp.lz");
+    const u32 gMonPalette_Caliante[] = INCBIN_U32("graphics/pokemon/caliante/normal.gbapal.lz");
+    const u32 gMonBackPic_Caliante[] = INCBIN_U32("graphics/pokemon/caliante/back.4bpp.lz");
+    const u32 gMonShinyPalette_Caliante[] = INCBIN_U32("graphics/pokemon/caliante/shiny.gbapal.lz");
+    const u8 gMonIcon_Caliante[] = INCBIN_U8("graphics/pokemon/caliante/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Charmeleon[] = INCBIN_U8("graphics/pokemon/charmeleon/footprint.1bpp");
+    const u8 gMonFootprint_Caliante[] = INCBIN_U8("graphics/pokemon/caliante/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
-    const u32 gMonFrontPic_Charizard[] = INCBIN_U32("graphics/pokemon/charizard/anim_front.4bpp.lz");
-    const u32 gMonPalette_Charizard[] = INCBIN_U32("graphics/pokemon/charizard/normal.gbapal.lz");
-    const u32 gMonBackPic_Charizard[] = INCBIN_U32("graphics/pokemon/charizard/back.4bpp.lz");
-    const u32 gMonShinyPalette_Charizard[] = INCBIN_U32("graphics/pokemon/charizard/shiny.gbapal.lz");
-    const u8 gMonIcon_Charizard[] = INCBIN_U8("graphics/pokemon/charizard/icon.4bpp");
+    const u32 gMonFrontPic_Scornet[] = INCBIN_U32("graphics/pokemon/scornet/anim_front.4bpp.lz");
+    const u32 gMonPalette_Scornet[] = INCBIN_U32("graphics/pokemon/scornet/normal.gbapal.lz");
+    const u32 gMonBackPic_Scornet[] = INCBIN_U32("graphics/pokemon/scornet/back.4bpp.lz");
+    const u32 gMonShinyPalette_Scornet[] = INCBIN_U32("graphics/pokemon/scornet/shiny.gbapal.lz");
+    const u8 gMonIcon_Scornet[] = INCBIN_U8("graphics/pokemon/scornet/icon.4bpp");
 #if P_FOOTPRINTS
-    const u8 gMonFootprint_Charizard[] = INCBIN_U8("graphics/pokemon/charizard/footprint.1bpp");
+    const u8 gMonFootprint_Scornet[] = INCBIN_U8("graphics/pokemon/scornet/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
 #if P_MEGA_EVOLUTIONS
-    const u32 gMonFrontPic_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/charizard/mega_x/front.4bpp.lz");
-    const u32 gMonPalette_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/charizard/mega_x/normal.gbapal.lz");
-    const u32 gMonBackPic_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/charizard/mega_x/back.4bpp.lz");
-    const u32 gMonShinyPalette_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/charizard/mega_x/shiny.gbapal.lz");
-    const u8 gMonIcon_CharizardMegaX[] = INCBIN_U8("graphics/pokemon/charizard/mega_x/icon.4bpp");
+    const u32 gMonFrontPic_ScornetMegaX[] = INCBIN_U32("graphics/pokemon/scornet/mega_x/front.4bpp.lz");
+    const u32 gMonPalette_ScornetMegaX[] = INCBIN_U32("graphics/pokemon/scornet/mega_x/normal.gbapal.lz");
+    const u32 gMonBackPic_ScornetMegaX[] = INCBIN_U32("graphics/pokemon/scornet/mega_x/back.4bpp.lz");
+    const u32 gMonShinyPalette_ScornetMegaX[] = INCBIN_U32("graphics/pokemon/scornet/mega_x/shiny.gbapal.lz");
+    const u8 gMonIcon_ScornetMegaX[] = INCBIN_U8("graphics/pokemon/scornet/mega_x/icon.4bpp");
 
-    const u32 gMonFrontPic_CharizardMegaY[] = INCBIN_U32("graphics/pokemon/charizard/mega_y/front.4bpp.lz");
-    const u32 gMonPalette_CharizardMegaY[] = INCBIN_U32("graphics/pokemon/charizard/mega_y/normal.gbapal.lz");
-    const u32 gMonBackPic_CharizardMegaY[] = INCBIN_U32("graphics/pokemon/charizard/mega_y/back.4bpp.lz");
-    const u32 gMonShinyPalette_CharizardMegaY[] = INCBIN_U32("graphics/pokemon/charizard/mega_y/shiny.gbapal.lz");
-    const u8 gMonIcon_CharizardMegaY[] = INCBIN_U8("graphics/pokemon/charizard/mega_y/icon.4bpp");
+    const u32 gMonFrontPic_ScornetMegaY[] = INCBIN_U32("graphics/pokemon/scornet/mega_y/front.4bpp.lz");
+    const u32 gMonPalette_ScornetMegaY[] = INCBIN_U32("graphics/pokemon/scornet/mega_y/normal.gbapal.lz");
+    const u32 gMonBackPic_ScornetMegaY[] = INCBIN_U32("graphics/pokemon/scornet/mega_y/back.4bpp.lz");
+    const u32 gMonShinyPalette_ScornetMegaY[] = INCBIN_U32("graphics/pokemon/scornet/mega_y/shiny.gbapal.lz");
+    const u8 gMonIcon_ScornetMegaY[] = INCBIN_U8("graphics/pokemon/scornet/mega_y/icon.4bpp");
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
-    const u32 gMonFrontPic_CharizardGigantamax[] = INCBIN_U32("graphics/pokemon/charizard/gigantamax/front.4bpp.lz");
-    const u32 gMonBackPic_CharizardGigantamax[] = INCBIN_U32("graphics/pokemon/charizard/gigantamax/back.4bpp.lz");
-    const u32 gMonPalette_CharizardGigantamax[] = INCBIN_U32("graphics/pokemon/charizard/gigantamax/normal.gbapal.lz");
-    const u32 gMonShinyPalette_CharizardGigantamax[] = INCBIN_U32("graphics/pokemon/charizard/gigantamax/shiny.gbapal.lz");
-    const u8 gMonIcon_CharizardGigantamax[] = INCBIN_U8("graphics/pokemon/charizard/gigantamax/icon.4bpp");
+    const u32 gMonFrontPic_ScornetGigantamax[] = INCBIN_U32("graphics/pokemon/scornet/gigantamax/front.4bpp.lz");
+    const u32 gMonBackPic_ScornetGigantamax[] = INCBIN_U32("graphics/pokemon/scornet/gigantamax/back.4bpp.lz");
+    const u32 gMonPalette_ScornetGigantamax[] = INCBIN_U32("graphics/pokemon/scornet/gigantamax/normal.gbapal.lz");
+    const u32 gMonShinyPalette_ScornetGigantamax[] = INCBIN_U32("graphics/pokemon/scornet/gigantamax/shiny.gbapal.lz");
+    const u8 gMonIcon_ScornetGigantamax[] = INCBIN_U8("graphics/pokemon/scornet/gigantamax/icon.4bpp");
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_CHARMANDER
+#endif //P_FAMILY_KINDLANT
 
 #if P_FAMILY_SQUIRTLE
     const u32 gMonFrontPic_Squirtle[] = INCBIN_U32("graphics/pokemon/squirtle/anim_front.4bpp.lz");

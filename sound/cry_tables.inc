@@ -8,15 +8,15 @@ gCryTable::
 	cry Cry_TropikoekaMega
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KIWEE
-.if P_FAMILY_CHARMANDER == TRUE
-	cry Cry_Charmander
-	cry Cry_Charmeleon
-	cry Cry_Charizard
+.if P_FAMILY_KINDLANT == TRUE
+	cry Cry_Kindlant
+	cry Cry_Caliante
+	cry Cry_Scornet
 .if P_MEGA_EVOLUTIONS == TRUE
-	cry Cry_CharizardMegaX
-	cry Cry_CharizardMegaY
+	cry Cry_ScornetMegaX
+	cry Cry_ScornetMegaY
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_CHARMANDER
+.endif @ P_FAMILY_KINDLANT
 .if P_FAMILY_SQUIRTLE == TRUE
 	cry Cry_Squirtle
 	cry Cry_Wartortle
@@ -2434,15 +2434,15 @@ gCryTable_Reverse::
 	cry_reverse Cry_TropikoekaMega
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KIWEE
-.if P_FAMILY_CHARMANDER == TRUE
-	cry_reverse Cry_Charmander
-	cry_reverse Cry_Charmeleon
-	cry_reverse Cry_Charizard
+.if P_FAMILY_KINDLANT == TRUE
+	cry_reverse Cry_Kindlant
+	cry_reverse Cry_Caliante
+	cry_reverse Cry_Scornet
 .if P_MEGA_EVOLUTIONS == TRUE
-	cry_reverse Cry_CharizardMegaX
-	cry_reverse Cry_CharizardMegaY
+	cry_reverse Cry_ScornetMegaX
+	cry_reverse Cry_ScornetMegaY
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_CHARMANDER
+.endif @ P_FAMILY_KINDLANT
 .if P_FAMILY_SQUIRTLE == TRUE
 	cry_reverse Cry_Squirtle
 	cry_reverse Cry_Wartortle

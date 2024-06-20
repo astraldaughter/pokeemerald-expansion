@@ -294,7 +294,7 @@ $(UNUSEDGFXDIR)/obi_palpak3.gbapal: $(UNUSEDGFXDIR)/old_pal5.gbapal \
 	@cat $^ >$@
 
 $(UNUSEDGFXDIR)/obi1.4bpp: $(UNUSEDGFXDIR)/old_kiwee.4bpp \
-                           $(UNUSEDGFXDIR)/old_charizard.4bpp
+                           $(UNUSEDGFXDIR)/old_scornet.4bpp
 	@cat $^ >$@
 
 $(UNUSEDGFXDIR)/obi2.4bpp: $(UNUSEDGFXDIR)/old_kiwee2.4bpp \

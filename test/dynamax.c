@@ -1199,8 +1199,8 @@ DOUBLE_BATTLE_TEST("(DYNAMAX) G-Max Wildfire sets a field effect that damages no
     s16 damage;
     GIVEN {
         ASSUME(gMovesInfo[MOVE_G_MAX_WILDFIRE].argument == MAX_EFFECT_WILDFIRE);
-        PLAYER(SPECIES_CHARIZARD) { GigantamaxFactor(TRUE); }
-        PLAYER(SPECIES_CHARMANDER);
+        PLAYER(SPECIES_SCORNET) { GigantamaxFactor(TRUE); }
+        PLAYER(SPECIES_KINDLANT);
         OPPONENT(SPECIES_WOBBUFFET) { HP(600); MaxHP(600); }
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_ARCANINE);
@@ -1212,7 +1212,7 @@ DOUBLE_BATTLE_TEST("(DYNAMAX) G-Max Wildfire sets a field effect that damages no
         TURN { }
     } SCENE {
         // turn 1
-        MESSAGE("Charizard used G-Max Wildfire!");
+        MESSAGE("Scornet used G-Max Wildfire!");
         MESSAGE("The opposing team was surrounded by flames!");
         MESSAGE("Foe Wobbuffet is burning up within G-Max Wildfire's flames!");
         HP_BAR(opponentLeft, captureDamage: &damage);
