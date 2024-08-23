@@ -14,7 +14,7 @@ SINGLE_BATTLE_TEST("Red Card switches the attacker with a random non-fainted rep
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_KINDLANT);
-        OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
+        OPPONENT(SPECIES_KELPONI) { HP(0); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); }
     } SCENE {
@@ -37,7 +37,7 @@ DOUBLE_BATTLE_TEST("Red Card switches the target with a random non-battler, non-
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_KIWEE);
         OPPONENT(SPECIES_KINDLANT);
-        OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
+        OPPONENT(SPECIES_KELPONI) { HP(0); }
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_TACKLE, target: playerLeft); }
     } SCENE {

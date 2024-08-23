@@ -812,7 +812,7 @@
       "MOVE_THUNDER_PUNCH"
     ]
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -937,7 +937,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1070,7 +1070,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 1,

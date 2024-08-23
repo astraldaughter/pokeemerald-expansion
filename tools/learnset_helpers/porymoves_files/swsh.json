@@ -724,7 +724,7 @@
       "MOVE_SCALE_SHOT"
     ]
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -843,7 +843,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -962,7 +962,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 0,

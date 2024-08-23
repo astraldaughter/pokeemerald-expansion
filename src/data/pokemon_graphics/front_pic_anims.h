@@ -93,8 +93,8 @@ PLACEHOLDER_ANIM_SINGLE_FRAME(ScornetGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KINDLANT
 
-#if P_FAMILY_SQUIRTLE
-static const union AnimCmd sAnim_Squirtle_1[] =
+#if P_FAMILY_KELPONI
+static const union AnimCmd sAnim_Kelponi_1[] =
 {
     ANIMCMD_FRAME(1, 11),
     ANIMCMD_FRAME(0, 11),
@@ -103,7 +103,7 @@ static const union AnimCmd sAnim_Squirtle_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Wartortle_1[] =
+static const union AnimCmd sAnim_Aquine_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 20),
@@ -111,7 +111,7 @@ static const union AnimCmd sAnim_Wartortle_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Blastoise_1[] =
+static const union AnimCmd sAnim_Aquastrian_1[] =
 {
     ANIMCMD_FRAME(1, 20),
     ANIMCMD_FRAME(0, 20),
@@ -121,13 +121,13 @@ static const union AnimCmd sAnim_Blastoise_1[] =
 };
 
 #if P_MEGA_EVOLUTIONS
-PLACEHOLDER_ANIM_SINGLE_FRAME(BlastoiseMega);
+PLACEHOLDER_ANIM_SINGLE_FRAME(AquastrianMega);
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
-PLACEHOLDER_ANIM_SINGLE_FRAME(BlastoiseGigantamax);
+PLACEHOLDER_ANIM_SINGLE_FRAME(AquastrianGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_SQUIRTLE
+#endif //P_FAMILY_KELPONI
 
 #if P_FAMILY_CATERPIE
 static const union AnimCmd sAnim_Caterpie_1[] =
@@ -10176,17 +10176,17 @@ SINGLE_ANIMATION(ScornetMegaY);
 SINGLE_ANIMATION(ScornetGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KINDLANT
-#if P_FAMILY_SQUIRTLE
-SINGLE_ANIMATION(Squirtle);
-SINGLE_ANIMATION(Wartortle);
-SINGLE_ANIMATION(Blastoise);
+#if P_FAMILY_KELPONI
+SINGLE_ANIMATION(Kelponi);
+SINGLE_ANIMATION(Aquine);
+SINGLE_ANIMATION(Aquastrian);
 #if P_MEGA_EVOLUTIONS
-SINGLE_ANIMATION(BlastoiseMega);
+SINGLE_ANIMATION(AquastrianMega);
 #endif //P_MEGA_EVOLUTIONS
 #if P_GIGANTAMAX_FORMS
-SINGLE_ANIMATION(BlastoiseGigantamax);
+SINGLE_ANIMATION(AquastrianGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_SQUIRTLE
+#endif //P_FAMILY_KELPONI
 #if P_FAMILY_CATERPIE
 SINGLE_ANIMATION(Caterpie);
 SINGLE_ANIMATION(Metapod);

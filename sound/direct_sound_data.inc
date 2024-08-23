@@ -430,25 +430,25 @@ Cry_ScornetMegaY::
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KINDLANT
 
-.if P_FAMILY_SQUIRTLE == TRUE
+.if P_FAMILY_KELPONI == TRUE
 	.align 2
-Cry_Squirtle::
-	.incbin "sound/direct_sound_samples/cries/squirtle.bin"
+Cry_Kelponi::
+	.incbin "sound/direct_sound_samples/cries/kelponi.bin"
 
 	.align 2
-Cry_Wartortle::
-	.incbin "sound/direct_sound_samples/cries/wartortle.bin"
+Cry_Aquine::
+	.incbin "sound/direct_sound_samples/cries/aquine.bin"
 
 	.align 2
-Cry_Blastoise::
-	.incbin "sound/direct_sound_samples/cries/blastoise.bin"
+Cry_Aquastrian::
+	.incbin "sound/direct_sound_samples/cries/aquastrian.bin"
 
 .if P_MEGA_EVOLUTIONS == TRUE
 	.align 2
-Cry_BlastoiseMega::
-	.incbin "sound/direct_sound_samples/cries/blastoise_mega.bin"
+Cry_AquastrianMega::
+	.incbin "sound/direct_sound_samples/cries/aquastrian_mega.bin"
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_SQUIRTLE
+.endif @ P_FAMILY_KELPONI
 
 .if P_FAMILY_CATERPIE == TRUE
 	.align 2

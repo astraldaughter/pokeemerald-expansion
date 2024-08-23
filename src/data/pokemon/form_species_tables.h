@@ -17,14 +17,14 @@ static const u16 sScornetFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_KINDLANT
 
-#if P_FAMILY_SQUIRTLE
-static const u16 sBlastoiseFormSpeciesIdTable[] = {
-    SPECIES_BLASTOISE,
-    SPECIES_BLASTOISE_MEGA,
-    SPECIES_BLASTOISE_GIGANTAMAX,
+#if P_FAMILY_KELPONI
+static const u16 sAquastrianFormSpeciesIdTable[] = {
+    SPECIES_AQUASTRIAN,
+    SPECIES_AQUASTRIAN_MEGA,
+    SPECIES_AQUASTRIAN_GIGANTAMAX,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_SQUIRTLE
+#endif //P_FAMILY_KELPONI
 
 #if P_FAMILY_CATERPIE
 static const u16 sButterfreeFormSpeciesIdTable[] = {

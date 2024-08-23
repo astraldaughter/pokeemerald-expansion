@@ -15,13 +15,13 @@ static const struct FormChange sScornetFormChangeTable[] = {
 };
 #endif //P_FAMILY_KINDLANT
 
-#if P_FAMILY_SQUIRTLE
-static const struct FormChange sBlastoiseFormChangeTable[] = {
-    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_BLASTOISE_MEGA, ITEM_BLASTOISINITE},
-    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_BLASTOISE_GIGANTAMAX},
+#if P_FAMILY_KELPONI
+static const struct FormChange sAquastrianFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_AQUASTRIAN_MEGA, ITEM_BLASTOISINITE},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_AQUASTRIAN_GIGANTAMAX},
     {FORM_CHANGE_TERMINATOR},
 };
-#endif //P_FAMILY_SQUIRTLE
+#endif //P_FAMILY_KELPONI
 
 #if P_FAMILY_CATERPIE
 static const struct FormChange sButterfreeFormChangeTable[] =

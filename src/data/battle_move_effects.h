@@ -2236,4 +2236,16 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0,
     },
+
+    [EFFECT_CUT] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 0,
+    },
+
+    [EFFECT_SPIKES_IF_MISS] =
+    {
+        .battleScript = BattleScript_EffectSpikesIfMiss,
+        .battleTvScore = 0,
+    },
 };

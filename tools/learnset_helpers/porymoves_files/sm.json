@@ -738,7 +738,7 @@
       "MOVE_FIRE_PLEDGE"
     ]
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -848,7 +848,7 @@
       "MOVE_WATER_PLEDGE"
     ]
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -966,7 +966,7 @@
       "MOVE_WATER_PLEDGE"
     ]
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 1,

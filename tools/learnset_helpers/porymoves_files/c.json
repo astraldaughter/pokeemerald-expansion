@@ -547,7 +547,7 @@
       "MOVE_FLAMETHROWER"
     ]
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -638,7 +638,7 @@
       "MOVE_ICE_BEAM"
     ]
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -737,7 +737,7 @@
       "MOVE_ICE_BEAM"
     ]
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 1,

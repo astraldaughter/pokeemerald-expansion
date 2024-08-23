@@ -357,8 +357,8 @@ static const u16 sScornetTeachableLearnset[] = {
 };
 #endif //P_FAMILY_KINDLANT
 
-#if P_FAMILY_SQUIRTLE
-static const u16 sSquirtleTeachableLearnset[] = {
+#if P_FAMILY_KELPONI
+static const u16 sKelponiTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
@@ -401,7 +401,7 @@ static const u16 sSquirtleTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sWartortleTeachableLearnset[] = {
+static const u16 sAquineTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
@@ -444,7 +444,7 @@ static const u16 sWartortleTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sBlastoiseTeachableLearnset[] = {
+static const u16 sAquastrianTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
@@ -489,7 +489,7 @@ static const u16 sBlastoiseTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_SQUIRTLE
+#endif //P_FAMILY_KELPONI
 
 #if P_FAMILY_CATERPIE
 static const u16 sCaterpieTeachableLearnset[] = {

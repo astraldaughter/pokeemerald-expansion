@@ -8,9 +8,9 @@
 #define SPECIES_KINDLANT                              4
 #define SPECIES_CALIANTE                              5
 #define SPECIES_SCORNET                               6
-#define SPECIES_SQUIRTLE                                7
-#define SPECIES_WARTORTLE                               8
-#define SPECIES_BLASTOISE                               9
+#define SPECIES_KELPONI                                7
+#define SPECIES_AQUINE                               8
+#define SPECIES_AQUASTRIAN                               9
 #define SPECIES_CATERPIE                                10
 #define SPECIES_METAPOD                                 11
 #define SPECIES_BUTTERFREE                              12
@@ -967,7 +967,7 @@
 #define SPECIES_TROPIKOEKA_MEGA                           906
 #define SPECIES_SCORNET_MEGA_X                        907
 #define SPECIES_SCORNET_MEGA_Y                        908
-#define SPECIES_BLASTOISE_MEGA                          909
+#define SPECIES_AQUASTRIAN_MEGA                          909
 #define SPECIES_BEEDRILL_MEGA                           910
 #define SPECIES_PIDGEOT_MEGA                            911
 #define SPECIES_ALAKAZAM_MEGA                           912
@@ -1594,7 +1594,7 @@
 #define SPECIES_PIKACHU_PARTNER                         1487
 #define SPECIES_EEVEE_PARTNER                           1488
 #define SPECIES_TROPIKOEKA_GIGANTAMAX                     1489
-#define SPECIES_BLASTOISE_GIGANTAMAX                    1490
+#define SPECIES_AQUASTRIAN_GIGANTAMAX                    1490
 #define SPECIES_SCORNET_GIGANTAMAX                    1491
 #define SPECIES_BUTTERFREE_GIGANTAMAX                   1492
 #define SPECIES_PIKACHU_GIGANTAMAX                      1493

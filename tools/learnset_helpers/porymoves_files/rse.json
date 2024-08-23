@@ -631,7 +631,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -736,7 +736,7 @@
       "MOVE_SWAGGER"
     ]
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -849,7 +849,7 @@
       "MOVE_SWAGGER"
     ]
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 1,

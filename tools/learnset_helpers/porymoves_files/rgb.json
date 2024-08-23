@@ -402,7 +402,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "SQUIRTLE": {
+  "KELPONI": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -467,7 +467,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "WARTORTLE": {
+  "AQUINE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -536,7 +536,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "BLASTOISE": {
+  "AQUASTRIAN": {
     "LevelMoves": [
       {
         "Level": 1,

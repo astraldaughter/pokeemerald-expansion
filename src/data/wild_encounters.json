@@ -7,30 +7,71 @@
         {
           "type": "land_mons",
           "encounter_rates": [
-            20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1
+            20,
+            20,
+            10,
+            10,
+            10,
+            10,
+            5,
+            5,
+            4,
+            4,
+            1,
+            1
           ]
         },
         {
           "type": "water_mons",
           "encounter_rates": [
-            60, 30, 5, 4, 1
+            60,
+            30,
+            5,
+            4,
+            1
           ]
         },
         {
           "type": "rock_smash_mons",
           "encounter_rates": [
-            60, 30, 5, 4, 1
+            60,
+            30,
+            5,
+            4,
+            1
           ]
         },
         {
           "type": "fishing_mons",
           "encounter_rates": [
-            70, 30, 60, 20, 20, 40, 40, 15, 4, 1
+            70,
+            30,
+            60,
+            20,
+            20,
+            40,
+            40,
+            15,
+            4,
+            1
           ],
           "groups": {
-            "old_rod": [0, 1],
-            "good_rod": [2, 3, 4],
-            "super_rod": [5, 6, 7, 8, 9]
+            "old_rod": [
+              0,
+              1
+            ],
+            "good_rod": [
+              2,
+              3,
+              4
+            ],
+            "super_rod": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
           }
         }
       ],
@@ -11714,7 +11755,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
@@ -11724,7 +11765,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               }
             ]
           }
@@ -11767,32 +11808,32 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               }
             ]
           }
@@ -11825,42 +11866,42 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               }
             ]
           }
@@ -11873,27 +11914,27 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WARTORTLE"
+                "species": "SPECIES_AQUINE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_KELPONI"
               },
               {
                 "min_level": 5,

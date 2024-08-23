@@ -17,14 +17,14 @@ gCryTable::
 	cry Cry_ScornetMegaY
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KINDLANT
-.if P_FAMILY_SQUIRTLE == TRUE
-	cry Cry_Squirtle
-	cry Cry_Wartortle
-	cry Cry_Blastoise
+.if P_FAMILY_KELPONI == TRUE
+	cry Cry_Kelponi
+	cry Cry_Aquine
+	cry Cry_Aquastrian
 .if P_MEGA_EVOLUTIONS == TRUE
-	cry Cry_BlastoiseMega
+	cry Cry_AquastrianMega
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_SQUIRTLE
+.endif @ P_FAMILY_KELPONI
 .if P_FAMILY_CATERPIE == TRUE
 	cry Cry_Caterpie
 	cry Cry_Metapod
@@ -2443,14 +2443,14 @@ gCryTable_Reverse::
 	cry_reverse Cry_ScornetMegaY
 .endif @ P_MEGA_EVOLUTIONS
 .endif @ P_FAMILY_KINDLANT
-.if P_FAMILY_SQUIRTLE == TRUE
-	cry_reverse Cry_Squirtle
-	cry_reverse Cry_Wartortle
-	cry_reverse Cry_Blastoise
+.if P_FAMILY_KELPONI == TRUE
+	cry_reverse Cry_Kelponi
+	cry_reverse Cry_Aquine
+	cry_reverse Cry_Aquastrian
 .if P_MEGA_EVOLUTIONS == TRUE
-	cry_reverse Cry_BlastoiseMega
+	cry_reverse Cry_AquastrianMega
 .endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_SQUIRTLE
+.endif @ P_FAMILY_KELPONI
 .if P_FAMILY_CATERPIE == TRUE
 	cry_reverse Cry_Caterpie
 	cry_reverse Cry_Metapod

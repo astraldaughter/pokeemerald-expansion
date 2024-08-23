@@ -19,7 +19,7 @@ static const u16 sFrontierExchangeCorner_Decor2[] =
     DECOR_SNORLAX_DOLL,
     DECOR_TROPIKOEKA_DOLL,
     DECOR_SCORNET_DOLL,
-    DECOR_BLASTOISE_DOLL,
+    DECOR_AQUASTRIAN_DOLL,
     ITEM_LIST_END
 };
 

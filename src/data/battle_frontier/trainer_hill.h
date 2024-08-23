@@ -2786,7 +2786,7 @@ static const struct TrainerHillFloor sFloors_Unique[] = {
                                         },
                                     [2] =
                                         {
-                                            .species = SPECIES_BLASTOISE,
+                                            .species = SPECIES_AQUASTRIAN,
                                             .heldItem = ITEM_SHELL_BELL,
                                             .moves = {MOVE_HYDRO_PUMP, MOVE_BITE, MOVE_MIRROR_COAT, MOVE_RAIN_DANCE},
                                             .speedEV = 255,
@@ -2800,7 +2800,7 @@ static const struct TrainerHillFloor sFloors_Unique[] = {
                                             .spDefenseIV = 15,
                                             .abilityNum = 0,
                                             .personality = 0x28,
-                                            .nickname = _("BLASTOISE"),
+                                            .nickname = _("AQUASTRIAN"),
                                             .friendship = MAX_FRIENDSHIP,
                                         },
                                     [3] =
@@ -3187,7 +3187,7 @@ static const struct TrainerHillFloor sFloors_Unique[] = {
                                         },
                                     [1] =
                                         {
-                                            .species = SPECIES_WARTORTLE,
+                                            .species = SPECIES_AQUINE,
                                             .heldItem = ITEM_MYSTIC_WATER,
                                             .moves = {MOVE_HYDRO_PUMP, MOVE_SKULL_BASH, MOVE_RAIN_DANCE, MOVE_PROTECT},
                                             .hpEV = 250,
@@ -3201,7 +3201,7 @@ static const struct TrainerHillFloor sFloors_Unique[] = {
                                             .spDefenseIV = 25,
                                             .abilityNum = 0,
                                             .personality = 0x0,
-                                            .nickname = _("WARTORTLE"),
+                                            .nickname = _("AQUINE"),
                                             .friendship = 100,
                                         },
                                     [2] =

@@ -108,7 +108,7 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - the 
     PARAMETRIZE {playerSetUpper = 1; opponentSetUpper = 1; }
 
     GIVEN {
-        PLAYER(SPECIES_SQUIRTLE);
+        PLAYER(SPECIES_KELPONI);
         PLAYER(SPECIES_KINDLANT);
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
         OPPONENT(SPECIES_CATERPIE);
@@ -147,7 +147,7 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - no o
     PARAMETRIZE { speedPlayer = 10; speedOpponent = 5; }
 
     GIVEN {
-        PLAYER(SPECIES_SQUIRTLE) { Speed(speedPlayer); }
+        PLAYER(SPECIES_KELPONI) { Speed(speedPlayer); }
         PLAYER(SPECIES_KINDLANT) { Speed(speedPlayer); }
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); Speed(speedOpponent); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
         OPPONENT(SPECIES_CATERPIE) { Speed(speedOpponent); }
@@ -192,7 +192,7 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - no o
 
     GIVEN {
         ASSUME(gMovesInfo[MOVE_MEMENTO].effect == EFFECT_MEMENTO);
-        PLAYER(SPECIES_SQUIRTLE) {Speed(5); }
+        PLAYER(SPECIES_KELPONI) {Speed(5); }
         PLAYER(SPECIES_KINDLANT) {Speed(5); }
         PLAYER(SPECIES_CORVIKNIGHT) {Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); Speed(5); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
         OPPONENT(SPECIES_CATERPIE) {Speed(7); }

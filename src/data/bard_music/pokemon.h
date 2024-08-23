@@ -60,7 +60,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         { .songLengthId = 51 },
         NULL_BARD_SOUND,
     },
-    [SPECIES_SQUIRTLE] = {
+    [SPECIES_KELPONI] = {
         { .songLengthId = 48 },
         { .songLengthId = 36 },
         { .songLengthId = 51 },
@@ -68,7 +68,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_WARTORTLE] = {
+    [SPECIES_AQUINE] = {
         { .songLengthId = 8 },
         { .songLengthId = 48 },
         { .songLengthId = 36 },
@@ -76,7 +76,7 @@ const struct BardSound gBardSounds_Pokemon[NUM_SPECIES][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_BLASTOISE] = {
+    [SPECIES_AQUASTRIAN] = {
         { .songLengthId =  0 },
         { .songLengthId = 30 },
         { .songLengthId = 51 },
