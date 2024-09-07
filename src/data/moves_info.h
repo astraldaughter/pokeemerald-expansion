@@ -462,12 +462,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Cut"),
         .description = COMPOUND_STRING(
-            "Cuts the foe with sharp\n"
-            "scythes, claws, etc."),
-        .effect = EFFECT_HIT,
-        .power = 50,
+            "A cut that is super\n"
+            "effective on Grass-types."),
+        .effect = EFFECT_CUT,
+        .power = 55,
         .type = TYPE_NORMAL,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 30,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -1276,17 +1276,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Sonic Boom"),
         .description = COMPOUND_STRING(
-            "Launches shock waves that\n"
-            "always inflict 20 HP damage."),
-        .effect = EFFECT_FIXED_DAMAGE_ARG,
-        .power = 1,
-        .type = TYPE_NORMAL,
-        .accuracy = 90,
+            "Breaks the sound barrier,\n"
+            "usually striking first."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
         .pp = 20,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 1,
+        .soundMove = TRUE,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .argument = 20,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -1299,16 +1299,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Psychically disables one of\n"
             "the foe's moves."),
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 100,
-        #elif B_UPDATED_MOVE_DATA == GEN_4
-            .accuracy = 80,
-        #else
-            .accuracy = 55,
-        #endif
+        .accuracy = 100,
         .effect = EFFECT_DISABLE,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_PSYCHIC,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -1527,7 +1521,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = B_BLIZZARD_HAIL >= GEN_4 ? EFFECT_BLIZZARD : EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
         .type = TYPE_ICE,
-        .accuracy = 70,
+        .accuracy = 85,
         .pp = 5,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
@@ -5805,6 +5799,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_TWISTER] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Twister"),
         .description = COMPOUND_STRING(
             "Whips up a vicious twister\n"
@@ -9636,6 +9631,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DARK_PULSE] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Dark Pulse"),
         .description = COMPOUND_STRING(
             "Attacks with a horrible\n"
@@ -10380,6 +10376,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_FLASH_CANNON] =
     {
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Flash Cannon"),
         .description = COMPOUND_STRING(
             "Releases a blast of light\n"
@@ -10922,7 +10919,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_WOOD_HAMMER] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Wood Hammer"),
         .description = COMPOUND_STRING(
             "Slams the body into a foe.\n"
@@ -20295,6 +20291,75 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
             .chance = 100,
+        }),
+    },
+
+    [MOVE_STAMPEDE] =
+    {
+        .name = COMPOUND_STRING("Stampede"),
+        .description = COMPOUND_STRING(
+            "Stampedes towards the foe,\n"
+            "striking it twice."),
+        .effect = EFFECT_HIT,
+        .power = 35,
+        .type = TYPE_GROUND,
+        .accuracy = 90,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .strikeCount = 2,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0}
+    },
+
+    [MOVE_STAGNANT_AIR] =
+    {
+        .name = COMPOUND_STRING("Stagnant Air"),
+        .description = COMPOUND_STRING(
+            "Fills the air with a foul\n"
+            "miasma that causes poison."),
+        .effect = EFFECT_POISON,
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SWEET_SCENT},
+    },
+
+    [MOVE_POISON_DARTS] =
+    {
+        .name = COMPOUND_STRING("Poison Darts"),
+        .description = COMPOUND_STRING(
+            "Fires toxic darts at the\n"
+            "target four times."),
+        .effect = EFFECT_HIT,
+        .power = 20,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .strikeCount = 4,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_POISON,
+            .chance = 10,
         }),
     },
 

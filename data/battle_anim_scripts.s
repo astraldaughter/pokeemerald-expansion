@@ -880,6 +880,9 @@ gBattleAnims_Moves::
 	.4byte Move_STAR_DROP
 	.4byte Move_UPROOT
 	.4byte Move_NECTAR_SPRAY
+	.4byte Move_STAMPEDE
+	.4byte Move_STAGNANT_AIR
+	.4byte Move_POISON_DARTS
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -17999,6 +18002,34 @@ Move_NECTAR_SPRAY::
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
+Move_STAMPEDE:
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_MUD_SAND
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_ROCKS
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	createvisualtask AnimTask_Rollout, 2, 0
+	waitforvisualfinish
+	createsprite gFistFootRandomPosSpriteTemplate, ANIM_ATTACKER, 3, 1, 20, 2
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 4, 0, 6, 1
+	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+Move_STAGNANT_AIR:
+	waitforvisualfinish
+	playsewithpan SE_M_HAZE, 0
+	createvisualtask AnimTask_HazeScrollingFog, 5
+	delay 30
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BATTLERS_2, 2, 0, 16, RGB_PURPLE
+	delay 90
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BATTLERS_2, 1, 16, 0, RGB_PURPLE
+	end
+
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
 Move_MIRROR_MOVE:
@@ -18392,6 +18423,7 @@ Move_DOUBLE_EDGE:
 	waitforvisualfinish
 	end
 
+Move_POISON_DARTS:
 Move_POISON_STING:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_IMPACT
