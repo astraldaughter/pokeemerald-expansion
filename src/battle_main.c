@@ -5389,6 +5389,7 @@ static bool32 TryDoMoveEffectsBeforeMoves(void)
                     BattleScriptExecute(BattleScript_FocusPunchSetUp);
                     return TRUE;
                 case MOVE_BEAK_BLAST:
+                case MOVE_HEAT_RAY:
                     BattleScriptExecute(BattleScript_BeakBlastSetUp);
                     return TRUE;
                 case MOVE_SHELL_TRAP:

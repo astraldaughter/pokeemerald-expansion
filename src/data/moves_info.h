@@ -20362,6 +20362,32 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .chance = 10,
         }),
     },
+    [MOVE_HEAT_RAY] =
+    {
+        .name = COMPOUND_STRING("Heat Ray"),
+        .description = COMPOUND_STRING(
+            "Heats up to fire a beam.\n"
+            "Burns foe on contact."),
+        .effect = EFFECT_BEAK_BLAST,
+        .power = 100,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = -3,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .mirrorMoveBanned = TRUE,
+        .meFirstBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .assistBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0}
+    },
 
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
