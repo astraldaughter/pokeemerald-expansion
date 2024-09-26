@@ -883,6 +883,7 @@ gBattleAnims_Moves::
 	.4byte Move_STAMPEDE
 	.4byte Move_STAGNANT_AIR
 	.4byte Move_POISON_DARTS
+	.4byte Move_HEAT_RAY
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -18029,6 +18030,34 @@ Move_STAGNANT_AIR:
 	delay 90
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BATTLERS_2, 1, 16, 0, RGB_PURPLE
 	end
+
+Move_HEAT_RAY:
+	loadspritegfx ANIM_TAG_ORBS
+	call SetSolarBeamBg
+	panse SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	createvisualtask AnimTask_CreateSmallSolarBeamOrbs, 5
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 0
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 1
+	delay 4
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 1, 0, 10, RGB(25, 31, 0)
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 2
+	delay 4
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 65, 1
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 3
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 4
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 5
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 6
+	delay 4
+	call SolarBeamUnleash1
+	call SolarBeamUnleash1
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 1, 10, 0, RGB(25, 31, 0)
+	call UnsetSolarBeamBg
+	goto SolarBeamEnd
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
