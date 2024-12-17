@@ -2613,4 +2613,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Immune to biting attacks."),
         .aiRating = 7,
     },
+
+    [ABILITY_TUBEROUS] =
+    {
+        .name = _("Tuberous"),
+        .description = COMPOUND_STRING("Restores 1/8 HP at the end of\nthe turn if underground."),
+        .aiRating = 3,
+    },
 };

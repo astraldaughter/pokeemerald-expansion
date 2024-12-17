@@ -2303,6 +2303,7 @@ u8 DoFieldEndTurnEffects(void)
 enum
 {
     ENDTURN_INGRAIN,
+    ENDTURN_UNDERGROUND,
     ENDTURN_AQUA_RING,
     ENDTURN_ABILITIES,
     ENDTURN_ITEMS1,
@@ -2392,6 +2393,25 @@ u8 DoBattlerEndTurnEffects(void)
                 BattleScriptExecute(BattleScript_IngrainTurnHeal);
                 effect++;
             }
+            gBattleStruct->turnEffectsTracker++;
+            break;
+        case ENDTURN_UNDERGROUND:  // underground, used for Tuberous
+             if (ability == ABILITY_TUBEROUS)
+                {
+                    if ((gStatuses3[battler] & STATUS3_UNDERGROUND )
+                    && !BATTLER_MAX_HP(battler)
+                    && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK)
+                    && gBattleMons[battler].hp != 0)
+                    {
+                        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        BattleScriptExecute(BattleScript_TuberousActivates);
+                        effect++;
+                    }
+                }
+            
             gBattleStruct->turnEffectsTracker++;
             break;
         case ENDTURN_AQUA_RING:  // aqua ring
@@ -5157,6 +5177,20 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             {
                 gEffectBattler = battler;
                 SET_STATCHANGER(STAT_DEF, 2, FALSE);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
+                effect++;
+            }
+            break;
+        case ABILITY_MAGMA_ARMOR:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler)
+             && moveType == TYPE_WATER
+             && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN))
+            {
+                gEffectBattler = battler;
+                SET_STATCHANGER(STAT_DEF, 1, FALSE);
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
