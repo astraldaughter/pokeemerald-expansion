@@ -854,11 +854,11 @@ static u32 AI_GetEffectiveness(uq4_12_t multiplier)
     case UQ_4_12(1.0):
     default:
         return AI_EFFECTIVENESS_x1;
-    case UQ_4_12(2.0):
+    case UQ_4_12(1.5):
         return AI_EFFECTIVENESS_x2;
-    case UQ_4_12(4.0):
+    case UQ_4_12(2.25):
         return AI_EFFECTIVENESS_x4;
-    case UQ_4_12(8.0):
+    case UQ_4_12(3.375):
         return AI_EFFECTIVENESS_x8;
     }
 }

@@ -900,24 +900,24 @@ static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON
 {//                   Defender -->
  //  Attacker         Normal  Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy
     [TYPE_NORMAL]   = {______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-    [TYPE_FIGHTING] = {X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), X(0.5)},
-    [TYPE_FLYING]   = {______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______},
-    [TYPE_POISON]   = {______, ______, ______, X(0.5), X(0.5), X(0.5), ______, X(0.5), X(0.0), ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, X(2.0)},
-    [TYPE_GROUND]   = {______, ______, X(0.0), X(2.0), ______, X(2.0), X(0.5), ______, X(2.0), ______, X(2.0), ______, X(0.5), X(2.0), ______, ______, ______, ______, ______},
-    [TYPE_ROCK]     = {______, X(0.5), X(2.0), ______, X(0.5), ______, X(2.0), ______, X(0.5), ______, X(2.0), ______, ______, ______, ______, X(2.0), ______, ______, ______},
-    [TYPE_BUG]      = {______, X(0.5), X(0.5), X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(2.0), ______, ______, X(2.0), X(0.5)},
-    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______},
-    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, ______, X(2.0)},
+    [TYPE_FIGHTING] = {X(1.5), ______, X(0.5), X(0.5), ______, X(1.5), X(0.5), X(0.0), X(1.5), ______, ______, ______, ______, ______, X(0.5), X(1.5), ______, X(1.5), X(0.5)},
+    [TYPE_FLYING]   = {______, X(1.5), ______, ______, ______, X(0.5), X(1.5), ______, X(0.5), ______, ______, ______, X(1.5), X(0.5), ______, ______, ______, ______, ______},
+    [TYPE_POISON]   = {______, ______, ______, X(0.5), X(0.5), X(0.5), ______, X(0.5), X(0.0), ______, ______, ______, X(1.5), ______, ______, ______, ______, ______, X(1.5)},
+    [TYPE_GROUND]   = {______, ______, X(0.0), X(1.5), ______, X(1.5), X(0.5), ______, X(1.5), ______, X(1.5), ______, X(0.5), X(1.5), ______, ______, ______, ______, ______},
+    [TYPE_ROCK]     = {______, X(0.5), X(1.5), ______, X(0.5), ______, X(1.5), ______, X(0.5), ______, X(1.5), ______, ______, ______, ______, X(1.5), ______, ______, ______},
+    [TYPE_BUG]      = {______, X(0.5), X(0.5), X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, X(1.5), ______, X(1.5), ______, ______, X(1.5), X(0.5)},
+    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(1.5), ______, ______, ______, ______, ______, ______, X(1.5), ______, ______, X(0.5), ______},
+    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(1.5), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(1.5), ______, ______, X(1.5)},
     [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______},
-    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______},
-    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, X(0.5), ______, ______},
-    [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______},
-    [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______},
-    [TYPE_ICE]      = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______},
-    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), ______, X(0.0)},
-    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5)},
-    [TYPE_FAIRY]    = {______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______},
+    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(1.5), ______, X(1.5), ______, X(0.5), X(0.5), X(1.5), ______, ______, X(1.5), X(0.5), ______, ______},
+    [TYPE_WATER]    = {______, ______, ______, ______, X(1.5), X(1.5), ______, ______, ______, ______, X(1.5), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______},
+    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(1.5), X(1.5), X(0.5), ______, X(0.5), ______, X(0.5), X(1.5), X(0.5), ______, ______, ______, X(0.5), ______, ______},
+    [TYPE_ELECTRIC] = {______, ______, X(1.5), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(1.5), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______},
+    [TYPE_PSYCHIC]  = {______, X(1.5), ______, X(1.5), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______},
+    [TYPE_ICE]      = {______, ______, X(1.5), ______, X(1.5), ______, ______, ______, X(0.5), ______, X(0.5), X(0.5), X(1.5), ______, ______, X(0.5), X(1.5), ______, ______},
+    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(1.5), ______, X(0.0)},
+    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(1.5), ______, ______, ______, ______, ______, ______, X(1.5), ______, ______, X(0.5), X(0.5)},
+    [TYPE_FAIRY]    = {______, X(1.5), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(1.5), X(1.5), ______},
 };
 
 #undef ______
@@ -9650,7 +9650,7 @@ static inline uq4_12_t GetScreensModifier(u32 move, u32 battlerAtk, u32 battlerD
 
 static inline uq4_12_t GetCollisionCourseElectroDriftModifier(u32 move, uq4_12_t typeEffectivenessModifier)
 {
-    if (gMovesInfo[move].effect == EFFECT_COLLISION_COURSE && typeEffectivenessModifier >= UQ_4_12(2.0))
+    if (gMovesInfo[move].effect == EFFECT_COLLISION_COURSE && typeEffectivenessModifier >= UQ_4_12(1.05))
         return UQ_4_12(1.3333);
     return UQ_4_12(1.0);
 }
@@ -9660,7 +9660,7 @@ static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typ
     switch (abilityAtk)
     {
     case ABILITY_NEUROFORCE:
-        if (typeEffectivenessModifier >= UQ_4_12(2.0))
+        if (typeEffectivenessModifier >= UQ_4_12(1.5))
             return UQ_4_12(1.25);
         break;
     case ABILITY_SNIPER:
@@ -9687,12 +9687,12 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
     case ABILITY_FILTER:
     case ABILITY_SOLID_ROCK:
     case ABILITY_PRISM_ARMOR:
-        if (typeEffectivenessModifier >= UQ_4_12(2.0))
-            return UQ_4_12(0.75);
+        if (typeEffectivenessModifier >= UQ_4_12(1.5))
+            return UQ_4_12(0.8);
         break;
     case ABILITY_FLUFFY:
         if (!IsMoveMakingContact(move, battlerAtk) && moveType == TYPE_FIRE)
-            return UQ_4_12(2.0);
+            return UQ_4_12(1.5);
         if (IsMoveMakingContact(move, battlerAtk) && moveType != TYPE_FIRE)
             return UQ_4_12(0.5);
         break;
@@ -9732,7 +9732,7 @@ static inline uq4_12_t GetAttackerItemsModifier(u32 battlerAtk, uq4_12_t typeEff
         return uq4_12_add(sPercentToModifier[percentBoost], UQ_4_12(1.0));
         break;
     case HOLD_EFFECT_EXPERT_BELT:
-        if (typeEffectivenessModifier >= UQ_4_12(2.0))
+        if (typeEffectivenessModifier >= UQ_4_12(1.5))
             return UQ_4_12(1.2);
         break;
     case HOLD_EFFECT_LIFE_ORB:
@@ -9752,7 +9752,7 @@ static inline uq4_12_t GetDefenderItemsModifier(u32 moveType, u32 battlerDef, uq
     case HOLD_EFFECT_RESIST_BERRY:
         if (UnnerveOn(battlerDef, itemDef))
             return UQ_4_12(1.0);
-        if (moveType == holdEffectDefParam && (moveType == TYPE_NORMAL || typeEffectivenessModifier >= UQ_4_12(2.0)))
+        if (moveType == holdEffectDefParam && (moveType == TYPE_NORMAL || typeEffectivenessModifier >= UQ_4_12(1.5)))
         {
             if (updateFlags)
                 gSpecialStatuses[battlerDef].berryReduced = TRUE;
@@ -9922,13 +9922,13 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
     if (gMovesInfo[move].effect == EFFECT_FREEZE_DRY && defType == TYPE_WATER)
-        mod = UQ_4_12(2.0);
+        mod = UQ_4_12(1.5);
     if (gMovesInfo[move].effect == EFFECT_CUT && defType == TYPE_GRASS)
-        mod = UQ_4_12(2.0);
+        mod = UQ_4_12(1.5);
     if (moveType == TYPE_GROUND && defType == TYPE_FLYING && IsBattlerGrounded(battlerDef) && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
     if (moveType == TYPE_FIRE && gDisableStructs[battlerDef].tarShot)
-        mod = UQ_4_12(2.0);
+        mod = UQ_4_12(1.5);
 
     // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokémon
     if (gBattleWeather & B_WEATHER_STRONG_WINDS && WEATHER_HAS_EFFECT)
@@ -9938,6 +9938,15 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     }
 
     *modifier = uq4_12_multiply(*modifier, mod);
+    switch (*modifier)
+    {
+    case UQ_4_12(0.75):
+        *modifier = UQ_4_12(1.0);
+    case UQ_4_12(0.325):
+        *modifier = UQ_4_12(0.5);
+    case UQ_4_12(1.125):
+        *modifier = UQ_4_12(1.5);
+    }
 }
 
 static inline void TryNoticeIllusionInTypeEffectiveness(u32 move, u32 moveType, u32 battlerAtk, u32 battlerDef, uq4_12_t resultingModifier, u32 illusionSpecies)
