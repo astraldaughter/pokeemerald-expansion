@@ -491,17 +491,17 @@ static const u16 sAquastrianTeachableLearnset[] = {
 };
 #endif //P_FAMILY_KELPONI
 
-#if P_FAMILY_CATERPIE
-static const u16 sCaterpieTeachableLearnset[] = {
+#if P_FAMILY_TIMIDNA
+static const u16 sTimidnaTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sMetapodTeachableLearnset[] = {
+static const u16 sToxrecTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sButterfreeTeachableLearnset[] = {
+static const u16 sLintsectTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -531,18 +531,18 @@ static const u16 sButterfreeTeachableLearnset[] = {
     MOVE_SWIFT,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_CATERPIE
+#endif //P_FAMILY_TIMIDNA
 
-#if P_FAMILY_WEEDLE
-static const u16 sWeedleTeachableLearnset[] = {
+#if P_FAMILY_DROSODUST
+static const u16 sDrosodustTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sKakunaTeachableLearnset[] = {
+static const u16 sOrbuncleTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sBeedrillTeachableLearnset[] = {
+static const u16 sMagtailTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
@@ -571,10 +571,10 @@ static const u16 sBeedrillTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_WEEDLE
+#endif //P_FAMILY_DROSODUST
 
-#if P_FAMILY_PIDGEY
-static const u16 sPidgeyTeachableLearnset[] = {
+#if P_FAMILY_MURMURAVEN
+static const u16 sMurmuravenTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -598,7 +598,7 @@ static const u16 sPidgeyTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sPidgeottoTeachableLearnset[] = {
+static const u16 sBewarecrowTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -646,7 +646,7 @@ static const u16 sPidgeotTeachableLearnset[] = {
     MOVE_SWIFT,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 
 #if P_FAMILY_RATTATA
 static const u16 sRattataTeachableLearnset[] = {

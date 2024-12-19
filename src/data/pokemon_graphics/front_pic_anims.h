@@ -129,8 +129,8 @@ PLACEHOLDER_ANIM_SINGLE_FRAME(AquastrianGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KELPONI
 
-#if P_FAMILY_CATERPIE
-static const union AnimCmd sAnim_Caterpie_1[] =
+#if P_FAMILY_TIMIDNA
+static const union AnimCmd sAnim_Timidna_1[] =
 {
     ANIMCMD_FRAME(1, 15),
     ANIMCMD_FRAME(0, 15),
@@ -143,14 +143,14 @@ static const union AnimCmd sAnim_Caterpie_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Metapod_1[] =
+static const union AnimCmd sAnim_Toxrec_1[] =
 {
     ANIMCMD_FRAME(1, 45),
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Butterfree_1[] =
+static const union AnimCmd sAnim_Lintsect_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 5),
@@ -169,12 +169,12 @@ static const union AnimCmd sAnim_Butterfree_1[] =
 };
 
 #if P_GIGANTAMAX_FORMS
-PLACEHOLDER_ANIM_SINGLE_FRAME(ButterfreeGigantamax);
+PLACEHOLDER_ANIM_SINGLE_FRAME(LintsectGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_CATERPIE
+#endif //P_FAMILY_TIMIDNA
 
-#if P_FAMILY_WEEDLE
-static const union AnimCmd sAnim_Weedle_1[] =
+#if P_FAMILY_DROSODUST
+static const union AnimCmd sAnim_Drosodust_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 15),
@@ -186,7 +186,7 @@ static const union AnimCmd sAnim_Weedle_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Kakuna_1[] =
+static const union AnimCmd sAnim_Orbuncle_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 5),
@@ -202,7 +202,7 @@ static const union AnimCmd sAnim_Kakuna_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Beedrill_1[] =
+static const union AnimCmd sAnim_Magtail_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 35),
@@ -215,12 +215,12 @@ static const union AnimCmd sAnim_Beedrill_1[] =
 };
 
 #if P_MEGA_EVOLUTIONS
-PLACEHOLDER_ANIM_SINGLE_FRAME(BeedrillMega);
+PLACEHOLDER_ANIM_SINGLE_FRAME(MagtailMega);
 #endif //P_MEGA_EVOLUTIONS
-#endif //P_FAMILY_WEEDLE
+#endif //P_FAMILY_DROSODUST
 
-#if P_FAMILY_PIDGEY
-static const union AnimCmd sAnim_Pidgey_1[] =
+#if P_FAMILY_MURMURAVEN
+static const union AnimCmd sAnim_Murmuraven_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 25),
@@ -228,7 +228,7 @@ static const union AnimCmd sAnim_Pidgey_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Pidgeotto_1[] =
+static const union AnimCmd sAnim_Bewarecrow_1[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(1, 10),
@@ -248,7 +248,7 @@ static const union AnimCmd sAnim_Pidgeot_1[] =
 #if P_MEGA_EVOLUTIONS
 PLACEHOLDER_ANIM_SINGLE_FRAME(PidgeotMega);
 #endif //P_MEGA_EVOLUTIONS
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 
 #if P_FAMILY_RATTATA
 static const union AnimCmd sAnim_Rattata_1[] =
@@ -10187,30 +10187,30 @@ SINGLE_ANIMATION(AquastrianMega);
 SINGLE_ANIMATION(AquastrianGigantamax);
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_KELPONI
-#if P_FAMILY_CATERPIE
-SINGLE_ANIMATION(Caterpie);
-SINGLE_ANIMATION(Metapod);
-SINGLE_ANIMATION(Butterfree);
+#if P_FAMILY_TIMIDNA
+SINGLE_ANIMATION(Timidna);
+SINGLE_ANIMATION(Toxrec);
+SINGLE_ANIMATION(Lintsect);
 #if P_GIGANTAMAX_FORMS
-SINGLE_ANIMATION(ButterfreeGigantamax);
+SINGLE_ANIMATION(LintsectGigantamax);
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_CATERPIE
-#if P_FAMILY_WEEDLE
-SINGLE_ANIMATION(Weedle);
-SINGLE_ANIMATION(Kakuna);
-SINGLE_ANIMATION(Beedrill);
+#endif //P_FAMILY_TIMIDNA
+#if P_FAMILY_DROSODUST
+SINGLE_ANIMATION(Drosodust);
+SINGLE_ANIMATION(Orbuncle);
+SINGLE_ANIMATION(Magtail);
 #if P_MEGA_EVOLUTIONS
-SINGLE_ANIMATION(BeedrillMega);
+SINGLE_ANIMATION(MagtailMega);
 #endif //P_MEGA_EVOLUTIONS
-#endif //P_FAMILY_WEEDLE
-#if P_FAMILY_PIDGEY
-SINGLE_ANIMATION(Pidgey);
-SINGLE_ANIMATION(Pidgeotto);
+#endif //P_FAMILY_DROSODUST
+#if P_FAMILY_MURMURAVEN
+SINGLE_ANIMATION(Murmuraven);
+SINGLE_ANIMATION(Bewarecrow);
 SINGLE_ANIMATION(Pidgeot);
 #if P_MEGA_EVOLUTIONS
 SINGLE_ANIMATION(PidgeotMega);
 #endif
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 #if P_FAMILY_RATTATA
 SINGLE_ANIMATION(Rattata);
 SINGLE_ANIMATION(Raticate);

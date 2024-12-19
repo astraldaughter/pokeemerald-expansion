@@ -30,7 +30,7 @@
 #define P_FUSION_FORMS                   TRUE
 
 // Regional Forms. Includes Regional Form evolutions, like Sirfetch'd.
-#define P_REGIONAL_FORMS                 TRUE
+#define P_REGIONAL_FORMS                 FALSE
 #define P_ALOLAN_FORMS                   P_REGIONAL_FORMS
 #define P_GALARIAN_FORMS                 P_REGIONAL_FORMS
 #define P_HISUIAN_FORMS                  P_REGIONAL_FORMS
@@ -56,9 +56,9 @@
 #define P_FAMILY_KIWEE                   P_GEN_1_POKEMON
 #define P_FAMILY_KINDLANT              P_GEN_1_POKEMON
 #define P_FAMILY_KELPONI                P_GEN_1_POKEMON
-#define P_FAMILY_CATERPIE                P_GEN_1_POKEMON
-#define P_FAMILY_WEEDLE                  P_GEN_1_POKEMON
-#define P_FAMILY_PIDGEY                  P_GEN_1_POKEMON
+#define P_FAMILY_TIMIDNA                P_GEN_1_POKEMON
+#define P_FAMILY_DROSODUST                  P_GEN_1_POKEMON
+#define P_FAMILY_MURMURAVEN                  P_GEN_1_POKEMON
 #define P_FAMILY_RATTATA                 P_GEN_1_POKEMON
 #define P_FAMILY_SPEAROW                 P_GEN_1_POKEMON
 #define P_FAMILY_EKANS                   P_GEN_1_POKEMON

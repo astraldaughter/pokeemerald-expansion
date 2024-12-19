@@ -26,29 +26,29 @@ static const u16 sAquastrianFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_KELPONI
 
-#if P_FAMILY_CATERPIE
-static const u16 sButterfreeFormSpeciesIdTable[] = {
-    SPECIES_BUTTERFREE,
-    SPECIES_BUTTERFREE_GIGANTAMAX,
+#if P_FAMILY_TIMIDNA
+static const u16 sLintsectFormSpeciesIdTable[] = {
+    SPECIES_LINTSECT,
+    SPECIES_LINTSECT_GIGANTAMAX,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_CATERPIE
+#endif //P_FAMILY_TIMIDNA
 
-#if P_FAMILY_WEEDLE
-static const u16 sBeedrillFormSpeciesIdTable[] = {
-    SPECIES_BEEDRILL,
-    SPECIES_BEEDRILL_MEGA,
+#if P_FAMILY_DROSODUST
+static const u16 sMagtailFormSpeciesIdTable[] = {
+    SPECIES_MAGTAIL,
+    SPECIES_MAGTAIL_MEGA,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_WEEDLE
+#endif //P_FAMILY_DROSODUST
 
-#if P_FAMILY_PIDGEY
+#if P_FAMILY_MURMURAVEN
 static const u16 sPidgeotFormSpeciesIdTable[] = {
     SPECIES_PIDGEOT,
     SPECIES_PIDGEOT_MEGA,
     FORM_SPECIES_END,
 };
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 
 #if P_FAMILY_RATTATA
 static const u16 sRattataFormSpeciesIdTable[] = {

@@ -62,8 +62,8 @@ const u16 gEggMoves[] = {
         MOVE_AURA_SPHERE),
 #endif //P_FAMILY_KELPONI
 
-#if P_FAMILY_PIDGEY
-    egg_moves(PIDGEY,
+#if P_FAMILY_MURMURAVEN
+    egg_moves(MURMURAVEN,
         MOVE_PURSUIT,
         MOVE_FEINT_ATTACK,
         MOVE_FORESIGHT,
@@ -73,7 +73,7 @@ const u16 gEggMoves[] = {
         MOVE_BRAVE_BIRD,
         MOVE_UPROAR,
         MOVE_DEFOG),
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 
 #if P_FAMILY_RATTATA
     egg_moves(RATTATA,

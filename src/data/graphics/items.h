@@ -826,8 +826,8 @@ const u32 gItemIconPalette_ScornetiteY[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_Blastoisinite[] = INCBIN_U32("graphics/items/icons/blastoisinite.4bpp.lz");
 const u32 gItemIconPalette_Blastoisinite[] = INCBIN_U32("graphics/items/icon_palettes/blastoisinite.gbapal.lz");
 
-const u32 gItemIcon_Beedrillite[] = INCBIN_U32("graphics/items/icons/beedrillite.4bpp.lz");
-const u32 gItemIconPalette_Beedrillite[] = INCBIN_U32("graphics/items/icon_palettes/beedrillite.gbapal.lz");
+const u32 gItemIcon_Magtailite[] = INCBIN_U32("graphics/items/icons/magtailite.4bpp.lz");
+const u32 gItemIconPalette_Magtailite[] = INCBIN_U32("graphics/items/icon_palettes/magtailite.gbapal.lz");
 
 const u32 gItemIcon_Pidgeotite[] = INCBIN_U32("graphics/items/icons/pidgeotite.4bpp.lz");
 const u32 gItemIconPalette_Pidgeotite[] = INCBIN_U32("graphics/items/icon_palettes/pidgeotite.gbapal.lz");

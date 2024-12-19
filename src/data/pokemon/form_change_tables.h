@@ -23,27 +23,27 @@ static const struct FormChange sAquastrianFormChangeTable[] = {
 };
 #endif //P_FAMILY_KELPONI
 
-#if P_FAMILY_CATERPIE
-static const struct FormChange sButterfreeFormChangeTable[] =
+#if P_FAMILY_TIMIDNA
+static const struct FormChange sLintsectFormChangeTable[] =
 {
-    {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_BUTTERFREE_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_LINTSECT_GIGANTAMAX},
     {FORM_CHANGE_TERMINATOR},
 };
-#endif //P_FAMILY_CATERPIE
+#endif //P_FAMILY_TIMIDNA
 
-#if P_FAMILY_WEEDLE
-static const struct FormChange sBeedrillFormChangeTable[] = {
-    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_BEEDRILL_MEGA, ITEM_BEEDRILLITE},
+#if P_FAMILY_DROSODUST
+static const struct FormChange sMagtailFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_MAGTAIL_MEGA, ITEM_MAGTAILITE},
     {FORM_CHANGE_TERMINATOR},
 };
-#endif //P_FAMILY_WEEDLE
+#endif //P_FAMILY_DROSODUST
 
-#if P_FAMILY_PIDGEY
+#if P_FAMILY_MURMURAVEN
 static const struct FormChange sPidgeotFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_PIDGEOT_MEGA, ITEM_PIDGEOTITE},
     {FORM_CHANGE_TERMINATOR},
 };
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_MURMURAVEN
 
 #if P_FAMILY_PIKACHU
 static const struct FormChange sPikachuFormChangeTable[] =
