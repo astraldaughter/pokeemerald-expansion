@@ -20992,22 +20992,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0}
     },
 
-    [MOVE_STAR_DROP] =
+    [MOVE_SHELL_SHOCK] =
     {
-        // UNDEXITED BUT I WANT TO REPLACE THIS.
-        .name = COMPOUND_STRING("Star Drop"),
+        .name = COMPOUND_STRING("Shell Shock"),
         .description = COMPOUND_STRING(
-            "Crashes like a falling star.\n"
-            "Moves first under Gravity."),
-        .effect = EFFECT_STAR_DROP,
+            "Spins to attack while safely\n"
+            "tucked inside its shell. Raises\n"
+            "Defense after hitting."),
+        .effect = EFFECT_HIT,
         .power = 70,
-        .type = TYPE_FAIRY,
-        .accuracy = 95,
-        .pp = 20,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .makesContact = TRUE,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
     },
 
     [MOVE_UPROOT] =
@@ -21152,6 +21156,34 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
+        .contestComboMoves = {0}
+    },
+
+    [MOVE_TENDERIZE] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("Tenderize"),
+        .description = COMPOUND_STRING(
+            "Punches to soften up the foe.\n"
+            "Lowers Defense. Can only be used\n"
+            "on the first turn."),
+        .priority = 2,
+        .makesContact = TRUE,
+        .punchingMove = TRUE,
+        .effect = EFFECT_FIRST_TURN_ONLY,
+        .power = 70,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = COMBO_STARTER_FAKE_OUT,
         .contestComboMoves = {0}
     },
 

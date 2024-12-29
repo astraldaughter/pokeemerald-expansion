@@ -2231,12 +2231,6 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .encourageEncore = TRUE,
     },
 
-    [EFFECT_STAR_DROP] =
-    {
-        .battleScript = BattleScript_EffectHit,
-        .battleTvScore = 0,
-    },
-
     [EFFECT_CUT] =
     {
         .battleScript = BattleScript_EffectHit,
