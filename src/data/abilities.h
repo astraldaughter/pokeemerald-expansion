@@ -278,7 +278,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ILLUMINATE] =
     {
         .name = _("Illuminate"),
-        .description = COMPOUND_STRING("Illuminates its surroundings,\nraising the encounter rate."),
+        .description = COMPOUND_STRING("Illuminates the area, raising\nits and its ally's accuracy. It\nalso raises the encounter rate."),
         .aiRating = 0,
         .breakable = TRUE,
     },
@@ -888,7 +888,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_HONEY_GATHER] =
     {
         .name = _("Honey Gather"),
-        .description = COMPOUND_STRING("May gather Honey after battle. "),
+        .description = COMPOUND_STRING("May gather Honey after battle."),
         .aiRating = 0,
     },
 
