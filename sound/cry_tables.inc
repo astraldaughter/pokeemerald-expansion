@@ -2478,7 +2478,7 @@ gCryTable_Reverse::
 .endif @ P_FAMILY_RATTATA
 .if P_FAMILY_RUTABUNNY == TRUE
 	cry_reverse Cry_Rutabunny
-	cry_reverse Cry_Fearow
+	cry_reverse Cry_Swiron
 .endif @ P_FAMILY_RUTABUNNY
 .if P_FAMILY_HOGWELD == TRUE
 	cry_reverse Cry_Hogweld
