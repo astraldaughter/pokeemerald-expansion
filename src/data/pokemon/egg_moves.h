@@ -105,8 +105,8 @@ const u16 gEggMoves[] = {
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
 
-#if P_FAMILY_SPEAROW
-    egg_moves(SPEAROW,
+#if P_FAMILY_RUTABUNNY
+    egg_moves(RUTABUNNY,
         MOVE_FEINT_ATTACK,
         MOVE_SCARY_FACE,
         MOVE_QUICK_ATTACK,
@@ -118,10 +118,10 @@ const u16 gEggMoves[] = {
         MOVE_FEATHER_DANCE,
         MOVE_STEEL_WING,
         MOVE_RAZOR_WIND),
-#endif //P_FAMILY_SPEAROW
+#endif //P_FAMILY_RUTABUNNY
 
-#if P_FAMILY_EKANS
-    egg_moves(EKANS,
+#if P_FAMILY_HOGWELD
+    egg_moves(HOGWELD,
         MOVE_PURSUIT,
         MOVE_SLAM,
         MOVE_SPITE,
@@ -134,7 +134,7 @@ const u16 gEggMoves[] = {
         MOVE_IRON_TAIL,
         MOVE_SUCKER_PUNCH,
         MOVE_SNATCH),
-#endif //P_FAMILY_EKANS
+#endif //P_FAMILY_HOGWELD
 
 #if P_FAMILY_PIKACHU
 #if P_GEN_2_CROSS_EVOS

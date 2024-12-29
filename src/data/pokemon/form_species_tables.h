@@ -57,10 +57,10 @@ static const u16 sRattataFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
-static const u16 sRaticateFormSpeciesIdTable[] = {
-    SPECIES_RATICATE,
-    SPECIES_RATICATE_ALOLAN,
-    SPECIES_RATICATE_ALOLAN_TOTEM,
+static const u16 sHopstalkFormSpeciesIdTable[] = {
+    SPECIES_HOPSTALK,
+    SPECIES_HOPSTALK_ALOLAN,
+    SPECIES_HOPSTALK_ALOLAN_TOTEM,
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_RATTATA

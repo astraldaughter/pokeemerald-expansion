@@ -408,7 +408,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Aquine"),
         .cryId = CRY_AQUINE,
         .natDexNum = NATIONAL_DEX_AQUINE,
-        .categoryName = _("Kelpie"),
+        .categoryName = _("Yearling"),
         .height = 12,
         .weight = 190,
         .description = COMPOUND_STRING(
@@ -738,10 +738,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 6,
         .weight = 100,
         .description = COMPOUND_STRING(
-            "It remains virtually immobile while it\n"
-            "clings to a tree. However, on the inside,\n"
-            "it busily prepares for evolution. This is\n"
-            "evident from how hot its shell becomes."),
+            "Easily frightened, a Haretoise will escape a\n"
+            "percieved threat in one of two ways - it will\n"
+            "either tuck its limbs away into its sturdy\n"
+            "shell, or bolt away from the danger at a\n"
+            "surprisingly high speed."),
         .pokemonScale = 424,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -775,8 +776,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 30,
         .baseSpDefense = 30,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
-        .catchRate = 45,
-        .expYield = 198,
+        .catchRate = 255,
+        .expYield = 49,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -788,14 +789,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Magtail"),
         .cryId = CRY_MAGTAIL,
         .natDexNum = NATIONAL_DEX_MAGTAIL,
-        .categoryName = _("Poison Bee"),
-        .height = 10,
-        .weight = 295,
+        .categoryName = _("Tiny Bird"),
+        .height = 3,
+        .weight = 18,
         .description = COMPOUND_STRING(
-            "A Magtail is extremely territorial.\n"
-            "For safety reasons, no one should ever\n"
-            "approach its nest. If angered, they will\n"
-            "attack in a swarm."),
+            "Magtail pose very little threat individually,\n"
+            "but an entire flock will regularly decimate\n"
+            "entire fields of crops, ruining a harvest. As a\n"
+            "result, it is viewed as a pest on farms, and\n"
+            "farmers will go to great lengths to repel them."),
         .pokemonScale = 366,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -830,8 +832,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_DARK, TYPE_FLYING),
-        .catchRate = 255,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 55,
+        .catchRate = 120,
+        .expYield = 121,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -843,14 +845,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Murmuraven"),
         .cryId = CRY_MURMURAVEN,
         .natDexNum = NATIONAL_DEX_MURMURAVEN,
-        .categoryName = _("Tiny Bird"),
-        .height = 3,
-        .weight = 18,
+        .categoryName = _("Murmuration"),
+        .height = 11,
+        .weight = 300,
         .description = COMPOUND_STRING(
-            "It has an extremely sharp sense of\n"
-            "direction. It can unerringly return home to\n"
-            "its nest, however far it may be removed\n"
-            "from its familiar surroundings."),
+            "Murmuraven often lead the flocks of Magtail\n"
+            "they grew up in, and are much more capable of\n"
+            "defending themselves. In historical art, they\n"
+            "were often depicted as symbols of hardship,\n"
+            "famine, and starvation."),
         .pokemonScale = 508,
         .pokemonOffset = -3,
         .trainerScale = 256,
@@ -871,10 +874,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         FOOTPRINT(Murmuraven)
         .levelUpLearnset = sMurmuravenLevelUpLearnset,
         .teachableLearnset = sMurmuravenTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_BEWARECROW}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_NEVERMORN}),
     },
 
-    [SPECIES_BEWARECROW] =
+    [SPECIES_NEVERMORN] =
     {
         .baseHP        = 85,
         .baseAttack    = 105,
@@ -883,8 +886,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DARK, TYPE_FLYING),
-        .catchRate = 120,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 122 : 113,
+        .catchRate = 45,
+        .expYield = 170,
         .evYield_Attack = 2,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
@@ -894,39 +897,40 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_UNNERVE, ABILITY_NONE, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Bewarecrow"),
-        .cryId = CRY_BEWARECROW,
-        .natDexNum = NATIONAL_DEX_BEWARECROW,
-        .categoryName = _("Bird"),
-        .height = 11,
-        .weight = 300,
+        .speciesName = _("Nevermorn"),
+        .cryId = CRY_NEVERMORN,
+        .natDexNum = NATIONAL_DEX_NEVERMORN,
+        .categoryName = _("Harbinger"),
+        .height = 15,
+        .weight = 412,
         .description = COMPOUND_STRING(
-            "This Pokémon flies around, patrolling its\n"
-            "large territory. If its living space is\n"
-            "violated, it shows no mercy in thoroughly\n"
-            "punishing the foe with its sharp claws."),
+            "Its frightening appearance has given it\n"
+            "somewhat of a bad reputation as a harbinger of\n"
+            "various destructive forces. Offerings were\n"
+            "often left to it, and in return, Nevermorn would\n"
+            "defend crops from encroaching Magtail flocks."),
         .pokemonScale = 331,
         .pokemonOffset = 10,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Bewarecrow,
+        .frontPic = gMonFrontPic_Nevermorn,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 3,
         .enemyMonElevation = 3,
-        .frontAnimFrames = sAnims_Bewarecrow,
+        .frontAnimFrames = sAnims_Nevermorn,
         .frontAnimId = ANIM_V_STRETCH,
         .frontAnimDelay = 25,
-        .backPic = gMonBackPic_Bewarecrow,
+        .backPic = gMonBackPic_Nevermorn,
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 6,
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
-        .palette = gMonPalette_Bewarecrow,
-        .shinyPalette = gMonShinyPalette_Bewarecrow,
-        .iconSprite = gMonIcon_Bewarecrow,
+        .palette = gMonPalette_Nevermorn,
+        .shinyPalette = gMonShinyPalette_Nevermorn,
+        .iconSprite = gMonIcon_Nevermorn,
         .iconPalIndex = 0,
-        FOOTPRINT(Bewarecrow)
-        .levelUpLearnset = sBewarecrowLevelUpLearnset,
-        .teachableLearnset = sBewarecrowTeachableLearnset,
+        FOOTPRINT(Nevermorn)
+        .levelUpLearnset = sNevermornLevelUpLearnset,
+        .teachableLearnset = sNevermornTeachableLearnset,
     },
 
 #define PIDGEOT_SPEED (P_UPDATED_STATS >= GEN_6 ? 101 : 91)
@@ -1049,10 +1053,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sRattataLevelUpLearnset,
         .teachableLearnset = sRattataTeachableLearnset,
         .formSpeciesIdTable = sRattataFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_RATICATE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_HOPSTALK}),
     },
 
-    [SPECIES_RATICATE] =
+    [SPECIES_HOPSTALK] =
     {
         .baseHP        = 45,
         .baseAttack    = 75,
@@ -1061,9 +1065,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
-        .catchRate = 127,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 145 : 116,
-        .evYield_Speed = 2,
+        .catchRate = 255,
+        .expYield = 64,
+        .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
@@ -1072,42 +1076,42 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_TUBEROUS, ABILITY_NONE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Hopstalk"),
-        .cryId = CRY_RATICATE,
-        .natDexNum = NATIONAL_DEX_RATICATE,
-        .categoryName = _("Mouse"),
+        .cryId = CRY_HOPSTALK,
+        .natDexNum = NATIONAL_DEX_HOPSTALK,
+        .categoryName = _("Root"),
         .height = 7,
         .weight = 185,
         .description = COMPOUND_STRING(
-            "A Raticate's sturdy fangs grow steadily.\n"
-            "To keep them ground down, it gnaws on\n"
-            "rocks and logs. It may even chew on the\n"
-            "walls of houses."),
+            "Hopstalk bury themselves in soil during the day\n"
+            "both to hide themselves from predators, and to\n"
+            "absorb minerals and nutrients. During the\n"
+            "night, a Hopstalk will uproot itself, and wander\n"
+            "in search of fresh soil to feed upon."),
         .pokemonScale = 459,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Raticate,
+        .frontPic = gMonFrontPic_Hopstalk,
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 15,
-        .frontAnimFrames = sAnims_Raticate,
+        .frontAnimFrames = sAnims_Hopstalk,
         .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
-        .backPic = gMonBackPic_Raticate,
+        .backPic = gMonBackPic_Hopstalk,
         .backPicSize = MON_COORDS_SIZE(64, 48),
         .backPicYOffset = 8,
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
-        .palette = gMonPalette_Raticate,
-        .shinyPalette = gMonShinyPalette_Raticate,
-        .iconSprite = gMonIcon_Raticate,
+        .palette = gMonPalette_Hopstalk,
+        .shinyPalette = gMonShinyPalette_Hopstalk,
+        .iconSprite = gMonIcon_Hopstalk,
         .iconPalIndex = 0,
-        FOOTPRINT(Raticate)
-        .levelUpLearnset = sRaticateLevelUpLearnset,
-        .teachableLearnset = sRaticateTeachableLearnset,
-        .formSpeciesIdTable = sRaticateFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_SPEAROW}),
+        FOOTPRINT(Hopstalk)
+        .levelUpLearnset = sHopstalkLevelUpLearnset,
+        .teachableLearnset = sHopstalkTeachableLearnset,
+        .formSpeciesIdTable = sHopstalkFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_RUTABUNNY}),
     },
 
-#if P_FAMILY_SPEAROW
-    [SPECIES_SPEAROW] =
+    [SPECIES_RUTABUNNY] =
     {
         .baseHP        = 75,
         .baseAttack    = 110,
@@ -1116,10 +1120,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
-        .catchRate = 255,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 52 : 58,
-        .evYield_Speed = 1,
-        .itemRare = ITEM_SHARP_BEAK,
+        .catchRate = 127,
+        .expYield = 172,
+        .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
@@ -1128,47 +1131,48 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_TUBEROUS, ABILITY_NONE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Rutabunny"),
-        .cryId = CRY_SPEAROW,
-        .natDexNum = NATIONAL_DEX_SPEAROW,
-        .categoryName = _("Tiny Bird"),
+        .cryId = CRY_RUTABUNNY,
+        .natDexNum = NATIONAL_DEX_RUTABUNNY,
+        .categoryName = _("Root"),
         .height = 3,
         .weight = 20,
         .description = COMPOUND_STRING(
-            "Its loud cry can be heard over half a mile\n"
-            "away. If its high, keening cry is heard\n"
-            "echoing all around, it is a sign that they\n"
-            "are warning each other of danger."),
+            "Since Rutabunny seek out the most nutrient-rich\n"
+            "soil, they often find themselves in competition\n"
+            "with human farmers who are trying to grow\n"
+            "crops. They will also unfortunately consume any\n"
+            "root vegetables they can get their teeth into."),
         .pokemonScale = 571,
         .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Spearow,
+        .frontPic = gMonFrontPic_Rutabunny,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_Spearow,
+        .frontAnimFrames = sAnims_Rutabunny,
         .frontAnimId = ANIM_V_JUMPS_SMALL,
-        .backPic = gMonBackPic_Spearow,
+        .backPic = gMonBackPic_Rutabunny,
         .backPicSize = MON_COORDS_SIZE(56, 56),
         .backPicYOffset = 8,
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
-        .palette = gMonPalette_Spearow,
-        .shinyPalette = gMonShinyPalette_Spearow,
-        .iconSprite = gMonIcon_Spearow,
+        .palette = gMonPalette_Rutabunny,
+        .shinyPalette = gMonShinyPalette_Rutabunny,
+        .iconSprite = gMonIcon_Rutabunny,
         .iconPalIndex = 0,
-        FOOTPRINT(Spearow)
-        .levelUpLearnset = sSpearowLevelUpLearnset,
-        .teachableLearnset = sSpearowTeachableLearnset,
+        FOOTPRINT(Rutabunny)
+        .levelUpLearnset = sRutabunnyLevelUpLearnset,
+        .teachableLearnset = sRutabunnyTeachableLearnset,
     },
 
-    [SPECIES_FEAROW] =
+    [SPECIES_SWIRON] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 90,
-        .baseDefense   = 65,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 61,
-        .baseSpDefense = 61,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .baseHP        = 50,
+        .baseAttack    = 65,
+        .baseDefense   = 100,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 30,
+        .baseSpDefense = 55,
+        .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 155 : 162,
         .evYield_Speed = 2,
@@ -1180,9 +1184,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Fearow"),
-        .cryId = CRY_FEAROW,
-        .natDexNum = NATIONAL_DEX_FEAROW,
+        .speciesName = _("Swiron"),
+        .cryId = CRY_SWIRON,
+        .natDexNum = NATIONAL_DEX_SWIRON,
         .categoryName = _("Beak"),
         .height = 12,
         .weight = 380,
@@ -1195,37 +1199,35 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .pokemonOffset = 1,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Fearow,
+        .frontPic = gMonFrontPic_Swiron,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_Fearow,
+        .frontPicYOffset = 16,
+        .frontAnimFrames = sAnims_Swiron,
         .frontAnimId = ANIM_FIGURE_8,
         .frontAnimDelay = 2,
-        .enemyMonElevation = 6,
-        .backPic = gMonBackPic_Fearow,
+        .enemyMonElevation = 0,
+        .backPic = gMonBackPic_Swiron,
         .backPicSize = MON_COORDS_SIZE(64, 56),
-        .backPicYOffset = 4,
+        .backPicYOffset = 13,
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
-        .palette = gMonPalette_Fearow,
-        .shinyPalette = gMonShinyPalette_Fearow,
-        .iconSprite = gMonIcon_Fearow,
+        .palette = gMonPalette_Swiron,
+        .shinyPalette = gMonShinyPalette_Swiron,
+        .iconSprite = gMonIcon_Swiron,
         .iconPalIndex = 0,
-        FOOTPRINT(Fearow)
-        .levelUpLearnset = sFearowLevelUpLearnset,
-        .teachableLearnset = sFearowTeachableLearnset,
+        FOOTPRINT(Swiron)
+        .levelUpLearnset = sSwironLevelUpLearnset,
+        .teachableLearnset = sSwironTeachableLearnset,
     },
-#endif //P_FAMILY_SPEAROW
 
-#if P_FAMILY_EKANS
-    [SPECIES_EKANS] =
+    [SPECIES_HOGWELD] =
     {
-        .baseHP        = 35,
-        .baseAttack    = 60,
-        .baseDefense   = 44,
-        .baseSpeed     = 55,
+        .baseHP        = 60,
+        .baseAttack    = 90,
+        .baseDefense   = 135,
+        .baseSpeed     = 30,
         .baseSpAttack  = 40,
-        .baseSpDefense = 54,
-        .types = MON_TYPES(TYPE_POISON),
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 62,
         .evYield_Attack = 1,
@@ -1236,14 +1238,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SHED_SKIN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Ekans"),
-        .cryId = CRY_EKANS,
-        .natDexNum = NATIONAL_DEX_EKANS,
+        .speciesName = _("Hogweld"),
+        .cryId = CRY_HOGWELD,
+        .natDexNum = NATIONAL_DEX_HOGWELD,
         .categoryName = _("Snake"),
         .height = 20,
         .weight = 69,
         .description = COMPOUND_STRING(
-            "An Ekans curls itself up in a spiral while\n"
+            "An Hogweld curls itself up in a spiral while\n"
             "it rests. This position allows it to quickly\n"
             "respond to an enemy from any direction\n"
             "with a threat from its upraised head."),
@@ -1251,43 +1253,37 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .pokemonOffset = 12,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Ekans,
+        .frontPic = gMonFrontPic_Hogweld,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
-        .frontPicYOffset = 10,
-        .frontAnimFrames = sAnims_Ekans,
+        .frontPicYOffset = 9,
+        .frontAnimFrames = sAnims_Hogweld,
         .frontAnimId = ANIM_V_STRETCH,
         .frontAnimDelay = 30,
-        .backPic = gMonBackPic_Ekans,
+        .backPic = gMonBackPic_Hogweld,
         .backPicSize = MON_COORDS_SIZE(56, 48),
         .backPicYOffset = 10,
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
-        .palette = gMonPalette_Ekans,
-        .shinyPalette = gMonShinyPalette_Ekans,
-        .iconSprite = gMonIcon_Ekans,
+        .palette = gMonPalette_Hogweld,
+        .shinyPalette = gMonShinyPalette_Hogweld,
+        .iconSprite = gMonIcon_Hogweld,
         .iconPalIndex = 2,
-        FOOTPRINT(Ekans)
-        .levelUpLearnset = sEkansLevelUpLearnset,
-        .teachableLearnset = sEkansTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_ARBOK}),
+        FOOTPRINT(Hogweld)
+        .levelUpLearnset = sHogweldLevelUpLearnset,
+        .teachableLearnset = sHogweldTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_HOGGERNAUT}),
     },
 
-    [SPECIES_ARBOK] =
+    [SPECIES_HOGGERNAUT] =
     {
-        .baseHP        = 60,
-        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
-        .baseDefense   = 69,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 79,
-        .types = MON_TYPES(TYPE_POISON),
+        .baseHP        = 70,
+        .baseAttack    = 105,
+        .baseDefense   = 170,
+        .baseSpeed     = 35,
+        .baseSpAttack  = 57,
+        .baseSpDefense = 75,
+        .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 90,
-    #if P_UPDATED_EXP_YIELDS >= GEN_7
         .expYield = 157,
-    #elif P_UPDATED_EXP_YIELDS >= GEN_5
-        .expYield = 153,
-    #else
-        .expYield = 147,
-    #endif
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1296,9 +1292,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SHED_SKIN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Arbok"),
-        .cryId = CRY_ARBOK,
-        .natDexNum = NATIONAL_DEX_ARBOK,
+        .speciesName = _("Hoggernaut"),
+        .cryId = CRY_HOGGERNAUT,
+        .natDexNum = NATIONAL_DEX_HOGGERNAUT,
         .categoryName = _("Cobra"),
         .height = 35,
         .weight = 650,
@@ -1311,24 +1307,23 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .pokemonOffset = 0,
         .trainerScale = 296,
         .trainerOffset = 2,
-        .frontPic = gMonFrontPic_Arbok,
+        .frontPic = gMonFrontPic_Hoggernaut,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
-        .frontAnimFrames = sAnims_Arbok,
+        .frontAnimFrames = sAnims_Hoggernaut,
         .frontAnimId = ANIM_V_STRETCH,
-        .backPic = gMonBackPic_Arbok,
+        .backPic = gMonBackPic_Hoggernaut,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 1,
+        .backPicYOffset = 8,
         .backAnimId = BACK_ANIM_V_SHAKE,
-        .palette = gMonPalette_Arbok,
-        .shinyPalette = gMonShinyPalette_Arbok,
-        .iconSprite = gMonIcon_Arbok,
+        .palette = gMonPalette_Hoggernaut,
+        .shinyPalette = gMonShinyPalette_Hoggernaut,
+        .iconSprite = gMonIcon_Hoggernaut,
         .iconPalIndex = 2,
-        FOOTPRINT(Arbok)
-        .levelUpLearnset = sArbokLevelUpLearnset,
-        .teachableLearnset = sArbokTeachableLearnset,
+        FOOTPRINT(Hoggernaut)
+        .levelUpLearnset = sHoggernautLevelUpLearnset,
+        .teachableLearnset = sHoggernautTeachableLearnset,
     },
-#endif //P_FAMILY_EKANS
 
 #if P_FAMILY_PIKACHU
 #if P_GEN_2_CROSS_EVOS
