@@ -29,10 +29,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 5,
         .weight = 5,
         .description = COMPOUND_STRING(
-            "It likes to hide in berry bushes\n"
-            "using the leaves on its body as\n"
-            "camouflage. Its long beak helps it\n"
-            "pluck fruits from their branches."),
+            "It spends most of its time hiding from predators\n"
+            "in dense undergrowth, as well as foraging for\n"
+            "fruits and berries which it plucks from their\n"
+            "branches with its long beak.\n"
+            ""),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -82,10 +83,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 12,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "Its long legs allow it to stand\n"
-            "above the dense undergrowth of\n"
-            "the tropics where it lives, allowing\n"
-            "it to absorb sunlight more easily."),
+            "Having grown larger from its days as a Kiwee, it\n"
+            "no longer needs to hide in the undergrowth.\n"
+            "Instead, it uses its long legs to stride through\n"
+            "tangling vines and foliage on the jungle floors\n"
+            "in the tropical regions in which it lives."),
         .pokemonScale = 335,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -136,10 +138,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 40,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "It likes to spend much of its time\n"
-            "standing motionlessly in the sunlight.\n"
-            "This often causes it to be mistaken\n"
-            "for a tall palm tree."),
+            "It spends a lot of its time photosynthesizing\n"
+            "motionlessly in the sunlight. When combined with\n"
+            "the camouflage of its lower body, this often\n"
+            "causes people to mistake it for palm trees. This\n"
+            "is usually harmless, but can cause nuisance."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -188,10 +191,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 6,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "It tirelessly gathers nectar and returns it\n"
-            "to its hive to make a flammable honey. It\n"
-            "stores some in its body to spray at any\n"
-            "Pokémon that tries to attack it."),
+            "It tirelessly gathers nectar that it returns to\n"
+            "its hive to be made into a flammable honey. It\n"
+            "stores this honey in a seperate chamber in its\n"
+            "abdomen, and can spray it at attackers and\n"
+            "ignite it to cause distraction and escape."),
         .pokemonScale = 444,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -241,10 +245,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 11,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "The stinger on its rear allows a Caliante\n"
-            "to focus the spray of the flammable honey\n"
-            "it stores in its abdomen, enabling the\n"
-            "use of more focused flame attacks."),
+            "Its abdomen bears a stinger-like spout that\n"
+            "allows it to concentrate the spray of its\n"
+            "flammable honey, enabling it to use stronger,\n"
+            "more precise Fire-type attacks to defend its\n"
+            "colony from intruders."),
         .pokemonScale = 302,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -295,10 +300,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 905,
         .description = COMPOUND_STRING(
-            "A hive of Kindlant and Caliante is often\n"
-            "overseen by a single Scornet. It causes\n"
-            "controlled wildfires to maintain its\n"
-            "forest home and the local ecosystem."),
+            "A colony of Kindlant and Caliante is overseen by\n"
+            "a single Scornet that directs them to gather\n"
+            "resources. It flies around its territory,\n"
+            "causing wildfires to control and maintain its\n"
+            "habitat and maintain the local ecosystem."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -351,10 +357,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 122,
         
         .description = COMPOUND_STRING(
-            "Despite learning to stand shortly\n"
-            "after birth, this Pokémon is still\n"
-            "quite unsteady on its feet and\n"
-            "relies on its herd for protection.\n"),
+            "It learns to stand very quickly after birth,\n"
+            "but remains unsteady on its feet for some time\n"
+            "afterwards. In the wild, this causes it to be\n"
+            "reliant on its herd to protect it. For trainers,\n"
+            "this is just an inconvenience in training."),
         .pokemonScale = 412,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -405,10 +412,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 12,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "This Pokémon is a very capable runner,\n"
-            "able to reach such a high speed that\n"
-            "it is able to skim across the surface\n"
-            "of water for brief periods of time.\n"),
+            "This Pokémon is a very fast runner, capable of\n"
+            "reaching speeds that allow it to skim across the\n"
+            "surface of water for short periods of time. It\n"
+            "can become irritable if it is unable to run in\n"
+            "this manner on natural bodies of water."),
         .pokemonScale = 332,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -458,10 +466,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 19,
         .weight = 1005,
         .description = COMPOUND_STRING(
-            "Solitary by nature, and often only\n"
-            "seen from the shores of lakes on misty\n"
-            "days, its striking beauty has made it\n"
-            "a popular subject of paintings and poetry.\n"),
+            "Solitary by nature, this Pokémon is very rarely\n"
+            "sighted in the wild, only appearing on misty\n"
+            "days. Often sighted from the shores of lakes,\n"
+            "its striking beauty has made it the subject of\n"
+            "much art and poetry throughout history."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
@@ -511,10 +520,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 3,
         .weight = 41,
         .description = COMPOUND_STRING(
-            "It prefers to avoid confrontation,\n"
-            "and will curl up into a ball when\n"
-            "attacked. It feeds on berries that\n"
-            "are poisonous to most other Pokémon.\n"),
+            "It prefers to avoid confrontation, and will\n"
+            "usually curl up into a spiky ball to protect\n"
+            "itself from attackers. To this end, its diet\n"
+            "consists mostly of berries that are often toxic\n"
+            "to other Pokémon."),
         .pokemonScale = 549,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -564,10 +574,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 7,
         .weight = 223,
         .description = COMPOUND_STRING(
-            "The poison from the berries it eats\n"
-            "is secreted from the quills on its back.\n"
-            "It has developed an aggressive temperament\n"
-            "and will attack unwelcome intruders.\n"),
+            "Its quills secrete toxins that it absorbs from\n"
+            "its diet of poisonous berries and fruits. It has\n"
+            "developed a territorial temperament, and will\n"
+            "use both its toxic quills and imposing displays\n"
+            "of aggression to ward off intruders."),
         .pokemonScale = 350,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -616,10 +627,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 1,
         .weight = 2,
         .description = COMPOUND_STRING(
-            "Commonly seen as an urban pest, Lintsect\n"
-            "gather in noisily buzzing swarms around\n"
-            "bins and other waste. Getting too close\n"
-            "usually results in multiple bites."),
+            "A commonly seen urban pest, Lintsect gather in\n"
+            "noisily buzzing swarms near bins and other\n"
+            "waste. Getting too close to these swarms is\n"
+            "ill-advised, as it often leads to recieving\n"
+            "multiple bites."),
         .pokemonScale = 312,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -670,10 +682,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 3,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "It is most active at night, shedding dust\n"
-            "from its wings. A common indication of\n"
-            "a Drosodust infestation in the home is\n"
-            "rooms getting dusty following cleaning."),
+            "It is most active at night, spreading fine,\n"
+            "powdery dust from its rapidly buzzing wings. A\n"
+            "home with a Drosodust infestation will often\n"
+            "have multiple rooms that are incredibly dusty,\n"
+            "even after being cleaned."),
         .pokemonScale = 455,
         .pokemonOffset = 22,
         .trainerScale = 256,
