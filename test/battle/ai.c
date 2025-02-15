@@ -740,15 +740,15 @@ AI_DOUBLE_BATTLE_TEST("AI will not try to switch for the same pokemon for 2 spot
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_HAUNTER) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
-        OPPONENT(SPECIES_RATICATE) { Moves(MOVE_HEADBUTT); }
+        OPPONENT(SPECIES_HOPSTALK) { Moves(MOVE_HEADBUTT); }
     } WHEN {
         TURN { EXPECT_SWITCH(opponentLeft, 3); };
     } SCENE {
         MESSAGE("{PKMN} TRAINER LEAF withdrew Gengar!");
-        MESSAGE("{PKMN} TRAINER LEAF sent out Raticate!");
+        MESSAGE("{PKMN} TRAINER LEAF sent out Hopstalk!");
         NONE_OF {
             MESSAGE("{PKMN} TRAINER LEAF withdrew Haunter!");
-            MESSAGE("{PKMN} TRAINER LEAF sent out Raticate!");
+            MESSAGE("{PKMN} TRAINER LEAF sent out Hopstalk!");
         }
     }
 }

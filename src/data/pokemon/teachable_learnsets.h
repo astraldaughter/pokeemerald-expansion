@@ -598,7 +598,7 @@ static const u16 sMurmuravenTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sBewarecrowTeachableLearnset[] = {
+static const u16 sNevermornTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -686,7 +686,7 @@ static const u16 sRattataTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sRaticateTeachableLearnset[] = {
+static const u16 sHopstalkTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_CUT,
@@ -757,7 +757,7 @@ static const u16 sRattataAlolanTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sRaticateAlolanTeachableLearnset[] = {
+static const u16 sHopstalkAlolanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BULK_UP,
@@ -792,8 +792,8 @@ static const u16 sRaticateAlolanTeachableLearnset[] = {
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
 
-#if P_FAMILY_SPEAROW
-static const u16 sSpearowTeachableLearnset[] = {
+#if P_FAMILY_RUTABUNNY
+static const u16 sRutabunnyTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -816,7 +816,7 @@ static const u16 sSpearowTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sFearowTeachableLearnset[] = {
+static const u16 sSwironTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,
@@ -839,10 +839,10 @@ static const u16 sFearowTeachableLearnset[] = {
     MOVE_SWIFT,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_SPEAROW
+#endif //P_FAMILY_RUTABUNNY
 
-#if P_FAMILY_EKANS
-static const u16 sEkansTeachableLearnset[] = {
+#if P_FAMILY_HOGWELD
+static const u16 sHogweldTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
@@ -872,7 +872,7 @@ static const u16 sEkansTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sArbokTeachableLearnset[] = {
+static const u16 sHoggernautTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
@@ -902,7 +902,7 @@ static const u16 sArbokTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_EKANS
+#endif //P_FAMILY_HOGWELD
 
 #if P_FAMILY_PIKACHU
 #if P_GEN_2_CROSS_EVOS

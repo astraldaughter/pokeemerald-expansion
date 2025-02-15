@@ -9942,10 +9942,13 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     {
     case UQ_4_12(0.75):
         *modifier = UQ_4_12(1.0);
+        break;
     case UQ_4_12(0.325):
         *modifier = UQ_4_12(0.5);
+        break;
     case UQ_4_12(1.125):
         *modifier = UQ_4_12(1.5);
+        break;
     }
 }
 

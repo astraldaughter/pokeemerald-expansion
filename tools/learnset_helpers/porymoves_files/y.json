@@ -613,7 +613,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "CATERPIE": {
+  "TIMIDNA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -629,7 +629,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "METAPOD": {
+  "TOXREC": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -648,7 +648,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "BUTTERFREE": {
+  "LINTSECT": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -717,7 +717,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "WEEDLE": {
+  "DROSODUST": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -733,7 +733,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "KAKUNA": {
+  "ORBUNCLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -748,7 +748,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "BEEDRILL": {
+  "MAGTAIL": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -805,7 +805,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "PIDGEY": {
+  "MURMURAVEN": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -857,7 +857,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "PIDGEOTTO": {
+  "BEWARECROW": {
     "LevelMoves": [
       {
         "Level": 1,

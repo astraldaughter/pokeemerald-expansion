@@ -7,8 +7,8 @@ SINGLE_BATTLE_TEST("White Smoke prevents intimidate")
     s16 turnTwoHit;
 
     GIVEN {
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_SHED_SKIN); };
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); };
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_SHED_SKIN); };
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); };
         OPPONENT(SPECIES_TORKOAL) { Ability(ABILITY_WHITE_SMOKE); };
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); }

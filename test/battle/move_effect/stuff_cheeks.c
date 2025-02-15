@@ -63,7 +63,7 @@ SINGLE_BATTLE_TEST("Stuff Cheeks can be used even if Unnerve is present")
 {
     GIVEN {
         PLAYER(SPECIES_SKWOVET) { Item(ITEM_LIECHI_BERRY); }
-        OPPONENT(SPECIES_EKANS) { Ability(ABILITY_UNNERVE); }
+        OPPONENT(SPECIES_HOGWELD) { Ability(ABILITY_UNNERVE); }
     } WHEN {
         TURN { MOVE(player, MOVE_STUFF_CHEEKS); }
     } SCENE {

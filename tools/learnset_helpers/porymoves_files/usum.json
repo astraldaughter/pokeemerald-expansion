@@ -1185,7 +1185,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "CATERPIE": {
+  "TIMIDNA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1209,7 +1209,7 @@
       "MOVE_SNORE"
     ]
   },
-  "METAPOD": {
+  "TOXREC": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1234,7 +1234,7 @@
       "MOVE_IRON_DEFENSE"
     ]
   },
-  "BUTTERFREE": {
+  "LINTSECT": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1363,7 +1363,7 @@
       "MOVE_TAILWIND"
     ]
   },
-  "WEEDLE": {
+  "DROSODUST": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1386,7 +1386,7 @@
       "MOVE_ELECTROWEB"
     ]
   },
-  "KAKUNA": {
+  "ORBUNCLE": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1410,7 +1410,7 @@
       "MOVE_IRON_DEFENSE"
     ]
   },
-  "BEEDRILL": {
+  "MAGTAIL": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1531,7 +1531,7 @@
       "MOVE_THROAT_CHOP"
     ]
   },
-  "PIDGEY": {
+  "MURMURAVEN": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1636,7 +1636,7 @@
       "MOVE_UPROAR"
     ]
   },
-  "PIDGEOTTO": {
+  "BEWARECROW": {
     "LevelMoves": [
       {
         "Level": 1,

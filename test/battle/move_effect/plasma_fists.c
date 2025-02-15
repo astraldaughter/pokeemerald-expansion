@@ -51,7 +51,7 @@ SINGLE_BATTLE_TEST("Plasma Fists type-changing effect is applied after Pixilate"
 {
     GIVEN {
         PLAYER(SPECIES_KRABBY) { Speed(300); };
-        OPPONENT(SPECIES_ALTARIA) { Speed(1); Item(ITEM_ALTARIANITE); }
+        OPPONENT(SPECIES_ALTARIA) { Speed(1); Item(ITEM_DUMMYSTONE33); }
     } WHEN {
         TURN { MOVE(player, MOVE_PLASMA_FISTS); MOVE(opponent, MOVE_EMBER, megaEvolve: TRUE); }
     } SCENE {

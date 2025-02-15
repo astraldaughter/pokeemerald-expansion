@@ -826,5 +826,6 @@ extern const u8 BattleScript_EffectUpperHand[];
 extern const u8 BattleScript_EffectTidyUp[];
 extern const u8 BattleScript_EffectSpikesIfMiss[];
 extern const u8 BattleScript_TuberousActivates[];
+extern const u8 BattleScript_EffectCottonSpore[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

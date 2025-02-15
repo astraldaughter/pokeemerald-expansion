@@ -25,7 +25,7 @@ SINGLE_BATTLE_TEST("Teatime causes the user to consume its Berry, even in the pr
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_LIECHI_BERRY); }
-        OPPONENT(SPECIES_EKANS) { Ability(ABILITY_UNNERVE); }
+        OPPONENT(SPECIES_HOGWELD) { Ability(ABILITY_UNNERVE); }
     } WHEN {
         TURN { MOVE(player, MOVE_TEATIME); }
     } SCENE {

@@ -2461,7 +2461,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_CONFUSION,
-            .chance = 10,
+            .chance = 20,
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2706,7 +2706,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 40,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -6471,9 +6471,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Rock Smash"),
         .description = COMPOUND_STRING(
-            "The user attacks with a punch\n"
-            "that can break rocks. This may\n"
-            "also lower the target's Defense."),
+            "Strikes foe with a crushing\n"
+            "attack that lowers its Defense.\n"
+            ""),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
         .type = TYPE_FIGHTING,
@@ -6485,7 +6485,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
-            .chance = 50,
+            .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -8288,7 +8288,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_STEEL,
-        .accuracy = 85,
+        .accuracy = 100,
         .pp = 40,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -14336,7 +14336,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_STICKY_WEB] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Sticky Web"),
         .description = COMPOUND_STRING(
             "Weaves a sticky net that\n"

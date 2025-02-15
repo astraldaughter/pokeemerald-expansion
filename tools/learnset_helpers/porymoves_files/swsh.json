@@ -1104,7 +1104,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "CATERPIE": {
+  "TIMIDNA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1126,7 +1126,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "METAPOD": {
+  "TOXREC": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1145,7 +1145,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "BUTTERFREE": {
+  "LINTSECT": {
     "LevelMoves": [
       {
         "Level": 0,

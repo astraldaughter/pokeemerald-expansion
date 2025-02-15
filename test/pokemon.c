@@ -27,10 +27,10 @@ TEST("Terastallization type defaults to primary or secondary type")
     u32 i, teraType;
     struct Pokemon mon;
     for (i = 0; i < 128; i++) PARAMETRIZE {}
-    CreateMon(&mon, SPECIES_PIDGEY, 100, 0, FALSE, 0, OT_ID_PRESET, 0);
+    CreateMon(&mon, SPECIES_MURMURAVEN, 100, 0, FALSE, 0, OT_ID_PRESET, 0);
     teraType = GetMonData(&mon, MON_DATA_TERA_TYPE);
-    EXPECT(teraType == gSpeciesInfo[SPECIES_PIDGEY].types[0]
-        || teraType == gSpeciesInfo[SPECIES_PIDGEY].types[1]);
+    EXPECT(teraType == gSpeciesInfo[SPECIES_MURMURAVEN].types[0]
+        || teraType == gSpeciesInfo[SPECIES_MURMURAVEN].types[1]);
 }
 
 TEST("Terastallization type can be set to any type")

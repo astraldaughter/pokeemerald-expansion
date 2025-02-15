@@ -442,8 +442,8 @@ SINGLE_BATTLE_TEST("Fling deals damage based on items fling power")
 
     GIVEN {
         ASSUME(gMovesInfo[MOVE_CRUNCH].power == 80);
-        ASSUME(gItemsInfo[ITEM_TROPIKOEKAITE].flingPower == 80);
-        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_TROPIKOEKAITE); }
+        ASSUME(gItemsInfo[ITEM_DUMMYSTONE1].flingPower == 80);
+        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_DUMMYSTONE1); }
         OPPONENT(SPECIES_REGIROCK);
     } WHEN {
         TURN { MOVE(player, MOVE_CRUNCH); }

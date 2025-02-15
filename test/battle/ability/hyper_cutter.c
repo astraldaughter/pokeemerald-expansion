@@ -7,8 +7,8 @@ SINGLE_BATTLE_TEST("Hyper Cutter prevents intimidate")
     s16 turnTwoHit;
 
     GIVEN {
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_SHED_SKIN); }
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_SHED_SKIN); }
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); }
         OPPONENT(SPECIES_KRABBY) { Ability(ABILITY_HYPER_CUTTER); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); }
