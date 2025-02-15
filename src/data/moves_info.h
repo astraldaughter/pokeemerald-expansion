@@ -4645,15 +4645,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Cotton Spore"),
         .description = COMPOUND_STRING(
-            "The user releases cottony spores\n"
-            "that cling to opposing Pokémon,\n"
-            "harshly lowering their Speed."),
-        .effect = EFFECT_SPEED_DOWN_2,
+            "Sheds cottony spores that cling\n"
+            "to the foe, lowering its evasion\n"
+            "and harshly lowering its Speed."),
+        .effect = EFFECT_COTTON_SPORE,
         .power = 0,
         .type = TYPE_GRASS,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 85,
+        .accuracy = 100,
         .pp = 40,
-        .target = B_UPDATED_MOVE_DATA >= GEN_6 ? MOVE_TARGET_BOTH : MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_RESET_STATS },

@@ -2242,4 +2242,10 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectSpikesIfMiss,
         .battleTvScore = 0,
     },
+
+    [EFFECT_COTTON_SPORE] =
+    {
+        .battleScript = BattleScript_EffectCottonSpore,
+        .battleTvScore = 0, // TODO: Assign points
+    },
 };
