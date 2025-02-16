@@ -6,6 +6,9 @@ const u32 gItemIconPalette_ReturnToFieldArrow[] = INCBIN_U32("graphics/items/ico
 
 // Poké Balls
 
+const u32 gItemIcon_StrangeBall[] = INCBIN_U32("graphics/items/icons/strange_ball.4bpp.lz");
+const u32 gItemIconPalette_StrangeBall[] = INCBIN_U32("graphics/items/icon_palettes/strange_ball.gbapal.lz");
+
 const u32 gItemIcon_PokeBall[] = INCBIN_U32("graphics/items/icons/poke_ball.4bpp.lz");
 const u32 gItemIconPalette_PokeBall[] = INCBIN_U32("graphics/items/icon_palettes/poke_ball.gbapal.lz");
 
@@ -2024,6 +2027,9 @@ const u32 gItemIconPalette_DarkTeraShard[] = INCBIN_U32("graphics/items/icon_pal
 const u32 gItemIconPalette_DragonTeraShard[] = INCBIN_U32("graphics/items/icon_palettes/dragon_tera_shard.gbapal.lz");
 const u32 gItemIconPalette_SteelTeraShard[] = INCBIN_U32("graphics/items/icon_palettes/steel_tera_shard.gbapal.lz");
 const u32 gItemIconPalette_FairyTeraShard[] = INCBIN_U32("graphics/items/icon_palettes/fairy_tera_shard.gbapal.lz");
+
+const u32 gItemIcon_StellarTeraShard[] = INCBIN_U32("graphics/items/icons/stellar_tera_shard.4bpp.lz");
+const u32 gItemIconPalette_StellarTeraShard[] = INCBIN_U32("graphics/items/icon_palettes/stellar_tera_shard.gbapal.lz");
 
 // Mochi
 

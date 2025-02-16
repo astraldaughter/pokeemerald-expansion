@@ -2,12 +2,11 @@
 #include "graphics.h"
 #include "mail.h"
 #include "palette.h"
-#include "pokemon_debug.h"
+#include "pokemon_sprite_visualizer.h"
 #include "pokemon_icon.h"
 #include "sprite.h"
 #include "data.h"
-
-#define POKE_ICON_BASE_PAL_TAG 56000
+#include "constants/pokemon_icon.h"
 
 struct MonIconSpriteTemplate
 {
@@ -151,8 +150,10 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
 
     if (species > NUM_SPECIES)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG;
+#if P_GENDER_DIFFERENCES
     else if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gSpeciesInfo[species].iconPalIndexFemale;
+#endif
 
     spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
 
@@ -245,9 +246,11 @@ void LoadMonIconPalettePersonality(u16 species, u32 personality)
 {
     u8 palIndex;
     species = SanitizeSpeciesId(species);
+#if P_GENDER_DIFFERENCES
     if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
         palIndex = gSpeciesInfo[species].iconPalIndexFemale;
     else
+#endif
         palIndex = gSpeciesInfo[species].iconPalIndex;
     if (IndexOfSpritePaletteTag(gMonIconPaletteTable[palIndex].tag) == 0xFF)
         LoadSpritePalette(&gMonIconPaletteTable[palIndex]);
@@ -287,9 +290,12 @@ const u8 *GetMonIconTiles(u16 species, u32 personality)
     if (species > NUM_SPECIES)
         species = SPECIES_NONE;
 
+#if P_GENDER_DIFFERENCES
     if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
         iconSprite = gSpeciesInfo[species].iconSpriteFemale;
-    else if (gSpeciesInfo[species].iconSprite != NULL)
+    else
+#endif
+    if (gSpeciesInfo[species].iconSprite != NULL)
         iconSprite = gSpeciesInfo[species].iconSprite;
     else
         iconSprite = gSpeciesInfo[SPECIES_NONE].iconSprite;

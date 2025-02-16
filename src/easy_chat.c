@@ -1478,10 +1478,10 @@ void ShowEasyChatScreen(void)
         break;
     case EASY_CHAT_TYPE_BARD_SONG:
         bard = &gSaveBlock1Ptr->oldMan.bard;
-        for (i = 0; i < BARD_SONG_LENGTH; i ++)
-            bard->temporaryLyrics[i] = bard->songLyrics[i];
+        for (i = 0; i < NUM_BARD_SONG_WORDS; i ++)
+            bard->newSongLyrics[i] = bard->songLyrics[i];
 
-        words = bard->temporaryLyrics;
+        words = bard->newSongLyrics;
         break;
     case EASY_CHAT_TYPE_INTERVIEW:
         words = gSaveBlock1Ptr->tvShows[gSpecialVar_0x8005].bravoTrainer.words;
@@ -3954,8 +3954,6 @@ static void PrintTitle(void)
 
 static void PrintEasyChatText(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
 {
-    if (DECAP_ENABLED && DECAP_MIRRORING && !DECAP_EASY_CHAT)
-        str = MirrorPtr(str);
     AddTextPrinterParameterized(windowId, fontId, str, x, y, speed, callback);
 }
 
@@ -5241,9 +5239,6 @@ u8 *ConvertEasyChatWordsToString(u8 *dest, const u16 *src, u16 columns, u16 rows
 {
     u16 i, j;
     u16 numColumns = columns - 1;
-
-    if (DECAP_ENABLED && !DECAP_EASY_CHAT)
-        *dest++ = CHAR_FIXED_CASE;
 
     for (i = 0; i < rows; i++)
     {

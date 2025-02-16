@@ -110,11 +110,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_COMPOUND_EYES] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Compound Eyes"),
-    #else
-        .name = _("CompoundEyes"),
-    #endif
         .description = COMPOUND_STRING("The Pokémon's compound eyes\nboost its accuracy."),
         .aiRating = 7,
     },
@@ -244,11 +240,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_LIGHTNING_ROD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Lightning Rod"),
-    #else
-        .name = _("LightningRod"),
-    #endif
         .description = COMPOUND_STRING("Draws in all Electric-type moves\nto raise its Sp. Atk instead of\ntaking damage."),
         .aiRating = 7,
         .breakable = TRUE,
@@ -1276,6 +1268,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Fur Coat"),
         .description = COMPOUND_STRING("Doubles Defense."),
         .aiRating = 7,
+        .breakable = TRUE,
     },
 
     [ABILITY_MAGICIAN] =
@@ -1323,11 +1316,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_STANCE_CHANGE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Stance Change"),
-    #else
-        .name = _("StanceChange"),
-    #endif
         .description = COMPOUND_STRING("Transforms as it battles."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
@@ -1346,11 +1335,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_MEGA_LAUNCHER] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Mega Launcher"),
-    #else
-        .name = _("MegaLauncher"),
-    #endif
         .description = COMPOUND_STRING("Boosts pulse moves."),
         .aiRating = 7,
     },
@@ -1400,11 +1385,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PARENTAL_BOND] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Parental Bond"),
-    #else
-        .name = _("ParentalBond"),
-    #endif
         .description = COMPOUND_STRING("Moves hit twice."),
         .aiRating = 10,
     },
@@ -1432,22 +1413,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PRIMORDIAL_SEA] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Primordial Sea"),
-    #else
-        .name = _("PrimrdialSea"),
-    #endif
         .description = COMPOUND_STRING("Summons heavy rain."),
         .aiRating = 10,
     },
 
     [ABILITY_DESOLATE_LAND] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Desolate Land"),
-    #else
-        .name = _("DesolateLand"),
-    #endif
         .description = COMPOUND_STRING("Summons intense sunlight."),
         .aiRating = 10,
     },
@@ -1475,22 +1448,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EMERGENCY_EXIT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Emergency Exit"),
-    #else
-        .name = _("EmergncyExit"),
-    #endif
         .description = COMPOUND_STRING("Sensing danger, flees battle\nwhen it drops below half HP."),
         .aiRating = 3,
     },
 
     [ABILITY_WATER_COMPACTION] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Water Compaction"),
-    #else
-        .name = _("WtrCmpaction"),
-    #endif
         .description = COMPOUND_STRING("Sharply raises Defense when hit\nwith a Water-type move."),
         .aiRating = 4,
     },
@@ -1601,6 +1566,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Disguise"),
         .description = COMPOUND_STRING("Decoy protects it once."),
         .aiRating = 8,
+        .breakable = TRUE,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
@@ -1623,11 +1589,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_POWER_CONSTRUCT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Power Construct"),
-    #else
-        .name = _("PwrConstruct"),
-    #endif
         .description = COMPOUND_STRING("Cells aid it when weakened."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
@@ -1658,11 +1620,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_QUEENLY_MAJESTY] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Queenly Majesty"),
-    #else
-        .name = _("QueenlyMjsty"),
-    #endif
         .description = COMPOUND_STRING("Protects from priority."),
         .aiRating = 6,
         .breakable = TRUE,
@@ -1714,11 +1672,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_TANGLING_HAIR] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Tangling Hair"),
-    #else
-        .name = _("TanglingHair"),
-    #endif
         .description = COMPOUND_STRING("Attackers making contact have\ntheir Speed lowered."),
         .aiRating = 5,
     },
@@ -1734,11 +1688,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_POWER_OF_ALCHEMY] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Power Of Alchemy"),
-    #else
-        .name = _("PwrOfAlchemy"),
-    #endif
         .description = COMPOUND_STRING("Copies the ability of the\ndefeated ally it's replacing."),
         .aiRating = 0,
         .cantBeCopied = TRUE,
@@ -1766,22 +1716,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_ELECTRIC_SURGE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Electric Surge"),
-    #else
-        .name = _("ElectrcSurge"),
-    #endif
         .description = COMPOUND_STRING("Field becomes Electric."),
         .aiRating = 8,
     },
 
     [ABILITY_PSYCHIC_SURGE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Psychic Surge"),
-    #else
-        .name = _("PsychicSurge"),
-    #endif
         .description = COMPOUND_STRING("Field becomes weird."),
         .aiRating = 8,
     },
@@ -1802,22 +1744,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_FULL_METAL_BODY] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Full Metal Body"),
-    #else
-        .name = _("FullMetalBdy"),
-    #endif
         .description = COMPOUND_STRING("Prevents stat reduction."),
         .aiRating = 4,
     },
 
     [ABILITY_SHADOW_SHIELD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Shadow Shield"),
-    #else
-        .name = _("ShadowShield"),
-    #endif
         .description = COMPOUND_STRING("Halves damage at full HP."),
         .aiRating = 8,
     },
@@ -1838,22 +1772,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_INTREPID_SWORD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Intrepid Sword"),
-    #else
-        .name = _("IntrepidSwrd"),
-    #endif
         .description = COMPOUND_STRING("Ups Attack on entry."),
         .aiRating = 3,
     },
 
     [ABILITY_DAUNTLESS_SHIELD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Dauntless Shield"),
-    #else
-        .name = _("DauntlssShld"),
-    #endif
         .description = COMPOUND_STRING("Ups Defense on entry."),
         .aiRating = 3,
     },
@@ -1880,11 +1806,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PROPELLER_TAIL] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Propeller Tail"),
-    #else
-        .name = _("PropellrTail"),
-    #endif
         .description = COMPOUND_STRING("Moves can't be redirected."),
         .aiRating = 2,
     },
@@ -1902,6 +1824,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Gulp Missile"),
         .description = COMPOUND_STRING("If hit, spits prey from sea."),
         .aiRating = 3,
+        .cantBeCopied = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
         .failsOnImposter = TRUE,
@@ -1981,22 +1904,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SCREEN_CLEANER] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Screen Cleaner"),
-    #else
-        .name = _("ScreenCleanr"),
-    #endif
         .description = COMPOUND_STRING("Removes Reflect and Light Screen\non entry."),
         .aiRating = 3,
     },
 
     [ABILITY_STEELY_SPIRIT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Steely Spirit"),
-    #else
-        .name = _("SteelySpirit"),
-    #endif
         .description = COMPOUND_STRING("Boosts ally's Steel moves."),
         .aiRating = 2,
     },
@@ -2010,33 +1925,21 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_WANDERING_SPIRIT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Wandering Spirit"),
-    #else
-        .name = _("WandrngSprit"),
-    #endif
         .description = COMPOUND_STRING("Trades ability with attacker if\nit makes contact."),
         .aiRating = 2,
     },
 
     [ABILITY_GORILLA_TACTICS] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Gorilla Tactics"),
-    #else
-        .name = _("GorillaTacti"),
-    #endif
         .description = COMPOUND_STRING("Boosts Attack, but can only use\nfirst selected move."),
         .aiRating = 4,
     },
 
     [ABILITY_NEUTRALIZING_GAS] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Neutralizing Gas"),
-    #else
-        .name = _("NeutrlzngGas"),
-    #endif
         .description = COMPOUND_STRING("Emits a strange gas that negates\nall other abilities."),
         .aiRating = 5,
         .cantBeCopied = TRUE,
@@ -2055,11 +1958,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_HUNGER_SWITCH] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Hunger Switch"),
-    #else
-        .name = _("HungerSwitch"),
-    #endif
         .description = COMPOUND_STRING("Changes form each turn."),
         .aiRating = 2,
         .cantBeCopied = TRUE,
@@ -2084,11 +1983,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_CURIOUS_MEDICINE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Curious Medicine"),
-    #else
-        .name = _("CuriusMedicn"),
-    #endif
         .description = COMPOUND_STRING("Scatters medicine that resets\nally stats on entry."),
         .aiRating = 3,
     },
@@ -2109,11 +2004,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_CHILLING_NEIGH] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Chilling Neigh"),
-    #else
-        .name = _("ChillngNeigh"),
-    #endif
         .description = COMPOUND_STRING("KOs boost Attack stat."),
         .aiRating = 7,
     },
@@ -2151,11 +2042,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_LINGERING_AROMA] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Lingering Aroma"),
-    #else
-        .name = _("LngerngAroma"),
-    #endif
         .description = COMPOUND_STRING("Attackers making contact gain\nthis ability."),
         .aiRating = 5,
     },
@@ -2169,11 +2056,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_THERMAL_EXCHANGE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Thermal Exchange"),
-    #else
-        .name = _("ThrmlExchnge"),
-    #endif
         .description = COMPOUND_STRING("Raises Attack when hit with a\nFire-type move. Can't be burned."),
         .aiRating = 4,
         .breakable = TRUE,
@@ -2188,11 +2071,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PURIFYING_SALT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Purifying Salt"),
-    #else
-        .name = _("PurfyingSalt"),
-    #endif
         .description = COMPOUND_STRING("Pure salt protects from status\nconditions and reduces\nGhost-type damage taken."),
         .aiRating = 6,
         .breakable = TRUE,
@@ -2200,11 +2079,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_WELL_BAKED_BODY] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Well-Baked Body"),
-    #else
-        .name = _("WellBakedBdy"),
-    #endif
         .description = COMPOUND_STRING("If hit by a Fire-type move, its\nDefense is sharply raised\ninstead."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -2228,11 +2103,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_ROCKY_PAYLOAD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Rocky Payload"),
-    #else
-        .name = _("RockyPayload"),
-    #endif
         .description = COMPOUND_STRING("Powers up Rock moves."),
         .aiRating = 6,
     },
@@ -2265,26 +2136,20 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
     },
 
     [ABILITY_ELECTROMORPHOSIS] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Electromorphosis"),
-    #else
-        .name = _("Elecmrphosis"),
-    #endif
         .description = COMPOUND_STRING("Gets charged when hit."),
         .aiRating = 5,
     },
 
     [ABILITY_PROTOSYNTHESIS] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Protosynthesis"),
-    #else
-        .name = _("Protosnthsis"),
-    #endif
         .description = COMPOUND_STRING("Sun boosts best stat."),
         .aiRating = 7,
         .cantBeCopied = TRUE,
@@ -2314,11 +2179,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_VESSEL_OF_RUIN] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Vessel of Ruin"),
-    #else
-        .name = _("VesselOfRuin"),
-    #endif
         .description = COMPOUND_STRING("Lowers foes' sp. damage."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -2326,11 +2187,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SWORD_OF_RUIN] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Sword of Ruin"),
-    #else
-        .name = _("SwordOfRuin"),
-    #endif
         .description = COMPOUND_STRING("Lowers foes' Defense."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -2338,11 +2195,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_TABLETS_OF_RUIN] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Tablets of Ruin"),
-    #else
-        .name = _("TabltsOfRuin"),
-    #endif
         .description = COMPOUND_STRING("Lowers foes' damage."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -2350,11 +2203,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_BEADS_OF_RUIN] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Beads of Ruin"),
-    #else
-        .name = _("BeadsOfRuin"),
-    #endif
         .description = COMPOUND_STRING("Lowers foes' Sp. Defense."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -2362,22 +2211,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_ORICHALCUM_PULSE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Orichalcum Pulse"),
-    #else
-        .name = _("OrchlcumPlse"),
-    #endif
         .description = COMPOUND_STRING("Summons sunlight in battle."),
         .aiRating = 8,
     },
 
     [ABILITY_HADRON_ENGINE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Hadron Engine"),
-    #else
-        .name = _("HadronEngine"),
-    #endif
         .description = COMPOUND_STRING("Field becomes Electric."),
         .aiRating = 8,
     },
@@ -2405,11 +2246,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SUPREME_OVERLORD] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Supreme Overlord"),
-    #else
-        .name = _("SuprmeOvrlrd"),
-    #endif
         .description = COMPOUND_STRING("Inherits fallen's strength."),
         .aiRating = 6,
     },
@@ -2446,11 +2283,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_MYCELIUM_MIGHT] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Mycelium Might"),
-    #else
-        .name = _("MceliumMight"),
-    #endif
         .description = COMPOUND_STRING("Status moves go last, but ignore\nthe foe's ability."),
         .aiRating = 2,
     },
@@ -2470,13 +2303,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .breakable = TRUE,
     },
 
-    [ABILITY_EMBODY_ASPECT_TEAL] =
+    [ABILITY_EMBODY_ASPECT_TEAL_MASK] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Embody Aspect"),
-    #else
-        .name = _("EmbodyAspect"),
-    #endif
         .description = COMPOUND_STRING("Raises Speed."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2485,13 +2314,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .failsOnImposter = TRUE,
     },
 
-    [ABILITY_EMBODY_ASPECT_HEARTHFLAME] =
+    [ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Embody Aspect"),
-    #else
-        .name = _("EmbodyAspect"),
-    #endif
         .description = COMPOUND_STRING("Raises Attack."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2500,13 +2325,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .failsOnImposter = TRUE,
     },
 
-    [ABILITY_EMBODY_ASPECT_WELLSPRING] =
+    [ABILITY_EMBODY_ASPECT_WELLSPRING_MASK] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Embody Aspect"),
-    #else
-        .name = _("EmbodyAspect"),
-    #endif
         .description = COMPOUND_STRING("Raises Sp. Def."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2515,13 +2336,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .failsOnImposter = TRUE,
     },
 
-    [ABILITY_EMBODY_ASPECT_CORNERSTONE] =
+    [ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Embody Aspect"),
-    #else
-        .name = _("EmbodyAspect"),
-    #endif
         .description = COMPOUND_STRING("Raises Defense."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2539,19 +2356,15 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SUPERSWEET_SYRUP] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Supersweet Syrup"),
-    #else
-        .name = _("SuprswtSyrup"),
-    #endif
-        .description = COMPOUND_STRING("Lowers the foe's Speed."),
+        .description = COMPOUND_STRING("Lowers the foe's Evasion."),
         .aiRating = 5,
     },
 
     [ABILITY_TERA_SHIFT] =
     {
         .name = _("Tera Shift"),
-        .description = COMPOUND_STRING("Terastalizes upon entry."),
+        .description = COMPOUND_STRING("Terastallizes upon entry."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
@@ -2564,7 +2377,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_TERA_SHELL] =
     {
         .name = _("Tera Shell"),
-        .description = COMPOUND_STRING("Resistant to types at full HP."),
+        .description = COMPOUND_STRING("Resists all at full HP."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
@@ -2574,12 +2387,8 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_TERAFORM_ZERO] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Teraform Zero"),
-    #else
-        .name = _("TeraformZero"),
-    #endif
-        .description = COMPOUND_STRING("Removes weather and terrain."),
+        .description = COMPOUND_STRING("Zeroes weather and terrain."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,
@@ -2588,11 +2397,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_POISON_PUPPETEER] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Poison Puppeteer"),
-    #else
-        .name = _("PoisnPuppter"),
-    #endif
         .description = COMPOUND_STRING("Confuses poisoned foes."),
         .aiRating = 8,
         .cantBeCopied = TRUE,
