@@ -630,7 +630,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 20,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 491,
+        .baseBlock = 507,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_LEFT] = {
         .bg = 0,
@@ -639,7 +639,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 6,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 531,
+        .baseBlock = 547,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_RIGHT] = {
         .bg = 0,
@@ -648,7 +648,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 3,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 567,
+        .baseBlock = 583,
     },
     [PSS_DATA_WINDOW_INFO_ABILITY] = {
         .bg = 0,
@@ -657,7 +657,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 20,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 776,
+        .baseBlock = 601,
     },
 };
 static const struct WindowTemplate sPageMovesTemplate[] = // This is used for both battle and contest moves
@@ -2913,10 +2913,7 @@ static void PrintTextOnWindowToFit(u8 windowId, const u8 *string, u8 x, u8 y, u8
 
 static void PrintSmallTextOnWindow(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId)
 {
-    if (DECAP_ENABLED && DECAP_MIRRORING && !DECAP_SUMMARY)
-        AddTextPrinterParameterized4(windowId, FONT_SMALL, x, y, 0, lineSpacing, sTextColors[colorId], 0, MirrorPtr(string));
-    else
-        AddTextPrinterParameterized4(windowId, FONT_SMALL, x, y, 0, lineSpacing, sTextColors[colorId], 0, string);
+    AddTextPrinterParameterized4(windowId, FONT_SMALL, x, y, 0, lineSpacing, sTextColors[colorId], 0, string);
 }
 
 static void PrintMonInfo(void)

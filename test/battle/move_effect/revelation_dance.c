@@ -88,8 +88,8 @@ SINGLE_BATTLE_TEST("Revelation Dance becomes Typeless if its user is Typeless")
 
     PARAMETRIZE { speciesOpponent = SPECIES_BLISSEY; }
     PARAMETRIZE { speciesOpponent = SPECIES_BLASTOISE; }
-    PARAMETRIZE { speciesOpponent = SPECIES_CHARIZARD; }
-    PARAMETRIZE { speciesOpponent = SPECIES_VENUSAUR; }
+    PARAMETRIZE { speciesOpponent = SPECIES_SCORNET; }
+    PARAMETRIZE { speciesOpponent = SPECIES_TROPIKOEKA; }
     PARAMETRIZE { speciesOpponent = SPECIES_GOLEM; }
     PARAMETRIZE { speciesOpponent = SPECIES_AEGISLASH; }
 

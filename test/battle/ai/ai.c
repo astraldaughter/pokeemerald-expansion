@@ -645,8 +645,8 @@ AI_DOUBLE_BATTLE_TEST("AI will not choose Earthquake if it damages the partner")
 {
     u32 species;
 
-    PARAMETRIZE { species = SPECIES_CHARIZARD; }
-    PARAMETRIZE { species = SPECIES_CHARMANDER; }
+    PARAMETRIZE { species = SPECIES_SCORNET; }
+    PARAMETRIZE { species = SPECIES_KINDLANT; }
     PARAMETRIZE { species = SPECIES_CHIKORITA; }
 
     GIVEN {
@@ -657,7 +657,7 @@ AI_DOUBLE_BATTLE_TEST("AI will not choose Earthquake if it damages the partner")
         OPPONENT(SPECIES_PHANPY) { Moves(MOVE_EARTHQUAKE, MOVE_TACKLE); }
         OPPONENT(species) { Moves(MOVE_CELEBRATE); }
     } WHEN {
-        if (species == SPECIES_CHARIZARD)
+        if (species == SPECIES_SCORNET)
             TURN { EXPECT_MOVE(opponentLeft, MOVE_EARTHQUAKE); }
         else
             TURN { EXPECT_MOVE(opponentLeft, MOVE_TACKLE, target: playerLeft); }

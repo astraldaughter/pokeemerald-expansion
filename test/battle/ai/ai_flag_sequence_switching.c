@@ -53,14 +53,14 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SEQUENCE_SWITCHING: Roar and Dragon Tail still fo
         AI_FLAGS(AI_FLAG_SEQUENCE_SWITCHING);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_BULBASAUR);
-        OPPONENT(SPECIES_CHARMANDER);
+        OPPONENT(SPECIES_KIWEE);
+        OPPONENT(SPECIES_KINDLANT);
         OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
         TURN { MOVE(player, move); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, move, player);
-        MESSAGE("The opposing Bulbasaur was dragged out!");
+        MESSAGE("The opposing Kiwee was dragged out!");
     }
 }
 

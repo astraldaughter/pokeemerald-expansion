@@ -10,7 +10,7 @@ SINGLE_BATTLE_TEST("Simple Beam replaces target's ability with Simple")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_TELEPATHY); }
-        OPPONENT(SPECIES_CHARMANDER) { Ability(ABILITY_BLAZE); }
+        OPPONENT(SPECIES_KINDLANT) { Ability(ABILITY_BLAZE); }
     }WHEN {
         TURN { MOVE(player, MOVE_SIMPLE_BEAM); }
     } SCENE {
@@ -25,8 +25,8 @@ DOUBLE_BATTLE_TEST("Simple Beam fails if the target already has Simple")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_TELEPATHY); }
-        PLAYER(SPECIES_CHARMANDER) { Ability(ABILITY_BLAZE); }
-        OPPONENT(SPECIES_BULBASAUR) { Ability(ABILITY_OVERGROW); }
+        PLAYER(SPECIES_KINDLANT) { Ability(ABILITY_BLAZE); }
+        OPPONENT(SPECIES_KIWEE) { Ability(ABILITY_OVERGROW); }
         OPPONENT(SPECIES_SQUIRTLE) { Ability(ABILITY_TORRENT); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_SIMPLE_BEAM, target: opponentLeft); MOVE(playerRight, MOVE_SIMPLE_BEAM, target: opponentLeft); }

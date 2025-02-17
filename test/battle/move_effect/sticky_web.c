@@ -276,7 +276,7 @@ DOUBLE_BATTLE_TEST("Sticky Web setter has their speed lowered with Mirror Armor 
 {
     GIVEN {
         PLAYER(SPECIES_SQUIRTLE);
-        PLAYER(SPECIES_CHARMANDER);
+        PLAYER(SPECIES_KINDLANT);
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
         OPPONENT(SPECIES_CATERPIE);
         OPPONENT(SPECIES_NATU);

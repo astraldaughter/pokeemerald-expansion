@@ -4,7 +4,7 @@
 SINGLE_BATTLE_TEST("Chlorophyll doubles speed if it's sunny")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Ability(ABILITY_CHLOROPHYLL); Speed(100); }
+        PLAYER(SPECIES_TROPIKOEKA) { Ability(ABILITY_CHLOROPHYLL); Speed(100); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(199); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE); MOVE(player, MOVE_SUNNY_DAY); }
@@ -20,7 +20,7 @@ SINGLE_BATTLE_TEST("Chlorophyll doubles speed if it's sunny")
 SINGLE_BATTLE_TEST("Chlorophyll doesn't double speed if Cloud Nine/Air Lock is on the field")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Ability(ABILITY_CHLOROPHYLL); Speed(100); }
+        PLAYER(SPECIES_TROPIKOEKA) { Ability(ABILITY_CHLOROPHYLL); Speed(100); }
         OPPONENT(SPECIES_GOLDUCK) { Speed(199); Ability(ABILITY_CLOUD_NINE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE); MOVE(player, MOVE_SUNNY_DAY); }
@@ -36,7 +36,7 @@ SINGLE_BATTLE_TEST("Chlorophyll doesn't double speed if Cloud Nine/Air Lock is o
 SINGLE_BATTLE_TEST("Chlorophyll doesn't double speed if they have an Utility Umbrella")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Ability(ABILITY_CHLOROPHYLL); Speed(100); Item(ITEM_UTILITY_UMBRELLA); }
+        PLAYER(SPECIES_TROPIKOEKA) { Ability(ABILITY_CHLOROPHYLL); Speed(100); Item(ITEM_UTILITY_UMBRELLA); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(199); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE); MOVE(player, MOVE_SUNNY_DAY); }

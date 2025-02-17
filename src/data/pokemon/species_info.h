@@ -25,98 +25,6 @@
 // Set .compressed = OW_GFX_COMPRESS
 #define COMP OW_GFX_COMPRESS
 
-#if OW_POKEMON_OBJECT_EVENTS
-#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
-#define OVERWORLD_PAL(...)                                  \
-    .overworldPalette = DEFAULT(NULL, __VA_ARGS__),         \
-    .overworldShinyPalette = DEFAULT_2(NULL, __VA_ARGS__),
-#if P_GENDER_DIFFERENCES
-#define OVERWORLD_PAL_FEMALE(...)                                 \
-    .overworldPaletteFemale = DEFAULT(NULL, __VA_ARGS__),         \
-    .overworldShinyPaletteFemale = DEFAULT_2(NULL, __VA_ARGS__),
-#else
-#define OVERWORLD_PAL_FEMALE(...)
-#endif //P_GENDER_DIFFERENCES
-#else
-#define OVERWORLD_PAL(...)
-#define OVERWORLD_PAL_FEMALE(...)
-#endif //OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
-
-#define OVERWORLD(picTable, _size, shadow, _tracks, ...)                                    \
-.overworldData = {                                                                          \
-    .tileTag = TAG_NONE,                                                                    \
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,                                                \
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                                         \
-    .size = (_size == SIZE_32x32 ? 512 : 2048),                                             \
-    .width = (_size == SIZE_32x32 ? 32 : 64),                                               \
-    .height = (_size == SIZE_32x32 ? 32 : 64),                                              \
-    .paletteSlot = PALSLOT_NPC_1,                                                           \
-    .shadowSize = shadow,                                                                   \
-    .inanimate = FALSE,                                                                     \
-    .compressed = COMP,                                                                     \
-    .tracks = _tracks,                                                                      \
-    .oam = (_size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
-    .subspriteTables = (_size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64),         \
-    .anims = sAnimTable_Following,                                                          \
-    .images = picTable,                                                                     \
-    .affineAnims = gDummySpriteAffineAnimTable,                                             \
-},                                                                                          \
-    OVERWORLD_PAL(__VA_ARGS__)
-
-#define OVERWORLD_SET_ANIM(picTable, _size, shadow, _tracks, _anims, ...)                   \
-.overworldData = {                                                                          \
-    .tileTag = TAG_NONE,                                                                    \
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,                                                \
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                                         \
-    .size = (_size == SIZE_32x32 ? 512 : 2048),                                             \
-    .width = (_size == SIZE_32x32 ? 32 : 64),                                               \
-    .height = (_size == SIZE_32x32 ? 32 : 64),                                              \
-    .paletteSlot = PALSLOT_NPC_1,                                                           \
-    .shadowSize = shadow,                                                                   \
-    .inanimate = FALSE,                                                                     \
-    .compressed = COMP,                                                                     \
-    .tracks = _tracks,                                                                      \
-    .oam = (_size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
-    .subspriteTables = (_size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64),         \
-    .anims = _anims,                                                                        \
-    .images = picTable,                                                                     \
-    .affineAnims = gDummySpriteAffineAnimTable,                                             \
-},                                                                                          \
-    OVERWORLD_PAL(__VA_ARGS__)
-
-#if P_GENDER_DIFFERENCES
-#define OVERWORLD_FEMALE(picTable, _size, shadow, _tracks, ...)                             \
-.overworldDataFemale = {                                                                    \
-    .tileTag = TAG_NONE,                                                                    \
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,                                                \
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                                         \
-    .size = (_size == SIZE_32x32 ? 512 : 2048),                                             \
-    .width = (_size == SIZE_32x32 ? 32 : 64),                                               \
-    .height = (_size == SIZE_32x32 ? 32 : 64),                                              \
-    .paletteSlot = PALSLOT_NPC_1,                                                           \
-    .shadowSize = shadow,                                                                   \
-    .inanimate = FALSE,                                                                     \
-    .compressed = COMP,                                                                     \
-    .tracks = _tracks,                                                                      \
-    .oam = (_size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
-    .subspriteTables = (_size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64),         \
-    .anims = sAnimTable_Following,                                                          \
-    .images = picTable,                                                                     \
-    .affineAnims = gDummySpriteAffineAnimTable,                                             \
-},                                                                                          \
-    OVERWORLD_PAL_FEMALE(__VA_ARGS__)
-#else
-#define OVERWORLD_FEMALE(picTable, _size, shadow, _tracks, ...)
-#endif //P_GENDER_DIFFERENCES
-
-#else
-#define OVERWORLD(picTable, _size, shadow, _tracks, ...)
-#define OVERWORLD_SET_ANIM(picTable, _size, shadow, _tracks, _anims, ...)
-#define OVERWORLD_FEMALE(picTable, _size, shadow, _tracks, ...)
-#define OVERWORLD_PAL(...)
-#define OVERWORLD_PAL_FEMALE(...)
-#endif //OW_POKEMON_OBJECT_EVENTS
-
 // Maximum value for a female Pokémon is 254 (MON_FEMALE) which is 100% female.
 // 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
 #define PERCENT_FEMALE(percent) min(254, ((percent * 255) / 100))
@@ -156,26 +64,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_QuestionMark,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-    #if OW_POKEMON_OBJECT_EVENTS
-        .overworldData = {
-            .tileTag = TAG_NONE,
-            .paletteTag = OBJ_EVENT_PAL_TAG_SUBSTITUTE,
-            .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-            .size = 512,
-            .width = 32,
-            .height = 32,
-            .paletteSlot = PALSLOT_NPC_1,
-            .shadowSize = SHADOW_SIZE_M,
-            .inanimate = FALSE,
-            .compressed = COMP,
-            .tracks = TRACKS_FOOT,
-            .oam = &gObjectEventBaseOam_32x32,
-            .subspriteTables = sOamTables_32x32,
-            .anims = sAnimTable_Following,
-            .images = sPicTable_Substitute,
-            .affineAnims = gDummySpriteAffineAnimTable,
-        },
-    #endif
         .levelUpLearnset = sNoneLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
         .eggMoveLearnset = sNoneEggMoveLearnset,
@@ -204,7 +92,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Egg,
         .iconPalIndex = 1,
     },
-
+};
     /* You may add any custom species below this point based on the following structure: */
 
     /*
@@ -277,4 +165,4 @@ const struct SpeciesInfo gSpeciesInfo[] =
         //.perfectIVCount = NUM_STATS,
     },
     */
-};
+

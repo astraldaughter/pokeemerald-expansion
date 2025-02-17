@@ -1,7 +1,7 @@
 #if P_FAMILY_KIWEE
 static const struct FormChange sTropikoekaFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TROPIKOEKA_MEGA, ITEM_DUMMYSTONE1},
-    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_TROPIKOEKA_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_TROPIKOEKA_GMAX},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_KIWEE
@@ -10,7 +10,7 @@ static const struct FormChange sTropikoekaFormChangeTable[] = {
 static const struct FormChange sScornetFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SCORNET_MEGA_X, ITEM_DUMMYSTONE2},
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SCORNET_MEGA_Y, ITEM_DUMMYSTONE3},
-    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_SCORNET_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_SCORNET_GMAX},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_KINDLANT
@@ -18,7 +18,7 @@ static const struct FormChange sScornetFormChangeTable[] = {
 #if P_FAMILY_KELPONI
 static const struct FormChange sAquastrianFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_AQUASTRIAN_MEGA, ITEM_DUMMYSTONE4},
-    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_AQUASTRIAN_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_AQUASTRIAN_GMAX},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_KELPONI
@@ -26,7 +26,7 @@ static const struct FormChange sAquastrianFormChangeTable[] = {
 #if P_FAMILY_TIMIDNA
 static const struct FormChange sLintsectFormChangeTable[] =
 {
-    {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_LINTSECT_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_LINTSECT_GMAX},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_TIMIDNA
@@ -92,7 +92,7 @@ static const struct FormChange sSlowbroFormChangeTable[] = {
 #if P_FAMILY_GASTLY
 static const struct FormChange sGengarFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_GENGAR_MEGA, ITEM_DUMMYSTONE9},
-    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_GENGAR_GIGANTAMAX},
+    {FORM_CHANGE_BATTLE_GIGANTAMAX,             SPECIES_GENGAR_GMAX},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_GASTLY

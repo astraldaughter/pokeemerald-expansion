@@ -30,7 +30,7 @@ DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - opponent fas
         MESSAGE("The opposing Gardevoir's Gardevoirite is reacting to 2's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, opponentLeft);
         MESSAGE("The opposing Gardevoir has Mega Evolved into Mega Gardevoir!");
-        MESSAGE("Venusaur's Venusaurite is reacting to 1's Mega Ring!");
+        MESSAGE("Tropikoeka's Tropikoekaite is reacting to 1's Mega Ring!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, playerLeft);
         MESSAGE("Tropikoeka has Mega Evolved into Mega Tropikoeka!");
     }
