@@ -6301,3 +6301,7 @@ static const u16 sFrigibaxEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FRIGIBAX
+
+static const u16 sNeadoughEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};

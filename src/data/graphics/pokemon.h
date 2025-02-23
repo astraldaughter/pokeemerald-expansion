@@ -18621,6 +18621,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 
 #endif //P_FAMILY_PECHARUNT
 
+    const u32 gMonFrontPic_Neadough[] = INCBIN_U32("graphics/pokemon/neadough/front.4bpp.lz");
+    const u32 gMonPalette_Neadough[] = INCBIN_U32("graphics/pokemon/neadough/normal.gbapal.lz");
+    const u32 gMonBackPic_Neadough[] = INCBIN_U32("graphics/pokemon/neadough/back.4bpp.lz");
+    const u32 gMonShinyPalette_Neadough[] = INCBIN_U32("graphics/pokemon/neadough/shiny.gbapal.lz");
+    const u8 gMonIcon_Neadough[] = INCBIN_U8("graphics/pokemon/neadough/icon.4bpp");
+
+    const u32 gMonFrontPic_Moldough[] = INCBIN_U32("graphics/pokemon/moldough/front.4bpp.lz");
+    const u32 gMonPalette_Moldough[] = INCBIN_U32("graphics/pokemon/moldough/normal.gbapal.lz");
+    const u32 gMonBackPic_Moldough[] = INCBIN_U32("graphics/pokemon/moldough/back.4bpp.lz");
+    const u32 gMonShinyPalette_Moldough[] = INCBIN_U32("graphics/pokemon/moldough/shiny.gbapal.lz");
+    const u8 gMonIcon_Moldough[] = INCBIN_U8("graphics/pokemon/moldough/icon.4bpp");
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
