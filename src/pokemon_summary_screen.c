@@ -4200,11 +4200,10 @@ static u8 CreateMonSprite(struct Pokemon *unused)
     gSprites[spriteId].data[2] = 0;
     gSprites[spriteId].callback = SpriteCB_Pokemon;
     gSprites[spriteId].oam.priority = 0;
-
-    if (!IsMonSpriteNotFlipped(summary->species2))
-        gSprites[spriteId].hFlip = TRUE;
-    else
-        gSprites[spriteId].hFlip = FALSE;
+//    if (!IsMonSpriteNotFlipped(summary->species2))
+//        gSprites[spriteId].hFlip = TRUE;
+//    else
+    gSprites[spriteId].hFlip = FALSE;
 
     return spriteId;
 }
