@@ -544,7 +544,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .levelUpLearnset = sKelponiLevelUpLearnset,
         .teachableLearnset = sKelponiTeachableLearnset,
         .eggMoveLearnset = sKelponiEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_AQUINE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_AQUINE}),    
     },
 
     [SPECIES_AQUINE] =
@@ -1674,7 +1674,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STURDY, ABILITY_SAND_STREAM, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_STURDY, ABILITY_SAND_STREAM, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Gigalith"),
         .cryId = CRY_GIGALITH,

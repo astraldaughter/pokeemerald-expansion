@@ -7110,6 +7110,24 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_GriseousOrb,
     },
 
+    [ITEM_SUN_SHARD] =
+    {
+        .name = _("Sun Shard"),
+        .price = (I_PRICE >= GEN_7) ? 0 : 10000,
+        .holdEffect = HOLD_EFFECT_SUN_SHARD,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "raises the Sp. Atk\n"
+            "of Gigalith."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 50,
+        .iconPic = gItemIcon_Shard,
+        .iconPalette = gItemIconPalette_YellowShard,
+    },
+
 // Incenses
 
     [ITEM_SEA_INCENSE] =
