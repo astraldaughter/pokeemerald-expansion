@@ -1349,8 +1349,11 @@ static s32 GetSwitchinWeatherImpact(void)
                     weatherImpact = 1;
             }
         }
+        // Uncomment this and delete the equivalent below if I un-buff Solar Power. 
+        // if ((gBattleWeather & B_WEATHER_SUN) && holdEffect != HOLD_EFFECT_UTILITY_UMBRELLA
+        // && (ability == ABILITY_SOLAR_POWER || ability == ABILITY_DRY_SKIN))
         if ((gBattleWeather & B_WEATHER_SUN) && holdEffect != HOLD_EFFECT_UTILITY_UMBRELLA
-         && (ability == ABILITY_SOLAR_POWER || ability == ABILITY_DRY_SKIN))
+         && (ability == ABILITY_DRY_SKIN))
         {
             weatherImpact = maxHP / 8;
             if (weatherImpact == 0)
