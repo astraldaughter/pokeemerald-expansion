@@ -707,7 +707,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SOLAR_POWER] =
     {
         .name = _("Solar Power"),
-        .description = COMPOUND_STRING("Boosts Sp. Atk in the sun, but\nloses HP each turn."),
+        .description = COMPOUND_STRING("Boosts Sp. Atk in the sun."),
         .aiRating = 3,
     },
 

@@ -5234,7 +5234,11 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 break;
             case ABILITY_DRY_SKIN:
                 if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
-                    goto SOLAR_POWER_HP_DROP;
+                    BattleScriptPushCursorAndCallback(BattleScript_SolarPowerActivates);
+                    gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    effect++;
             // Dry Skin works similarly to Rain Dish in Rain
             case ABILITY_RAIN_DISH:
                 if (IsBattlerWeatherAffected(battler, B_WEATHER_RAIN)
@@ -5336,16 +5340,18 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 BattleScriptPushCursorAndCallback(BattleScript_BadDreamsActivates);
                 effect++;
                 break;
-            case ABILITY_SOLAR_POWER:
-                if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
-                {
-                SOLAR_POWER_HP_DROP:
-                    BattleScriptPushCursorAndCallback(BattleScript_SolarPowerActivates);
-                    gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-                    effect++;
-                }
+            // Commented out because I'm buffing Solar Power. 
+            //    
+            // case ABILITY_SOLAR_POWER:
+            //    if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
+            //    {
+            //    SOLAR_POWER_HP_DROP:
+            //        BattleScriptPushCursorAndCallback(BattleScript_SolarPowerActivates);
+            //        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+            //        if (gBattleMoveDamage == 0)
+            //            gBattleMoveDamage = 1;
+            //        effect++;
+            //    }
                 break;
             case ABILITY_HEALER:
                 gBattleScripting.battler = BATTLE_PARTNER(battler);
