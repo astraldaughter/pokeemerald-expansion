@@ -4661,10 +4661,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Flame Wheel"),
         .description = COMPOUND_STRING(
-            "The user cloaks itself in fire\n"
-            "and charges at the target. This\n"
-            "may also inflict a burn."),
-        .effect = EFFECT_HIT,
+            "A fiery charge attack that may\n"
+            "burn. Boosted for each Speed\n"
+            "boost the user has."),
+        .effect = EFFECT_FLAME_WHEEL,
         .power = 60,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -8542,19 +8542,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Rock Tomb"),
         .description = COMPOUND_STRING(
-            "Boulders are hurled at the\n"
-            "target, lowering its Speed stat\n"
-            "by preventing its movement."),
+            "Hurls boulders to prevent the\n"
+            "foe from moving, lowering its\n"
+            "Speed and evasiveness."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 50,
+        .power = 60,
         .type = TYPE_ROCK,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 95 : 80,
+        .accuracy = 85,
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 15 : 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        },
+        {
+            .moveEffect = MOVE_EFFECT_EVS_MINUS_1,
             .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
@@ -21867,29 +21871,28 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
 
     // Customs
-    [MOVE_ELECTROPLATE] =
+    [MOVE_FIRECRACKER] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("Electroplate"),
+        .name = COMPOUND_STRING("Firecracker"),
         .description = COMPOUND_STRING(
-            "Coats the target in metal\n"
-            "plating, giving it the Steel\n"
-            "typing."),
-        .effect = EFFECT_THIRD_TYPE,
-        .power = 0,
-        .type = TYPE_ELECTRIC,
+            "Launches startling explosives at\n"
+            "the foe 2-5 times. Each hit has\n"
+            "a small chance to flinch."),
+        .effect = EFFECT_MULTI_HIT,
+        .power = 15,
+        .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
-        .argument = TYPE_STEEL,
-        .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
-        .magicCoatAffected = TRUE,
-        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
-        .contestCategory = CONTEST_CATEGORY_SMART,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = TYPE_FIRE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 5,
+        }),
+        .battleAnimScript = gBattleAnimMove_Firecracker,
     },
 
     [MOVE_SHELL_SHOCK] =
@@ -21909,29 +21912,37 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .moveEffect = MOVE_EFFECT_DEF_PLUS_1,
             .chance = 100,
         }),
     },
 
-    [MOVE_UPROOT] =
+    [MOVE_SANDBLAST] =
     {
-        // UNDEXITED BUT NEEDS REWORK SINCE I CUT TERRAINS.
-        .name = COMPOUND_STRING("Uproot"),
+        // UNDEXITED
+        .name = COMPOUND_STRING("Sandblast"),
         .description = COMPOUND_STRING(
-            "Uproots the target,\n"
-            "destroying the terrain."),
-        .effect = EFFECT_HIT_SET_REMOVE_TERRAIN,
-        .power = 50,
-        .type = TYPE_GRASS,
-        .accuracy = 100,
+            "Blasts the foe with abrasive\n"
+            "sand that may lower its Defense\n"
+            "or accuracy."),
+        .effect = EFFECT_HIT,
+        .power = 30,
+        .type = TYPE_GROUND,
+        .accuracy = 95,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
-        .makesContact = TRUE,
-        .damagesUnderground = TRUE,
-        .argument = ARG_TRY_REMOVE_TERRAIN_HIT, // Remove the active field terrain if there is one.
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
+            .chance = 30,
+        },
+        {
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
+            .chance = 30,
+        }
+        ),
+        .battleAnimScript = gBattleAnimMove_Sandblast,
     },
 
     [MOVE_NECTAR_SPRAY] =
@@ -21954,6 +21965,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
             .chance = 100,
         }),
+        .battleAnimScript = gBattleAnimMove_NectarSpray,
     },
 
     [MOVE_STAMPEDE] =
@@ -21977,7 +21989,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Stampede,
     },
 
     [MOVE_STAGNANT_AIR] =
@@ -22002,6 +22015,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .battleAnimScript = gBattleAnimMove_StagnantAir,
     },
 
     [MOVE_POISON_DARTS] =
@@ -22030,33 +22044,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .chance = 10,
         }),
     },
-    [MOVE_HEAT_RAY] =
+    [MOVE_EXPLOIT] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("Heat Ray"),
+        .name = COMPOUND_STRING("Exploit"),
         .description = COMPOUND_STRING(
-            "Builds up heat to fire an\n"
-            "intensely hot ray. Burns any\n"
-            "attackers that make contact."),
-        .effect = EFFECT_BEAK_BLAST,
-        .power = 100,
-        .type = TYPE_FIRE,
+            "Exploits the foe's weakpoints to\n"
+            "attack, targeting their lower\n"
+            "defensive stat to deal damage."),
+        .effect = EFFECT_EXPLOIT,
+        .power = 70,
+        .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
-        .priority = -3,
+        .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .mirrorMoveBanned = TRUE,
-        .meFirstBanned = TRUE,
-        .metronomeBanned = TRUE,
-        .copycatBanned = TRUE,
-        .sleepTalkBanned = TRUE,
-        .instructBanned = TRUE,
-        .assistBanned = TRUE,
-        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
-        .contestCategory = CONTEST_CATEGORY_COOL,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .battleAnimScript = gBattleAnimMove_Exploit,
     },
 
     [MOVE_TENDERIZE] =

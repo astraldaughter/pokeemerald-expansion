@@ -14,6 +14,140 @@
 
 	.section script_data, "aw", %progbits
 
+@@@@@@@@@@@@@@@@@@@@@@@ CUSTOM @@@@@@@@@@@@@@@@@@@@@@
+
+gBattleAnimMove_Firecracker::
+	loadspritegfx ANIM_TAG_SEED
+	loadspritegfx ANIM_TAG_EXPLOSION
+	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 30, 1
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 6, 5, 1, 0
+	delay 6
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -16, -15, 1, 0
+	delay 6
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 16, -5, 1, 0
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_Sandblast::
+	loadspritegfx ANIM_TAG_MUD_SAND
+	monbg ANIM_ATK_PARTNER
+	splitbgprio ANIM_ATTACKER
+	setalpha 12, 8
+	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
+	call SandblastDirt
+	call SandblastDirt
+	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
+	call SandblastDirt
+	call SandblastDirt
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 2, 0, 25, 1
+	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
+	call SandblastDirt
+	call SandblastDirt
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	end
+SandblastDirt:
+	createsprite gSandAttackDirtSpriteTemplate, ANIM_TARGET, 2, 15, 0, 20, 0, 0
+	createsprite gSandAttackDirtSpriteTemplate, ANIM_TARGET, 2, 15, 0, 20, 10, 10
+	createsprite gSandAttackDirtSpriteTemplate, ANIM_TARGET, 2, 15, 0, 20, -10, -10
+	createsprite gSandAttackDirtSpriteTemplate, ANIM_TARGET, 2, 15, 0, 20, 20, 5
+	createsprite gSandAttackDirtSpriteTemplate, ANIM_TARGET, 2, 15, 0, 20, -20, -5
+	delay 2
+	return
+
+gBattleAnimMove_NectarSpray::
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_POISON_BUBBLE, 0, 12, 12,RGB_YELLOW
+	playsewithpan SE_M_METRONOME, SOUND_PAN_ATTACKER
+	monbg ANIM_TARGET
+	createsprite gAppleAcidLaunchTemplate, ANIM_TARGET, 2, 0x14, 0x0, 0x28, 0x1, 0x0, 0x0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 0x5
+	createsprite gAppleAcidLaunchTemplate, ANIM_TARGET, 2, 0x14, 0x0, 0x28, 0x1, 0x18, 0x0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 0x5
+	createsprite gAppleAcidLaunchTemplate, ANIM_TARGET, 2, 0x14, 0x0, 0x28, 0x1, 0xffe8, 0x0
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	delay 0xf
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 10, 1
+	createsprite gAppleAcidDripTemplate, ANIM_TARGET, 2, 0x0, 0xffea, 0x0, 0xf, 0x37
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_TARGET
+	delay 0xa
+	createsprite gAppleAcidDripTemplate, ANIM_TARGET, 2, 0xffe6, 0xffe8, 0x0, 0xf, 0x37
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_TARGET
+	delay 0xa
+	createsprite gAppleAcidDripTemplate, ANIM_TARGET, 2, 0xf, 0xffe5, 0x0, 0xf, 0x32
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_TARGET
+	delay 0xa
+	createsprite gAppleAcidDripTemplate, ANIM_TARGET, 2, 0xfff1, 0xffef, 0x0, 0xa, 0x2d
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_TARGET
+	delay 0xa
+	createsprite gAppleAcidDripTemplate, ANIM_TARGET, 2, 0x1b, 0xffea, 0x0, 0xf, 0x32
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	end
+
+gBattleAnimMove_Stampede::
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_MUD_SAND
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	createvisualtask AnimTask_Rollout, 2, 0
+	waitforvisualfinish
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	createsprite gFistFootRandomPosSpriteTemplate, ANIM_ATTACKER, 3, 0, 20, 1
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 4, 0, 6, 1
+	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+gBattleAnimMove_StagnantAir::
+	waitforvisualfinish
+	playsewithpan SE_M_HAZE, 0
+	createvisualtask AnimTask_HazeScrollingFog, 5
+	delay 30
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BATTLERS_2, 2, 0, 16, RGB_PURPLE
+	delay 90
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BATTLERS_2, 1, 16, 0, RGB_PURPLE
+	end
+
+gBattleAnimMove_Exploit::
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_TARGET
+	fadetobg BG_DARK
+	waitbgfadein
+	delay 0
+	createvisualtask AnimTask_SwayMon, 3, 0, 6, 1280, 3, ANIM_ATTACKER
+	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_TARGET, 8, 8
+	waitforvisualfinish
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 12, 1
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 0, 2, 0, 13, RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	delay 0
+	restorebg
+	waitbgfadein
+	end
+
+
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_Roost::
 	loadspritegfx ANIM_TAG_WHITE_FEATHER

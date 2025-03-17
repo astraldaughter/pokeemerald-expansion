@@ -8855,6 +8855,11 @@ u32 GetBattlerWeight(u32 battler)
     return weight;
 }
 
+u32 CountBattlerSpecificStatIncrease(u32 battler, u32 battlerstat)
+{
+    return gBattleMons[battler].statStages[battlerstat] - DEFAULT_STAT_STAGE;;
+}
+
 u32 CountBattlerStatIncreases(u32 battler, bool32 countEvasionAcc)
 {
     u32 i;
@@ -9150,6 +9155,9 @@ static inline u32 CalcMoveBasePower(struct DamageCalculationData *damageCalcData
         break;
     case EFFECT_STORED_POWER:
         basePower += (CountBattlerStatIncreases(battlerAtk, TRUE) * 20);
+        break;
+    case EFFECT_FLAME_WHEEL:
+        basePower += (CountBattlerSpecificStatIncrease(battlerAtk, STAT_SPEED) * 30);
         break;
     case EFFECT_ELECTRO_BALL:
         speed = GetBattlerTotalSpeedStat(battlerAtk) / GetBattlerTotalSpeedStat(battlerDef);
@@ -9930,7 +9938,8 @@ static inline u32 CalcDefenseStat(struct DamageCalculationData *damageCalcData, 
         spDef = gBattleMons[battlerDef].spDefense;
     }
 
-    if (gMovesInfo[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move)) // uses defense stat instead of sp.def
+    if (gMovesInfo[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move) 
+    || (gMovesInfo[move].effect == EFFECT_EXPLOIT && def < spDef)) // uses defense stat instead of sp.def
     {
         defStat = def;
         defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
