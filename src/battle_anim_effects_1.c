@@ -2172,6 +2172,19 @@ const struct SpriteTemplate gHornHitSpriteTemplate =
     .callback = AnimHornHit,
 };
 
+// custom, but goes here for compat reasons
+
+const struct SpriteTemplate gGulpFishSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GULP_FISH,
+    .paletteTag = ANIM_TAG_GULP_FISH,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimHornHit,
+};
+
 const union AnimCmd gSuperFangAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 2),

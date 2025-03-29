@@ -98,6 +98,7 @@ struct ResourceFlags
 #define RESOURCE_FLAG_NEUTRALIZING_GAS  0x40
 #define RESOURCE_FLAG_ICE_FACE          0x80
 
+// Cleared each time a mon leaves the field, either by switching out or fainting
 struct DisableStruct
 {
     u32 transformedMonPersonality;
@@ -154,6 +155,7 @@ struct DisableStruct
     u8 usedProteanLibero:1;
 };
 
+// Fully Cleared each turn after end turn effects are done. A few things are cleared before end turn effects
 struct ProtectStruct
 {
     u32 protected:1;
@@ -210,6 +212,7 @@ struct ProtectStruct
 
 };
 
+// Cleared at the start of HandleAction_ActionFinished
 struct SpecialStatus
 {
     s32 shellBellDmg;
@@ -251,6 +254,7 @@ struct SpecialStatus
     u8 afterYou:1;
     u8 preventLifeOrbDamage:1; // So that Life Orb doesn't activate various effects.
     u8 distortedTypeMatchups:1;
+    u32 extraMoveUsed:1;
 };
 
 struct SideTimer

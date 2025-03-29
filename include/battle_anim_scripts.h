@@ -859,6 +859,7 @@ extern const u8 gBattleAnimMove_StagnantAir[];
 extern const u8 gBattleAnimMove_PoisonDarts[];
 extern const u8 gBattleAnimMove_Exploit[];
 extern const u8 gBattleAnimMove_Tenderize[];
+extern const u8 gBattleAnimMove_GulpMissile[];
 extern const u8 gBattleAnimMove_BreakneckBlitz[];
 extern const u8 gBattleAnimMove_AllOutPummeling[];
 extern const u8 gBattleAnimMove_SupersonicSkystrike[];

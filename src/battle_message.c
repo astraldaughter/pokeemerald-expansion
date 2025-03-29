@@ -885,7 +885,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ELECTRICCURRENTISRUNNING]             = COMPOUND_STRING("An electric current is running across the battlefield!"),
     [STRINGID_SEEMSWEIRD]                           = COMPOUND_STRING("The battlefield seems weird!"),
     [STRINGID_WAGGLINGAFINGER]                      = COMPOUND_STRING("Waggling a finger let it use {B_CURRENT_MOVE}!"),
-    [STRINGID_TUBEROUSHPUP]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} absorbed nutrients\nfrom the soil!")
+    [STRINGID_TUBEROUSHPUP]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} absorbed nutrients from the soil!"),
+    [STRINGID_ABILITYLETITUSEMOVE]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Ability let it use {B_CURRENT_MOVE}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

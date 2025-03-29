@@ -164,6 +164,8 @@ const u32 gBattleAnimSpritePal_GoldenApple[] = INCBIN_U32("graphics/battle_anims
 
 const u32 gBattleAnimSpritePal_GreenDrake[] = INCBIN_U32("graphics/battle_anims/sprites/green_drake.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_GulpFish[] = INCBIN_U32("graphics/battle_anims/sprites/gulp_fish.4bpp.lz");
+
 const u32 gBattleAnimSpriteGfx_NewGreenStar[] = INCBIN_U32("graphics/battle_anims/sprites/green_star_new.4bpp.lz");
 const u32 gBattleAnimSpritePal_NewGreenStar[] = INCBIN_U32("graphics/battle_anims/sprites/green_star_new.gbapal.lz");
 

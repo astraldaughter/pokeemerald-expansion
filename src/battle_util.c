@@ -6080,7 +6080,8 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && gBattleMons[gBattlerTarget].species != SPECIES_CRAMORANT)
+             && gBattleMons[gBattlerTarget].species != SPECIES_CRAMORANT
+             && !gSpecialStatuses[gBattlerTarget].extraMoveUsed)
             {
                 if (GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD)
                 {
@@ -6099,6 +6100,16 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                         break;
                     case SPECIES_CRAMORANT_GULPING:
                         TryBattleFormChange(battler, FORM_CHANGE_HIT_BY_MOVE);
+                        // set extraMoveUsed = TRUE so it can't activate more than once
+                        gSpecialStatuses[gBattlerTarget].extraMoveUsed = TRUE;
+
+                        // proceed
+                        gCurrentMove = MOVE_GULP_MISSILE;
+                        SWAP(gBattlerAttacker, gBattlerTarget, i);
+                        SetAtkCancellerForCalledMove();
+                        PrepareStringBattle(STRINGID_ABILITYLETITUSEMOVE, gBattlerAttacker);
+                        gBattlescriptCurrInstr = GET_MOVE_BATTLESCRIPT(gCurrentMove);
+                        gBattlerTarget = GetMoveTarget(gCurrentMove, NO_TARGET_OVERRIDE);
                         BattleScriptPushCursor();
                         gBattlescriptCurrInstr = BattleScript_GulpMissileGulping;
                         effect++;

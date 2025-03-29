@@ -1822,7 +1822,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GULP_MISSILE] =
     {
         .name = _("Gulp Missile"),
-        .description = COMPOUND_STRING("If hit, spits prey from sea."),
+        .description = COMPOUND_STRING("Catches prey from the water.\nWhen hit while holding prey,\nspits it to counterattack."),
         .aiRating = 3,
         .cantBeCopied = TRUE,
         .cantBeSuppressed = TRUE,

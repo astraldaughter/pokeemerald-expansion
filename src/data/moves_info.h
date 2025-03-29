@@ -22091,6 +22091,34 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0}
     },
 
+    [MOVE_GULP_MISSILE] =
+    {
+        // UNDEXITED, only called by ABILITY_GULP_MISSILE
+        .name = COMPOUND_STRING("Gulp Missile"),
+        .description = COMPOUND_STRING(
+			"if you can see this something\n"
+			"broke. yell at me about it\n"
+			"ok cool"),
+        .effect = EFFECT_HIT,
+        .power = 30,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_GulpMissile,
+        .metronomeBanned = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .sketchBanned = TRUE,
+        .assistBanned = TRUE,
+        .mimicBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
+            .chance = 100,
+        }),
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

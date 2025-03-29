@@ -147,6 +147,23 @@ gBattleAnimMove_Exploit::
 	waitbgfadein
 	end
 
+gBattleAnimMove_GulpMissile::
+	loadspritegfx ANIM_TAG_GULP_FISH
+	loadspritegfx ANIM_TAG_WATER_IMPACT
+	monbg ANIM_ATK_PARTNER
+	splitbgprio ANIM_ATTACKER
+	setalpha 12, 8
+	createsprite gGulpFishSpriteTemplate, ANIM_TARGET, 4, 0, 0, 15
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
+	delay 16
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 8, 0, 8, 1
+	createsprite gWaterHitSplatSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x0, 0x1, 0x2
+	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	delay 1
+	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_Roost::

@@ -2783,6 +2783,7 @@ extern const u32 gBattleAnimSpritePal_GigavoltHavocSpear[];
 extern const u32 gBattleAnimSpriteGfx_GoldenApple[];
 extern const u32 gBattleAnimSpritePal_GoldenApple[];
 extern const u32 gBattleAnimSpritePal_GreenDrake[];
+extern const u32 gBattleAnimSpriteGfx_GulpFish[];
 extern const u32 gBattleAnimSpriteGfx_NewGreenStar[];
 extern const u32 gBattleAnimSpritePal_NewGreenStar[];
 extern const u32 gBattleAnimSpriteGfx_HeartStamp[];

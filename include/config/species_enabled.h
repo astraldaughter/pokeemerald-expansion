@@ -495,7 +495,7 @@
 #define P_FAMILY_ROLYCOLY                P_GEN_8_POKEMON
 #define P_FAMILY_APPLIN                  P_GEN_8_POKEMON
 #define P_FAMILY_SILICOBRA               P_GEN_8_POKEMON
-#define P_FAMILY_CRAMORANT               P_GEN_8_POKEMON
+#define P_FAMILY_CRAMORANT               TRUE
 #define P_FAMILY_ARROKUDA                P_GEN_8_POKEMON
 #define P_FAMILY_TOXEL                   P_GEN_8_POKEMON
 #define P_FAMILY_SIZZLIPEDE              P_GEN_8_POKEMON
