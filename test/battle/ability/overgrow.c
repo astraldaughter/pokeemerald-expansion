@@ -7,8 +7,8 @@ SINGLE_BATTLE_TEST("Overgrow boosts Grass-type moves in a pinch", s16 damage)
     PARAMETRIZE { hp = 99; }
     PARAMETRIZE { hp = 33; }
     GIVEN {
-        ASSUME(gMovesInfo[MOVE_VINE_WHIP].type == TYPE_GRASS);
-        PLAYER(SPECIES_KIWEE) { Ability(ABILITY_OVERGROW); MaxHP(99); HP(hp); }
+        ASSUME(GetMoveType(MOVE_VINE_WHIP) == TYPE_GRASS);
+        PLAYER(SPECIES_BULBASAUR) { Ability(ABILITY_OVERGROW); MaxHP(99); HP(hp); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_VINE_WHIP); }

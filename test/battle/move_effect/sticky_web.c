@@ -3,7 +3,7 @@
 
 ASSUMPTIONS
 {
-    ASSUME(gMovesInfo[MOVE_STICKY_WEB].effect == EFFECT_STICKY_WEB);
+    ASSUME(GetMoveEffect(MOVE_STICKY_WEB) == EFFECT_STICKY_WEB);
 }
 
 SINGLE_BATTLE_TEST("Sticky Web lowers Speed by 1 on switch-in")
@@ -49,7 +49,7 @@ SINGLE_BATTLE_TEST("Sticky Web can only be set up 1 time")
 DOUBLE_BATTLE_TEST("Sticky Web lowers Speed by 1 in a double battle after Explosion fainting both mons")
 {
     GIVEN {
-        ASSUME(gMovesInfo[MOVE_EXPLOSION].effect == EFFECT_EXPLOSION);
+        ASSUME(GetMoveEffect(MOVE_EXPLOSION) == EFFECT_EXPLOSION);
         PLAYER(SPECIES_WOBBUFFET) {Speed(5);}
         PLAYER(SPECIES_WOBBUFFET) {HP(1500); Speed(10);}
         PLAYER(SPECIES_WOBBUFFET) {Speed(10);}

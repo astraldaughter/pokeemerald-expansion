@@ -418,6 +418,8 @@
 #define ANIM_TAG_PURPLE_CHAIN               (ANIM_SPRITES_START + 404)
 #define ANIM_TAG_PINKVIO_ORB                (ANIM_SPRITES_START + 405)
 #define ANIM_TAG_GULP_FISH                  (ANIM_SPRITES_START + 406)
+#define ANIM_TAG_STARSTORM                  (ANIM_SPRITES_START + 407)
+#define ANIM_TAG_SALT_PARTICLE              (ANIM_SPRITES_START + 408)
 
 // battlers
 #define ANIM_ATTACKER         0
