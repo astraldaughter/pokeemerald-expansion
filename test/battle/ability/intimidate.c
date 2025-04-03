@@ -92,15 +92,15 @@ DOUBLE_BATTLE_TEST("Intimidate doesn't activate on an empty field in a double ba
         // Intimidate activates after all battlers have been brought out
         ABILITY_POPUP(playerLeft, ABILITY_INTIMIDATE);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentLeft);
-        MESSAGE("Ekans's Intimidate cuts the opposing Arbok's Attack!");
+        MESSAGE("Hogweld's Intimidate cuts the opposing Hoggernaut's Attack!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
-        MESSAGE("Ekans's Intimidate cuts the opposing Wynaut's Attack!");
+        MESSAGE("Hogweld's Intimidate cuts the opposing Wynaut's Attack!");
 
         ABILITY_POPUP(opponentLeft, ABILITY_INTIMIDATE);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, playerLeft);
-        MESSAGE("The opposing Arbok's Intimidate cuts Ekans's Attack!");
+        MESSAGE("The opposing Hoggernaut's Intimidate cuts Hogweld's Attack!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, playerRight);
-        MESSAGE("The opposing Arbok's Intimidate cuts Abra's Attack!");
+        MESSAGE("The opposing Hoggernaut's Intimidate cuts Abra's Attack!");
     }
 }
 
@@ -196,7 +196,7 @@ SINGLE_BATTLE_TEST("Intimidate can not further lower opponents Atk stat if it is
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CHARM); }
         TURN { MOVE(opponent, MOVE_CHARM); }
@@ -209,7 +209,7 @@ SINGLE_BATTLE_TEST("Intimidate can not further lower opponents Atk stat if it is
         ABILITY_POPUP(opponent, ABILITY_INTIMIDATE);
         NONE_OF {
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, player);
-            MESSAGE("The opposing Arbok's Intimidate cuts Wobbuffet's Attack!");
+            MESSAGE("The opposing Hoggernaut's Intimidate cuts Wobbuffet's Attack!");
         }
         MESSAGE("Wobbuffet's Attack won't go any lower!");
     } THEN {
@@ -222,7 +222,7 @@ DOUBLE_BATTLE_TEST("Intimidate is not going to trigger if a mon switches out thr
     GIVEN {
         PLAYER(SPECIES_WYNAUT);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_TREECKO);
@@ -251,7 +251,7 @@ SINGLE_BATTLE_TEST("Intimidate activates when it's no longer effected by Neutral
     GIVEN {
         PLAYER(SPECIES_WEEZING) { Ability(ABILITY_NEUTRALIZING_GAS); }
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { SWITCH(player, 1); }
     } SCENE {
@@ -276,7 +276,7 @@ SINGLE_BATTLE_TEST("Intimidate activates when it's no longer affected by Neutral
         ASSUME(gMovesInfo[MOVE_BATON_PASS].effect == EFFECT_BATON_PASS);
         PLAYER(SPECIES_WEEZING) { Ability(ABILITY_NEUTRALIZING_GAS); }
         PLAYER(SPECIES_WOBBUFFET) { HP(1); }
-        OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { MOVE(player, move); SEND_OUT(player, 1); }
     } SCENE {
@@ -307,7 +307,7 @@ SINGLE_BATTLE_TEST("Intimidate activates when it's no longer affected by Neutral
         ASSUME(gMovesInfo[MOVE_DRAGON_TAIL].effect == EFFECT_HIT_SWITCH_TARGET);
         PLAYER(SPECIES_WEEZING) { Ability(ABILITY_NEUTRALIZING_GAS); Item(item); }
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         if (item != ITEM_NONE) {
             TURN { MOVE(opponent, move); SEND_OUT(player, 1); }
@@ -336,7 +336,7 @@ SINGLE_BATTLE_TEST("Intimidate activates when it's no longer affected by Neutral
         ASSUME(gMovesInfo[MOVE_FELL_STINGER].effect == EFFECT_FELL_STINGER);
         PLAYER(SPECIES_WEEZING) { Ability(ABILITY_NEUTRALIZING_GAS); HP(1); }
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_FELL_STINGER); SEND_OUT(player, 1); }
     } SCENE {

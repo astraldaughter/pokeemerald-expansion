@@ -2268,7 +2268,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_DRAGON_RAGE,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RUSH, COMBO_STARTER_DRAGON_TAIL},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_TYRANT_CRUSH, COMBO_STARTER_DRAGON_TAIL},
         .battleAnimScript = gBattleAnimMove_DragonRage,
     },
 
@@ -6089,7 +6089,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_DRAGON_BREATH,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_RUSH, COMBO_STARTER_DRAGON_TAIL},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_TYRANT_CRUSH, COMBO_STARTER_DRAGON_TAIL},
         .battleAnimScript = gBattleAnimMove_DragonBreath,
     },
 
@@ -9082,7 +9082,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_RUSH, COMBO_STARTER_DRAGON_TAIL},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_TYRANT_CRUSH, COMBO_STARTER_DRAGON_TAIL},
         .battleAnimScript = gBattleAnimMove_DragonClaw,
     },
 
@@ -9418,7 +9418,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_DRAGON_DANCE,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_RUSH, COMBO_STARTER_DRAGON_TAIL},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_TYRANT_CRUSH, COMBO_STARTER_DRAGON_TAIL},
         .battleAnimScript = gBattleAnimMove_DragonDance,
     },
 
@@ -9805,7 +9805,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_PLUCK] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Pluck"),
         .description = COMPOUND_STRING(
             "The user pecks the target,\n"
@@ -10867,13 +10867,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = gBattleAnimMove_DragonPulse,
     },
 
-    [MOVE_DRAGON_RUSH] =
+    [MOVE_TYRANT_CRUSH] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("Dragon Rush"),
+        .name = COMPOUND_STRING("Tyrant Crush"),
         .description = COMPOUND_STRING(
-            "A menacing diving tackle attack\n"
-            "that may cause the target to\n"
+            "A menacingly powerful crushing\n"
+            "attack that may make the foe\n"
             "flinch."),
         .effect = EFFECT_HIT,
         .power = 100,
@@ -10891,9 +10891,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         }),
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .contestComboStarterId = COMBO_STARTER_DRAGON_RUSH,
+        .contestComboStarterId = COMBO_STARTER_TYRANT_CRUSH,
         .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_TAIL},
-        .battleAnimScript = gBattleAnimMove_DragonRush,
+        .battleAnimScript = gBattleAnimMove_TyrantCrush,
     },
 
     [MOVE_POWER_GEM] =
@@ -11187,7 +11187,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 10,
-        .target = MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_BOTH,
         .priority = -4,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
@@ -12056,11 +12056,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Wood Hammer"),
         .description = COMPOUND_STRING(
-            "The user slams its rugged, woody\n"
-            "body into the target to attack,\n"
-            "damaging the user quite a lot."),
+            "Slams into the foe like a falling\n"
+            "tree. This also hurts the user a\n"
+            "little."),
         .effect = EFFECT_HIT,
-        .power = 120,
+        .power = 100,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .recoil = 33,
@@ -13903,7 +13903,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_DRAGON_TAIL,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_RUSH},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_TYRANT_CRUSH},
         .battleAnimScript = gBattleAnimMove_DragonTail,
     },
 
@@ -14927,9 +14927,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         // UNDEXITED
         .name = COMPOUND_STRING("Fell Stinger"),
         .description = COMPOUND_STRING(
-            "If this move knocks out a foe,\n"
-            "raises the user's Attack stat.\n"
-            ""),
+            "Attacks with a stinger to land\n"
+            "a finishing blow. Drastically\n"
+            "raises user's Attack if it does."),
         .effect = EFFECT_FELL_STINGER,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 50 : 30,
         .type = TYPE_BUG,
@@ -16042,7 +16042,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BABY_DOLL_EYES] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("Baby-Doll Eyes"),
         .description = COMPOUND_STRING(
             "Stares at the foe with baby-doll\n"
@@ -17267,7 +17267,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
-        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_RUSH, COMBO_STARTER_DRAGON_TAIL},
+        .contestComboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_TYRANT_CRUSH, COMBO_STARTER_DRAGON_TAIL},
         .battleAnimScript = gBattleAnimMove_DragonHammer,
     },
 
@@ -22117,6 +22117,31 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
             .chance = 100,
         }),
+    },
+
+    [MOVE_PROVOKE] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("Provoke"),
+        .description = COMPOUND_STRING(
+            "Makes a loud, sudden noise to\n"
+            "draw attention. Foes only aim\n"
+            "at the user this turn."),
+        .effect = EFFECT_FOLLOW_ME,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 0,
+        .pp = 20,
+        .target = MOVE_TARGET_USER,
+        .priority = 2,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .soundMove = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+        .battleAnimScript = gBattleAnimMove_Provoke,
     },
 
     // Z-Moves

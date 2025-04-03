@@ -1103,6 +1103,121 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sNevermornTeachableLearnset,
     },
 
+    [SPECIES_LYNDWURM] =
+    {
+        .baseHP        = 50,
+        .baseAttack    = 71,
+        .baseDefense   = 65,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 50,
+        .baseSpeed     = 46,
+        .types = MON_TYPES(TYPE_GROUND),
+        .catchRate = 170,
+        .expYield = 67,
+        .evYield_Attack = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_DRAGON),
+        .abilities = {ABILITY_SAND_VEIL, ABILITY_INFILTRATOR, ABILITY_EARTH_EATER},
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Lyndwurm"),
+        .cryId = CRY_NONE,
+        .natDexNum = NATIONAL_DEX_LYNDWURM,
+        .categoryName = _("Earth Worm"),
+        .height = 14,
+        .weight = 69,
+        .description = COMPOUND_STRING(
+            "Lyndwurm tunnel through the ground in pursuit\n"
+            "of both root vegetables and the nests of small\n"
+            "burrowing Pokémon. Due to the fact that they\n"
+            "are technically both, Hopstalk are a particular\n"
+            "favourite target for hungry Lyndwurm."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Lyndwurm,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 14,
+        .frontAnimFrames = sAnims_None,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_CircledQuestionMark,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 12,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Lyndwurm,
+        .shinyPalette = gMonShinyPalette_Lyndwurm,
+        .iconSprite = gMonIcon_QuestionMark,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sNoneLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+        //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
+        //.formChangeTable = sNoneFormChangeTable,
+        //.perfectIVCount = NUM_STATS,
+    },
+
+    [SPECIES_EARTHWYRM] =
+    {
+        .baseHP        = 1,
+        .baseAttack    = 1,
+        .baseDefense   = 1,
+        .baseSpAttack  = 1,
+        .baseSpDefense = 1,
+        .baseSpeed     = 1,
+        .types = MON_TYPES(TYPE_MYSTERY),
+        .catchRate = 255,
+        .expYield = 67,
+        .evYield_HP = 1,
+        .evYield_Defense = 1,
+        .evYield_SpDefense = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_NONE, ABILITY_CURSED_BODY, ABILITY_DAMP },
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Earthwyrm"),
+        .cryId = CRY_NONE,
+        .natDexNum = NATIONAL_DEX_EARTHWYRM,
+        .categoryName = _("Unknown"),
+        .height = 0,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "This is a newly discovered Pokémon.\n"
+            "It is currently under investigation.\n"
+            "No detailed information is available\n"
+            "at this time."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_CircledQuestionMark,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_None,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_CircledQuestionMark,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 7,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_CircledQuestionMark,
+        .shinyPalette = gMonShinyPalette_CircledQuestionMark,
+        .iconSprite = gMonIcon_QuestionMark,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sNoneLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
+                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
+        //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
+        //.formChangeTable = sNoneFormChangeTable,
+        //.perfectIVCount = NUM_STATS,
+    },
+
     [SPECIES_HOPSTALK] =
     {
         .baseHP        = 45,
@@ -1224,8 +1339,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 155 : 162,
-        .evYield_Speed = 2,
-        .itemRare = ITEM_SHARP_BEAK,
+        .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
@@ -1403,10 +1517,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 6,
         .weight = 78,
         .description = COMPOUND_STRING(
-            "Its fluffy wool rubs together and builds\n"
-            "a static charge. The more energy is\n"
-            "charged, the more brightly the lightbulb\n"
-            "at the tip of its tail glows."),
+            "A Mareep's wool naturally remains statically\n"
+            "charged for some time after it is shorn. It\n"
+            "is because of this that special processes have\n"
+            "been developed to treat the wool so it can be\n"
+            "used to produce textiles more quickly."),
         .pokemonScale = 379,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -1458,10 +1573,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 8,
         .weight = 133,
         .description = COMPOUND_STRING(
-            "Its fleece quality changes to generate\n"
-            "strong static electricity with a small\n"
-            "amount of wool. The bare, slick parts of its\n"
-            "hide are shielded against electricity."),
+            "As a Flaaffy grows, its wool becomes more\n"
+            "efficient at generating static electricity. To\n"
+            "prevent violent discharges, it sheds its wool,\n"
+            "leaving behind patches of skin that are rubbery\n"
+            "and don't conduct electricity."),
         .pokemonScale = 372,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1512,10 +1628,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 14,
         .weight = 615,
         .description = COMPOUND_STRING(
-            "It gives off so much light that it can be\n"
-            "seen even from space. People in the old\n"
-            "days used its light to send signals back\n"
-            "and forth with others far away."),
+            "Its tail glows so brightly it can be seen across\n"
+            "long distances. Because of this, Ampharos were\n"
+            "often employed as the beacons in lighthouses\n"
+            "before humans developed artificial electricity.\n"
+            "Some lighthouses still use Ampharos to this day."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -1542,174 +1659,119 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = sAmpharosFormChangeTable,
     },
 
-    [SPECIES_ROGGENROLA] =
+    [SPECIES_KRABBY] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 75,
-        .baseDefense   = 85,
-        .baseSpeed     = 15,
+        .baseHP        = 30,
+        .baseAttack    = 105,
+        .baseDefense   = 90,
+        .baseSpeed     = 50,
         .baseSpAttack  = 25,
         .baseSpDefense = 25,
-        .types = MON_TYPES(TYPE_ROCK),
-        .catchRate = 255,
-        .expYield = 56,
-        .evYield_Defense = 1,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Roggenrola"),
-        .cryId = CRY_ROGGENROLA,
-        .natDexNum = NATIONAL_DEX_ROGGENROLA,
-        .categoryName = _("Mantle"),
-        .height = 4,
-        .weight = 180,
-        .description = COMPOUND_STRING(
-            "The hexagonal cavity is its ear.\n"
-            "It walks in the direction of sounds it\n"
-            "hears, but if the sounds cease, it panics\n"
-            "and topples over."),
-        .pokemonScale = 491,
-        .pokemonOffset = 16,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Roggenrola,
-        .frontPicSize = MON_COORDS_SIZE(24, 40),
-        .frontPicYOffset = 14,
-        .frontAnimFrames = sAnims_Roggenrola,
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Roggenrola,
-        .backPicSize = MON_COORDS_SIZE(40, 48),
-        .backPicYOffset = 13,
-        .backAnimId = BACK_ANIM_V_SHAKE,
-        .palette = gMonPalette_Roggenrola,
-        .shinyPalette = gMonShinyPalette_Roggenrola,
-        .iconSprite = gMonIcon_Roggenrola,
-        .iconPalIndex = 2,
-        FOOTPRINT(Roggenrola)
-        .levelUpLearnset = sRoggenrolaLevelUpLearnset,
-        .teachableLearnset = sRoggenrolaTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_BOLDORE}),
-    },
-
-    [SPECIES_BOLDORE] =
-    {
-        .baseHP        = 70,
-        .baseAttack    = 105,
-        .baseDefense   = 105,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 40,
-        .types = MON_TYPES(TYPE_ROCK),
-        .catchRate = 120,
-        .expYield = 137,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 225,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 115,
         .evYield_Attack = 1,
-        .evYield_Defense = 1,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Boldore"),
-        .cryId = CRY_BOLDORE,
-        .natDexNum = NATIONAL_DEX_BOLDORE,
-        .categoryName = _("Ore"),
-        .height = 9,
-        .weight = 1020,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
+        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR, ABILITY_SHEER_FORCE },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Krabby"),
+        .cryId = CRY_KRABBY,
+        .natDexNum = NATIONAL_DEX_KRABBY,
+        .categoryName = _("River Crab"),
+        .height = 4,
+        .weight = 65,
         .description = COMPOUND_STRING(
-            "Its orange crystal is a mass of energy.\n"
-            "Just one crystal fragment would provide\n"
-            "enough fuel for a hundred dump trucks.\n"
-            "When it is healthy, its core sticks out."),
-        .pokemonScale = 338,
-        .pokemonOffset = 8,
+            "At sunset, Krabby emerge from their burrows to\n"
+            "blow bubbles together, in a spectacle that is a\n"
+            "popular tourist attraction where it occurs.\n"
+            "When food is scarce, however, they squabble\n"
+            "instead with their powerful pincers."),
+        .pokemonScale = 469,
+        .pokemonOffset = 20,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Boldore,
-        .frontPicSize = MON_COORDS_SIZE(56, 48),
-        .frontPicYOffset = 10,
-        .frontAnimFrames = sAnims_Boldore,
-        .frontAnimId = ANIM_H_SLIDE_SLOW,
-        .backPic = gMonBackPic_Boldore,
-        .backPicSize = MON_COORDS_SIZE(64, 40),
-        .backPicYOffset = 16,
-        .backAnimId = BACK_ANIM_H_SHAKE,
-        .palette = gMonPalette_Boldore,
-        .shinyPalette = gMonShinyPalette_Boldore,
-        .iconSprite = gMonIcon_Boldore,
-        .iconPalIndex = 0,
-        SHADOW(-4, 6, SHADOW_SIZE_M)
-        FOOTPRINT(Boldore)
-        .levelUpLearnset = sBoldoreLevelUpLearnset,
-        .teachableLearnset = sBoldoreTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GIGALITH},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GIGALITH}),
+        .frontPic = gMonFrontPic_Krabby,
+        .frontPicSize = MON_COORDS_SIZE(64, 48),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_Krabby,
+        .frontAnimId = P_GBA_STYLE_SPECIES_GFX ? ANIM_H_SLIDE : ANIM_H_SLIDE_SLOW,
+        .backPic = gMonBackPic_Krabby,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(56, 40),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 10 : 15,
+        .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
+        .palette = gMonPalette_Krabby,
+        .shinyPalette = gMonShinyPalette_Krabby,
+        .iconSprite = gMonIcon_Krabby,
+        .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 2 : 0,
+        SHADOW(0, -1, SHADOW_SIZE_XL_BATTLE_ONLY)
+        FOOTPRINT(Krabby)
+        .levelUpLearnset = sKrabbyLevelUpLearnset,
+        .teachableLearnset = sKrabbyTeachableLearnset,
+        .eggMoveLearnset = sKrabbyEggMoveLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_KINGLER}),
     },
 
-    [SPECIES_GIGALITH] =
+    [SPECIES_KINGLER] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 135,
-        .baseDefense   = 130,
-        .baseSpeed     = 25,
-        .baseSpAttack  = 60,
-        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
-        .types = MON_TYPES(TYPE_ROCK),
-        .catchRate = 45,
-        .expYield = 258,
-        .evYield_Attack = 3,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
+        .baseHP        = 55,
+        .baseAttack    = 130,
+        .baseDefense   = 115,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 50,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 60,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 206,
+        .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STURDY, ABILITY_SAND_STREAM, ABILITY_SOLAR_POWER },
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Gigalith"),
-        .cryId = CRY_GIGALITH,
-        .natDexNum = NATIONAL_DEX_GIGALITH,
-        .categoryName = _("Compressed"),
-        .height = 17,
-        .weight = 2600,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
+        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR, ABILITY_SHEER_FORCE },
+        .bodyColor = BODY_COLOR_RED,
+        .noFlip = TRUE,
+        .speciesName = _("Kingler"),
+        .cryId = CRY_KINGLER,
+        .natDexNum = NATIONAL_DEX_KINGLER,
+        .categoryName = _("Pincer"),
+        .height = 13,
+        .weight = 600,
         .description = COMPOUND_STRING(
-            "The blasts of energy it makes from\n"
-            "sunbeams have terrifying power.\n"
-            "However, it's not able to fire its blasts\n"
-            "at night or on rainy days."),
-        .pokemonScale = 259,
-        .pokemonOffset = 0,
-        .trainerScale = 290,
-        .trainerOffset = 1,
-        .frontPic = gMonFrontPic_Gigalith,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 1,
-        .frontAnimFrames = sAnims_Gigalith,
-        .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
-        .backPic = gMonBackPic_Gigalith,
-        .backPicSize = MON_COORDS_SIZE(56, 64),
-        .backPicYOffset = 2,
-        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
-        .palette = gMonPalette_Gigalith,
-        .shinyPalette = gMonShinyPalette_Gigalith,
-        .iconSprite = gMonIcon_Gigalith,
-        .iconPalIndex = 0,
-        SHADOW(-4, 6, SHADOW_SIZE_M)
-        FOOTPRINT(Gigalith)
-        .levelUpLearnset = sGigalithLevelUpLearnset,
-        .teachableLearnset = sGigalithTeachableLearnset,
+            "Its huge pincer has an incredible crushing\n"
+            "power of approximately 10,000 pounds per\n"
+            "square inch. Unfortunately, it is also so large\n"
+            "that when Kingler use them for battle or to\n"
+            "communicate with each other, they tire quickly."),
+        .pokemonScale = 256,
+        .pokemonOffset = 2,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Kingler,
+        .frontPicSize = MON_COORDS_SIZE(64, 48),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = sAnims_Kingler,
+        .frontAnimId = P_GBA_STYLE_SPECIES_GFX ? ANIM_ZIGZAG_SLOW : ANIM_V_SHAKE_TWICE,
+        .frontAnimDelay = P_GBA_STYLE_SPECIES_GFX ? 0 : 4,
+        .backPic = gMonBackPic_Kingler,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 56) : MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 4 : 5,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        .palette = gMonPalette_Kingler,
+        .shinyPalette = gMonShinyPalette_Kingler,
+        .iconSprite = gMonIcon_Kingler,
+        .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 2 : 0,
+        SHADOW(-2, 4, SHADOW_SIZE_XL_BATTLE_ONLY)
+        FOOTPRINT(Kingler)
+        .levelUpLearnset = sKinglerLevelUpLearnset,
+        .teachableLearnset = sKinglerTeachableLearnset,
+        .formSpeciesIdTable = sKinglerFormSpeciesIdTable,
+        .formChangeTable = sKinglerFormChangeTable,
     },
-
 
     [SPECIES_NEADOUGH] =
     {
@@ -1823,5 +1885,176 @@ const struct SpeciesInfo gSpeciesInfo[] =
         //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
         //.formChangeTable = sNoneFormChangeTable,
         //.perfectIVCount = NUM_STATS,
+    },
+
+    [SPECIES_ROGGENROLA] =
+    {
+        .baseHP        = 55,
+        .baseAttack    = 75,
+        .baseDefense   = 85,
+        .baseSpeed     = 15,
+        .baseSpAttack  = 25,
+        .baseSpDefense = 25,
+        .types = MON_TYPES(TYPE_ROCK),
+        .catchRate = 255,
+        .expYield = 56,
+        .evYield_Defense = 1,
+        .itemCommon = ITEM_EVERSTONE,
+        .itemRare = ITEM_HARD_STONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Roggenrola"),
+        .cryId = CRY_ROGGENROLA,
+        .natDexNum = NATIONAL_DEX_ROGGENROLA,
+        .categoryName = _("Mantle"),
+        .height = 4,
+        .weight = 180,
+        .description = COMPOUND_STRING(
+            "Its rock-hard body is the result of hundreds of\n"
+            "years of compression underground. Despite\n"
+            "appearances, the cavity on its front acts like\n"
+            "an ear, and contains the energy core that makes\n"
+            "Roggenrola slightly warm to the touch."),
+        .pokemonScale = 491,
+        .pokemonOffset = 16,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Roggenrola,
+        .frontPicSize = MON_COORDS_SIZE(24, 40),
+        .frontPicYOffset = 14,
+        .frontAnimFrames = sAnims_Roggenrola,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Roggenrola,
+        .backPicSize = MON_COORDS_SIZE(40, 48),
+        .backPicYOffset = 13,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        .palette = gMonPalette_Roggenrola,
+        .shinyPalette = gMonShinyPalette_Roggenrola,
+        .iconSprite = gMonIcon_Roggenrola,
+        .iconPalIndex = 2,
+        FOOTPRINT(Roggenrola)
+        .levelUpLearnset = sRoggenrolaLevelUpLearnset,
+        .teachableLearnset = sRoggenrolaTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_BOLDORE}),
+    },
+
+    [SPECIES_BOLDORE] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 105,
+        .baseDefense   = 105,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 40,
+        .types = MON_TYPES(TYPE_ROCK),
+        .catchRate = 120,
+        .expYield = 137,
+        .evYield_Attack = 1,
+        .evYield_Defense = 1,
+        .itemCommon = ITEM_EVERSTONE,
+        .itemRare = ITEM_HARD_STONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Boldore"),
+        .cryId = CRY_BOLDORE,
+        .natDexNum = NATIONAL_DEX_BOLDORE,
+        .categoryName = _("Ore"),
+        .height = 9,
+        .weight = 1020,
+        .description = COMPOUND_STRING(
+            "The energy from its core is so great that it\n"
+            "leaks out of its body and forms crystals on its\n"
+            "surface. It relies on sound to find water to\n"
+            "drink in the caverns where it dwells. It drinks\n"
+            "cautiously, because it fears water."),
+        .pokemonScale = 338,
+        .pokemonOffset = 8,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Boldore,
+        .frontPicSize = MON_COORDS_SIZE(56, 48),
+        .frontPicYOffset = 10,
+        .frontAnimFrames = sAnims_Boldore,
+        .frontAnimId = ANIM_H_SLIDE_SLOW,
+        .backPic = gMonBackPic_Boldore,
+        .backPicSize = MON_COORDS_SIZE(64, 40),
+        .backPicYOffset = 16,
+        .backAnimId = BACK_ANIM_H_SHAKE,
+        .palette = gMonPalette_Boldore,
+        .shinyPalette = gMonShinyPalette_Boldore,
+        .iconSprite = gMonIcon_Boldore,
+        .iconPalIndex = 0,
+        SHADOW(-4, 6, SHADOW_SIZE_M)
+        FOOTPRINT(Boldore)
+        .levelUpLearnset = sBoldoreLevelUpLearnset,
+        .teachableLearnset = sBoldoreTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GIGALITH},
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GIGALITH}),
+    },
+
+    [SPECIES_GIGALITH] =
+    {
+        .baseHP        = 85,
+        .baseAttack    = 135,
+        .baseDefense   = 130,
+        .baseSpeed     = 25,
+        .baseSpAttack  = 60,
+        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
+        .types = MON_TYPES(TYPE_ROCK),
+        .catchRate = 45,
+        .expYield = 258,
+        .evYield_Attack = 3,
+        .itemCommon = ITEM_EVERSTONE,
+        .itemRare = ITEM_HARD_STONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STURDY, ABILITY_SAND_STREAM, ABILITY_SOLAR_POWER },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Gigalith"),
+        .cryId = CRY_GIGALITH,
+        .natDexNum = NATIONAL_DEX_GIGALITH,
+        .categoryName = _("Compressed"),
+        .height = 17,
+        .weight = 2600,
+        .description = COMPOUND_STRING(
+            "A hardy Pokémon, it is often used by workers in\n"
+            "the construction industry both because of its\n"
+            "strength and its ability to turn the solar power\n"
+            "it absorbs into destructive blasts, which can\n"
+            "clear terrain for work to begin."),
+        .pokemonScale = 259,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 1,
+        .frontPic = gMonFrontPic_Gigalith,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_Gigalith,
+        .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
+        .backPic = gMonBackPic_Gigalith,
+        .backPicSize = MON_COORDS_SIZE(56, 64),
+        .backPicYOffset = 2,
+        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
+        .palette = gMonPalette_Gigalith,
+        .shinyPalette = gMonShinyPalette_Gigalith,
+        .iconSprite = gMonIcon_Gigalith,
+        .iconPalIndex = 0,
+        SHADOW(-4, 6, SHADOW_SIZE_M)
+        FOOTPRINT(Gigalith)
+        .levelUpLearnset = sGigalithLevelUpLearnset,
+        .teachableLearnset = sGigalithTeachableLearnset,
     },
 };

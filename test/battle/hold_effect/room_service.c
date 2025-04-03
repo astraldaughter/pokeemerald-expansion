@@ -13,7 +13,7 @@ SINGLE_BATTLE_TEST("Room Serive decreases the holder's seep by one stage")
         ASSUME(gMovesInfo[MOVE_TRICK_ROOM].effect == EFFECT_TRICK_ROOM);
         ASSUME(gMovesInfo[MOVE_EXPLOSION].effect == EFFECT_EXPLOSION);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ROOM_SERVICE); }
+        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ROOM_SERVICE); }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {

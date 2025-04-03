@@ -3126,6 +3126,13 @@ const struct SpriteTemplate gChainBindingSpriteTemplate =
 };
 
 // functions
+
+// args[0] - initial x offset
+// args[1] - initial y offset
+// args[2] - some param to linear translation
+// args[3] - some param to linear translation
+// args[4] - offset that gets added to param for Sin
+// args[5] - another param for Sin
 static void AnimGrassKnot(struct Sprite *sprite)
 {
     if (BATTLE_PARTNER(gBattleAnimAttacker) == gBattleAnimTarget && GetBattlerPosition(gBattleAnimTarget) < B_POSITION_PLAYER_RIGHT)
@@ -5050,27 +5057,13 @@ void AnimNeedleArmSpike(struct Sprite *sprite)
     {
         if (gBattleAnimArgs[0] == 0)
         {
-            if (IsDoubleBattle())
-            {
-                SetAverageBattlerPositions(gBattleAnimAttacker, TRUE, &a, &b);
-            }
-            else
-            {
-                a = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
-                b = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
-            }
+            a = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+            b = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
         }
         else
         {
-            if (IsDoubleBattle())
-            {
-                SetAverageBattlerPositions(gBattleAnimTarget, TRUE, &a, &b);
-            }
-            else
-            {
-                a = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
-                b = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
-            }
+            a = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+            b = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
         }
 
         sprite->data[0] = gBattleAnimArgs[4];
@@ -5835,7 +5828,7 @@ static void AnimBowMon_Step1_Callback(struct Sprite *sprite)
     {
         sprite->data[3] = gBattlerSpriteIds[gBattleAnimAttacker];
         PrepareBattlerSpriteForRotScale(sprite->data[3], ST_OAM_OBJ_NORMAL);
-        sprite->data[4] = (sprite->data[6] = GetBattlerSide(gBattleAnimAttacker)) ? 0x300 : 0xFFFFFD00;
+        sprite->data[4] = (sprite->data[6] = GetBattlerSide(gBattleAnimAttacker)) ?  768 : -768;
         sprite->data[5] = 0;
     }
 

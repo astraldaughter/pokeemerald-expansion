@@ -7,33 +7,33 @@
 // Showdown: https://github.com/smogon/Pokemon-Showdown/blob/master/data/pokedex.ts
 
 #define SPECIES_NONE                                    0
-#define SPECIES_KIWEE                               1
-#define SPECIES_FRONDODO                                 2
-#define SPECIES_TROPIKOEKA                                3
-#define SPECIES_KINDLANT                              4
-#define SPECIES_CALIANTE                              5
-#define SPECIES_SCORNET                               6
-#define SPECIES_KELPONI                                7
-#define SPECIES_AQUINE                               8
-#define SPECIES_AQUASTRIAN                               9
-#define SPECIES_TIMIDNA                                10
-#define SPECIES_TOXREC                                 11
-#define SPECIES_LINTSECT                              12
-#define SPECIES_DROSODUST                                  13
-#define SPECIES_ORBUNCLE                                  14
-#define SPECIES_MAGTAIL                                15
-#define SPECIES_MURMURAVEN                                  16
+#define SPECIES_KIWEE                                   1
+#define SPECIES_FRONDODO                                2
+#define SPECIES_TROPIKOEKA                              3
+#define SPECIES_KINDLANT                                4
+#define SPECIES_CALIANTE                                5
+#define SPECIES_SCORNET                                 6
+#define SPECIES_KELPONI                                 7
+#define SPECIES_AQUINE                                  8
+#define SPECIES_AQUASTRIAN                              9
+#define SPECIES_TIMIDNA                                 10
+#define SPECIES_TOXREC                                  11
+#define SPECIES_LINTSECT                                12
+#define SPECIES_DROSODUST                               13
+#define SPECIES_ORBUNCLE                                14
+#define SPECIES_MAGTAIL                                 15
+#define SPECIES_MURMURAVEN                              16
 #define SPECIES_NEVERMORN                               17
 #define SPECIES_PIDGEOT                                 18
 #define SPECIES_RATTATA                                 19
 #define SPECIES_HOPSTALK                                20
-#define SPECIES_RUTABUNNY                                 21
+#define SPECIES_RUTABUNNY                               21
 #define SPECIES_SWIRON                                  22
-#define SPECIES_HOGWELD                                   23
-#define SPECIES_HOGGERNAUT                                   24
-#define SPECIES_MAREEP                                25
-#define SPECIES_FLAAFFY                                  26
-#define SPECIES_AMPHAROS                               27
+#define SPECIES_HOGWELD                                 23
+#define SPECIES_HOGGERNAUT                              24
+#define SPECIES_MAREEP                                  25
+#define SPECIES_FLAAFFY                                 26
+#define SPECIES_AMPHAROS                                27
 #define SPECIES_KRABBY                                  28
 #define SPECIES_KINGLER                                 29
 #define SPECIES_ROGGENROLA                              30
@@ -1642,8 +1642,10 @@
 
 #define SPECIES_NEADOUGH                                1524
 #define SPECIES_MOLDOUGH                                1525
+#define SPECIES_LYNDWURM                                1526
+#define SPECIES_EARTHWYRM                               1527
 
-#define SPECIES_EGG                                     (SPECIES_MOLDOUGH + 1)
+#define SPECIES_EGG                                     (SPECIES_EARTHWYRM + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

@@ -275,10 +275,10 @@ SINGLE_BATTLE_TEST("Sticky Web is placed on the correct side after Memento")
 DOUBLE_BATTLE_TEST("Sticky Web setter has their speed lowered with Mirror Armor even after Ally Switch")
 {
     GIVEN {
-        PLAYER(SPECIES_SQUIRTLE);
+        PLAYER(SPECIES_KELPONI);
         PLAYER(SPECIES_KINDLANT);
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
-        OPPONENT(SPECIES_CATERPIE);
+        OPPONENT(SPECIES_TIMIDNA);
         OPPONENT(SPECIES_NATU);
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_STICKY_WEB); }
@@ -294,8 +294,8 @@ DOUBLE_BATTLE_TEST("Sticky Web setter has their speed lowered with Mirror Armor 
         SEND_IN_MESSAGE("Corviknight");
         MESSAGE("Corviknight was caught in a sticky web!");
         ABILITY_POPUP(playerRight, ABILITY_MIRROR_ARMOR);
-        // sticky web setter - caterpie (now opponentRight) gets speed lowered
+        // sticky web setter - timidna (now opponentRight) gets speed lowered
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
-        MESSAGE("The opposing Caterpie's Speed fell!");
+        MESSAGE("The opposing Timidna's Speed fell!");
     }
 }

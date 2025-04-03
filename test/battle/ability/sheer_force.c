@@ -418,7 +418,7 @@ static inline bool32 IsMoveSheerForceBoosted(u32 move)
         case MOVE_CRUNCH:
         case MOVE_CRUSH_CLAW:
         case MOVE_DARK_PULSE:
-        case MOVE_DRAGON_RUSH:
+        case MOVE_TYRANT_CRUSH:
         case MOVE_DRAGON_BREATH:
         case MOVE_DYNAMIC_PUNCH:
         case MOVE_EARTH_POWER:

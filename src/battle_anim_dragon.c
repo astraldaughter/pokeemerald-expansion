@@ -9,7 +9,8 @@ static void AnimDragonDanceOrb_Step(struct Sprite *);
 static void AnimOverheatFlame_Step(struct Sprite *);
 static void AnimTask_DragonDanceWaver_Step(u8);
 static void UpdateDragonDanceScanlineEffect(struct Task *);
-static void AnimDragonRushStep(struct Sprite *sprite);
+static void AnimTyrantCrush(struct Sprite *sprite);
+static void AnimTyrantCrushStep(struct Sprite *sprite);
 static void AnimSpinningDracoMeteor(struct Sprite *sprite);
 static void AnimSpinningDracoMeteorFinish(struct Sprite *sprite);
 static void AnimDracoMeteorRock_Step(struct Sprite *sprite);
@@ -243,36 +244,36 @@ const struct SpriteTemplate gDracoMeteorTailSpriteTemplate =
     .callback = AnimDracoMeteorRock,
 };
 
-const union AnimCmd gDragonRushAnimCmds[] =
+const union AnimCmd gTyrantCrushAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(64, 4),
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gDragonRushAnimTable[] =
+const union AnimCmd *const gTyrantCrushAnimTable[] =
 {
-    gDragonRushAnimCmds,
+    gTyrantCrushAnimCmds,
 };
 
-const union AffineAnimCmd gDragonRushAffineanimCmds1[] =
+const union AffineAnimCmd gTyrantCrushAffineanimCmds1[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0, 0, -4, 8),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd gDragonRushAffineanimCmds2[] =
+const union AffineAnimCmd gTyrantCrushAffineanimCmds2[] =
 {
     AFFINEANIMCMD_FRAME(-0x100, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0, 0, 4, 8),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd *const gDragonRushAffineAnimTable[] =
+const union AffineAnimCmd *const gTyrantCrushAffineAnimTable[] =
 {
-    gDragonRushAffineanimCmds1,
-    gDragonRushAffineanimCmds2,
+    gTyrantCrushAffineanimCmds1,
+    gTyrantCrushAffineanimCmds2,
 };
 
 const union AnimCmd gDracoMeteorAnimTable[] =
@@ -298,15 +299,15 @@ const union AffineAnimCmd *const gDracoMeteorAffineAnims[] =
     gDracoMeteorAffineAnimCmd,
 };
 
-const struct SpriteTemplate gDragonRushSpriteTemplate =
+const struct SpriteTemplate gTyrantCrushSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SLAM_HIT_2,
     .paletteTag = ANIM_TAG_RED_HEART,
     .oam = &gOamData_AffineNormal_ObjNormal_64x64,
-    .anims = gDragonRushAnimTable,
+    .anims = gTyrantCrushAnimTable,
     .images = NULL,
-    .affineAnims = gDragonRushAffineAnimTable,
-    .callback = AnimDragonRushStep,
+    .affineAnims = gTyrantCrushAffineAnimTable,
+    .callback = AnimTyrantCrush,
 };
 
 const struct SpriteTemplate gDracoMetorSpriteTemplate =
@@ -331,7 +332,38 @@ const struct SpriteTemplate gDragonPulseSpriteTemplate =
     .callback = TranslateAnimSpriteToTargetMonLocation,
 };
 
-static void AnimDragonRushStep(struct Sprite *sprite)
+// Animates a strike that swipes downard at the target mon.
+// arg 0: initial x pixel offset
+// arg 1: initial y pixel offset
+static void AnimTyrantCrush(struct Sprite *sprite)
+{
+    if (GetBattlerSide(gBattleAnimTarget) == B_SIDE_PLAYER)
+    {
+        sprite->x -= gBattleAnimArgs[0];
+        sprite->y += gBattleAnimArgs[1];
+        sprite->data[0] = -11;
+        sprite->data[1] = 192;
+        StartSpriteAffineAnim(sprite, 1);
+    }
+    else
+    {
+        sprite->data[0] = 11;
+        sprite->data[1] = 192;
+        sprite->x += gBattleAnimArgs[0];
+        sprite->y += gBattleAnimArgs[1];
+    }
+
+    sprite->callback = AnimTyrantCrushStep;
+}
+
+// args[0] - initial x delta
+// args[1] - initial y delta
+// args[2] - x delta to end x
+// args[3] - y delta to end y
+// args[4] - num frames
+// args[5] - sprite anim number
+
+static void AnimTyrantCrushStep(struct Sprite *sprite)
 {
     // These two cases are identical.
     if (GetBattlerSide(gBattleAnimTarget) == B_SIDE_PLAYER)
@@ -424,6 +456,9 @@ static void StartDragonFireTranslation(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
 }
 
+// args[0] - attacker or target
+// args[1] - initial x offset
+// args[2] - initial y offset
 void AnimDragonRageFirePlume(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[0] == 0)

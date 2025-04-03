@@ -54,15 +54,15 @@ AI_DOUBLE_BATTLE_TEST("AI will not try to switch for the same pokemon for 2 spot
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_HAUNTER) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
-        OPPONENT(SPECIES_RATICATE) { Moves(MOVE_HEADBUTT); }
+        OPPONENT(SPECIES_HOPSTALK) { Moves(MOVE_HEADBUTT); }
     } WHEN {
         TURN { EXPECT_SWITCH(opponentLeft, 3); };
     } SCENE {
         MESSAGE(AI_TRAINER_NAME " withdrew Gengar!");
-        MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
+        MESSAGE(AI_TRAINER_NAME " sent out Hopstalk!");
         NONE_OF {
             MESSAGE(AI_TRAINER_NAME " withdrew Haunter!");
-            MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
+            MESSAGE(AI_TRAINER_NAME " sent out Hopstalk!");
         }
     }
 }
@@ -177,7 +177,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI will not switch in a Pokemo
         PLAYER(SPECIES_WEAVILE) { Speed(300); Ability(ABILITY_SHADOW_TAG); } // Weavile has Shadow Tag, so AI can't switch on the first turn, but has to do it after fainting.
         OPPONENT(SPECIES_KADABRA) { Speed(200); Moves(MOVE_PSYCHIC, MOVE_DISABLE, MOVE_TAUNT, MOVE_CALM_MIND); }
         OPPONENT(SPECIES_ALAKAZAM) { Speed(speedAlakazm); Moves(MOVE_FOCUS_BLAST, MOVE_PSYCHIC); } // Alakazam has a move which OHKOes Weavile, but it doesn't matter if he's getting KO-ed first.
-        OPPONENT(SPECIES_BLASTOISE) { Speed(200); Moves(MOVE_BUBBLE_BEAM, MOVE_WATER_GUN, MOVE_LEER, MOVE_STRENGTH); } // Can't OHKO, but survives a hit from Weavile's Night Slash.
+        OPPONENT(SPECIES_AQUASTRIAN) { Speed(200); Moves(MOVE_BUBBLE_BEAM, MOVE_WATER_GUN, MOVE_LEER, MOVE_STRENGTH); } // Can't OHKO, but survives a hit from Weavile's Night Slash.
     } WHEN {
             TURN { MOVE(player, MOVE_NIGHT_SLASH) ; EXPECT_SEND_OUT(opponent, alakazamFirst ? 1 : 2); } // AI doesn't send out Alakazam if it gets outsped
     } SCENE {
@@ -185,7 +185,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI will not switch in a Pokemo
         if (alakazamFirst) {
             MESSAGE(AI_TRAINER_NAME " sent out Alakazam!");
         } else {
-            MESSAGE(AI_TRAINER_NAME " sent out Blastoise!");
+            MESSAGE(AI_TRAINER_NAME " sent out Aquastrian!");
         }
     }
 }

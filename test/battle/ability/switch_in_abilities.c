@@ -9,7 +9,7 @@ SINGLE_BATTLE_TEST("Switch-in abilities trigger in Speed Order at the battle's s
     PARAMETRIZE { spdOpponent = 5; spdPlayer = 1; }
 
     GIVEN {
-        PLAYER(SPECIES_EKANS) { Speed(spdPlayer); Ability(ABILITY_INTIMIDATE); }
+        PLAYER(SPECIES_HOGWELD) { Speed(spdPlayer); Ability(ABILITY_INTIMIDATE); }
         OPPONENT(SPECIES_NINETALES) { Speed(spdOpponent); Ability(ABILITY_DROUGHT); }
     } WHEN {
         TURN { ; }
@@ -68,7 +68,7 @@ SINGLE_BATTLE_TEST("Switch-in abilities trigger in Speed Order after post-KO swi
 
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { HP(1); Speed(1); }
-        PLAYER(SPECIES_EKANS) { Speed(spdPlayer); Ability(ABILITY_INTIMIDATE); }
+        PLAYER(SPECIES_HOGWELD) { Speed(spdPlayer); Ability(ABILITY_INTIMIDATE); }
         OPPONENT(SPECIES_WOBBUFFET) { HP(1); Speed(1); }
         OPPONENT(SPECIES_PORYGON2) { Speed(spdOpponent); Ability(ABILITY_DOWNLOAD); }
     } WHEN {

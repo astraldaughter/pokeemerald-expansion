@@ -31,7 +31,7 @@ SINGLE_BATTLE_TEST("Eject Pack does not activate if there are no Pokémon left t
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_EJECT_PACK); }
         PLAYER(SPECIES_WOBBUFFET) { HP(0); }
-        OPPONENT(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { }
     } SCENE {
@@ -93,7 +93,7 @@ SINGLE_BATTLE_TEST("Eject Pack activates once intimidate mon switches in")
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_EJECT_PACK); }
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { SWITCH(opponent, 1); SEND_OUT(player, 1); }
     } SCENE {
@@ -130,7 +130,7 @@ DOUBLE_BATTLE_TEST("Eject Pack will not trigger if the conditions are not met")
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
+        OPPONENT(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { SWITCH(opponentLeft, 2); SEND_OUT(playerLeft, 2); }
     } SCENE {

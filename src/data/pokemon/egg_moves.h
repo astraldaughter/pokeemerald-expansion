@@ -34,7 +34,7 @@ static const u16 sKindlantEggMoveLearnset[] = {
     MOVE_BEAT_UP,
     MOVE_DRAGON_DANCE,
     MOVE_CRUNCH,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_METAL_CLAW,
     MOVE_FLARE_BLITZ,
     MOVE_COUNTER,
@@ -1042,7 +1042,7 @@ static const u16 sRhyhornEggMoveLearnset[] = {
     MOVE_MAGNITUDE,
     MOVE_CURSE,
     MOVE_CRUSH_CLAW,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_ICE_FANG,
     MOVE_FIRE_FANG,
     MOVE_THUNDER_FANG,
@@ -1458,7 +1458,7 @@ static const u16 sDratiniEggMoveLearnset[] = {
     MOVE_SUPERSONIC,
     MOVE_DRAGON_BREATH,
     MOVE_DRAGON_DANCE,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_EXTREME_SPEED,
     MOVE_WATER_PULSE,
     MOVE_AQUA_JET,
@@ -2720,7 +2720,7 @@ static const u16 sAronEggMoveLearnset[] = {
     MOVE_CURSE,
     MOVE_SCREECH,
     MOVE_IRON_HEAD,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_HEAD_SMASH,
     MOVE_SUPERPOWER,
     MOVE_STEALTH_ROCK,
@@ -3034,7 +3034,7 @@ static const u16 sSwabluEggMoveLearnset[] = {
     MOVE_PURSUIT,
     MOVE_RAGE,
     MOVE_FEATHER_DANCE,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_POWER_SWAP,
     MOVE_ROOST,
     MOVE_HYPER_VOICE,
@@ -3398,7 +3398,7 @@ static const u16 sBagonEggMoveLearnset[] = {
     MOVE_TWISTER,
     MOVE_DRAGON_DANCE,
     MOVE_FIRE_FANG,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_DRAGON_PULSE,
     MOVE_ENDURE,
     MOVE_DEFENSE_CURL,
@@ -5573,7 +5573,7 @@ static const u16 sBruxishEggMoveLearnset[] = {
 #if P_FAMILY_DRAMPA
 static const u16 sDrampaEggMoveLearnset[] = {
     MOVE_HURRICANE,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_RAZOR_WIND,
     MOVE_MIST,
     MOVE_PLAY_ROUGH,
@@ -5731,7 +5731,7 @@ static const u16 sApplinEggMoveLearnset[] = {
 
 #if P_FAMILY_SILICOBRA
 static const u16 sSilicobraEggMoveLearnset[] = {
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_MUD_SLAP,
     MOVE_LAST_RESORT,
     MOVE_BELCH,
@@ -6295,7 +6295,7 @@ static const u16 sTatsugiriEggMoveLearnset[] = {
 #if P_FAMILY_FRIGIBAX
 static const u16 sFrigibaxEggMoveLearnset[] = {
     MOVE_AQUA_TAIL,
-    MOVE_DRAGON_RUSH,
+    MOVE_TYRANT_CRUSH,
     MOVE_FREEZE_DRY,
     MOVE_ICICLE_SPEAR,
     MOVE_UNAVAILABLE,

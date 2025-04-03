@@ -600,10 +600,10 @@ AI_SINGLE_BATTLE_TEST("AI will choose Scratch over Power-up Punch with Contrary"
         ASSUME(gMovesInfo[MOVE_SCRATCH].type == TYPE_NORMAL);
         ASSUME(gMovesInfo[MOVE_POWER_UP_PUNCH].power == 40);
         ASSUME(gMovesInfo[MOVE_POWER_UP_PUNCH].type == TYPE_FIGHTING);
-        ASSUME(gSpeciesInfo[SPECIES_SQUIRTLE].types[0] == TYPE_WATER);
-        ASSUME(gSpeciesInfo[SPECIES_SQUIRTLE].types[1] == TYPE_WATER);
+        ASSUME(gSpeciesInfo[SPECIES_KELPONI].types[0] == TYPE_WATER);
+        ASSUME(gSpeciesInfo[SPECIES_KELPONI].types[1] == TYPE_WATER);
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT);
-        PLAYER(SPECIES_SQUIRTLE) { };
+        PLAYER(SPECIES_KELPONI) { };
         OPPONENT(SPECIES_MALAMAR) { Ability(ability); Moves(MOVE_SCRATCH, MOVE_POWER_UP_PUNCH); }
     } WHEN {
         TURN {
@@ -626,10 +626,10 @@ AI_SINGLE_BATTLE_TEST("AI will choose Superpower over Outrage with Contrary")
         ASSUME(gMovesInfo[MOVE_SUPERPOWER].type == TYPE_FIGHTING);
         ASSUME(gMovesInfo[MOVE_OUTRAGE].power == 120);
         ASSUME(gMovesInfo[MOVE_OUTRAGE].type == TYPE_DRAGON);
-        ASSUME(gSpeciesInfo[SPECIES_SQUIRTLE].types[0] == TYPE_WATER);
-        ASSUME(gSpeciesInfo[SPECIES_SQUIRTLE].types[1] == TYPE_WATER);
+        ASSUME(gSpeciesInfo[SPECIES_KELPONI].types[0] == TYPE_WATER);
+        ASSUME(gSpeciesInfo[SPECIES_KELPONI].types[1] == TYPE_WATER);
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT);
-        PLAYER(SPECIES_SQUIRTLE) { };
+        PLAYER(SPECIES_KELPONI) { };
         OPPONENT(SPECIES_MALAMAR) { Ability(ability); Moves(MOVE_OUTRAGE, MOVE_SUPERPOWER); }
     } WHEN {
         TURN {

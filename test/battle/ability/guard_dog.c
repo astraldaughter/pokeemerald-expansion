@@ -9,7 +9,7 @@ SINGLE_BATTLE_TEST("Guard Dog raises Attack when intimidated", s16 damage)
     GIVEN {
         PLAYER(SPECIES_OKIDOGI) { Ability(ABILITY_GUARD_DOG); }
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_ARBOK) { Ability(ability); }
+        OPPONENT(SPECIES_HOGGERNAUT) { Ability(ability); }
     } WHEN {
         TURN { SWITCH(opponent, 1); }
         TURN { MOVE(player, MOVE_TACKLE); }

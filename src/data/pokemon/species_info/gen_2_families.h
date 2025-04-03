@@ -2831,7 +2831,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .iconSprite = gMonIcon_Unown ##letter,                                                          \
         .iconPalIndex = 0,                                                                              \
         SHADOW(0, 3, SHADOW_SIZE_S)                                                                     \
-        FOOTPRINT(Unown)                                                                                \                                                                                      \
+        FOOTPRINT(Unown)                                                                                \
         .levelUpLearnset = sUnownLevelUpLearnset,                                                       \
         .teachableLearnset = sUnownTeachableLearnset,                                                   \
         .tmIlliterate = TRUE,                                                                           \

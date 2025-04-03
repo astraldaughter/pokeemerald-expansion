@@ -116,17 +116,17 @@ SINGLE_BATTLE_TEST("Color Change changes the type to Electric when a Pokemon is 
     KNOWN_FAILING; // #4471.
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_BLASTOISE) { Ability(ABILITY_COLOR_CHANGE); }
+        OPPONENT(SPECIES_AQUASTRIAN) { Ability(ABILITY_COLOR_CHANGE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE); MOVE(player, MOVE_FUTURE_SIGHT); }
         TURN { }
         TURN { MOVE(opponent, MOVE_ELECTRIFY); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_FUTURE_SIGHT, player);
-        MESSAGE("The opposing Blastoise took the Future Sight attack!");
+        MESSAGE("The opposing Aquastrian took the Future Sight attack!");
         MESSAGE("It's super effective!");
         ABILITY_POPUP(opponent, ABILITY_COLOR_CHANGE);
-        MESSAGE("The opposing Blastoise's Color Change made it the Electr type!");
+        MESSAGE("The opposing Aquastrian's Color Change made it the Electr type!");
     }
 }
 
@@ -134,15 +134,15 @@ SINGLE_BATTLE_TEST("Color Change changes the type to Normal when a Pokemon is hi
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_NORMALIZE); }
-        OPPONENT(SPECIES_BLASTOISE) { Ability(ABILITY_COLOR_CHANGE); }
+        OPPONENT(SPECIES_AQUASTRIAN) { Ability(ABILITY_COLOR_CHANGE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE); MOVE(player, MOVE_FUTURE_SIGHT); }
         TURN { }
         TURN { }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_FUTURE_SIGHT, player);
-        MESSAGE("The opposing Blastoise took the Future Sight attack!");
+        MESSAGE("The opposing Aquastrian took the Future Sight attack!");
         ABILITY_POPUP(opponent, ABILITY_COLOR_CHANGE);
-        MESSAGE("The opposing Blastoise's Color Change made it the Normal type!");
+        MESSAGE("The opposing Aquastrian's Color Change made it the Normal type!");
     }
 }

@@ -116,7 +116,7 @@ SINGLE_BATTLE_TEST("Stomping Tatrum will deal double damage if user was immune t
     s16 damage[2];
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_PIDGEY);
+        OPPONENT(SPECIES_MURMURAVEN);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_STOMPING_TANTRUM); SWITCH(opponent, 1); }
@@ -125,7 +125,7 @@ SINGLE_BATTLE_TEST("Stomping Tatrum will deal double damage if user was immune t
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_STOMPING_TANTRUM, player);
         HP_BAR(opponent, captureDamage: &damage[0]);
-        MESSAGE("It doesn't affect the opposing Pidgey…");
+        MESSAGE("It doesn't affect the opposing Murmuraven…");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_STOMPING_TANTRUM, player);
         HP_BAR(opponent, captureDamage: &damage[1]);
     } THEN {
