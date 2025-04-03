@@ -420,6 +420,7 @@ static const struct BitfieldInfo sStatus1Bitfield[] =
     {/*Toxic Poison*/ 1, 7},
     {/*Toxic Counter*/ 4, 8},
     {/*Frostbite*/ 1, 12},
+    {/*Panic*/1, 13}
 };
 
 static const struct BitfieldInfo sStatus2Bitfield[] =

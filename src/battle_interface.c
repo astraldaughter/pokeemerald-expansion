@@ -78,8 +78,8 @@ enum
     HEALTHBOX_GFX_116,
     HEALTHBOX_GFX_117,
     HEALTHBOX_GFX_STATUS_PNC_BATTLER0,  //status pnc
-    HEALTHBOX_GFX_124,
     HEALTHBOX_GFX_125,
+    HEALTHBOX_GFX_126,
     HEALTHBOX_GFX_36, //misc [Black section]
     HEALTHBOX_GFX_37, //misc [Black section]
     HEALTHBOX_GFX_38, //misc [Black section]
@@ -134,8 +134,8 @@ enum
     HEALTHBOX_GFX_118,
     HEALTHBOX_GFX_119,
     HEALTHBOX_GFX_STATUS_PNC_BATTLER1, //status2 "PNC"
-    HEALTHBOX_GFX_126,
-    HEALTHBOX_GFX_127,
+    HEALTHBOX_GFX_128,
+    HEALTHBOX_GFX_129,
     HEALTHBOX_GFX_STATUS_PSN_BATTLER2, //status3 "PSN"
     HEALTHBOX_GFX_87,
     HEALTHBOX_GFX_88,
@@ -155,8 +155,8 @@ enum
     HEALTHBOX_GFX_120,
     HEALTHBOX_GFX_121,
     HEALTHBOX_GFX_STATUS_PNC_BATTLER2, //status3 "PNC"
-    HEALTHBOX_GFX_128,
-    HEALTHBOX_GFX_129,
+    HEALTHBOX_GFX_131,
+    HEALTHBOX_GFX_132,
     HEALTHBOX_GFX_STATUS_PSN_BATTLER3, //status4 "PSN"
     HEALTHBOX_GFX_102,
     HEALTHBOX_GFX_103,
@@ -176,8 +176,8 @@ enum
     HEALTHBOX_GFX_122,
     HEALTHBOX_GFX_123,
     HEALTHBOX_GFX_STATUS_PNC_BATTLER3, //status4 "PNC"
-    HEALTHBOX_GFX_130,
-    HEALTHBOX_GFX_131,
+    HEALTHBOX_GFX_134,
+    HEALTHBOX_GFX_135,
     HEALTHBOX_GFX_FRAME_END,
     HEALTHBOX_GFX_FRAME_END_BAR,
 };
@@ -604,7 +604,7 @@ enum
     PAL_STATUS_SLP,
     PAL_STATUS_FRZ,
     PAL_STATUS_BRN,
-    PAL_STATUS_PNC
+    PAL_STATUS_PNC,
 };
 
 static const u16 sStatusIconColors[] =
@@ -614,7 +614,7 @@ static const u16 sStatusIconColors[] =
     [PAL_STATUS_SLP] = RGB(20, 20, 17),
     [PAL_STATUS_FRZ] = RGB(17, 22, 28),
     [PAL_STATUS_BRN] = RGB(28, 14, 10),
-    [PAL_STATUS_PNC] = RGB(24, 18, 25),
+    [PAL_STATUS_PNC] = RGB(31, 12, 25),
 };
 
 static const struct WindowTemplate sHealthboxWindowTemplate = {
@@ -2090,12 +2090,11 @@ s32 MoveBattleBar(u8 battlerId, u8 healthboxSpriteId, u8 whichBar, u8 unused)
 
     if (whichBar == HEALTH_BAR) // health bar
     {
-        u16 hpFraction = B_FAST_HP_DRAIN == FALSE ? 1 : max(gBattleSpritesDataPtr->battleBars[battlerId].maxValue / (B_HEALTHBAR_PIXELS / 2), 1);
         currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
                     gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
                     gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
                     &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                    B_HEALTHBAR_PIXELS / 8, hpFraction);
+                    B_HEALTHBAR_PIXELS / 8, max(gBattleSpritesDataPtr->battleBars[battlerId].maxValue / 4, 1));
     }
     else // exp bar
     {

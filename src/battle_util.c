@@ -10157,7 +10157,7 @@ static inline uq4_12_t GetBurnOrFrostBiteModifier(struct DamageCalculationData *
         && (B_BURN_FACADE_DMG < GEN_6 || gMovesInfo[move].effect != EFFECT_FACADE)
         && abilityAtk != ABILITY_GUTS)
         return UQ_4_12(0.5);
-    if (gBattleMons[battlerAtk].status1 & STATUS1_FROSTBITE
+    if (gBattleMons[battlerAtk].status1 & (STATUS1_FROSTBITE | STATUS1_PANIC)
         && IS_MOVE_SPECIAL(move)
         && (B_BURN_FACADE_DMG < GEN_6 || gMovesInfo[move].effect != EFFECT_FACADE))
         return UQ_4_12(0.5);
