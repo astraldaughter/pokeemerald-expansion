@@ -374,7 +374,7 @@ static const struct LevelUpMove sSwironLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-#if P_FAMILY_HOGWELD
+#if P_FAMILY_EKANS
 static const struct LevelUpMove sHogweldLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WRAP),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
@@ -420,7 +420,7 @@ static const struct LevelUpMove sHoggernautLevelUpLearnset[] = {
     LEVEL_UP_MOVE(63, MOVE_GUNK_SHOT),
     LEVEL_UP_END
 };
-#endif //P_FAMILY_HOGWELD
+#endif //P_FAMILY_EKANS
 
 #if P_FAMILY_PIKACHU
 #if P_GEN_2_CROSS_EVOS

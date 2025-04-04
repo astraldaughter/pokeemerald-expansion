@@ -8,8 +8,8 @@ SINGLE_BATTLE_TEST("Scrappy prevents intimidate")
 
     GIVEN {
         ASSUME(B_UPDATED_INTIMIDATE >= GEN_8);
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_SHED_SKIN); };
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); };
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_SHED_SKIN); };
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); };
         OPPONENT(SPECIES_KANGASKHAN) { Ability(ABILITY_SCRAPPY); };
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); }

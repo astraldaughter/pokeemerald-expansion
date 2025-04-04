@@ -17,7 +17,7 @@ SINGLE_BATTLE_TEST("Revelation Dance changes its type depending on the user's 1s
     u16 speciesOpponent;
 
     PARAMETRIZE { speciesPlayer = SPECIES_ORICORIO_POM_POM; speciesOpponent = SPECIES_DUGTRIO; }
-    PARAMETRIZE { speciesPlayer = SPECIES_ORICORIO_BAILE; speciesOpponent = SPECIES_AQUASTRIAN; }
+    PARAMETRIZE { speciesPlayer = SPECIES_ORICORIO_BAILE; speciesOpponent = SPECIES_BLASTOISE; }
     PARAMETRIZE { speciesPlayer = SPECIES_ORICORIO_PAU; speciesOpponent = SPECIES_LIEPARD; }
     PARAMETRIZE { speciesPlayer = SPECIES_ORICORIO_SENSU; speciesOpponent = SPECIES_PERSIAN; }
 
@@ -87,9 +87,9 @@ SINGLE_BATTLE_TEST("Revelation Dance becomes Typeless if its user is Typeless")
     u16 speciesOpponent;
 
     PARAMETRIZE { speciesOpponent = SPECIES_BLISSEY; }
-    PARAMETRIZE { speciesOpponent = SPECIES_AQUASTRIAN; }
-    PARAMETRIZE { speciesOpponent = SPECIES_SCORNET; }
-    PARAMETRIZE { speciesOpponent = SPECIES_TROPIKOEKA; }
+    PARAMETRIZE { speciesOpponent = SPECIES_BLASTOISE; }
+    PARAMETRIZE { speciesOpponent = SPECIES_CHARIZARD; }
+    PARAMETRIZE { speciesOpponent = SPECIES_VENUSAUR; }
     PARAMETRIZE { speciesOpponent = SPECIES_GOLEM; }
     PARAMETRIZE { speciesOpponent = SPECIES_AEGISLASH; }
 

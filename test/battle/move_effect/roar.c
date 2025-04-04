@@ -12,14 +12,14 @@ SINGLE_BATTLE_TEST("Roar switches the target with a random non-fainted replaceme
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_KIWEE);
-        OPPONENT(SPECIES_KINDLANT);
-        OPPONENT(SPECIES_KELPONI) { HP(0); }
+        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_CHARMANDER);
+        OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
         TURN { MOVE(player, MOVE_ROAR); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ROAR, player);
-        MESSAGE("The opposing Kiwee was dragged out!");
+        MESSAGE("The opposing Bulbasaur was dragged out!");
     }
 }
 
@@ -31,14 +31,14 @@ DOUBLE_BATTLE_TEST("Roar switches the target with a random non-battler, non-fain
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
-        OPPONENT(SPECIES_KIWEE);
-        OPPONENT(SPECIES_KINDLANT);
-        OPPONENT(SPECIES_KELPONI) { HP(0); }
+        OPPONENT(SPECIES_BULBASAUR);
+        OPPONENT(SPECIES_CHARMANDER);
+        OPPONENT(SPECIES_SQUIRTLE) { HP(0); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_ROAR, target: opponentRight); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ROAR, playerLeft);
-        MESSAGE("The opposing Kiwee was dragged out!");
+        MESSAGE("The opposing Bulbasaur was dragged out!");
     }
 }
 

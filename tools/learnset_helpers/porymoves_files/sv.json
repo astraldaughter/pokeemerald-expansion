@@ -1,5 +1,5 @@
 {
-  "KIWEE": {
+  "BULBASAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -107,7 +107,7 @@
     ],
     "TutorMoves": []
   },
-  "FRONDODO": {
+  "IVYSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -211,7 +211,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TROPIKOEKA": {
+  "VENUSAUR": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -334,7 +334,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "KINDLANT": {
+  "CHARMANDER": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -446,7 +446,7 @@
     ],
     "TutorMoves": []
   },
-  "CALIANTE": {
+  "CHARMELEON": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -553,7 +553,7 @@
     ],
     "TutorMoves": []
   },
-  "SCORNET": {
+  "CHARIZARD": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -692,7 +692,7 @@
     ],
     "TutorMoves": []
   },
-  "KELPONI": {
+  "SQUIRTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -803,7 +803,7 @@
     ],
     "TutorMoves": []
   },
-  "AQUINE": {
+  "WARTORTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -904,7 +904,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "AQUASTRIAN": {
+  "BLASTOISE": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1026,49 +1026,49 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TIMIDNA": {
+  "CATERPIE": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TOXREC": {
+  "METAPOD": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "LINTSECT": {
+  "BUTTERFREE": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "DROSODUST": {
+  "WEEDLE{
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "ORBUNCLE": {
+  "KAKUNA": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "MAGTAIL": {
+  "BEEDRILL": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
-  "MURMURAVEN": {
+  "PIDGEY": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],

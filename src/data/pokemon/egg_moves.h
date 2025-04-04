@@ -4,7 +4,7 @@ static const u16 sNoneEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-#if P_FAMILY_KIWEE
+#if P_FAMILY_BULBASAUR
 static const u16 sKiweeEggMoveLearnset[] = {
     MOVE_SKULL_BASH,
     MOVE_CHARM,
@@ -23,9 +23,9 @@ static const u16 sKiweeEggMoveLearnset[] = {
     MOVE_GRASSY_TERRAIN,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_KIWEE
+#endif //P_FAMILY_BULBASAUR
 
-#if P_FAMILY_KINDLANT
+#if P_FAMILY_CHARMANDER
 static const u16 sKindlantEggMoveLearnset[] = {
     MOVE_BELLY_DRUM,
     MOVE_ANCIENT_POWER,
@@ -43,9 +43,9 @@ static const u16 sKindlantEggMoveLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_KINDLANT
+#endif //P_FAMILY_CHARMANDER
 
-#if P_FAMILY_KELPONI
+#if P_FAMILY_SQUIRTLE
 static const u16 sKelponiEggMoveLearnset[] = {
     MOVE_MIRROR_COAT,
     MOVE_HAZE,
@@ -65,10 +65,10 @@ static const u16 sKelponiEggMoveLearnset[] = {
     MOVE_AURA_SPHERE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_KELPONI
+#endif //P_FAMILY_SQUIRTLE
 
-#if P_FAMILY_MURMURAVEN
-static const u16 sMurmuravenEggMoveLearnset[] = {
+#if P_FAMILY_PIDGEY
+static const u16 sPidgeyEggMoveLearnset[] = {
     MOVE_PURSUIT,
     MOVE_FEINT_ATTACK,
     MOVE_FORESIGHT,
@@ -80,7 +80,7 @@ static const u16 sMurmuravenEggMoveLearnset[] = {
     MOVE_DEFOG,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_MURMURAVEN
+#endif //P_FAMILY_PIDGEY
 
 #if P_FAMILY_RATTATA
 static const u16 sRattataEggMoveLearnset[] = {
@@ -116,8 +116,8 @@ static const u16 sRattataAlolaEggMoveLearnset[] = {
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
 
-#if P_FAMILY_RUTABUNNY
-static const u16 sRutabunnyEggMoveLearnset[] = {
+#if P_FAMILY_SPEAROW
+static const u16 sSpearowEggMoveLearnset[] = {
     MOVE_FEINT_ATTACK,
     MOVE_SCARY_FACE,
     MOVE_QUICK_ATTACK,
@@ -131,10 +131,10 @@ static const u16 sRutabunnyEggMoveLearnset[] = {
     MOVE_RAZOR_WIND,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_RUTABUNNY
+#endif //P_FAMILY_SPEAROW
 
 #if P_FAMILY_EKANS
-static const u16 sHogweldEggMoveLearnset[] = {
+static const u16 sEkansEggMoveLearnset[] = {
     MOVE_PURSUIT,
     MOVE_SLAM,
     MOVE_SPITE,
@@ -149,7 +149,7 @@ static const u16 sHogweldEggMoveLearnset[] = {
     MOVE_SNATCH,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_HOGWELD
+#endif //P_FAMILY_EKANS
 
 #if P_FAMILY_PIKACHU
 #if P_GEN_2_CROSS_EVOS

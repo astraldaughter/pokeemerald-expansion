@@ -34,10 +34,10 @@ struct GMaxMove
 
 static const struct GMaxMove sGMaxMoveTable[] =
 {
-    {SPECIES_TROPIKOEKA_GMAX,                   TYPE_GRASS,      MOVE_G_MAX_VINE_LASH},
-    {SPECIES_AQUASTRIAN_GMAX,                  TYPE_WATER,      MOVE_G_MAX_CANNONADE},
-    {SPECIES_SCORNET_GMAX,                  TYPE_FIRE,       MOVE_G_MAX_WILDFIRE},
-    {SPECIES_LINTSECT_GMAX,                 TYPE_BUG,        MOVE_G_MAX_BEFUDDLE},
+    {SPECIES_VENUSAUR_GMAX,                   TYPE_GRASS,      MOVE_G_MAX_VINE_LASH},
+    {SPECIES_BLASTOISE_GMAX,                  TYPE_WATER,      MOVE_G_MAX_CANNONADE},
+    {SPECIES_CHARIZARD_GMAX,                  TYPE_FIRE,       MOVE_G_MAX_WILDFIRE},
+    {SPECIES_BUTTERFREE_GMAX,                 TYPE_BUG,        MOVE_G_MAX_BEFUDDLE},
     {SPECIES_PIKACHU_GMAX,                    TYPE_ELECTRIC,   MOVE_G_MAX_VOLT_CRASH},
     {SPECIES_MEOWTH_GMAX,                     TYPE_NORMAL,     MOVE_G_MAX_GOLD_RUSH},
     {SPECIES_MACHAMP_GMAX,                    TYPE_FIGHTING,   MOVE_G_MAX_CHI_STRIKE},

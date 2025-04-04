@@ -6,8 +6,8 @@ static const struct LevelUpMove sNoneLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-#if P_FAMILY_KIWEE
-static const struct LevelUpMove sKiweeLevelUpLearnset[] = {
+#if P_FAMILY_BULBASAUR
+static const struct LevelUpMove sBulbasaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 3, MOVE_VINE_WHIP),
@@ -26,7 +26,7 @@ static const struct LevelUpMove sKiweeLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sFrondodoLevelUpLearnset[] = {
+static const struct LevelUpMove sIvysaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_VINE_WHIP),
@@ -45,7 +45,7 @@ static const struct LevelUpMove sFrondodoLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sTropikoekaLevelUpLearnset[] = {
+static const struct LevelUpMove sVenusaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_PETAL_BLIZZARD),
     LEVEL_UP_MOVE( 1, MOVE_PETAL_BLIZZARD),
     LEVEL_UP_MOVE( 1, MOVE_PETAL_DANCE),
@@ -66,10 +66,10 @@ static const struct LevelUpMove sTropikoekaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(58, MOVE_SOLAR_BEAM),
     LEVEL_UP_END
 };
-#endif //P_FAMILY_KIWEE
+#endif //P_FAMILY_BULBASAUR
 
-#if P_FAMILY_KINDLANT
-static const struct LevelUpMove sKindlantLevelUpLearnset[] = {
+#if P_FAMILY_CHARMANDER
+static const struct LevelUpMove sCharmanderLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 4, MOVE_EMBER),
@@ -85,7 +85,7 @@ static const struct LevelUpMove sKindlantLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sCalianteLevelUpLearnset[] = {
+static const struct LevelUpMove sCharmeleonLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_EMBER),
@@ -101,7 +101,7 @@ static const struct LevelUpMove sCalianteLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sScornetLevelUpLearnset[] = {
+static const struct LevelUpMove sCharizardLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_AIR_SLASH),
     LEVEL_UP_MOVE( 1, MOVE_AIR_SLASH),
     LEVEL_UP_MOVE( 1, MOVE_DRAGON_CLAW),
@@ -120,7 +120,7 @@ static const struct LevelUpMove sScornetLevelUpLearnset[] = {
     LEVEL_UP_MOVE(62, MOVE_FLARE_BLITZ),
     LEVEL_UP_END
 };
-#endif //P_FAMILY_KINDLANT
+#endif //P_FAMILY_CHARMANDER
 
 #if P_FAMILY_SQUIRTLE
 static const struct LevelUpMove sSquirtleLevelUpLearnset[] = {

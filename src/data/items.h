@@ -80,8 +80,8 @@ static const u8 sNectarDesc[]         = _("Flower nectar that\n"
                                           "changes the form\n"
                                           "of certain Pokémon.");
 
-static const u8 sScornetiteDesc[]   = _("This stone enables\n"
-                                          "Scornet to Mega\n"
+static const u8 sCharizarditeDesc[]   = _("This stone enables\n"
+                                          "Charizard to Mega\n"
                                           "Evolve in battle.");
 
 static const u8 sMewtwoniteDesc[]     = _("This stone enables\n"

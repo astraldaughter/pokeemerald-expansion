@@ -1368,40 +1368,40 @@ const struct Decoration gDecorations[] =
         .tiles = DecorGfx_LAPRAS_DOLL,
     },
 
-    [DECOR_TROPIKOEKA_DOLL] =
+    [DECOR_VENUSAUR_DOLL] =
     {
-        .id = DECOR_TROPIKOEKA_DOLL,
-        .name = _("TROPIKOEKA DOLL"),
+        .id = DECOR_VENUSAUR_DOLL,
+        .name = _("VENUSAUR DOLL"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x2,
         .category = DECORCAT_DOLL,
         .price = 10000,
-        .description = DecorDesc_TROPIKOEKA_DOLL,
-        .tiles = DecorGfx_TROPIKOEKA_DOLL,
+        .description = DecorDesc_VENUSAUR_DOLL,
+        .tiles = DecorGfx_VENUSAUR_DOLL,
     },
 
-    [DECOR_SCORNET_DOLL] =
+    [DECOR_CHARIZARD_DOLL] =
     {
-        .id = DECOR_SCORNET_DOLL,
-        .name = _("SCORNET DOLL"),
+        .id = DECOR_CHARIZARD_DOLL,
+        .name = _("CHARIZARD DOLL"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x2,
         .category = DECORCAT_DOLL,
         .price = 10000,
-        .description = DecorDesc_SCORNET_DOLL,
-        .tiles = DecorGfx_SCORNET_DOLL,
+        .description = DecorDesc_CHARIZARD_DOLL,
+        .tiles = DecorGfx_CHARIZARD_DOLL,
     },
 
-    [DECOR_AQUASTRIAN_DOLL] =
+    [DECOR_BLASTOISE_DOLL] =
     {
-        .id = DECOR_AQUASTRIAN_DOLL,
-        .name = _("AQUASTRIAN DOLL"),
+        .id = DECOR_BLASTOISE_DOLL,
+        .name = _("BLASTOISE DOLL"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x2,
         .category = DECORCAT_DOLL,
         .price = 10000,
-        .description = DecorDesc_AQUASTRIAN_DOLL,
-        .tiles = DecorGfx_AQUASTRIAN_DOLL,
+        .description = DecorDesc_BLASTOISE_DOLL,
+        .tiles = DecorGfx_BLASTOISE_DOLL,
     },
 
     [DECOR_WAILMER_DOLL] =

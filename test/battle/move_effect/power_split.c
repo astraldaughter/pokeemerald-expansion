@@ -9,8 +9,8 @@ ASSUMPTIONS
 SINGLE_BATTLE_TEST("Power Split averages user and targets Atk and Sp. Atk stats")
 {
     GIVEN {
-        PLAYER(SPECIES_KIWEE);
-        OPPONENT(species_frondodo);
+        PLAYER(SPECIES_BULBASAUR);
+        OPPONENT(species_ivysaur);
     } WHEN {
         TURN { MOVE(player, MOVE_POWER_SPLIT); }
     } SCENE {

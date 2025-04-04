@@ -6,7 +6,7 @@ const u8 gFallbackPokedexText[] = _(
     "at this time.");
 
 // Gen 1 families
-const u8 gHopstalkAlolanPokedexText[] = _(
+const u8 gRaticateAlolanPokedexText[] = _(
     "It forms a group of Rattata, which it \n"
     "assumes command of. Each group\n"
     "has its own territory, and disputes\n"

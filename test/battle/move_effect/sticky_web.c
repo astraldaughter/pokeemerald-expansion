@@ -108,11 +108,11 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - the 
     PARAMETRIZE {playerSetUpper = 1; opponentSetUpper = 1; }
 
     GIVEN {
-        PLAYER(SPECIES_KELPONI);
-        PLAYER(SPECIES_KINDLANT);
+        PLAYER(SPECIES_SQUIRTLE);
+        PLAYER(SPECIES_CHARMANDER);
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
-        OPPONENT(SPECIES_TIMIDNA);
-        OPPONENT(SPECIES_DROSODUST);
+        OPPONENT(SPECIES_CATERPIE);
+        OPPONENT(SPECIES_WEEDLE);
     } WHEN {
         TURN { MOVE(BATTLER_OPPONENT, MOVE_STICKY_WEB); }
         TURN { MOVE(BATTLER_PLAYER, MOVE_STICKY_WEB); }
@@ -128,14 +128,14 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - the 
         ABILITY_POPUP(playerRight, ABILITY_MIRROR_ARMOR);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, BATTLER_OPPONENT);
         if (opponentSetUpper == 0) {
-            MESSAGE("The opposing Timidna's Speed fell!");
+            MESSAGE("The opposing Caterpie's Speed fell!");
             NONE_OF {
-                MESSAGE("The opposing Timidna was caught in a sticky web!");
+                MESSAGE("The opposing Caterpie was caught in a sticky web!");
             }
         } else {
-            MESSAGE("The opposing Drosodust's Speed fell!");
+            MESSAGE("The opposing Weedle's Speed fell!");
             NONE_OF {
-                MESSAGE("The opposing Drosodust was caught in a sticky web!");
+                MESSAGE("The opposing Weedle's caught in a sticky web!");
             }
         }
     }
@@ -153,12 +153,12 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - no o
     PARAMETRIZE { speedPlayer = 10; speedOpponent = 5; }
 
     GIVEN {
-        PLAYER(SPECIES_KELPONI) { Speed(speedPlayer); }
-        PLAYER(SPECIES_KINDLANT) { Speed(speedPlayer); }
+        PLAYER(SPECIES_SQUIRTLE) { Speed(speedPlayer); }
+        PLAYER(SPECIES_CHARMANDER) { Speed(speedPlayer); }
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); Speed(speedOpponent); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
-        OPPONENT(SPECIES_TIMIDNA) { Speed(speedOpponent); }
-        OPPONENT(SPECIES_DROSODUST) { Speed(speedOpponent); }
-        OPPONENT(SPECIES_MURMURAVEN) { Speed(speedOpponent); } // Flying type,so not affected by Sticky Web.
+        OPPONENT(SPECIES_CATERPIE) { Speed(speedOpponent); }
+        OPPONENT(SPECIES_WEEDLE) {Speed(speedOpponent); }
+        OPPONENT(SPECIES_PIDGEY) { Speed(speedOpponent); } // Flying type,so not affected by Sticky Web.
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_STICKY_WEB); MOVE(playerRight, MOVE_STICKY_WEB); }
         TURN { SWITCH(opponentLeft, 2); }
@@ -198,13 +198,13 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - no o
 
     GIVEN {
         ASSUME(gMovesInfo[MOVE_MEMENTO].effect == EFFECT_MEMENTO);
-        PLAYER(SPECIES_KELPONI) {Speed(5); }
-        PLAYER(SPECIES_KINDLANT) {Speed(5); }
+        PLAYER(SPECIES_SQUIRTLE) {Speed(5); }
+        PLAYER(SPECIES_CHARMANDER) {Speed(5); }
         PLAYER(SPECIES_CORVIKNIGHT) {Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); Speed(5); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
-        OPPONENT(SPECIES_TIMIDNA) {Speed(7); }
-        OPPONENT(SPECIES_DROSODUST) {Speed(7); }
+        OPPONENT(SPECIES_CATERPIE) {Speed(7); }
+        OPPONENT(SPECIES_WEEDLE) {Speed(7); }
         if (hasReplacement) {
-            OPPONENT(SPECIES_MURMURAVEN) {Speed(7); }
+            OPPONENT(SPECIES_PIDGEY) {Speed(7); }
         }
 
     } WHEN {
@@ -220,9 +220,9 @@ DOUBLE_BATTLE_TEST("Sticky Web has correct interactions with Mirror Armor - no o
         MESSAGE("A sticky web has been laid out on the ground around your team!");
 
         ANIMATION(ANIM_TYPE_MOVE, MOVE_MEMENTO, opponentLeft);
-        MESSAGE("The opposing Timidna fainted!");
+        MESSAGE("The opposing Caterpie fainted!");
         if (hasReplacement) {
-            MESSAGE("2 sent out Murmuraven!");
+            MESSAGE("2 sent out Pidgey!");
         }
 
         SEND_IN_MESSAGE("Corviknight");
@@ -275,10 +275,10 @@ SINGLE_BATTLE_TEST("Sticky Web is placed on the correct side after Memento")
 DOUBLE_BATTLE_TEST("Sticky Web setter has their speed lowered with Mirror Armor even after Ally Switch")
 {
     GIVEN {
-        PLAYER(SPECIES_KELPONI);
-        PLAYER(SPECIES_KINDLANT);
+        PLAYER(SPECIES_SQUIRTLE);
+        PLAYER(SPECIES_CHARMANDER);
         PLAYER(SPECIES_CORVIKNIGHT) { Ability(ABILITY_MIRROR_ARMOR); Item(ITEM_IRON_BALL); } // Iron Ball, so that flying type Corviknight is affected by Sticky Web.
-        OPPONENT(SPECIES_TIMIDNA);
+        OPPONENT(SPECIES_CATERPIE);
         OPPONENT(SPECIES_NATU);
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_STICKY_WEB); }
@@ -294,8 +294,8 @@ DOUBLE_BATTLE_TEST("Sticky Web setter has their speed lowered with Mirror Armor 
         SEND_IN_MESSAGE("Corviknight");
         MESSAGE("Corviknight was caught in a sticky web!");
         ABILITY_POPUP(playerRight, ABILITY_MIRROR_ARMOR);
-        // sticky web setter - timidna (now opponentRight) gets speed lowered
+        // sticky web setter - caterpie (now opponentRight) gets speed lowered
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentRight);
-        MESSAGE("The opposing Timidna's Speed fell!");
+        MESSAGE("The opposing Caterpie's Speed fell!");
     }
 }

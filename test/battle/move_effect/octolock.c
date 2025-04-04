@@ -72,17 +72,17 @@ SINGLE_BATTLE_TEST("Octolock Defense reduction is prevented by Big Pecks")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_MURMURAVEN) { Ability(ABILITY_BIG_PECKS); }
+        OPPONENT(SPECIES_PIDGEY) { Ability(ABILITY_BIG_PECKS); }
     } WHEN {
         TURN { MOVE(player, MOVE_OCTOLOCK); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_OCTOLOCK, player);
-        MESSAGE("The opposing Murmuraven can no longer escape because of Octolock!");
+        MESSAGE("The opposing Pidgey can no longer escape because of Octolock!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);
-        NOT MESSAGE("The opposing Murmuraven's Defense fell!");
+        NOT MESSAGE("The opposing Pidgey's Defense fell!");
         ABILITY_POPUP(opponent, ABILITY_BIG_PECKS);
-        MESSAGE("The opposing Murmuraven's Big Pecks prevents Defense loss!");
-        MESSAGE("The opposing Murmuraven's Sp. Def fell!");
+        MESSAGE("The opposing Pidgey's Big Pecks prevents Defense loss!");
+        MESSAGE("The opposing Pidgey's Sp. Def fell!");
     }
 }
 

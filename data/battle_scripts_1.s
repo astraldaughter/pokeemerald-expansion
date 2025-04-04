@@ -5424,22 +5424,6 @@ BattleScript_EffectCamouflage::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectSpikesIfMiss::
-	attackcanceler
-	accuracycheck BattleScript_SetSpikes, ACC_CURR_MOVE
-	typecalc
-	jumpifhalfword CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_SetSpikes
-	goto BattleScript_HitFromAtkString
-BattleScript_SetSpikes::
-	trysetspikes BattleScript_PrintMoveMissed
-	attackstring
-	ppreduce
-	attackanimation
-	waitanimation
-	printstring STRINGID_SPIKESSCATTERED
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
-
 BattleScript_FaintAttacker::
 	tryillusionoff BS_ATTACKER
 	tryactivategulpmissile

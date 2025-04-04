@@ -6886,7 +6886,7 @@ u16 GetSpeciesPreEvolution(u16 species)
 {
     int i, j;
 
-    for (i = SPECIES_KIWEE; i < NUM_SPECIES; i++)
+    for (i = SPECIES_BULBASAUR; i < NUM_SPECIES; i++)
     {
         const struct Evolution *evolutions = GetSpeciesEvolutions(i);
         if (evolutions == NULL)

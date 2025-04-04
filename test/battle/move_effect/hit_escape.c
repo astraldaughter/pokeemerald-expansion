@@ -99,7 +99,7 @@ SINGLE_BATTLE_TEST("Hit Escape: U-turn switches the user out after Ice Face acti
 {
     GIVEN {
         ASSUME(gMovesInfo[MOVE_U_TURN].category == DAMAGE_CATEGORY_PHYSICAL);
-        PLAYER(SPECIES_MAGTAIL);
+        PLAYER(SPECIES_BEEDRILL);
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_EISCUE) { Ability(ABILITY_ICE_FACE); }
     } WHEN {
@@ -117,7 +117,7 @@ SINGLE_BATTLE_TEST("Hit Escape: Held items are consumed immediately after a mon 
 {
     GIVEN {
         PLAYER(SPECIES_TAPU_KOKO) { Ability(ABILITY_ELECTRIC_SURGE); };
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ELECTRIC_SEED); }
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ELECTRIC_SEED); }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {
@@ -140,7 +140,7 @@ SINGLE_BATTLE_TEST("Hit Escape: Held items are consumed immediately after a mon 
 {
     GIVEN {
         PLAYER(SPECIES_TAPU_KOKO) { Ability(ABILITY_ELECTRIC_SURGE); };
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE);  }
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE);  }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WYNAUT) { Item(ITEM_ELECTRIC_SEED); }
     } WHEN {
@@ -163,7 +163,7 @@ SINGLE_BATTLE_TEST("Hit Escape: Electric Seed boost is received by the right pok
 {
     GIVEN {
         PLAYER(SPECIES_TAPU_KOKO) { Ability(ABILITY_ELECTRIC_SURGE); };
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ELECTRIC_SEED); }
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); Item(ITEM_ELECTRIC_SEED); }
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {

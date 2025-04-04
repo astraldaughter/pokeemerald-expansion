@@ -1,5 +1,5 @@
 {
-  "KIWEE": {
+  "BULBASAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -110,7 +110,7 @@
       "MOVE_GRASSY_GLIDE"
     ]
   },
-  "FRONDODO": {
+  "IVYSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -221,7 +221,7 @@
       "MOVE_GRASSY_GLIDE"
     ]
   },
-  "TROPIKOEKA": {
+  "VENUSAUR": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -353,7 +353,7 @@
       "MOVE_GRASSY_GLIDE"
     ]
   },
-  "KINDLANT": {
+  "CHARMANDER": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -465,7 +465,7 @@
       "MOVE_FIRE_PLEDGE"
     ]
   },
-  "CALIANTE": {
+  "CHARMELEON": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -577,7 +577,7 @@
       "MOVE_FIRE_PLEDGE"
     ]
   },
-  "SCORNET": {
+  "CHARIZARD": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -724,7 +724,7 @@
       "MOVE_SCALE_SHOT"
     ]
   },
-  "KELPONI": {
+  "SQUIRTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -843,7 +843,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "AQUINE": {
+  "WARTORTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -962,7 +962,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "AQUASTRIAN": {
+  "BLASTOISE": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1104,7 +1104,7 @@
       "MOVE_FLIP_TURN"
     ]
   },
-  "TIMIDNA": {
+  "CATERPIE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1126,7 +1126,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TOXREC": {
+  "METAPOD": {
     "LevelMoves": [
       {
         "Level": 0,
@@ -1145,7 +1145,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "LINTSECT": {
+  "BUTTERFREE": {
     "LevelMoves": [
       {
         "Level": 0,

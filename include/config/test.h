@@ -45,8 +45,8 @@
 
 #undef P_FAMILY_BULBASAUR
 #define P_FAMILY_BULBASAUR               TRUE
-#undef P_FAMILY_KINDLANT
-#define P_FAMILY_KINDLANT              TRUE
+#undef P_FAMILY_CHARMANDER
+#define P_FAMILY_CHARMANDER              TRUE
 #undef P_FAMILY_SQUIRTLE
 #define P_FAMILY_SQUIRTLE                TRUE
 #undef P_FAMILY_CATERPIE

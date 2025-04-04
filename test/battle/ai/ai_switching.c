@@ -56,15 +56,15 @@ AI_DOUBLE_BATTLE_TEST("AI will not try to switch for the same pokemon for 2 spot
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_HAUNTER) { Moves(MOVE_SHADOW_BALL); }
         OPPONENT(SPECIES_GENGAR) { Moves(MOVE_SHADOW_BALL); }
-        OPPONENT(SPECIES_HOPSTALK) { Moves(MOVE_HEADBUTT); }
+        OPPONENT(SPECIES_RATICATE) { Moves(MOVE_HEADBUTT); }
     } WHEN {
         TURN { EXPECT_SWITCH(opponentLeft, 3); };
     } SCENE {
         MESSAGE(AI_TRAINER_NAME " withdrew Gengar!");
-        MESSAGE(AI_TRAINER_NAME " sent out Hopstalk!");
+        MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
         NONE_OF {
             MESSAGE(AI_TRAINER_NAME " withdrew Haunter!");
-            MESSAGE(AI_TRAINER_NAME " sent out Hopstalk!");
+            MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
         }
     }
 }
@@ -169,7 +169,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
 {
     GIVEN {
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_MON_CHOICES);
-        PLAYER(SPECIES_TROPIKOEKA) { Level(30); Moves(MOVE_TACKLE); }
+        PLAYER(SPECIES_VENUSAUR) { Level(30); Moves(MOVE_TACKLE); }
         // Opponent party courtesy of Skolgrahd, who triggered the bug in the first place
         OPPONENT(SPECIES_PIKACHU) { Level(100); Moves(MOVE_ZIPPY_ZAP, MOVE_EXTREME_SPEED, MOVE_IRON_TAIL, MOVE_KNOCK_OFF); }
         OPPONENT(SPECIES_NINETALES_ALOLA) { Level(100); Moves(MOVE_AURORA_VEIL, MOVE_BLIZZARD, MOVE_MOONBLAST, MOVE_DISABLE); }
@@ -180,7 +180,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
     } WHEN {
             TURN { MOVE(player, MOVE_TACKLE); EXPECT_MOVES(opponent, MOVE_ZIPPY_ZAP, MOVE_EXTREME_SPEED, MOVE_IRON_TAIL, MOVE_KNOCK_OFF); }
     } SCENE {
-        MESSAGE("Tropikoeka fainted!");
+        MESSAGE("Venusaur fainted!");
     }
 }
 
@@ -189,7 +189,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
     GIVEN {
         ASSUME(gItemsInfo[ITEM_LEFTOVERS].holdEffect == HOLD_EFFECT_LEFTOVERS);
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_MON_CHOICES);
-        PLAYER(SPECIES_KIWEE) { Level(5); Moves(MOVE_SWORDS_DANCE, MOVE_WHIRLWIND, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP); }
+        PLAYER(SPECIES_BULBASAUR) { Level(5); Moves(MOVE_SWORDS_DANCE, MOVE_WHIRLWIND, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP); }
         // Scenario courtesy of Duke, who triggered the bug in the first place
         OPPONENT(SPECIES_GEODUDE) { Level(100); Moves(MOVE_TACKLE); }
         OPPONENT(SPECIES_GEODUDE) { Level(100); Moves(MOVE_TACKLE); }
@@ -197,7 +197,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
     } WHEN {
             TURN { MOVE(player, MOVE_SWORDS_DANCE); EXPECT_MOVES(opponent, MOVE_TACKLE); }
     } SCENE {
-        MESSAGE("Kiwee fainted!");
+        MESSAGE("Bulbasaur fainted!");
     }
 }
 
@@ -238,7 +238,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI will not switch in a Pokemo
         PLAYER(SPECIES_WEAVILE) { Speed(300); Ability(ABILITY_SHADOW_TAG); } // Weavile has Shadow Tag, so AI can't switch on the first turn, but has to do it after fainting.
         OPPONENT(SPECIES_KADABRA) { Speed(200); Moves(MOVE_PSYCHIC, MOVE_DISABLE, MOVE_TAUNT, MOVE_CALM_MIND); }
         OPPONENT(SPECIES_ALAKAZAM) { Speed(speedAlakazm); Moves(MOVE_FOCUS_BLAST, MOVE_PSYCHIC); } // Alakazam has a move which OHKOes Weavile, but it doesn't matter if he's getting KO-ed first.
-        OPPONENT(SPECIES_AQUASTRIAN) { Speed(200); Moves(MOVE_BUBBLE_BEAM, MOVE_WATER_GUN, MOVE_LEER, MOVE_STRENGTH); } // Can't OHKO, but survives a hit from Weavile's Night Slash.
+        OPPONENT(SPECIES_BLASTOISE) { Speed(200); Moves(MOVE_BUBBLE_BEAM, MOVE_WATER_GUN, MOVE_LEER, MOVE_STRENGTH); } // Can't OHKO, but survives a hit from Weavile's Night Slash.
     } WHEN {
             TURN { MOVE(player, MOVE_NIGHT_SLASH) ; EXPECT_SEND_OUT(opponent, alakazamFirst ? 1 : 2); } // AI doesn't send out Alakazam if it gets outsped
     } SCENE {
@@ -246,7 +246,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI will not switch in a Pokemo
         if (alakazamFirst) {
             MESSAGE(AI_TRAINER_NAME " sent out Alakazam!");
         } else {
-            MESSAGE(AI_TRAINER_NAME " sent out Aquastrian!");
+            MESSAGE(AI_TRAINER_NAME " sent out Blastoise!");
         }
     }
 }
@@ -261,13 +261,13 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI considers hazard damage whe
 
     GIVEN {
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | aiSmartSwitchFlags);
-        PLAYER(SPECIES_MEGANIUM) { Speed(100); SpDefense(328); SpAttack(265); Moves(MOVE_STEALTH_ROCK, MOVE_SURF); } // Meganium does ~56% minimum ~66% maximum, enough to KO Scornet after rocks and never KO Typhlosion after rocks
+        PLAYER(SPECIES_MEGANIUM) { Speed(100); SpDefense(328); SpAttack(265); Moves(MOVE_STEALTH_ROCK, MOVE_SURF); } // Meganium does ~56% minimum ~66% maximum, enough to KO Charizard after rocks and never KO Typhlosion after rocks
         OPPONENT(SPECIES_PONYTA) { Level(5); Speed(5); Moves(MOVE_TACKLE); }
-        OPPONENT(SPECIES_SCORNET) { Speed(200); Moves(MOVE_FLAMETHROWER); SpAttack(317); SpDefense(207); MaxHP(297); } // Outspeends and 2HKOs Meganium
+        OPPONENT(SPECIES_CHARIZARD) { Speed(200); Moves(MOVE_FLAMETHROWER); SpAttack(317); SpDefense(207); MaxHP(297); } // Outspeends and 2HKOs Meganium
         OPPONENT(SPECIES_TYPHLOSION) { Speed(200); Moves(MOVE_FLAMETHROWER); SpAttack(317); SpDefense(207); MaxHP(297); } // Outspeends and 2HKOs Meganium
     } WHEN {
             TURN { MOVE(player, MOVE_STEALTH_ROCK) ;}
-            TURN { MOVE(player, MOVE_SURF); EXPECT_SEND_OUT(opponent, aiIsSmart ? 2 : 1); } // AI sends out Typhlosion to get the KO with the flag rather than Scornet
+            TURN { MOVE(player, MOVE_SURF); EXPECT_SEND_OUT(opponent, aiIsSmart ? 2 : 1); } // AI sends out Typhlosion to get the KO with the flag rather than Charizard
     }
 }
 

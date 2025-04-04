@@ -12,8 +12,8 @@ SINGLE_BATTLE_TEST("Clear Amulet prevents Intimidate")
     s16 turnTwoHit;
 
     GIVEN {
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_SHED_SKIN); };
-        PLAYER(SPECIES_HOGWELD) { Ability(ABILITY_INTIMIDATE); };
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_SHED_SKIN); };
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); };
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_CLEAR_AMULET); };
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); }

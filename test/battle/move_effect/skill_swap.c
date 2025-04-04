@@ -10,7 +10,7 @@ SINGLE_BATTLE_TEST("Skill Swap swaps user and target's abilities")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_TELEPATHY); }
-        OPPONENT(SPECIES_KINDLANT) { Ability(ABILITY_BLAZE); }
+        OPPONENT(SPECIES_CHARMANDER) { Ability(ABILITY_BLAZE); }
     }WHEN {
         TURN { MOVE(player, MOVE_SKILL_SWAP); }
     } SCENE {
@@ -27,9 +27,9 @@ DOUBLE_BATTLE_TEST("Skill Swap only swaps user's ability with target's ability")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_TELEPATHY); }
-        PLAYER(SPECIES_KINDLANT) { Ability(ABILITY_BLAZE); }
-        OPPONENT(SPECIES_KIWEE) { Ability(ABILITY_OVERGROW); }
-        OPPONENT(SPECIES_KELPONI) { Ability(ABILITY_TORRENT); }
+        PLAYER(SPECIES_CHARMANDER) { Ability(ABILITY_BLAZE); }
+        OPPONENT(SPECIES_BULBASAUR) { Ability(ABILITY_OVERGROW); }
+        OPPONENT(SPECIES_SQUIRTLE) { Ability(ABILITY_TORRENT); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_SKILL_SWAP, target: opponentLeft); }
     } SCENE {
@@ -48,9 +48,9 @@ DOUBLE_BATTLE_TEST("Skill Swap doesn't display ability popups when swapping with
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_TELEPATHY); }
-        PLAYER(SPECIES_KINDLANT) { Ability(ABILITY_BLAZE); }
-        OPPONENT(SPECIES_KIWEE) { Ability(ABILITY_OVERGROW); }
-        OPPONENT(SPECIES_KELPONI) { Ability(ABILITY_TORRENT); }
+        PLAYER(SPECIES_CHARMANDER) { Ability(ABILITY_BLAZE); }
+        OPPONENT(SPECIES_BULBASAUR) { Ability(ABILITY_OVERGROW); }
+        OPPONENT(SPECIES_SQUIRTLE) { Ability(ABILITY_TORRENT); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_SKILL_SWAP, target: playerRight); }
     } SCENE {

@@ -56,15 +56,15 @@
 #define P_GEN_9_CROSS_EVOS               P_CROSS_GENERATION_EVOS // Clodsire handled by P_PALDEAN_FORMS.
 
 // To disable specific families, replace P_GEN_x_POKEMON with FALSE.
-#define P_FAMILY_KIWEE                   P_GEN_1_POKEMON
-#define P_FAMILY_KINDLANT              P_GEN_1_POKEMON
-#define P_FAMILY_KELPONI                P_GEN_1_POKEMON
-#define P_FAMILY_TIMIDNA                P_GEN_1_POKEMON
-#define P_FAMILY_DROSODUST                  P_GEN_1_POKEMON
-#define P_FAMILY_MURMURAVEN                  P_GEN_1_POKEMON
+#define P_FAMILY_BULBASAUR                   P_GEN_1_POKEMON
+#define P_FAMILY_CHARMANDER              P_GEN_1_POKEMON
+#define P_FAMILY_SQUIRTLE                P_GEN_1_POKEMON
+#define P_FAMILY_CATERPIE                P_GEN_1_POKEMON
+#define P_FAMILY_WEEDLE               P_GEN_1_POKEMON
+#define P_FAMILY_PIDGEY                  P_GEN_1_POKEMON
 #define P_FAMILY_RATTATA                 P_GEN_1_POKEMON
-#define P_FAMILY_RUTABUNNY                 P_GEN_1_POKEMON
-#define P_FAMILY_HOGWELD                   P_GEN_1_POKEMON
+#define P_FAMILY_SPEAROW                 P_GEN_1_POKEMON
+#define P_FAMILY_EKANS                   P_GEN_1_POKEMON
 #define P_FAMILY_PIKACHU                 P_GEN_1_POKEMON
 #define P_FAMILY_SANDSHREW               P_GEN_1_POKEMON
 #define P_FAMILY_NIDORAN                 P_GEN_1_POKEMON

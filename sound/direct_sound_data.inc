@@ -387,7 +387,6 @@ DirectSoundWaveData_unknown_17::
 	.incbin "sound/direct_sound_samples/unknown_17.bin"
 
 .if P_CRIES_ENABLED == TRUE
-.if P_FAMILY_KIWEE == TRUE
 	.align 2
 Cry_Kiwee::
 	.incbin "sound/direct_sound_samples/cries/kiwee.bin"
@@ -400,14 +399,6 @@ Cry_Frondodo::
 Cry_Tropikoeka::
 	.incbin "sound/direct_sound_samples/cries/tropikoeka.bin"
 
-.if P_MEGA_EVOLUTIONS == TRUE
-	.align 2
-Cry_TropikoekaMega::
-	.incbin "sound/direct_sound_samples/cries/tropikoeka_mega.bin"
-.endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_KIWEE
-
-.if P_FAMILY_KINDLANT == TRUE
 	.align 2
 Cry_Kindlant::
 	.incbin "sound/direct_sound_samples/cries/kindlant.bin"
@@ -420,18 +411,6 @@ Cry_Caliante::
 Cry_Scornet::
 	.incbin "sound/direct_sound_samples/cries/scornet.bin"
 
-.if P_MEGA_EVOLUTIONS == TRUE
-	.align 2
-Cry_ScornetMegaX::
-	.incbin "sound/direct_sound_samples/cries/scornet_mega_x.bin"
-
-	.align 2
-Cry_ScornetMegaY::
-	.incbin "sound/direct_sound_samples/cries/scornet_mega_y.bin"
-.endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_KINDLANT
-
-.if P_FAMILY_KELPONI == TRUE
 	.align 2
 Cry_Kelponi::
 	.incbin "sound/direct_sound_samples/cries/kelponi.bin"
@@ -444,14 +423,6 @@ Cry_Aquine::
 Cry_Aquastrian::
 	.incbin "sound/direct_sound_samples/cries/aquastrian.bin"
 
-.if P_MEGA_EVOLUTIONS == TRUE
-	.align 2
-Cry_AquastrianMega::
-	.incbin "sound/direct_sound_samples/cries/aquastrian_mega.bin"
-.endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_KELPONI
-
-.if P_FAMILY_TIMIDNA == TRUE
 	.align 2
 Cry_Timidna::
 	.incbin "sound/direct_sound_samples/cries/timidna.bin"
@@ -463,9 +434,7 @@ Cry_Toxrec::
 	.align 2
 Cry_Lintsect::
 	.incbin "sound/direct_sound_samples/cries/lintsect.bin"
-.endif @ P_FAMILY_TIMIDNA
 
-.if P_FAMILY_DROSODUST == TRUE
 	.align 2
 Cry_Drosodust::
 	.incbin "sound/direct_sound_samples/cries/drosodust.bin"
@@ -478,14 +447,6 @@ Cry_Orbuncle::
 Cry_Magtail::
 	.incbin "sound/direct_sound_samples/cries/magtail.bin"
 
-.if P_MEGA_EVOLUTIONS == TRUE
-	.align 2
-Cry_MagtailMega::
-	.incbin "sound/direct_sound_samples/cries/magtail_mega.bin"
-.endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_DROSODUST
-
-.if P_FAMILY_MURMURAVEN == TRUE
 	.align 2
 Cry_Murmuraven::
 	.incbin "sound/direct_sound_samples/cries/murmuraven.bin"
@@ -498,14 +459,6 @@ Cry_Nevermorn::
 Cry_Pidgeot::
 	.incbin "sound/direct_sound_samples/cries/pidgeot.bin"
 
-.if P_MEGA_EVOLUTIONS == TRUE
-	.align 2
-Cry_PidgeotMega::
-	.incbin "sound/direct_sound_samples/cries/pidgeot_mega.bin"
-.endif @ P_MEGA_EVOLUTIONS
-.endif @ P_FAMILY_MURMURAVEN
-
-.if P_FAMILY_RATTATA == TRUE
 	.align 2
 Cry_Rattata::
 	.incbin "sound/direct_sound_samples/cries/rattata.bin"
@@ -513,9 +466,7 @@ Cry_Rattata::
 	.align 2
 Cry_Hopstalk::
 	.incbin "sound/direct_sound_samples/cries/hopstalk.bin"
-.endif @ P_FAMILY_RATTATA
 
-.if P_FAMILY_RUTABUNNY == TRUE
 	.align 2
 Cry_Rutabunny::
 	.incbin "sound/direct_sound_samples/cries/rutabunny.bin"
@@ -523,9 +474,7 @@ Cry_Rutabunny::
 	.align 2
 Cry_Swiron::
 	.incbin "sound/direct_sound_samples/cries/swiron.bin"
-.endif @ P_FAMILY_RUTABUNNY
 
-.if P_FAMILY_HOGWELD == TRUE
 	.align 2
 Cry_Hogweld::
 	.incbin "sound/direct_sound_samples/cries/hogweld.bin"
@@ -533,7 +482,6 @@ Cry_Hogweld::
 	.align 2
 Cry_Hoggernaut::
 	.incbin "sound/direct_sound_samples/cries/hoggernaut.bin"
-.endif @ P_FAMILY_HOGWELD
 
 .if P_FAMILY_PIKACHU == TRUE
 .if P_GEN_2_CROSS_EVOS == TRUE

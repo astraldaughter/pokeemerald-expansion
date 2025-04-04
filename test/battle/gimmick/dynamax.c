@@ -402,7 +402,7 @@ SINGLE_BATTLE_TEST("Dynamax: Dynamaxed Pokemon that changes forms does not gain 
     u16 capturedHP, finalHP;
     GIVEN {
         PLAYER(SPECIES_GRENINJA_BATTLE_BOND) { Ability(ABILITY_BATTLE_BOND); HP(100); Speed(100); }
-        OPPONENT(SPECIES_TIMIDNA) { HP(1); Speed(1000); }
+        OPPONENT(SPECIES_CATERPIE) { HP(1); Speed(1000); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(10); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_TACKLE); MOVE(player, MOVE_TACKLE, gimmick: GIMMICK_DYNAMAX); SEND_OUT(opponent, 1); }
@@ -513,10 +513,10 @@ SINGLE_BATTLE_TEST("Dynamax: Pokemon with Gigantamax forms change upon Dynamaxin
 {
     u32 species;
     bool32 gigantamaxFactor;
-    PARAMETRIZE { gigantamaxFactor = FALSE; species = SPECIES_TROPIKOEKA; }
-    PARAMETRIZE { gigantamaxFactor = TRUE; species = SPECIES_TROPIKOEKA_GMAX; }
+    PARAMETRIZE { gigantamaxFactor = FALSE; species = SPECIES_VENUSAUR; }
+    PARAMETRIZE { gigantamaxFactor = TRUE; species = SPECIES_VENUSAUR_GMAX; }
     GIVEN {
-        PLAYER(SPECIES_TROPIKOEKA) { GigantamaxFactor(gigantamaxFactor); }
+        PLAYER(SPECIES_VENUSAUR) { GigantamaxFactor(gigantamaxFactor); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE, gimmick: GIMMICK_DYNAMAX); }
@@ -528,7 +528,7 @@ SINGLE_BATTLE_TEST("Dynamax: Pokemon with Gigantamax forms change upon Dynamaxin
 SINGLE_BATTLE_TEST("Dynamax: Pokemon with Gigantamax forms revert upon switching")
 {
     GIVEN {
-        PLAYER(SPECIES_TROPIKOEKA);
+        PLAYER(SPECIES_VENUSAUR);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -536,7 +536,7 @@ SINGLE_BATTLE_TEST("Dynamax: Pokemon with Gigantamax forms revert upon switching
         TURN { SWITCH(player, 1); }
         TURN { SWITCH(player, 0); }
     } THEN {
-        EXPECT_EQ(player->species, SPECIES_TROPIKOEKA);
+        EXPECT_EQ(player->species, SPECIES_VENUSAUR);
     }
 }
 
@@ -1083,15 +1083,15 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Befuddle paralyzes, poisons, or sleeps both o
     PARAMETRIZE { statusAnim = B_ANIM_STATUS_SLP; rng = STATUS1_SLEEP; }
     GIVEN {
         ASSUME(gMovesInfo[MOVE_G_MAX_BEFUDDLE].argument == MAX_EFFECT_EFFECT_SPORE_FOES);
-        PLAYER(SPECIES_LINTSECT) { GigantamaxFactor(TRUE); }
-        PLAYER(SPECIES_TIMIDNA);
+        PLAYER(SPECIES_BUTTERFREE) { GigantamaxFactor(TRUE); }
+        PLAYER(SPECIES_CATERPIE);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_BUG_BITE, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
                WITH_RNG(RNG_G_MAX_BEFUDDLE, rng)); }
     } SCENE {
-        MESSAGE("Lintsect used G-Max Befuddle!");
+        MESSAGE("Butterfree used G-Max Befuddle!");
         // opponent left
         ANIMATION(ANIM_TYPE_STATUS, statusAnim, opponentLeft);
         if (statusAnim == B_ANIM_STATUS_PSN) {
@@ -1260,8 +1260,8 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Wildfire sets a field effect that damages non
     s16 damage;
     GIVEN {
         ASSUME(gMovesInfo[MOVE_G_MAX_WILDFIRE].argument == MAX_EFFECT_WILDFIRE);
-        PLAYER(SPECIES_SCORNET) { GigantamaxFactor(TRUE); }
-        PLAYER(SPECIES_KINDLANT);
+        PLAYER(SPECIES_CHARIZARD) { GigantamaxFactor(TRUE); }
+        PLAYER(SPECIES_CHARMANDER);
         OPPONENT(SPECIES_WOBBUFFET) { HP(600); MaxHP(600); }
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_ARCANINE);
@@ -1273,7 +1273,7 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Wildfire sets a field effect that damages non
         TURN { }
     } SCENE {
         // turn 1
-        MESSAGE("Scornet used G-Max Wildfire!");
+        MESSAGE("Charizard used G-Max Wildfire!");
         MESSAGE("The opposing Pokémon were surrounded by fire!");
         MESSAGE("The opposing Wobbuffet is burning up within G-Max Wildfire's flames!");
         HP_BAR(opponentLeft, captureDamage: &damage);

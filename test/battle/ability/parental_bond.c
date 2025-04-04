@@ -84,7 +84,7 @@ DOUBLE_BATTLE_TEST("Parental Bond does not convert multi-target moves into a two
         PLAYER(SPECIES_KANGASKHAN) { Item(ITEM_KANGASKHANITE); }
         PLAYER(SPECIES_PIDGEY);
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_MURMURAVEN);
+        OPPONENT(SPECIES_PIDGEY);
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_EARTHQUAKE, gimmick: GIMMICK_MEGA); MOVE(playerRight, MOVE_CELEBRATE); MOVE(opponentLeft, MOVE_CELEBRATE); MOVE(opponentRight, MOVE_CELEBRATE); }
     } SCENE {
@@ -93,8 +93,8 @@ DOUBLE_BATTLE_TEST("Parental Bond does not convert multi-target moves into a two
         MESSAGE("Kangaskhan has Mega Evolved into Mega Kangaskhan!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, playerLeft);
         HP_BAR(opponentLeft);
-        MESSAGE("It doesn't affect Murmuraven…");
-        MESSAGE("It doesn't affect the opposing Murmuraven…");
+        MESSAGE("It doesn't affect Pidgey…");
+        MESSAGE("It doesn't affect the opposing Pidgey…");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_CELEBRATE, playerRight);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_CELEBRATE, opponentLeft);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_CELEBRATE, opponentRight);

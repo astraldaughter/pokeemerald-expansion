@@ -1,5 +1,5 @@
 {
-  "KIWEE": {
+  "BULBASAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -93,7 +93,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "FRONDODO": {
+  "IVYSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -195,7 +195,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "TROPIKOEKA": {
+  "VENUSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -304,7 +304,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "KINDLANT": {
+  "CHARMANDER": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -406,7 +406,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "CALIANTE": {
+  "CHARMELEON": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -512,7 +512,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "SCORNET": {
+  "CHARIZARD": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -631,7 +631,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "KELPONI": {
+  "SQUIRTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -736,7 +736,7 @@
       "MOVE_SWAGGER"
     ]
   },
-  "AQUINE": {
+  "WARTORTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -849,7 +849,7 @@
       "MOVE_SWAGGER"
     ]
   },
-  "AQUASTRIAN": {
+  "BLASTOISE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -969,7 +969,7 @@
       "MOVE_SWAGGER"
     ]
   },
-  "TIMIDNA": {
+  "CATERPIE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -985,7 +985,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "TOXREC": {
+  "METAPOD": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1004,7 +1004,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "LINTSECT": {
+  "BUTTERFREE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1093,7 +1093,7 @@
       "MOVE_SWIFT"
     ]
   },
-  "DROSODUST": {
+  "WEEDLE{
     "LevelMoves": [
       {
         "Level": 1,
@@ -1109,7 +1109,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "ORBUNCLE": {
+  "KAKUNA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1128,7 +1128,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "MAGTAIL": {
+  "BEEDRILL": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1208,7 +1208,7 @@
       "MOVE_SWORDS_DANCE"
     ]
   },
-  "MURMURAVEN": {
+  "PIDGEY": {
     "LevelMoves": [
       {
         "Level": 1,

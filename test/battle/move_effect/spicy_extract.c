@@ -66,20 +66,20 @@ SINGLE_BATTLE_TEST("Spicy Extract Defense loss is prevented by Big Pecks")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_MURMURAVEN) { Ability(ABILITY_BIG_PECKS); }
+        OPPONENT(SPECIES_PIDGEY) { Ability(ABILITY_BIG_PECKS); }
     } WHEN {
         TURN { MOVE(player, MOVE_SPICY_EXTRACT); }
     } SCENE {
         MESSAGE("Wobbuffet used Spicy Extract!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SPICY_EXTRACT, player);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);
-        MESSAGE("The opposing Murmuraven's Attack sharply rose!");
+        MESSAGE("The opposing Pidgey's Attack sharply rose!");
         NONE_OF {
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponent);
             MESSAGE("The opposing Wobbuffet's Defense harshly fell!");
         }
         ABILITY_POPUP(opponent, ABILITY_BIG_PECKS);
-        MESSAGE("The opposing Murmuraven's Big Pecks prevents Defense loss!");
+        MESSAGE("The opposing Pidgey's Big Pecks prevents Defense loss!");
     }
 }
 

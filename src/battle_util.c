@@ -2304,14 +2304,14 @@ u8 DoBattlerEndTurnEffects(void)
              if (ability == ABILITY_TUBEROUS)
                 {
                     if ((gStatuses3[battler] & STATUS3_UNDERGROUND )
-                    && !BATTLER_MAX_HP(battler)
+                    && !IsBattlerAtMaxHp(battler)
                     && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK)
                     && gBattleMons[battler].hp != 0)
                     {
-                        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
-                        if (gBattleMoveDamage == 0)
-                            gBattleMoveDamage = 1;
-                        gBattleMoveDamage *= -1;
+                        gBattleStruct->moveDamage[battler] =GetNonDynamaxMaxHP(battler) / 8;
+                        if (gBattleStruct->moveDamage[battler] == 0)
+                            gBattleStruct->moveDamage[battler] = 1;
+                        gBattleStruct->moveDamage[battler] *= -1;
                         BattleScriptExecute(BattleScript_TuberousActivates);
                         effect++;
                     }
@@ -4263,7 +4263,7 @@ bool32 CanAbilityBlockMove(u32 battlerAtk, u32 battlerDef, u32 move, u32 ability
         break;
     case ABILITY_GOBSTOPPER:
         if (gMovesInfo[move].bitingMove)
-            effect = MOVE_BLOCKED_BY_SOUNDPROOF_OR_BULLETPROOF;
+            battleScriptBlocksMove = BattleScript_SoundproofProtected;
         break;
     case ABILITY_DAZZLING:
     case ABILITY_QUEENLY_MAJESTY:
@@ -5426,9 +5426,9 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             case ABILITY_DRY_SKIN:
                 if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
                     BattleScriptPushCursorAndCallback(BattleScript_SolarPowerActivates);
-                    gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
+                    gBattleStruct->moveDamage[battler] = GetNonDynamaxMaxHP(battler) / 8;
+                    if (gBattleStruct->moveDamage[battler] == 0)
+                        gBattleStruct->moveDamage[battler] = 1;
                     effect++;
             // Dry Skin works similarly to Rain Dish in Rain
             case ABILITY_RAIN_DISH:
@@ -5685,8 +5685,8 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             }
             break;
         case ABILITY_MAGMA_ARMOR:
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-             && TARGET_TURN_DAMAGED
+            if (!(gBattleStruct->moveResultFlags[battler] & MOVE_RESULT_NO_EFFECT)
+             && IsBattlerTurnDamaged(gBattlerTarget)
              && IsBattlerAlive(battler)
              && moveType == TYPE_WATER
              && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN))
@@ -6160,8 +6160,8 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                         SWAP(gBattlerAttacker, gBattlerTarget, i);
                         SetAtkCancellerForCalledMove();
                         PrepareStringBattle(STRINGID_ABILITYLETITUSEMOVE, gBattlerAttacker);
-                        gBattlescriptCurrInstr = GET_MOVE_BATTLESCRIPT(gCurrentMove);
-                        gBattlerTarget = GetMoveTarget(gCurrentMove, NO_TARGET_OVERRIDE);
+                        gBattlescriptCurrInstr = GetMoveBattleScript(gCurrentMove);
+                        gBattlerTarget = GetBattleMoveTarget(gCurrentMove, NO_TARGET_OVERRIDE);
                         BattleScriptPushCursor();
                         gBattlescriptCurrInstr = BattleScript_GulpMissileGulping;
                         effect++;
@@ -9951,7 +9951,7 @@ static inline u32 CalcAttackStat(struct DamageCalculationData *damageCalcData, u
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_SUN_SHARD:
-        if (atkBaseSpeciesId == SPECIES_GIGALITH && IS_MOVE_SPECIAL(move))
+        if (atkBaseSpeciesId == SPECIES_GIGALITH && IsBattleMoveSpecial(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_CHOICE_BAND:
@@ -12051,7 +12051,7 @@ bool8 IsMonBannedFromSkyBattles(u16 species)
     switch (species)
     {
 #if B_SKY_BATTLE_STRICT_ELIGIBILITY == TRUE
-        case SPECIES_RUTABUNNY:
+        case SPECIES_SPEAROW:
         case SPECIES_FARFETCHD:
         case SPECIES_DODUO:
         case SPECIES_DODRIO:

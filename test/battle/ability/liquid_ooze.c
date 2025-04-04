@@ -117,7 +117,7 @@ SINGLE_BATTLE_TEST("Liquid Ooze causes leech seed victim to faint before seeder"
     PARAMETRIZE { ability = ABILITY_CLEAR_BODY; }
     PARAMETRIZE { ability = ABILITY_LIQUID_OOZE; }
     GIVEN {
-        PLAYER(SPECIES_KIWEE)   { HP(1); }
+        PLAYER(SPECIES_BULBASAUR)   { HP(1); }
         OPPONENT(SPECIES_TENTACOOL) { HP(1); Ability(ability); }
     } WHEN {
         TURN { MOVE(player, MOVE_LEECH_SEED); }

@@ -2198,12 +2198,6 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0,
     },
 
-    [EFFECT_SPIKES_IF_MISS] =
-    {
-        .battleScript = BattleScript_EffectSpikesIfMiss,
-        .battleTvScore = 0,
-    },
-
     [EFFECT_COTTON_SPORE] =
     {
         .battleScript = BattleScript_EffectCottonSpore,

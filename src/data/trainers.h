@@ -42073,7 +42073,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 16837
-            .species = SPECIES_KINDLANT,
+            .species = SPECIES_CHARMANDER,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 16839
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -42105,7 +42105,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 16849
-            .species = SPECIES_KIWEE,
+            .species = SPECIES_BULBASAUR,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 16851
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),

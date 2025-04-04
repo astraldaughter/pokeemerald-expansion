@@ -1,5 +1,5 @@
 {
-  "KIWEE": {
+  "BULBASAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -117,7 +117,7 @@
       "MOVE_WORRY_SEED"
     ]
   },
-  "FRONDODO": {
+  "IVYSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -245,7 +245,7 @@
       "MOVE_WORRY_SEED"
     ]
   },
-  "TROPIKOEKA": {
+  "VENUSAUR": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -389,7 +389,7 @@
       "MOVE_WORRY_SEED"
     ]
   },
-  "KINDLANT": {
+  "CHARMANDER": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -496,7 +496,7 @@
       "MOVE_THUNDER_PUNCH"
     ]
   },
-  "CALIANTE": {
+  "CHARMELEON": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -607,7 +607,7 @@
       "MOVE_THUNDER_PUNCH"
     ]
   },
-  "SCORNET": {
+  "CHARIZARD": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -762,7 +762,7 @@
       "MOVE_TWISTER"
     ]
   },
-  "KELPONI": {
+  "SQUIRTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -886,7 +886,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "AQUINE": {
+  "WARTORTLE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1018,7 +1018,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "AQUASTRIAN": {
+  "BLASTOISE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1170,7 +1170,7 @@
       "MOVE_ZEN_HEADBUTT"
     ]
   },
-  "TIMIDNA": {
+  "CATERPIE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1194,7 +1194,7 @@
       "MOVE_STRING_SHOT"
     ]
   },
-  "TOXREC": {
+  "METAPOD": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1219,7 +1219,7 @@
       "MOVE_STRING_SHOT"
     ]
   },
-  "LINTSECT": {
+  "BUTTERFREE": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1335,7 +1335,7 @@
       "MOVE_TWISTER"
     ]
   },
-  "DROSODUST": {
+  "WEEDLE{
     "LevelMoves": [
       {
         "Level": 1,
@@ -1358,7 +1358,7 @@
       "MOVE_STRING_SHOT"
     ]
   },
-  "ORBUNCLE": {
+  "KAKUNA": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1382,7 +1382,7 @@
       "MOVE_STRING_SHOT"
     ]
   },
-  "MAGTAIL": {
+  "BEEDRILL": {
     "LevelMoves": [
       {
         "Level": 1,
@@ -1492,7 +1492,7 @@
       "MOVE_TAILWIND"
     ]
   },
-  "MURMURAVEN": {
+  "PIDGEY": {
     "LevelMoves": [
       {
         "Level": 1,

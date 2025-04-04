@@ -9,8 +9,8 @@ ASSUMPTIONS
 SINGLE_BATTLE_TEST("Guard Split averages users and targets Def and Sp. Def stats")
 {
     GIVEN {
-        PLAYER(SPECIES_KIWEE);
-        OPPONENT(species_frondodo);
+        PLAYER(SPECIES_BULBASAUR);
+        OPPONENT(species_ivysaur);
     } WHEN {
         TURN { MOVE(player, MOVE_GUARD_SPLIT); }
     } SCENE {

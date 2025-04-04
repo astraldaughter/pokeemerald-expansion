@@ -1461,7 +1461,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDol
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedKelponiDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedSquirtleDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1476,7 +1476,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedKelponiDoll 
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_UnusedKelponiDoll,
+    .images = sPicTable_UnusedSquirtleDoll,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -3418,7 +3418,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigLaprasDoll = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigTropikoekaDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigVenusaurDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -3433,11 +3433,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigTropikoekaDoll 
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_BigTropikoekaDoll,
+    .images = sPicTable_BigVenusaurDoll,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigScornetDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigCharizardDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -3452,11 +3452,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigScornetDoll = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_BigScornetDoll,
+    .images = sPicTable_BigCharizardDoll,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigAquastrianDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigBlastoiseDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -3471,7 +3471,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigAquastrianDoll 
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_BigAquastrianDoll,
+    .images = sPicTable_BigBlastoiseDoll,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

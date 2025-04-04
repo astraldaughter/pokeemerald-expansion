@@ -208,7 +208,7 @@ DOUBLE_BATTLE_TEST("Ally switch swaps sky drop targets if being used by partner"
     u8 visibility;
     GIVEN {
         ASSUME(gMovesInfo[MOVE_SKY_DROP].effect == EFFECT_SKY_DROP);
-        PLAYER(SPECIES_SWIRON) { Speed(100); }
+        PLAYER(SPECIES_FEAROW) { Speed(100); }
         PLAYER(SPECIES_XATU)   { Speed(150); }
         OPPONENT(SPECIES_ARON) { Speed(25); Ability(ABILITY_STURDY); }
         OPPONENT(SPECIES_WYNAUT) { Speed(30); }
@@ -216,12 +216,12 @@ DOUBLE_BATTLE_TEST("Ally switch swaps sky drop targets if being used by partner"
         TURN { MOVE(playerLeft, MOVE_SKY_DROP, target: opponentLeft); }
         TURN { MOVE(playerRight, MOVE_ALLY_SWITCH); SKIP_TURN(playerLeft); MOVE(opponentRight, MOVE_MUD_SPORT); MOVE(opponentLeft, MOVE_IRON_DEFENSE); }
     } SCENE {
-        MESSAGE("Swiron used Sky Drop!");
-        MESSAGE("Swiron took the opposing Aron into the sky!");
+        MESSAGE("Fearow used Sky Drop!");
+        MESSAGE("Fearow took the opposing Aron into the sky!");
         // turn 2
         MESSAGE("Xatu used Ally Switch!");
-        MESSAGE("Xatu and Swiron switched places!");
-        MESSAGE("Swiron used Sky Drop!");
+        MESSAGE("Xatu and Fearow switched places!");
+        MESSAGE("Fearow used Sky Drop!");
         HP_BAR(opponentLeft);
         MESSAGE("The opposing Wynaut used Mud Sport!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_MUD_SPORT, opponentRight);
@@ -247,18 +247,18 @@ DOUBLE_BATTLE_TEST("Ally switch swaps opposing sky drop targets if partner is be
         ASSUME(GetMoveEffect(MOVE_SKY_DROP) == EFFECT_SKY_DROP);
         PLAYER(SPECIES_ARON) { Speed(25); Ability(ABILITY_STURDY); }
         PLAYER(SPECIES_WYNAUT) { Speed(30); }
-        OPPONENT(SPECIES_SWIRON) { Speed(100); }
+        OPPONENT(SPECIES_FEAROW) { Speed(100); }
         OPPONENT(SPECIES_XATU)   { Speed(150); }
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_SKY_DROP, target: playerLeft); }
         TURN { MOVE(opponentRight, MOVE_ALLY_SWITCH); SKIP_TURN(opponentLeft); MOVE(playerRight, MOVE_MUD_SPORT); MOVE(playerLeft, MOVE_IRON_DEFENSE); }
     } SCENE {
-        MESSAGE("The opposing Swiron used Sky Drop!");
-        MESSAGE("The opposing Swiron took Aron into the sky!");
+        MESSAGE("The opposing Fearow used Sky Drop!");
+        MESSAGE("The opposing Fearow took Aron into the sky!");
         // turn 2
         MESSAGE("The opposing Xatu used Ally Switch!");
-        MESSAGE("The opposing Xatu and the opposing Swiron switched places!");
-        MESSAGE("The opposing Swiron used Sky Drop!");
+        MESSAGE("The opposing Xatu and the opposing Fearow switched places!");
+        MESSAGE("The opposing Fearow used Sky Drop!");
         HP_BAR(playerLeft);
         MESSAGE("Wynaut used Mud Sport!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_MUD_SPORT, playerRight);

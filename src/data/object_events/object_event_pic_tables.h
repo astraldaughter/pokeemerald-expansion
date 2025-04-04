@@ -318,8 +318,8 @@ static const struct SpriteFrameImage sPicTable_UnusedMagnemiteDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedMagnemiteDoll),
 };
 
-static const struct SpriteFrameImage sPicTable_UnusedKelponiDoll[] = {
-    obj_frame_tiles(gObjectEventPic_UnusedKelponiDoll),
+static const struct SpriteFrameImage sPicTable_UnusedSquirtleDoll[] = {
+    obj_frame_tiles(gObjectEventPic_UnusedSquirtleDoll),
 };
 
 static const struct SpriteFrameImage sPicTable_UnusedWooperDoll[] = {
@@ -832,16 +832,16 @@ static const struct SpriteFrameImage sPicTable_BigLaprasDoll[] = {
     obj_frame_tiles(gObjectEventPic_BigLaprasDoll),
 };
 
-static const struct SpriteFrameImage sPicTable_BigTropikoekaDoll[] = {
-    obj_frame_tiles(gObjectEventPic_BigTropikoekaDoll),
+static const struct SpriteFrameImage sPicTable_BigVenusaurDoll[] = {
+    obj_frame_tiles(gObjectEventPic_BigVenusaurDoll),
 };
 
-static const struct SpriteFrameImage sPicTable_BigScornetDoll[] = {
-    obj_frame_tiles(gObjectEventPic_BigScornetDoll),
+static const struct SpriteFrameImage sPicTable_BigCharizardDoll[] = {
+    obj_frame_tiles(gObjectEventPic_BigCharizardDoll),
 };
 
-static const struct SpriteFrameImage sPicTable_BigAquastrianDoll[] = {
-    obj_frame_tiles(gObjectEventPic_BigAquastrianDoll),
+static const struct SpriteFrameImage sPicTable_BigBlastoiseDoll[] = {
+    obj_frame_tiles(gObjectEventPic_BigBlastoiseDoll),
 };
 
 static const struct SpriteFrameImage sPicTable_BigWailmerDoll[] = {
