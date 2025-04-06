@@ -477,16 +477,17 @@ static void CB2_InitBattleInternal(void)
         {
             ScanlineEffect_Clear();
 
-            for (i = 0; i < DISPLAY_HEIGHT / 2; i++)
+            i = 0;
+            while (i < (DISPLAY_HEIGHT / 2))
             {
-                gScanlineEffectRegBuffers[0][i] = 0xF0;
-                gScanlineEffectRegBuffers[1][i] = 0xF0;
+                gScanlineEffectRegBuffers[0][i] = DISPLAY_WIDTH;
+                gScanlineEffectRegBuffers[1][i] = DISPLAY_WIDTH;
             }
 
-            for (; i < DISPLAY_HEIGHT; i++)
+            while (i < DISPLAY_HEIGHT)
             {
-                gScanlineEffectRegBuffers[0][i] = 0xFF10;
-                gScanlineEffectRegBuffers[1][i] = 0xFF10;
+                gScanlineEffectRegBuffers[0][i] = -DISPLAY_WIDTH;
+                gScanlineEffectRegBuffers[1][i] = -DISPLAY_WIDTH;
             }
 
             ScanlineEffect_SetParams(sIntroScanlineParams16Bit);
@@ -2132,17 +2133,17 @@ void CB2_InitEndLinkBattle(void)
         ScanlineEffect_Clear();
 
         i = 0;
-        while (i < 80)
+        while (i < (DISPLAY_HEIGHT / 2))
         {
-            gScanlineEffectRegBuffers[0][i] = 0xF0;
-            gScanlineEffectRegBuffers[1][i] = 0xF0;
+            gScanlineEffectRegBuffers[0][i] = DISPLAY_WIDTH;
+            gScanlineEffectRegBuffers[1][i] = DISPLAY_WIDTH;
             i++;
         }
 
-        while (i < 160)
+        while (i < DISPLAY_HEIGHT)
         {
-            gScanlineEffectRegBuffers[0][i] = 0xFF10;
-            gScanlineEffectRegBuffers[1][i] = 0xFF10;
+            gScanlineEffectRegBuffers[0][i] = -DISPLAY_WIDTH;
+            gScanlineEffectRegBuffers[1][i] = -DISPLAY_WIDTH;
             i++;
         }
 
@@ -2611,7 +2612,7 @@ static void SpriteCB_MoveWildMonToRight(struct Sprite *sprite)
     if ((gIntroSlideFlags & 1) == 0)
     {
         if (B_FAST_INTRO_NO_SLIDE == FALSE && !gTestRunnerHeadless)
-            sprite->x2 += 8;
+            sprite->x2 += B_INTRO_SLIDE_SPEED;
         else
             sprite->x2 = 0;
 

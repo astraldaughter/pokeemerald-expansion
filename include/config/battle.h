@@ -316,4 +316,8 @@
 #define B_POOL_RULE_ITEM_CLAUSE             FALSE    // Only allow each item to be picked once
 #define B_POOL_RULES_USE_ITEM_EXCLUSIONS    FALSE    // Exclude items listed in poolItemClauseExclusions
 
+// custom stuff
+#define B_INTRO_SLIDE_SPEED     (5) // Controls how fast the sliding into battle intro goes.
+#define B_INTRO_TERRAIN_SPEED  (24) // Controls how long the terrain slides until it goes down the screen.
+
 #endif // GUARD_CONFIG_BATTLE_H
