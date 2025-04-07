@@ -482,12 +482,14 @@ static void CB2_InitBattleInternal(void)
             {
                 gScanlineEffectRegBuffers[0][i] = DISPLAY_WIDTH;
                 gScanlineEffectRegBuffers[1][i] = DISPLAY_WIDTH;
+                i++;
             }
 
             while (i < DISPLAY_HEIGHT)
             {
                 gScanlineEffectRegBuffers[0][i] = -DISPLAY_WIDTH;
                 gScanlineEffectRegBuffers[1][i] = -DISPLAY_WIDTH;
+                i++;
             }
 
             ScanlineEffect_SetParams(sIntroScanlineParams16Bit);
