@@ -28,6 +28,7 @@ static u16 FontFunc_Narrower(struct TextPrinter *);
 static u16 FontFunc_SmallNarrower(struct TextPrinter *);
 static u16 FontFunc_ShortNarrow(struct TextPrinter *);
 static u16 FontFunc_ShortNarrower(struct TextPrinter *);
+static u16 FontFunc_SmallCompacted(struct TextPrinter *);
 static void DecompressGlyph_Small(u16, bool32);
 static void DecompressGlyph_Normal(u16, bool32);
 static void DecompressGlyph_Short(u16, bool32);
@@ -108,6 +109,7 @@ static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
     { FONT_SHORT_NARROW,   GetGlyphWidth_ShortNarrow },
     { FONT_BW_SUMMARY_SCREEN, GetGlyphWidth_Short },
     { FONT_SHORT_NARROWER, GetGlyphWidth_ShortNarrower },
+    { FONT_SMALL_COMPACTED, GetGlyphWidth_Small },
 };
 
 struct
@@ -286,6 +288,16 @@ static const struct FontInfo sFontInfos[] =
         .bgColor = 1,
         .shadowColor = 3,
     },
+    [FONT_SMALL_COMPACTED] = {
+        .fontFunction = FontFunc_SmallCompacted,
+        .maxLetterWidth = 5,
+        .maxLetterHeight = 10,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .fgColor = 2,
+        .bgColor = 1,
+        .shadowColor = 3,
+    },
 };
 
 static const u8 sMenuCursorDimensions[][2] =
@@ -305,6 +317,7 @@ static const u8 sMenuCursorDimensions[][2] =
     [FONT_SHORT_NARROW]   = { 8,  14 },
     [FONT_BW_SUMMARY_SCREEN] = { 8,  14 },
     [FONT_SHORT_NARROWER] = { 8,  14 },
+    [FONT_SMALL_COMPACTED] = { 8,  14 },
 };
 
 static const u16 sFontBoldJapaneseGlyphs[] = INCBIN_U16("graphics/fonts/bold.hwjpnfont");
@@ -854,7 +867,6 @@ static u16 FontFunc_Narrower(struct TextPrinter *textPrinter)
     return RenderText(textPrinter);
 }
 
-
 static u16 FontFunc_SmallNarrower(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
@@ -898,6 +910,18 @@ static u16 FontFunc_ShortNarrower(struct TextPrinter *textPrinter)
     if (subStruct->hasFontIdBeenSet == FALSE)
     {
         subStruct->fontId = FONT_SHORT_NARROWER;
+        subStruct->hasFontIdBeenSet = TRUE;
+    }
+    return RenderText(textPrinter);
+}
+
+static u16 FontFunc_SmallCompacted(struct TextPrinter *textPrinter)
+{
+    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
+
+    if (subStruct->hasFontIdBeenSet == FALSE)
+    {
+        subStruct->fontId = FONT_SMALL_COMPACTED;
         subStruct->hasFontIdBeenSet = TRUE;
     }
     return RenderText(textPrinter);
@@ -1112,6 +1136,8 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             textPrinter->printerTemplate.currentY += (gFonts[textPrinter->printerTemplate.fontId].maxLetterHeight + textPrinter->printerTemplate.lineSpacing);
             if (subStruct->fontId == FONT_BW_SUMMARY_SCREEN)
                 textPrinter->printerTemplate.currentY -= 2;
+            else if (subStruct->fontId == FONT_SMALL_COMPACTED)
+                textPrinter->printerTemplate.currentY -= 4;
             return RENDER_REPEAT;
         case PLACEHOLDER_BEGIN:
             textPrinter->printerTemplate.currentChar++;
@@ -1267,6 +1293,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
         switch (subStruct->fontId)
         {
         case FONT_SMALL:
+        case FONT_SMALL_COMPACTED:
             DecompressGlyph_Small(currChar, textPrinter->japanese);
             break;
         case FONT_NORMAL:

@@ -591,9 +591,9 @@ static const struct WindowTemplate sSummaryTemplate[] =
     },
     [PSS_LABEL_WINDOW_PORTRAIT_NICKNAME_GENDER_LEVEL] = {
         .bg = 0,
-        .tilemapLeft = 20,
+        .tilemapLeft = 18,
         .tilemapTop = 2,
-        .width = 10,
+        .width = 12,
         .height = 3,
         .paletteNum = 6,
         .baseBlock = 245,
@@ -605,7 +605,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 275,
+        .baseBlock = 281,
     },
     [PSS_LABEL_WINDOW_PROMPT_EVS] = {
         .bg = 0,
@@ -614,7 +614,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 295,
+        .baseBlock = 301,
     },
     [PSS_LABEL_WINDOW_PROMPT_STATS] = {
         .bg = 0,
@@ -623,7 +623,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 315,
+        .baseBlock = 321,
     },
     [PSS_LABEL_WINDOW_END] = DUMMY_WIN_TEMPLATE
 };
@@ -636,7 +636,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 12,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 335,
+        .baseBlock = 341,
     },
     [PSS_DATA_WINDOW_INFO_MEMO] = {
         .bg = 0,
@@ -645,7 +645,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 26,
         .height = 7,
         .paletteNum = 6,
-        .baseBlock = 407,
+        .baseBlock = 413,
     },
     [PSS_DATA_WINDOW_INFO_DEX_NUMBER_NAME] = {
         .bg = 0,
@@ -654,7 +654,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 9,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 589,
+        .baseBlock = 595,
     },
 };
 static const struct WindowTemplate sPageSkillsTemplate[] =
@@ -666,7 +666,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 335,
+        .baseBlock = 341,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_HP] = {
         .bg = 0,
@@ -675,7 +675,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 8,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 355,
+        .baseBlock = 361,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_NON_HP] = {
         .bg = 0,
@@ -684,7 +684,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 10,
         .height = 8,
         .paletteNum = 6,
-        .baseBlock = 371,
+        .baseBlock = 377,
     },
     [PSS_DATA_WINDOW_EXP] = {
         .bg = 0,
@@ -693,7 +693,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 11,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 451,
+        .baseBlock = 457,
     },
     [PSS_DATA_WINDOW_EXP_NEXT_LEVEL] = {
         .bg = 0,
@@ -702,7 +702,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 9,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 473,
+        .baseBlock = 479,
     },
     [PSS_DATA_WINDOW_SKILLS_ABILITY] = {
         .bg = 0,
@@ -711,7 +711,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 24,
         .height = 5,
         .paletteNum = 6,
-        .baseBlock = 491,
+        .baseBlock = 497,
     },
 };
 static const struct WindowTemplate sPageMovesTemplate[] = // This is used for both battle and contest moves
@@ -723,16 +723,16 @@ static const struct WindowTemplate sPageMovesTemplate[] = // This is used for bo
         .width = 9,
         .height = 20,
         .paletteNum = 8,
-        .baseBlock = 335,
+        .baseBlock = 341,
     },
     [PSS_DATA_WINDOW_MOVE_DESCRIPTION] = {
         .bg = 0,
         .tilemapLeft = 15,
-        .tilemapTop = 14,
+        .tilemapTop = 10,
         .width = 15,
-        .height = 9,
+        .height = 13,
         .paletteNum = 6,
-        .baseBlock = 515,
+        .baseBlock = 521,
     },
 };
 static const u8 sTextColors[][3] =
@@ -3291,7 +3291,7 @@ static void Task_ShowEffectTilemap(u8 taskId)
         SetNewMoveTypeIcon();
 
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-            PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
+            PutWindowTilemap(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION]);
 
         DestroyTask(taskId);
     }
@@ -3315,7 +3315,7 @@ static void Task_HideEffectTilemap(u8 taskId)
         SetGpuRegBits(REG_OFFSET_BG1CNT, BGCNT_MOSAIC);
 
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-            ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
+           ClearWindowTilemap(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION]);
 
         windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_DATA_WINDOW_MOVE_DESCRIPTION);
         ClearWindowTilemap(windowId);
@@ -3625,10 +3625,10 @@ static void PrintGenderSymbol(struct Pokemon *mon, u16 species)
         switch (GetMonGender(mon))
         {
         case MON_MALE:
-            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME_GENDER_LEVEL, gText_MaleSymbol, 70, 1, 0, 3);
+            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME_GENDER_LEVEL, gText_MaleSymbol, 86, 1, 0, 3);
             break;
         case MON_FEMALE:
-            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME_GENDER_LEVEL, gText_FemaleSymbol, 70, 1, 0, 4);
+            PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME_GENDER_LEVEL, gText_FemaleSymbol, 86, 1, 0, 4);
             break;
         }
     }
@@ -3746,7 +3746,7 @@ static void PutPageWindowTilemaps(u8 page)
         if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
-                PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
+                PutWindowTilemap(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION]);
         }
         else
         {
@@ -3794,7 +3794,7 @@ static void ClearPageWindowTilemaps(u8 page)
         if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
-                ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
+               ClearWindowTilemap(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION]);
         }
         else
         {
@@ -4560,7 +4560,7 @@ static void PrintMoveNameAndPP(u8 moveIndex)
 static void PrintMovePowerAndAccuracy(u16 moveIndex)
 {
     const u8 *text;
-    FillWindowPixelRect(PSS_LABEL_WINDOW_MOVES_POWER_ACC, PIXEL_FILL(0), 2, 0, 19, 32);
+    FillWindowPixelRect(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION], PIXEL_FILL(0), 2, 0, 19, 32);
 
     if (moveIndex != MOVE_NONE)
     {
@@ -4574,7 +4574,7 @@ static void PrintMovePowerAndAccuracy(u16 moveIndex)
             text = gStringVar1;
         }
 
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 2, 4, 0, 0);
+        PrintTextOnWindow(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION], text, 66, 4, 0, 0);
 
         if (gMovesInfo[moveIndex].accuracy == 0)
         {
@@ -4586,11 +4586,11 @@ static void PrintMovePowerAndAccuracy(u16 moveIndex)
             text = gStringVar1;
         }
 
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 2, 16, 0, 0);
+        PrintTextOnWindow(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION], text, 66, 16, 0, 0);
     } else {
         text = gText_ThreeDashes;
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 2, 4, 0, 0);
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 2, 16, 0, 0);
+        PrintTextOnWindow(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION], text, 66, 4, 0, 0);
+        PrintTextOnWindow(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_MOVE_DESCRIPTION], text, 66, 16, 0, 0);
     }
 }
 
@@ -4680,19 +4680,20 @@ static void PrintMoveDetails(u16 move)
             if (BW_SUMMARY_AUTO_FORMAT_MOVE_DESCRIPTIONS)
             {
                 if (gMovesInfo[move].effect != EFFECT_PLACEHOLDER)
-                    FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gMovesInfo[move].description, GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
+                    FormatTextByWidth(desc, 119, FONT_SMALL, gMovesInfo[move].description, 0);
                 else
-                    FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gNotDoneYetDescription, GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
+                    FormatTextByWidth(desc, 119, FONT_SMALL, gNotDoneYetDescription, 0);
 
-                PrintTextOnWindow_BW_Font(windowId, desc, 2, 0, 0, 0);
+                    PrintTextOnWindowWithFont(windowId, desc, 1, 29, 2, 0, FONT_SMALL_COMPACTED);
             }
             else
             {
                 if (gMovesInfo[move].effect != EFFECT_PLACEHOLDER)
-                    PrintTextOnWindow_BW_Font(windowId, gMovesInfo[move].description, 2, 0, 0, 0);
+                    PrintTextOnWindowWithFont(windowId, gMovesInfo[move].description, 2, 0, 0, 0, FONT_SMALL);
                 else
-                    PrintTextOnWindow_BW_Font(windowId, gNotDoneYetDescription, 2, 0, 0, 0);
+                    PrintTextOnWindowWithFont(windowId, gNotDoneYetDescription, 2, 0, 0, 0, FONT_SMALL);
             }
+
 
         }
         else

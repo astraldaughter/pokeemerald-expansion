@@ -23,6 +23,7 @@ enum {
     FONT_SHORT_NARROW,
     FONT_BW_SUMMARY_SCREEN,
     FONT_SHORT_NARROWER,
+    FONT_SMALL_COMPACTED, // Identical to FONT_SMALL but with top whitespace trimmed, used mainly to get summary screen working
 };
 
 // Return values for font functions
