@@ -454,7 +454,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SWORDS DANCE"),
         .description = COMPOUND_STRING(
-            "A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat."),
+            "A frenetic dance to uplift the fighting spirit. This sharply raises the user's ATTACK stat."),
         .effect = EFFECT_ATTACK_UP_2,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -1084,7 +1084,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("TAIL WHIP"),
         .description = COMPOUND_STRING(
-            "The user wags its tail cutely to make opposing Pokémon less wary and lower their Defense stats."),
+            "The user wags its tail cutely to make opposing Pokémon less wary and lower their DEFENSE stats."),
         .effect = EFFECT_DEFENSE_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -1181,7 +1181,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("LEER"),
         .description = COMPOUND_STRING(
-            "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat."),
+            "The user gives opposing Pokémon an intimidating leer that lowers the DEFENSE stat."),
         .effect = EFFECT_DEFENSE_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -1232,7 +1232,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("GROWL"),
         .description = COMPOUND_STRING(
-            "The user growls endearingly to make opposing Pokémon less wary, lowering their Attack stats."),
+            "The user growls endearingly to make opposing Pokémon less wary, lowering their ATTACK stats."),
         .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -1386,7 +1386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ACID"),
         .description = COMPOUND_STRING(
-            "Opposing Pokémon are attacked with a spray of harsh acid. This may lower their Defense stats."),
+            "Opposing Pokémon are attacked with a spray of harsh acid. This may lower their DEFENSE stats."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_POISON,
@@ -1636,7 +1636,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BUBBLE BEAM"),
         .description = COMPOUND_STRING(
-            "A spray of bubbles is forcefully ejected at the target. This may also lower the target's Speed."),
+            "A spray of bubbles is forcefully ejected at the target. This may also lower the target's SPEED."),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_WATER,
@@ -1661,7 +1661,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("AURORA BEAM"),
         .description = COMPOUND_STRING(
-            "The target is hit with a rainbow colored beam. This may also lower the target's Attack stat."),
+            "The target is hit with a rainbow colored beam. This may also lower the target's ATTACK stat."),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ICE,
@@ -1951,7 +1951,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("GROWTH"),
         .description = COMPOUND_STRING(
-            "The user's body grows all at once, raising the Attack and Sp. Atk stats."),
+            "The user's body grows all at once, raising the ATTACK and SP. ATK stats."),
         .effect = B_GROWTH_STAT_RAISE >= GEN_5 ? EFFECT_GROWTH : EFFECT_SPECIAL_ATTACK_UP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -2130,7 +2130,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("STRING SHOT"),
         .description = COMPOUND_STRING(
-            "Opposing Pokémon are bound with silk blown from the user's mouth that harshly lowers Speed."),
+            "Opposing Pokémon are bound with silk blown from the user's mouth that harshly lowers SPEED."),
         .effect = B_UPDATED_MOVE_DATA >= GEN_6 ? EFFECT_SPEED_DOWN_2 : EFFECT_SPEED_DOWN,
         .power = 0,
         .type = TYPE_BUG,
@@ -2452,7 +2452,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("PSYCHIC"),
         .description = COMPOUND_STRING(
-            "The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def."),
+            "The target is hit by a strong telekinetic force. This may also lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_PSYCHIC,
@@ -2502,7 +2502,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("MEDITATE"),
         .description = COMPOUND_STRING(
-            "The user meditates to awaken the power deep within its body and raise its Attack stat."),
+            "The user meditates to awaken the power deep within its body and raise its ATTACK stat."),
         .effect = EFFECT_ATTACK_UP,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -2528,7 +2528,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("AGILITY"),
         .description = COMPOUND_STRING(
-            "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat."),
+            "The user relaxes and lightens its body to move faster. This sharply raises the SPEED stat."),
         .effect = EFFECT_SPEED_UP_2,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -2577,7 +2577,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("RAGE"),
         .description = COMPOUND_STRING(
-            "As long as this move is in use, the power of rage raises the user's Attack when it's hit."),
+            "As long as this move is in use, the power of rage raises the user's ATTACK when it's hit."),
         .effect = EFFECT_RAGE,
         .power = 45,
         .type = TYPE_NORMAL,
@@ -2676,7 +2676,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SCREECH"),
         .description = COMPOUND_STRING(
-            "An earsplitting screech harshly lowers the target's Defense. "),
+            "An earsplitting screech harshly lowers the target's DEFENSE. "),
         .effect = EFFECT_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -2755,7 +2755,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("HARDEN"),
         .description = COMPOUND_STRING(
-            "The user stiffens all the muscles in its body to raise its Defense stat."),
+            "The user stiffens all the muscles in its body to raise its DEFENSE stat."),
         .effect = EFFECT_DEFENSE_UP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -2855,7 +2855,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("WITHDRAW"),
         .description = COMPOUND_STRING(
-            "The user withdraws its body into its hard shell, raising its Defense stat."),
+            "The user withdraws its body into its hard shell, raising its DEFENSE stat."),
         .effect = EFFECT_DEFENSE_UP,
         .power = 0,
         .type = TYPE_WATER,
@@ -2881,7 +2881,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("DEFENSE CURL"),
         .description = COMPOUND_STRING(
-            "The user curls up to conceal weak spots and raise its Defense stat."),
+            "The user curls up to conceal weak spots and raise its DEFENSE stat."),
         .effect = EFFECT_DEFENSE_CURL,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -2907,7 +2907,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BARRIER"),
         .description = COMPOUND_STRING(
-            "The user throws up a sturdy wall that sharply raises its Defense stat."),
+            "The user throws up a sturdy wall that sharply raises its DEFENSE stat."),
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -3376,7 +3376,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SKULL BASH"),
         .description = COMPOUND_STRING(
-            "The user tucks in its head to raise its Defense, then rams the target on the next turn."),
+            "The user tucks in its head to raise its DEFENSE, then rams the target on the next turn."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 100,
         .type = TYPE_NORMAL,
@@ -3428,7 +3428,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CONSTRICT"),
         .description = COMPOUND_STRING(
-            "The target is constricted to inflict pain. This may also lower the target's Speed."),
+            "The target is constricted to inflict pain. This may also lower the target's SPEED."),
         .effect = EFFECT_HIT,
         .power = 10,
         .type = TYPE_NORMAL,
@@ -3454,7 +3454,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("AMNESIA"),
         .description = COMPOUND_STRING(
-            "The user temporarily empties its mind to forget its concerns and sharply raise its Sp. Def stat."),
+            "The user temporarily empties its mind to forget its concerns and sharply raise its SP. DEF stat."),
         .effect = EFFECT_SPECIAL_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -3766,7 +3766,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BUBBLE"),
         .description = COMPOUND_STRING(
-            "A spray of countless bubbles is jetted at the opposing Pokémon. This may also lower their Speed."),
+            "A spray of countless bubbles is jetted at the opposing Pokémon. This may also lower their SPEED."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 40 : 20,
         .type = TYPE_WATER,
@@ -3915,7 +3915,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ACID ARMOR"),
         .description = COMPOUND_STRING(
-            "The user alters its cellular structure to liquefy itself, sharply raising its Defense."),
+            "The user alters its cellular structure to liquefy itself, sharply raising its DEFENSE."),
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_POISON,
@@ -4114,7 +4114,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SHARPEN"),
         .description = COMPOUND_STRING(
-            "The user makes its edges more jagged, which raises its Attack stat."),
+            "The user makes its edges more jagged, which raises its ATTACK stat."),
         .effect = EFFECT_ATTACK_UP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -4462,7 +4462,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FLAME WHEEL"),
         .description = COMPOUND_STRING(
-            "A fiery charge attack that may burn. Boosted for each Speed boost the user has."),
+            "A fiery charge attack that may burn. Boosted for each SPEED boost the user has."),
         .effect = EFFECT_FLAME_WHEEL,
         .power = 60,
         .type = TYPE_FIRE,
@@ -4617,7 +4617,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("COTTON SPORE"),
         .description = COMPOUND_STRING(
-            "Sheds cottony spores that cling to the foe, lowering its evasion and harshly lowering its Speed."),
+            "Sheds cottony spores that cling to the foe, lowering its evasion and harshly lowering its SPEED."),
         .effect = EFFECT_COTTON_SPORE,
         .power = 0,
         .type = TYPE_GRASS,
@@ -4765,7 +4765,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SCARY FACE"),
         .description = COMPOUND_STRING(
-            "The user frightens the target with a scary face to harshly lower its Speed."),
+            "The user frightens the target with a scary face to harshly lower its SPEED."),
         .effect = EFFECT_SPEED_DOWN_2,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -4836,7 +4836,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BELLY DRUM"),
         .description = COMPOUND_STRING(
-            "The user maximizes its Attack stat in exchange for HP equal to half its max HP."),
+            "The user maximizes its ATTACK stat in exchange for HP equal to half its max HP."),
         .effect = EFFECT_BELLY_DRUM,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -5078,7 +5078,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ICY WIND"),
         .description = COMPOUND_STRING(
-            "The user attacks with a gust of chilled air. This also lowers opposing Pokémon's Speed."),
+            "The user attacks with a gust of chilled air. This also lowers opposing Pokémon's SPEED."),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_ICE,
@@ -5283,7 +5283,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CHARM"),
         .description = COMPOUND_STRING(
-            "The user gazes at the target charmingly, making it less wary, harshly lowering its Attack."),
+            "The user gazes at the target charmingly, making it less wary, harshly lowering its ATTACK."),
         .effect = EFFECT_ATTACK_DOWN_2,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -5355,7 +5355,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SWAGGER"),
         .description = COMPOUND_STRING(
-            "The user enrages and confuses the target, but also sharply raising its Attack."),
+            "The user enrages and confuses the target, but also sharply raising its ATTACK."),
         .effect = EFFECT_SWAGGER,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -5921,7 +5921,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("RAPID SPIN"),
         .description = COMPOUND_STRING(
-            "The user spins to attack, raising its Speed, and clearing any trapping effects or hazards."),
+            "The user spins to attack, raising its SPEED, and clearing any trapping effects or hazards."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 50 : 20,
         .type = TYPE_NORMAL,
@@ -5977,7 +5977,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("IRON TAIL"),
         .description = COMPOUND_STRING(
-            "The target is slammed with a steel-hard tail. This may also lower the target's Defense."),
+            "The target is slammed with a steel-hard tail. This may also lower the target's DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_STEEL,
@@ -6004,7 +6004,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("METAL CLAW"),
         .description = COMPOUND_STRING(
-            "The target is raked with steel claws. This may also raise the user's Attack stat."),
+            "The target is raked with steel claws. This may also raise the user's ATTACK stat."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_STEEL,
@@ -6259,7 +6259,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CRUNCH"),
         .description = COMPOUND_STRING(
-            "The user crunches up the target with sharp fangs. This may also lower the target's Sp. Def."),
+            "The user crunches up the target with sharp fangs. This may also lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_DARK,
@@ -6391,7 +6391,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SHADOW BALL"),
         .description = COMPOUND_STRING(
-            "The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def."),
+            "The user hurls a shadowy blob at the target. This may also lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_GHOST,
@@ -6442,7 +6442,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ROCK SMASH"),
         .description = COMPOUND_STRING(
-            "Strikes foe with a crushing attack that lowers its Defense. "),
+            "Strikes foe with a crushing attack that lowers its DEFENSE. "),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
         .type = TYPE_FIGHTING,
@@ -6574,7 +6574,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("STOCKPILE"),
         .description = COMPOUND_STRING(
-            "The user charges up power up to 3 times. This raises its Defense and Sp. Def for each stack."),
+            "The user charges up power up to 3 times. This raises its DEFENSE and SP. DEF for each stack."),
         .effect = EFFECT_STOCKPILE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -6726,7 +6726,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FLATTER"),
         .description = COMPOUND_STRING(
-            "Flattery is used to confuse the target. However, this also raise the target's Sp. Atk."),
+            "Flattery is used to confuse the target. However, this also raise the target's SP. ATK."),
         .effect = EFFECT_FLATTER,
         .power = 0,
         .type = TYPE_DARK,
@@ -6774,7 +6774,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("MEMENTO"),
         .description = COMPOUND_STRING(
-            "The user faints. In return, the target's Attack and Sp. Atk is harshly lowered."),
+            "The user faints. In return, the target's ATTACK and SP. ATK is harshly lowered."),
         .effect = EFFECT_MEMENTO,
         .power = 0,
         .type = TYPE_DARK,
@@ -6935,7 +6935,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CHARGE"),
         .description = COMPOUND_STRING(
-            "The user boosts the power of the next Electric move it uses. This also raises the user's Sp. Def."),
+            "The user boosts the power of the next Electric move it uses. This also raises the user's SP. DEF."),
         .effect = EFFECT_CHARGE,
         .power = 0,
         .type = TYPE_ELECTRIC,
@@ -7152,7 +7152,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SUPERPOWER"),
         .description = COMPOUND_STRING(
-            "The user attacks the target with great power. This also lowers the user's Attack and Defense."),
+            "The user attacks the target with great power. This also lowers the user's ATTACK and DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_FIGHTING,
@@ -7606,7 +7606,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TAIL GLOW"),
         .description = COMPOUND_STRING(
-            "Flashes a light that sharply raises Sp. Atk."),
+            "Flashes a light that sharply raises SP. ATK."),
         .effect = B_UPDATED_MOVE_DATA >= GEN_5 ? EFFECT_SPECIAL_ATTACK_UP_3 : EFFECT_SPECIAL_ATTACK_UP_2,
         .power = 0,
         .type = TYPE_BUG,
@@ -7632,7 +7632,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("LUSTER PURGE"),
         .description = COMPOUND_STRING(
-            "Attacks with a burst of light. May lower Sp. Def."),
+            "Attacks with a burst of light. May lower SP. DEF."),
         .effect = EFFECT_HIT,
         .power = (B_UPDATED_MOVE_DATA >= GEN_9) ? 95 : 70,
         .type = TYPE_PSYCHIC,
@@ -7658,7 +7658,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MIST BALL"),
         .description = COMPOUND_STRING(
-            "Attacks with a flurry of down. May lower Sp. Atk."),
+            "Attacks with a flurry of down. May lower SP. ATK."),
         .effect = EFFECT_HIT,
         .power = (B_UPDATED_MOVE_DATA >= GEN_9) ? 95 : 70,
         .type = TYPE_PSYCHIC,
@@ -7685,7 +7685,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FEATHER DANCE"),
         .description = COMPOUND_STRING(
-            "The user covers the target's body with a mass of down that harshly lowers its Attack stat."),
+            "The user covers the target's body with a mass of down that harshly lowers its ATTACK stat."),
         .effect = EFFECT_ATTACK_DOWN_2,
         .power = 0,
         .type = TYPE_FLYING,
@@ -7920,7 +7920,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CRUSH CLAW"),
         .description = COMPOUND_STRING(
-            "The user slashes the target with hard and sharp claws. This may also lower the target's Defense."),
+            "The user slashes the target with hard and sharp claws. This may also lower the target's DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_NORMAL,
@@ -7999,7 +7999,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("METEOR MASH"),
         .description = COMPOUND_STRING(
-            "Fires a meteor-like punch. May raise Attack."),
+            "Fires a meteor-like punch. May raise ATTACK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 100,
         .type = TYPE_STEEL,
@@ -8106,7 +8106,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FAKE TEARS"),
         .description = COMPOUND_STRING(
-            "The user feigns crying to fluster the target, harshly lowering its Sp. Def stat."),
+            "The user feigns crying to fluster the target, harshly lowering its SP. DEF stat."),
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_DARK,
@@ -8155,7 +8155,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("OVERHEAT"),
         .description = COMPOUND_STRING(
-            "The user releases intense heat to attack. This also harshly lowers the user's Sp. Atk stat."),
+            "The user releases intense heat to attack. This also harshly lowers the user's SP. ATK stat."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 140,
         .type = TYPE_FIRE,
@@ -8207,7 +8207,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ROCK TOMB"),
         .description = COMPOUND_STRING(
-            "Hurls boulders to prevent the foe from moving, lowering its Speed and evasiveness."),
+            "Hurls boulders to prevent the foe from moving, lowering its SPEED and evasiveness."),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_ROCK,
@@ -8265,7 +8265,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("METAL SOUND"),
         .description = COMPOUND_STRING(
-            "A horrible sound like scraping metal harshly lowers the target's Sp. Def stat."),
+            "A horrible sound like scraping metal harshly lowers the target's SP. DEF stat."),
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_2,
         .power = 0,
         .type = TYPE_STEEL,
@@ -8317,7 +8317,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("TICKLE"),
         .description = COMPOUND_STRING(
-            "The user tickles the target, making it laugh and reducing its Attack and Defense."),
+            "The user tickles the target, making it laugh and reducing its ATTACK and DEFENSE."),
         .effect = EFFECT_TICKLE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -8341,7 +8341,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("COSMIC POWER"),
         .description = COMPOUND_STRING(
-            "The user absorbs a mystical power from space to raise its Defense and Sp. Def."),
+            "The user absorbs a mystical power from space to raise its DEFENSE and SP. DEF."),
         .effect = EFFECT_COSMIC_POWER,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -8632,7 +8632,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("IRON DEFENSE"),
         .description = COMPOUND_STRING(
-            "The user hardens its body's surface like iron, sharply raising its Defense."),
+            "The user hardens its body's surface like iron, sharply raising its DEFENSE."),
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_STEEL,
@@ -8683,7 +8683,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("HOWL"),
         .description = COMPOUND_STRING(
-            "The user howls loudly to raise the spirit of itself and allies. This raises their Attack."),
+            "The user howls loudly to raise the spirit of itself and allies. This raises their ATTACK."),
         .power = 0,
         .effect = B_UPDATED_MOVE_DATA >= GEN_8 ? EFFECT_ATTACK_UP_USER_ALLY : EFFECT_ATTACK_UP,
         .type = TYPE_NORMAL,
@@ -8760,7 +8760,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BULK UP"),
         .description = COMPOUND_STRING(
-            "The user tenses its muscles to bulk up its body, raising both its Attack and Defense."),
+            "The user tenses its muscles to bulk up its body, raising both its ATTACK and DEFENSE."),
         .effect = EFFECT_BULK_UP,
         .power = 0,
         .type = TYPE_FIGHTING,
@@ -8818,7 +8818,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("MUD SHOT"),
         .description = COMPOUND_STRING(
-            "The user attacks by hurling mud at the target. This also lowers the target's Speed."),
+            "The user attacks by hurling mud at the target. This also lowers the target's SPEED."),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_GROUND,
@@ -8979,7 +8979,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CALM MIND"),
         .description = COMPOUND_STRING(
-            "The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def."),
+            "The user quietly focuses its mind and calms its spirit to raise its SP. ATK and SP. DEF."),
         .effect = EFFECT_CALM_MIND,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -9030,7 +9030,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("DRAGON DANCE"),
         .description = COMPOUND_STRING(
-            "A mystic, powerful dance that raises the user's Attack and Speed."),
+            "A mystic, powerful dance that raises the user's ATTACK and SPEED."),
         .effect = EFFECT_DRAGON_DANCE,
         .power = 0,
         .type = TYPE_DRAGON,
@@ -9152,7 +9152,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("PSYCHO BOOST"),
         .description = COMPOUND_STRING(
-            "Allows a full-power attack, but sharply lowers Sp. Atk."),
+            "Allows a full-power attack, but sharply lowers SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 140,
         .type = TYPE_PSYCHIC,
@@ -9279,7 +9279,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("HAMMER ARM"),
         .description = COMPOUND_STRING(
-            "A swinging fist attack that also lowers Speed."),
+            "A swinging fist attack that also lowers SPEED."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FIGHTING,
@@ -9448,7 +9448,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TAILWIND"),
         .description = COMPOUND_STRING(
-            "Whips up a turbulent breeze that raises Speed."),
+            "Whips up a turbulent breeze that raises SPEED."),
         .effect = EFFECT_TAILWIND,
         .power = 0,
         .type = TYPE_FLYING,
@@ -9744,7 +9744,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POWER TRICK"),
         .description = COMPOUND_STRING(
-            "The user swaps its Attack and Defense stats."),
+            "The user swaps its ATTACK and DEFENSE stats."),
         .effect = EFFECT_POWER_TRICK,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -9880,7 +9880,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POWER SWAP"),
         .description = COMPOUND_STRING(
-            "Swaps changes to Attack and Sp. Atk with the foe."),
+            "Swaps changes to ATTACK and SP. ATK with the foe."),
         .effect = EFFECT_POWER_SWAP,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -9903,7 +9903,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GUARD SWAP"),
         .description = COMPOUND_STRING(
-            "Swaps changes to Defense and Sp. Def with the foe."),
+            "Swaps changes to DEFENSE and SP. DEF with the foe."),
         .effect = EFFECT_GUARD_SWAP,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -10193,7 +10193,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ROCK POLISH"),
         .description = COMPOUND_STRING(
-            "The user polishes its body to reduce drag. This sharply raises the Speed stat."),
+            "The user polishes its body to reduce drag. This sharply raises the SPEED stat."),
         .effect = EFFECT_SPEED_UP_2,
         .power = 0,
         .type = TYPE_ROCK,
@@ -10387,7 +10387,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BUG BUZZ"),
         .description = COMPOUND_STRING(
-            "The user generates a harsh sound wave by flapping its wings. It may lower the targets Sp. Def."),
+            "The user generates a harsh sound wave by flapping its wings. It may lower the targets SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_BUG,
@@ -10529,7 +10529,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FOCUS BLAST"),
         .description = COMPOUND_STRING(
-            "The user heightens its focus and unleashes its power. This may lower the target's Sp. Def."),
+            "The user heightens its focus and unleashes its power. This may lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_FIGHTING,
@@ -10555,7 +10555,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ENERGY BALL"),
         .description = COMPOUND_STRING(
-            "Draws power from nature to attack. May lower Sp. Def."),
+            "Draws power from nature to attack. May lower SP. DEF."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 80,
         .type = TYPE_GRASS,
@@ -10604,7 +10604,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("EARTH POWER"),
         .description = COMPOUND_STRING(
-            "The user makes the ground under the target erupt violently. This may lower the target's Sp. Def."),
+            "The user makes the ground under the target erupt violently. This may lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_GROUND,
@@ -10680,7 +10680,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("NASTY PLOT"),
         .description = COMPOUND_STRING(
-            "The user stimulates its brain by thinking bad thoughts, sharply raising its Sp. Atk."),
+            "The user stimulates its brain by thinking bad thoughts, sharply raising its SP. ATK."),
         .effect = EFFECT_SPECIAL_ATTACK_UP_2,
         .power = 0,
         .type = TYPE_DARK,
@@ -11009,7 +11009,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FLASH CANNON"),
         .description = COMPOUND_STRING(
-            "Releases a blast of light that may lower Sp. Def."),
+            "Releases a blast of light that may lower SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_STEEL,
@@ -11107,7 +11107,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("DRACO METEOR"),
         .description = COMPOUND_STRING(
-            "Casts comets onto the foe. Harshly lowers the Sp. Atk."),
+            "Casts comets onto the foe. Harshly lowers the SP. ATK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 140,
         .type = TYPE_DRAGON,
@@ -11181,7 +11181,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("LEAF STORM"),
         .description = COMPOUND_STRING(
-            "The user unleashes all its leaves to attack. This also harshly lowers the user's Sp. Atk."),
+            "The user unleashes all its leaves to attack. This also harshly lowers the user's SP. ATK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 140,
         .type = TYPE_GRASS,
@@ -11376,7 +11376,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("CAPTIVATE"),
         .description = COMPOUND_STRING(
-            "Makes the opposite gender sharply reduce its Sp. Atk."),
+            "Makes the opposite gender sharply reduce its SP. ATK."),
         .effect = EFFECT_CAPTIVATE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -11535,7 +11535,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CHARGE BEAM"),
         .description = COMPOUND_STRING(
-            "The user fires a beam of charged particles at the target. The remaining charge raises Sp. Atk."),
+            "The user fires a beam of charged particles at the target. The remaining charge raises SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_ELECTRIC,
@@ -11628,7 +11628,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("DEFEND ORDER"),
         .description = COMPOUND_STRING(
-            "Raises Defense and Sp. Def with a living shield."),
+            "Raises DEFENSE and SP. DEF with a living shield."),
         .effect = EFFECT_COSMIC_POWER,
         .power = 0,
         .type = TYPE_BUG,
@@ -11866,7 +11866,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SEED FLARE"),
         .description = COMPOUND_STRING(
-            "Generates a shock wave that sharply reduces Sp. Def."),
+            "Generates a shock wave that sharply reduces SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_GRASS,
@@ -11948,7 +11948,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("HONE CLAWS"),
         .description = COMPOUND_STRING(
-            "Sharpens its claws to raise Attack and Accuracy."),
+            "Sharpens its claws to raise ATTACK and Accuracy."),
         .effect = EFFECT_ATTACK_ACCURACY_UP,
         .power = 0,
         .type = TYPE_DARK,
@@ -12000,7 +12000,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GUARD SPLIT"),
         .description = COMPOUND_STRING(
-            "Averages changes to Defense and Sp. Def with the foe."),
+            "Averages changes to DEFENSE and SP. DEF with the foe."),
         .effect = EFFECT_GUARD_SPLIT,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -12023,7 +12023,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POWER SPLIT"),
         .description = COMPOUND_STRING(
-            "Averages changes to Attack and Sp. Atk with the foe."),
+            "Averages changes to ATTACK and SP. ATK with the foe."),
         .effect = EFFECT_POWER_SPLIT,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -12046,7 +12046,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("WONDER ROOM"),
         .description = COMPOUND_STRING(
-            "Defense and Sp. Def stats are swapped for 5 turns."),
+            "DEFENSE and SP. DEF stats are swapped for 5 turns."),
         .effect = EFFECT_WONDER_ROOM,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -12111,7 +12111,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("AUTOTOMIZE"),
         .description = COMPOUND_STRING(
-            "Sheds additional weight to sharply boost Speed."),
+            "Sheds additional weight to sharply boost SPEED."),
         .effect = EFFECT_AUTOTOMIZE,
         .power = 0,
         .type = TYPE_STEEL,
@@ -12309,7 +12309,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("QUIVER DANCE"),
         .description = COMPOUND_STRING(
-            "Dances to raise Sp. Atk Sp. Def and Speed."),
+            "Dances to raise SP. ATK SP. DEF and SPEED."),
         .effect = EFFECT_QUIVER_DANCE,
         .power = 0,
         .type = TYPE_BUG,
@@ -12425,7 +12425,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FLAME CHARGE"),
         .description = COMPOUND_STRING(
-            "Attacks in a cloak of flames. Raises Speed."),
+            "Attacks in a cloak of flames. Raises SPEED."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_FIRE,
@@ -12452,7 +12452,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("COIL"),
         .description = COMPOUND_STRING(
-            "Coils up and concentrates to raises its Attack and Defense as well as its accuracy."),
+            "Coils up and concentrates to raises its ATTACK and DEFENSE as well as its accuracy."),
         .effect = EFFECT_COIL,
         .power = 0,
         .type = TYPE_POISON,
@@ -12477,7 +12477,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("LOW SWEEP"),
         .description = COMPOUND_STRING(
-            "Attacks the foe's legs lowering its Speed."),
+            "Attacks the foe's legs lowering its SPEED."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 65 : 60,
         .type = TYPE_FIGHTING,
@@ -12503,7 +12503,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ACID SPRAY"),
         .description = COMPOUND_STRING(
-            "Sprays a hide-melting acid. Sharply reduces Sp. Def."),
+            "Sprays a hide-melting acid. Sharply reduces SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_POISON,
@@ -12529,7 +12529,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FOUL PLAY"),
         .description = COMPOUND_STRING(
-            "The higher the foe's Attack the more damage caused."),
+            "The higher the foe's ATTACK the more damage caused."),
         .effect = EFFECT_FOUL_PLAY,
         .power = 95,
         .type = TYPE_DARK,
@@ -12917,7 +12917,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SHIFT GEAR"),
         .description = COMPOUND_STRING(
-            "Rotates its gears to raise Attack and Speed."),
+            "Rotates its gears to raise ATTACK and SPEED."),
         .effect = EFFECT_SHIFT_GEAR,
         .power = 0,
         .type = TYPE_STEEL,
@@ -13241,7 +13241,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("STRUGGLE BUG"),
         .description = COMPOUND_STRING(
-            "Resisting, the user attacks the foe. Lowers Sp. Atk."),
+            "Resisting, the user attacks the foe. Lowers SP. ATK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 50 : 30,
         .type = TYPE_BUG,
@@ -13266,7 +13266,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BULLDOZE"),
         .description = COMPOUND_STRING(
-            "Stomps down on the ground. Lowers Speed."),
+            "Stomps down on the ground. Lowers SPEED."),
         .effect = EFFECT_EARTHQUAKE,
         .power = 60,
         .type = TYPE_GROUND,
@@ -13337,7 +13337,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("WORK UP"),
         .description = COMPOUND_STRING(
-            "The user is roused. Ups Attack and Sp. Atk."),
+            "The user is roused. Ups ATTACK and SP. ATK."),
         .effect = EFFECT_ATTACK_SPATK_UP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -13362,7 +13362,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ELECTROWEB"),
         .description = COMPOUND_STRING(
-            "Snares the foe with an electric net. Lowers Speed."),
+            "Snares the foe with an electric net. Lowers SPEED."),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_ELECTRIC,
@@ -13528,7 +13528,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("RAZOR SHELL"),
         .description = COMPOUND_STRING(
-            "Cuts the foe with sharp shells. May lower the foe's Defense. "),
+            "Cuts the foe with sharp shells. May lower the foe's DEFENSE. "),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_WATER,
@@ -13629,7 +13629,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("COTTON GUARD"),
         .description = COMPOUND_STRING(
-            "Wraps its body in cotton. Drastically raises Defense."),
+            "Wraps its body in cotton. Drastically raises DEFENSE."),
         .effect = EFFECT_DEFENSE_UP_3,
         .power = 0,
         .type = TYPE_GRASS,
@@ -13895,7 +13895,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GLACIATE"),
         .description = COMPOUND_STRING(
-            "Blows very cold air at the foe. It lowers their Speed."),
+            "Blows very cold air at the foe. It lowers their SPEED."),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ICE,
@@ -13971,7 +13971,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FIERY DANCE"),
         .description = COMPOUND_STRING(
-            "Dances cloaked in flames. May raise Sp. Atk."),
+            "Dances cloaked in flames. May raise SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FIRE,
@@ -14056,7 +14056,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SNARL"),
         .description = COMPOUND_STRING(
-            "Yells and rants at the foes, which lowers their Sp. Atk. "),
+            "Yells and rants at the foes, which lowers their SP. ATK. "),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_DARK,
@@ -14108,7 +14108,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("V-CREATE"),
         .description = COMPOUND_STRING(
-            "Very powerful, but lowers Defense, Sp. Def and Speed."),
+            "Very powerful, but lowers DEFENSE, SP. DEF and SPEED."),
         .effect = EFFECT_HIT,
         .power = 180,
         .type = TYPE_FIRE,
@@ -14265,7 +14265,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ROTOTILLER"),
         .description = COMPOUND_STRING(
-            "Ups the Attack and Sp. Atk of Grass-type Pokémon."),
+            "Ups the ATTACK and SP. ATK of Grass-type Pokémon."),
         .effect = EFFECT_ROTOTILLER,
         .power = 0,
         .type = TYPE_GROUND,
@@ -14315,7 +14315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FELL STINGER"),
         .description = COMPOUND_STRING(
-            "Attacks with a stinger to land a finishing blow. Drastically raises user's Attack if it does."),
+            "Attacks with a stinger to land a finishing blow. Drastically raises user's ATTACK if it does."),
         .effect = EFFECT_FELL_STINGER,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 50 : 30,
         .type = TYPE_BUG,
@@ -14392,7 +14392,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("NOBLE ROAR"),
         .description = COMPOUND_STRING(
-            "Intimidates the foe, to cut Attack and Sp. Atk."),
+            "Intimidates the foe, to cut ATTACK and SP. ATK."),
         .effect = EFFECT_NOBLE_ROAR,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -14564,7 +14564,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("PARTING SHOT"),
         .description = COMPOUND_STRING(
-            "Lowers the foe's Attack and Sp. Atk, then switches out."),
+            "Lowers the foe's ATTACK and SP. ATK, then switches out."),
         .effect = EFFECT_PARTING_SHOT,
         .power = 0,
         .type = TYPE_DARK,
@@ -14662,7 +14662,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FLOWER SHIELD"),
         .description = COMPOUND_STRING(
-            "Raises the Defense of Grass-type Pokémon."),
+            "Raises the DEFENSE of Grass-type Pokémon."),
         .effect = EFFECT_FLOWER_SHIELD,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -14758,7 +14758,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("PLAY ROUGH"),
         .description = COMPOUND_STRING(
-            "Plays rough with the foe to attack. May lower the foe's Attack."),
+            "Plays rough with the foe to attack. May lower the foe's ATTACK."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_FAIRY,
@@ -14806,7 +14806,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("MOONBLAST"),
         .description = COMPOUND_STRING(
-            "Borrows the power of the moon to attack. May lower the target's Sp. Atk."),
+            "Borrows the power of the moon to attack. May lower the target's SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_FAIRY,
@@ -14878,7 +14878,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("KING's Shield"),
         .description = COMPOUND_STRING(
-            "Evades damage, and sharply reduces Attack if struck."),
+            "Evades damage, and sharply reduces ATTACK if struck."),
         .effect = EFFECT_PROTECT,
         .power = 0,
         .type = TYPE_STEEL,
@@ -14906,7 +14906,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("PLAY NICE"),
         .description = COMPOUND_STRING(
-            "Befriend the foe, lowering its Attack without fail."),
+            "Befriend the foe, lowering its ATTACK without fail."),
         .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -14931,7 +14931,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("CONFIDE"),
         .description = COMPOUND_STRING(
-            "Shares a secret with the foe, lowering Sp. Atk."),
+            "Shares a secret with the foe, lowering SP. ATK."),
         .effect = EFFECT_SPECIAL_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -14957,7 +14957,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("DIAMOND STORM"),
         .description = COMPOUND_STRING(
-            "Whips up a storm of diamonds. May up Defense."),
+            "Whips up a storm of diamonds. May up DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_ROCK,
@@ -15058,7 +15058,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MYSTICAL FIRE"),
         .description = COMPOUND_STRING(
-            "Breathes a special, hot fire. Lowers Sp. Atk."),
+            "Breathes a special, hot fire. Lowers SP. ATK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 75 : 65,
         .type = TYPE_FIRE,
@@ -15110,7 +15110,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("AROMATIC MIST"),
         .description = COMPOUND_STRING(
-            "Raises the Sp. Def of a partner Pokémon."),
+            "Raises the SP. DEF of a partner Pokémon."),
         .effect = EFFECT_AROMATIC_MIST,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -15135,7 +15135,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("EERIE IMPULSE"),
         .description = COMPOUND_STRING(
-            "Exposes the foe to a pulse that sharply cuts Sp. Atk."),
+            "Exposes the foe to a pulse that sharply cuts SP. ATK."),
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_2,
         .power = 0,
         .type = TYPE_ELECTRIC,
@@ -15158,7 +15158,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("VENOM DRENCH"),
         .description = COMPOUND_STRING(
-            "Lowers the Attack, Sp. Atk and Speed of a poisoned foe."),
+            "Lowers the ATTACK, SP. ATK and SPEED of a poisoned foe."),
         .effect = EFFECT_VENOM_DRENCH,
         .power = 0,
         .type = TYPE_POISON,
@@ -15205,7 +15205,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GEOMANCY"),
         .description = COMPOUND_STRING(
-            "Raises Sp. Atk, Sp. Def and Speed on the 2nd turn."),
+            "Raises SP. ATK, SP. DEF and SPEED on the 2nd turn."),
         .effect = EFFECT_GEOMANCY,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -15387,7 +15387,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BABY-DOLL EYES"),
         .description = COMPOUND_STRING(
-            "Stares at the foe with baby-doll eyes, lowering the its Attack. This move always goes first."),
+            "Stares at the foe with baby-doll eyes, lowering the its ATTACK. This move always goes first."),
         .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -15482,7 +15482,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POWER-UP PUNCH"),
         .description = COMPOUND_STRING(
-            "A hard punch that raises the user's Attack."),
+            "A hard punch that raises the user's ATTACK."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_FIGHTING,
@@ -15878,7 +15878,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ICE HAMMER"),
         .description = COMPOUND_STRING(
-            "Swings the fist to strike. Lowers the user's Speed."),
+            "Swings the fist to strike. Lowers the user's SPEED."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_ICE,
@@ -15953,7 +15953,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("STRENGTH SAP"),
         .description = COMPOUND_STRING(
-            "Restores HP by the same amount as the foe's Attack stat, and lowers the target's Attack."),
+            "Restores HP by the same amount as the foe's ATTACK stat, and lowers the target's ATTACK."),
         .effect = EFFECT_STRENGTH_SAP,
         .power = 0,
         .type = TYPE_GRASS,
@@ -16051,7 +16051,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TOXIC THREAD"),
         .description = COMPOUND_STRING(
-            "Attacks with a thread that poisons and drops Speed."),
+            "Attacks with a thread that poisons and drops SPEED."),
         .effect = EFFECT_TOXIC_THREAD,
         .power = 0,
         .type = TYPE_POISON,
@@ -16223,7 +16223,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("LUNGE"),
         .description = COMPOUND_STRING(
-            "Lunges at the foe to lower its Attack stat."),
+            "Lunges at the foe to lower its ATTACK stat."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_BUG,
@@ -16249,7 +16249,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FIRE LASH"),
         .description = COMPOUND_STRING(
-            "Whips the foe with fire lowering its Defense."),
+            "Whips the foe with fire lowering its DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FIRE,
@@ -16324,7 +16324,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SPEED SWAP"),
         .description = COMPOUND_STRING(
-            "Swaps user's Speed with the target's."),
+            "Swaps user's SPEED with the target's."),
         .effect = EFFECT_SPEED_SWAP,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -16441,7 +16441,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TROP KICK"),
         .description = COMPOUND_STRING(
-            "An intense kick from the tropics. Lowers Attack."),
+            "An intense kick from the tropics. Lowers ATTACK."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_GRASS,
@@ -16522,7 +16522,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("CLANGING SCALES"),
         .description = COMPOUND_STRING(
-            "Makes a big noise with its scales. Drops Defense."),
+            "Makes a big noise with its scales. Drops DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 110,
         .type = TYPE_DRAGON,
@@ -16646,7 +16646,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FLEUR CANNON"),
         .description = COMPOUND_STRING(
-            "A strong ray that harshly lowers Sp. Attack."),
+            "A strong ray that harshly lowers Sp. ATTACK."),
         .effect = EFFECT_HIT,
         .power = 130,
         .type = TYPE_FAIRY,
@@ -16718,7 +16718,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SHADOW BONE"),
         .description = COMPOUND_STRING(
-            "Strikes with a haunted bone. Might drop Defense."),
+            "Strikes with a haunted bone. Might drop DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_GHOST,
@@ -16764,7 +16764,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("LIQUIDATION"),
         .description = COMPOUND_STRING(
-            "Slams the foe with water. Can lower Defense."),
+            "Slams the foe with water. Can lower DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_WATER,
@@ -16886,7 +16886,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TEARFUL LOOK"),
         .description = COMPOUND_STRING(
-            "The user tears up, dropping Attack and Sp. Attack."),
+            "The user tears up, dropping ATTACK and Sp. ATTACK."),
         .effect = EFFECT_NOBLE_ROAR,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -17227,7 +17227,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GLITZY GLOW"),
         .description = COMPOUND_STRING(
-            "Telekinetic force that sets wall, lowering Sp. Atk damage."),
+            "Telekinetic force that sets wall, lowering SP. ATK damage."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 80 : 90,
         .type = TYPE_PSYCHIC,
@@ -17251,7 +17251,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BADDY BAD"),
         .description = COMPOUND_STRING(
-            "Acting badly, attacks. Sets wall, lowering Attack damage."),
+            "Acting badly, attacks. Sets wall, lowering ATTACK damage."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 80 : 90,
         .type = TYPE_DARK,
@@ -17524,7 +17524,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TAR SHOT"),
         .description = COMPOUND_STRING(
-            "Lowers the foe's Speed and makes it weak to Fire."),
+            "Lowers the foe's SPEED and makes it weak to Fire."),
         .effect = EFFECT_TAR_SHOT,
         .power = 0,
         .type = TYPE_ROCK,
@@ -17617,7 +17617,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("OCTOLOCK"),
         .description = COMPOUND_STRING(
-            "Traps the foe to lower Def and Sp. Def each turn."),
+            "Traps the foe to lower Def and SP. DEF each turn."),
         .effect = EFFECT_OCTOLOCK,
         .power = 0,
         .type = TYPE_FIGHTING,
@@ -17780,7 +17780,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("DRUM BEATING"),
         .description = COMPOUND_STRING(
-            "Plays a drum to attack. The foe's Speed is lowered."),
+            "Plays a drum to attack. The foe's SPEED is lowered."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_GRASS,
@@ -17914,7 +17914,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("AURA WHEEL"),
         .description = COMPOUND_STRING(
-            "Raises Speed to attack. The Type is based on its form."),
+            "Raises SPEED to attack. The Type is based on its form."),
         .effect = EFFECT_AURA_WHEEL,
         .power = 110,
         .type = TYPE_ELECTRIC,
@@ -18015,7 +18015,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("APPLE ACID"),
         .description = COMPOUND_STRING(
-            "Attacks with tart apple acid to lower the foe's Sp. Def."),
+            "Attacks with tart apple acid to lower the foe's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_GRASS,
@@ -18041,7 +18041,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("GRAV APPLE"),
         .description = COMPOUND_STRING(
-            "Drops an apple from above. Lowers the foe's Defense."),
+            "Drops an apple from above. Lowers the foe's DEFENSE."),
         .effect = EFFECT_GRAV_APPLE,
         .power = 80,
         .type = TYPE_GRASS,
@@ -18067,7 +18067,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SPIRIT BREAK"),
         .description = COMPOUND_STRING(
-            "Attacks with spirit-breaking force. Lowers Sp. Atk."),
+            "Attacks with spirit-breaking force. Lowers SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_FAIRY,
@@ -18315,7 +18315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SCALE SHOT"),
         .description = COMPOUND_STRING(
-            "Shoots scales 2 to 5 times. Ups Speed, lowers defense."),
+            "Shoots scales 2 to 5 times. Ups SPEED, lowers defense."),
         .effect = EFFECT_MULTI_HIT,
         .power = 25,
         .type = TYPE_DRAGON,
@@ -18337,7 +18337,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("METEOR BEAM"),
         .description = COMPOUND_STRING(
-            "Gathers space power and boosts Sp. Atk, then blasts the foe on the next turn."),
+            "Gathers space power and boosts SP. ATK, then blasts the foe on the next turn."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 120,
         .type = TYPE_ROCK,
@@ -18477,7 +18477,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SKITTER SMACK"),
         .description = COMPOUND_STRING(
-            "User skitters behind foe to attack. Lowers foe's Sp. Atk."),
+            "User skitters behind foe to attack. Lowers foe's SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_BUG,
@@ -18594,7 +18594,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("COACHING"),
         .description = COMPOUND_STRING(
-            "Properly coaches allies to up their Attack and Defense."),
+            "Properly coaches allies to up their ATTACK and DEFENSE."),
         .effect = EFFECT_COACHING,
         .power = 0,
         .type = TYPE_FIGHTING,
@@ -18893,7 +18893,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("THUNDEROUS KICK"),
         .description = COMPOUND_STRING(
-            "Uses a lightning-like kick to hit. Lowers foe's Defense."),
+            "Uses a lightning-like kick to hit. Lowers foe's DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_FIGHTING,
@@ -19013,7 +19013,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("PSYSHIELD BASH"),
         .description = COMPOUND_STRING(
-            "Hits a foe with psychic energy. May raise Defense."),
+            "Hits a foe with psychic energy. May raise DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_PSYCHIC,
@@ -19036,7 +19036,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POWER SHIFT"),
         .description = COMPOUND_STRING(
-            "The user swaps its Attack and Defense stats."),
+            "The user swaps its ATTACK and DEFENSE stats."),
         .effect = EFFECT_POWER_TRICK,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -19103,7 +19103,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MYSTICAL POWER"),
         .description = COMPOUND_STRING(
-            "A mysterious power strikes, raising the user's Sp. Atk."),
+            "A mysterious power strikes, raising the user's SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_PSYCHIC,
@@ -19205,7 +19205,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("VICTORY DANCE"),
         .description = COMPOUND_STRING(
-            "Dances to raise Attack, Defense and Speed."),
+            "Dances to raise ATTACK, DEFENSE and SPEED."),
         .effect = EFFECT_VICTORY_DANCE,
         .power = 0,
         .type = TYPE_FIGHTING,
@@ -19271,7 +19271,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ESPER WING"),
         .description = COMPOUND_STRING(
-            "High critical hit ratio. Ups the user's Speed."),
+            "High critical hit ratio. Ups the user's SPEED."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 80 : 75,
         .type = TYPE_PSYCHIC,
@@ -19294,7 +19294,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BITTER MALICE"),
         .description = COMPOUND_STRING(
-            "A spine-chilling resentment. Lowers the foe's Attack."),
+            "A spine-chilling resentment. Lowers the foe's ATTACK."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 75 : 60,
         .type = TYPE_GHOST,
@@ -19315,7 +19315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SHELTER"),
         .description = COMPOUND_STRING(
-            "The user hardens their skin, sharply raising its Defense."),
+            "The user hardens their skin, sharply raising its DEFENSE."),
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_STEEL,
@@ -19335,7 +19335,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TRIPLE ARROWS"),
         .description = COMPOUND_STRING(
-            "High critical hit ratio. May lower Defense or flinch."),
+            "High critical hit ratio. May lower DEFENSE or flinch."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 90 : 50,
         .type = TYPE_FIGHTING,
@@ -19406,7 +19406,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BLEAKWIND STORM"),
         .description = COMPOUND_STRING(
-            "Hits with brutal, cold winds. May lower the foe's Speed."),
+            "Hits with brutal, cold winds. May lower the foe's SPEED."),
         .effect = EFFECT_RAIN_ALWAYS_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 100 : 95,
         .type = TYPE_FLYING,
@@ -19535,7 +19535,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SILK TRAP"),
         .description = COMPOUND_STRING(
-            "Protects itself, lowering Speed on contact."),
+            "Protects itself, lowering SPEED on contact."),
         .effect = EFFECT_PROTECT,
         .power = 0,
         .type = TYPE_BUG,
@@ -19595,7 +19595,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("LUMINA CRASH"),
         .description = COMPOUND_STRING(
-            "A mind-affecting light harshly lowers Sp. Def."),
+            "A mind-affecting light harshly lowers SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
@@ -19660,7 +19660,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SPICY EXTRACT"),
         .description = COMPOUND_STRING(
-            "Sharply ups target's Attack, harshly lowers its Defense."),
+            "Sharply ups target's ATTACK, harshly lowers its DEFENSE."),
         .effect = EFFECT_SPICY_EXTRACT,
         .power = 0,
         .type = TYPE_GRASS,
@@ -19679,7 +19679,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SPIN OUT"),
         .description = COMPOUND_STRING(
-            "Furiously strains its legs. Harshly lowers user's Speed."),
+            "Furiously strains its legs. Harshly lowers user's SPEED."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_STEEL,
@@ -19867,7 +19867,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FILLET AWAY"),
         .description = COMPOUND_STRING(
-            "Sharply boosts offenses and Speed by using its own HP."),
+            "Sharply boosts offenses and SPEED by using its own HP."),
         .effect = EFFECT_FILLET_AWAY,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -19926,7 +19926,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TORCH SONG"),
         .description = COMPOUND_STRING(
-            "Flames scorch the target. Boosts the user's Sp. Atk."),
+            "Flames scorch the target. Boosts the user's SP. ATK."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FIRE,
@@ -19950,7 +19950,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("AQUA STEP"),
         .description = COMPOUND_STRING(
-            "Hits with light, fluid dance steps. Ups the user's Speed."),
+            "Hits with light, fluid dance steps. Ups the user's SPEED."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_WATER,
@@ -19993,7 +19993,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MAKE IT RAIN"),
         .description = COMPOUND_STRING(
-            "Lowers the user's Sp. Atk. Money is recovered after."),
+            "Lowers the user's SP. ATK. Money is recovered after."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_STEEL,
@@ -20116,7 +20116,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TIDY UP"),
         .description = COMPOUND_STRING(
-            "User tidies up hazards and raises its Attack and Speed."),
+            "User tidies up hazards and raises its ATTACK and SPEED."),
         .effect = EFFECT_TIDY_UP,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -20157,7 +20157,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("POUNCE"),
         .description = COMPOUND_STRING(
-            "The user pounces on the foe, lowering its Speed."),
+            "The user pounces on the foe, lowering its SPEED."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_BUG,
@@ -20180,7 +20180,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("TRAILBLAZE"),
         .description = COMPOUND_STRING(
-            "The user attacks suddenly, raising its Speed."),
+            "The user attacks suddenly, raising its SPEED."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_GRASS,
@@ -20204,7 +20204,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("CHILLING WATER"),
         .description = COMPOUND_STRING(
-            "A shower with ice-cold water lowers the target's Attack."),
+            "A shower with ice-cold water lowers the target's ATTACK."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_WATER,
@@ -21005,7 +21005,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("SHELL SHOCK"),
         .description = COMPOUND_STRING(
-            "Spins to attack while safely tucked inside its shell. Raises Defense after hitting."),
+            "Spins to attack while safely tucked inside its shell. Raises DEFENSE after hitting."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_ROCK,
@@ -21026,7 +21026,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SANDBLAST"),
         .description = COMPOUND_STRING(
-            "Blasts the foe with abrasive sand that may lower its Defense or accuracy."),
+            "Blasts the foe with abrasive sand that may lower its DEFENSE or accuracy."),
         .effect = EFFECT_HIT,
         .power = 30,
         .type = TYPE_GROUND,
@@ -21052,7 +21052,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("NECTAR SPRAY"),
         .description = COMPOUND_STRING(
-            "Sprays a sticky nectar at the foe, lowering its Speed. "),
+            "Sprays a sticky nectar at the foe, lowering its SPEED. "),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_BUG,
@@ -21160,7 +21160,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("TENDERIZE"),
         .description = COMPOUND_STRING(
-            "Punches to soften up the foe. Lowers Defense. Can only be used on the first turn."),
+            "Punches to soften up the foe. Lowers DEFENSE. Can only be used on the first turn."),
         .priority = 2,
         .makesContact = TRUE,
         .punchingMove = TRUE,
