@@ -6178,31 +6178,7 @@ void DoMonFrontSpriteAnimation(struct Sprite *sprite, u16 species, bool8 noCry, 
 
 void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneFrame, bool32 isShadow)
 {
-    if (!oneFrame && HasTwoFramesAnimation(species))
-        StartSpriteAnim(sprite, 1);
-    if (gSpeciesInfo[species].frontAnimDelay != 0)
-    {
-        // Animation has delay, start delay task
-        u8 taskId = CreateTask(Task_PokemonSummaryAnimateAfterDelay, 0);
-        STORE_PTR_IN_TASK(sprite, taskId, 0);
-        gTasks[taskId].sAnimId = gSpeciesInfo[species].frontAnimId;
-        gTasks[taskId].sAnimDelay = gSpeciesInfo[species].frontAnimDelay;
-        gTasks[taskId].tIsShadow = isShadow;  // needed to track anim delay task for mon shadow in BW summary screen
-
-        #if BW_SUMMARY_SCREEN == TRUE
-        if (isShadow)
-            SummaryScreen_SetShadowAnimDelayTaskId_BW(taskId);
-        else
-        #endif
-            SummaryScreen_SetAnimDelayTaskId(taskId);
-
-        SetSpriteCB_MonAnimDummy(sprite);
-    }
-    else
-    {
-        // No delay, start animation
-        StartMonSummaryAnimation(sprite, gSpeciesInfo[species].frontAnimId);
-    }
+    sprite->callback = SpriteCallbackDummy;
 }
 
 #define tIsShadow data[4]
