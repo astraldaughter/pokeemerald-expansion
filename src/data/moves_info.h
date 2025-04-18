@@ -8386,7 +8386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SIGNAL_BEAM] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SIGNAL BEAM"),
         .description = COMPOUND_STRING(
             "The user attacks with a strange beam of light. This may also confuse the target."),
@@ -9350,7 +9350,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_BRINE] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("BRINE"),
         .description = COMPOUND_STRING(
             "Sprays the target with salty water, dealing double damage if it has half HP or less."),
@@ -13525,7 +13525,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_RAZOR_SHELL] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("RAZOR SHELL"),
         .description = COMPOUND_STRING(
             "Cuts the foe with sharp shells. May lower the foe's DEFENSE. "),
@@ -16740,7 +16740,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_ACCELEROCK] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("ACCELEROCK"),
         .description = COMPOUND_STRING(
             "Flings a stone at the foe at high speed. This move always goes first."),
