@@ -28312,6 +28312,12 @@ gBattleAnimStatus_Nightmare::
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
+gBattleAnimStatus_Panic::
+	createvisualtask AnimTask_ShakeTargetInPattern, 5, 60, 1, FALSE
+	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER, 12, 4
+	waitforvisualfinish
+	end
+
 gBattleAnimGeneral_StatsChange::
 	createvisualtask AnimTask_StatsChange, 5
 	waitforvisualfinish

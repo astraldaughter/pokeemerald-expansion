@@ -893,6 +893,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_PARALYSIS]      = STATUS1_PARALYSIS,
     [MOVE_EFFECT_TOXIC]          = STATUS1_TOXIC_POISON,
     [MOVE_EFFECT_FROSTBITE]      = STATUS1_FROSTBITE,
+    [MOVE_EFFECT_PANIC]          = STATUS1_PANIC,
     [MOVE_EFFECT_CONFUSION]      = STATUS2_CONFUSION,
     [MOVE_EFFECT_FLINCH]         = STATUS2_FLINCHED,
     [MOVE_EFFECT_UPROAR]         = STATUS2_UPROAR,
@@ -917,6 +918,7 @@ static const u8 *const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_PAYDAY]           = BattleScript_MoveEffectPayDay,
     [MOVE_EFFECT_WRAP]             = BattleScript_MoveEffectWrap,
     [MOVE_EFFECT_FROSTBITE]        = BattleScript_MoveEffectFrostbite,
+    [MOVE_EFFECT_PANIC]            = BattleScript_MoveEffectPanic,
 };
 
 static const struct WindowTemplate sUnusedWinTemplate =
@@ -3451,6 +3453,19 @@ void SetMoveEffect(bool32 primary, bool32 certain)
             }
             if (!CanGetFrostbite(gEffectBattler))
                 break;
+
+            statusChanged = TRUE;
+            break;
+        case STATUS1_PANIC:
+            if (B_STATUS_TYPE_IMMUNITY == GEN_1)
+            {
+                u32 moveType = GetBattleMoveType(gCurrentMove);
+                if (primary == FALSE && certain == FALSE && IS_BATTLER_OF_TYPE(gEffectBattler, moveType))
+                    break;
+            }
+            if (!CanBePanicked(gEffectBattler))
+                break;
+
 
             statusChanged = TRUE;
             break;
@@ -6665,6 +6680,9 @@ static void Cmd_moveend(void)
                     case STATUS1_TOXIC_POISON:
                     case STATUS1_PSN_ANY:
                         gBattlescriptCurrInstr = BattleScript_TargetPoisonHealed;
+                        break;
+                    case STATUS1_PANIC:
+                        gBattlescriptCurrInstr = BattleScript_TargetPanicHealed;
                         break;
                     }
                 }

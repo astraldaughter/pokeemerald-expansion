@@ -895,6 +895,17 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITDOESNTAFFECTTWOFOES]                = COMPOUND_STRING("It doesn't affect {B_DEF_NAME_WITH_PREFIX2} and {B_DEF_PARTNER_NAME}…"),
     [STRINGID_SENDCAUGHTMONPARTYORBOX]              = COMPOUND_STRING("Add {B_DEF_NAME} to your party?"),
     [STRINGID_PKMNSENTTOPCAFTERCATCH]               = gText_PkmnSentToPCAfterCatch,
+    [STRINGID_THUNDERSTORMBREWED]                   = COMPOUND_STRING("A thunderstorm brewed!"),
+    [STRINGID_THUNDERSTORMRAGES]                    = COMPOUND_STRING("The thunderstorm is raging."),
+    [STRINGID_THUNDERSTORMSTOPPED]                  = COMPOUND_STRING("The thunderstorm subsided."),
+    [STRINGID_PKMNSTRUCKBYLIGHTNING]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is struck by lightning!"),
+    [STRINGID_PKMNSTARTEDTOPANIC]                   = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} started to panic!"),
+    [STRINGID_PKMNISALREADYPANICKED]                = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} is already panicked!"),
+    [STRINGID_PKMNSITEMHEALEDPANIC]                 = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_LAST_ITEM} eased its panic!"),
+    [STRINGID_ATTACKERHEALEDITSPANIC]               = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} pushed through its panic so you wouldn't worry!"),
+    [STRINGID_PKMNPANICHEALED]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s panic eased!"),
+    [STRINGID_PKMNPANICHEALED2]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s panic eased!"),
+    [STRINGID_PKMNPANICHEALEDBY]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} eased its panic!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1199,6 +1210,11 @@ const u16 gGotBurnedStringIds[] =
 const u16 gGotFrostbiteStringIds[] =
 {
     [B_MSG_STATUSED]            = STRINGID_PKMNGOTFROSTBITE
+};
+
+const u16 gGotPanickedStringIds[] =
+{
+    [B_MSG_STATUSED]            = STRINGID_PKMNSTARTEDTOPANIC,
 };
 
 const u16 gFrostbiteHealedStringIds[] =

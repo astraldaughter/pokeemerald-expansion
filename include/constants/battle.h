@@ -333,6 +333,7 @@ enum MoveEffects
     MOVE_EFFECT_PARALYSIS,
     MOVE_EFFECT_TOXIC,
     MOVE_EFFECT_FROSTBITE,
+    MOVE_EFFECT_PANIC,
     MOVE_EFFECT_CONFUSION,
     MOVE_EFFECT_FLINCH,
     MOVE_EFFECT_TRI_ATTACK,
@@ -460,7 +461,7 @@ enum MoveEffects
     NUM_MOVE_EFFECTS
 };
 
-#define PRIMARY_STATUS_MOVE_EFFECT      MOVE_EFFECT_FROSTBITE // All above move effects apply primary status
+#define PRIMARY_STATUS_MOVE_EFFECT      MOVE_EFFECT_PANIC // All above move effects apply primary status
 #if B_USE_FROSTBITE == TRUE
 #define MOVE_EFFECT_FREEZE_OR_FROSTBITE MOVE_EFFECT_FROSTBITE
 #else

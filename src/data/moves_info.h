@@ -4765,11 +4765,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SCARY FACE"),
         .description = COMPOUND_STRING(
-            "The user frightens the target with a scary face to harshly lower its SPEED."),
-        .effect = EFFECT_SPEED_DOWN_2,
+            "Makes a frightening face to scare the foe, causing panic."),
+        .effect = EFFECT_PANIC,
         .power = 0,
-        .type = TYPE_NORMAL,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 90,
+        .type = TYPE_GHOST,
+        .accuracy = 90,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,

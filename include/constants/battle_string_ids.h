@@ -731,8 +731,19 @@
 #define STRINGID_PKMNSENTTOPCAFTERCATCH               729
 #define STRINGID_TUBEROUSHPUP                         730
 #define STRINGID_ABILITYLETITUSEMOVE                  731
+#define STRINGID_THUNDERSTORMBREWED                   732
+#define STRINGID_THUNDERSTORMRAGES                    733
+#define STRINGID_THUNDERSTORMSTOPPED                  734
+#define STRINGID_PKMNSTRUCKBYLIGHTNING                735
+#define STRINGID_PKMNSTARTEDTOPANIC                   736
+#define STRINGID_PKMNISALREADYPANICKED                737
+#define STRINGID_PKMNSITEMHEALEDPANIC                 738
+#define STRINGID_ATTACKERHEALEDITSPANIC               739
+#define STRINGID_PKMNPANICHEALED                      740
+#define STRINGID_PKMNPANICHEALED2                     741
+#define STRINGID_PKMNPANICHEALEDBY                    742
 
-#define BATTLESTRINGS_COUNT                           732
+#define BATTLESTRINGS_COUNT                           743
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -785,6 +796,7 @@
 #define B_MSG_STARTED_HAIL      5
 #define B_MSG_STARTED_SNOW      6
 #define B_MSG_STARTED_FOG       7
+#define B_MSG_STARTED_THUNDERSTORM 8
 
 // gWeatherEndsStringIds
 #define B_MSG_WEATHER_END_RAIN         0
@@ -794,7 +806,8 @@
 #define B_MSG_WEATHER_END_SNOW         4
 #define B_MSG_WEATHER_END_FOG          5
 #define B_MSG_WEATHER_END_STRONG_WINDS 6
-#define B_MSG_WEATHER_END_COUNT        7
+#define B_MSG_WEATHER_END_THUNDERSTORM 7
+#define B_MSG_WEATHER_END_COUNT        8
 
 // gWeatherTurnStringIds
 #define B_MSG_WEATHER_TURN_RAIN         0
@@ -805,7 +818,8 @@
 #define B_MSG_WEATHER_TURN_SNOW         5
 #define B_MSG_WEATHER_TURN_FOG          6
 #define B_MSG_WEATHER_TURN_STRONG_WINDS 7
-#define B_MSG_WEATHER_TURN_COUNT        8
+#define B_MSG_WEATHER_TURN_THUNDERSTORM 8
+#define B_MSG_WEATHER_TURN_COUNT        9
 
 // gRainContinuesStringIds
 #define B_MSG_RAIN_CONTINUES     0
@@ -816,6 +830,7 @@
 #define B_MSG_SANDSTORM  0
 #define B_MSG_HAIL       1
 #define B_MSG_SNOW       2
+#define B_MSG_THUNDERSTORM 3
 
 // gReflectLightScreenSafeguardStringIds
 #define B_MSG_SIDE_STATUS_FAILED     0

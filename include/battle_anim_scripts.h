@@ -959,6 +959,7 @@ extern const u8 gBattleAnimStatus_Paralysis[];
 extern const u8 gBattleAnimStatus_Freeze[];
 extern const u8 gBattleAnimStatus_Curse[];
 extern const u8 gBattleAnimStatus_Nightmare[];
+extern const u8 gBattleAnimStatus_Panic[];
 
 // general animations
 extern const u8 gBattleAnimGeneral_StatsChange[];
