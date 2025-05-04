@@ -122,6 +122,7 @@ SINGLE_BATTLE_TEST("Full Heal heals a battler from any primary status")
     PARAMETRIZE { status = STATUS1_PARALYSIS; }
     PARAMETRIZE { status = STATUS1_TOXIC_POISON; }
     PARAMETRIZE { status = STATUS1_FROSTBITE; }
+    PARAMETRIZE { status = STATUS1_PANIC; }
     GIVEN {
         ASSUME(gItemsInfo[ITEM_FULL_HEAL].battleUsage == EFFECT_ITEM_CURE_STATUS);
         PLAYER(SPECIES_WOBBUFFET) { Status1(status); }

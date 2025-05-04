@@ -241,7 +241,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LIGHTNING_ROD] =
     {
         .name = _("LIGHTNING ROD"),
-        .description = COMPOUND_STRING("Draws in all Electric-type moves\nto raise its Sp. Atk instead of\ntaking damage."),
+        .description = COMPOUND_STRING("Draws in and negates ELECTRIC\nmoves, as well as protecting the\nPOKéMON from lightning strikes."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -2423,6 +2423,13 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     {
         .name = _("TUBEROUS"),
         .description = COMPOUND_STRING("Restores 1/8 HP at the end of\nthe turn if underground."),
+        .aiRating = 3,
+    },
+
+    [ABILITY_STORM_CALL] =
+    {
+        .name = _("STORM CALL"),
+        .description = COMPOUND_STRING("Turns rain into a thunderstorm,\ndamaging all types except GROUND\nand ELECTRIC."),
         .aiRating = 3,
     },
 };
