@@ -4,7 +4,7 @@
 SINGLE_BATTLE_TEST("Venusaur can Mega Evolve holding Venusaurite")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); }
+        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_DUMMYSTONE1); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
@@ -20,9 +20,9 @@ SINGLE_BATTLE_TEST("Venusaur can Mega Evolve holding Venusaurite")
 DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - opponent faster")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); Speed(1); }
+        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_DUMMYSTONE1); Speed(1); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(3); }
-        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(3); }
+        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_DUMMYSTONE25); Speed(3); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(4); }
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); MOVE(playerLeft, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
@@ -39,9 +39,9 @@ DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - opponent fas
 DOUBLE_BATTLE_TEST("Mega Evolution's order is determined by Speed - player faster")
 {
     GIVEN {
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); Speed(5); }
+        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_DUMMYSTONE1); Speed(5); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(3); }
-        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(2); }
+        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_DUMMYSTONE25); Speed(2); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(4); }
     } WHEN {
         TURN { MOVE(opponentLeft, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); MOVE(playerLeft, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
@@ -75,7 +75,7 @@ SINGLE_BATTLE_TEST("Mega Evolution affects turn order")
 {
     GIVEN {
         ASSUME(B_MEGA_EVO_TURN_ORDER >= GEN_7);
-        PLAYER(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(105); }
+        PLAYER(SPECIES_GARDEVOIR) { Item(ITEM_DUMMYSTONE25); Speed(105); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(106); }
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
@@ -93,7 +93,7 @@ SINGLE_BATTLE_TEST("Abilities replaced by Mega Evolution do not affect turn orde
         ASSUME(B_MEGA_EVO_TURN_ORDER >= GEN_7);
         ASSUME(gSpeciesInfo[SPECIES_SABLEYE_MEGA].abilities[0] != ABILITY_STALL
             && gSpeciesInfo[SPECIES_SABLEYE_MEGA].abilities[1] != ABILITY_STALL);
-        PLAYER(SPECIES_SABLEYE) { Item(ITEM_SABLENITE); Ability(ABILITY_STALL); Speed(105); }
+        PLAYER(SPECIES_SABLEYE) { Item(ITEM_DUMMYSTONE26); Ability(ABILITY_STALL); Speed(105); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(44); }
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
@@ -110,7 +110,7 @@ DOUBLE_BATTLE_TEST("Mega Evolution happens after switching, but before Focus Pun
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_FOCUS_PUNCH) == EFFECT_FOCUS_PUNCH);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_VENUSAURITE); }
+        PLAYER(SPECIES_VENUSAUR) { Item(ITEM_DUMMYSTONE1); }
         OPPONENT(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
@@ -137,7 +137,7 @@ SINGLE_BATTLE_TEST("Regular Mega Evolution and Fervent Wish Mega Evolution can h
 {
     GIVEN {
         PLAYER(SPECIES_RAYQUAZA) { Moves(MOVE_DRAGON_ASCENT, MOVE_CELEBRATE); Speed(3); }
-        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(2); }
+        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_DUMMYSTONE25); Speed(2); }
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); MOVE(opponent, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
     } SCENE {
@@ -162,7 +162,7 @@ SINGLE_BATTLE_TEST("Mega Evolved Pokemon do not change abilities after fainting"
         ASSUME(gSpeciesInfo[SPECIES_GARCHOMP_MEGA].abilities[1] != ABILITY_ROUGH_SKIN);
         ASSUME(gSpeciesInfo[SPECIES_GARCHOMP_MEGA].abilities[2] != ABILITY_ROUGH_SKIN);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_GARCHOMP) { Ability(ABILITY_ROUGH_SKIN); Item(ITEM_GARCHOMPITE); HP(1); }
+        OPPONENT(SPECIES_GARCHOMP) { Ability(ABILITY_ROUGH_SKIN); Item(ITEM_DUMMYSTONE42); HP(1); }
     } WHEN {
         TURN { MOVE(player, MOVE_CRUNCH); MOVE(opponent, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
     } SCENE {

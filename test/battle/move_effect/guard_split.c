@@ -10,7 +10,7 @@ SINGLE_BATTLE_TEST("Guard Split averages users and targets Def and Sp. Def stats
 {
     GIVEN {
         PLAYER(SPECIES_BULBASAUR);
-        OPPONENT(species_ivysaur);
+        OPPONENT(SPECIES_IVYSAUR);
     } WHEN {
         TURN { MOVE(player, MOVE_GUARD_SPLIT); }
     } SCENE {

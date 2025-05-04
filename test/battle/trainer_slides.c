@@ -172,7 +172,7 @@ SINGLE_BATTLE_TEST("Trainer Slide: Mega Evolution")
 
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_LOPUNNY) {Item(ITEM_LOPUNNITE); };
+        OPPONENT(SPECIES_LOPUNNY) {Item(ITEM_DUMMYSTONE41); };
     } WHEN {
         TURN { MOVE(opponent, MOVE_CELEBRATE, gimmick: GIMMICK_MEGA); }
     } SCENE {

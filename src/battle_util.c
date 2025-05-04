@@ -1082,7 +1082,8 @@ bool32 WasUnableToUseMove(u32 battler)
         || gProtectStructs[battler].flinchImmobility
         || gProtectStructs[battler].confusionSelfDmg
         || gProtectStructs[battler].powderSelfDmg
-        || gProtectStructs[battler].usedThroatChopPreventedMove)
+        || gProtectStructs[battler].usedThroatChopPreventedMove
+        || gProtectStructs[battler].pncImmobility)
         return TRUE;
     else
         return FALSE;

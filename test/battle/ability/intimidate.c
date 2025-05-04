@@ -381,7 +381,7 @@ SINGLE_BATTLE_TEST("Intimdate does not lose timing after mega evolution and swit
     GIVEN {
         ASSUME(gMovesInfo[MOVE_U_TURN].effect == EFFECT_HIT_ESCAPE);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_MANECTRIC) { Item(ITEM_MANECTITE); }
+        OPPONENT(SPECIES_MANECTRIC) { Item(ITEM_DUMMYSTONE30); }
         OPPONENT(SPECIES_ARBOK) { Ability(ABILITY_INTIMIDATE); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_U_TURN, gimmick: GIMMICK_MEGA); SEND_OUT(opponent, 1); }

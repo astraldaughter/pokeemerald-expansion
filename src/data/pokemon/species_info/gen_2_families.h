@@ -4345,17 +4345,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .iconPalIndex = 0,
         SHADOW(2, 13, SHADOW_SIZE_M)
         FOOTPRINT(Heracross)
-    #if OW_BATTLE_ONLY_FORMS
-        OVERWORLD(
-            sPicTable_HeracrossMega,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_HeracrossMega,
-            gShinyOverworldPalette_HeracrossMega
-        )
-    #endif //OW_BATTLE_ONLY_FORMS
+
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sHeracrossLevelUpLearnset,
         .teachableLearnset = sHeracrossTeachableLearnset,
@@ -5946,17 +5936,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .iconPalIndex = 0,
         SHADOW(-5, 13, SHADOW_SIZE_L)
         FOOTPRINT(Houndoom)
-    #if OW_BATTLE_ONLY_FORMS
-        OVERWORLD(
-            sPicTable_HoundoomMega,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_HoundoomMega,
-            gShinyOverworldPalette_HoundoomMega
-        )
-    #endif //OW_BATTLE_ONLY_FORMS
+
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sHoundoomLevelUpLearnset,
         .teachableLearnset = sHoundoomTeachableLearnset,
@@ -6793,17 +6773,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .iconPalIndex = 1,
         SHADOW(-1, 13, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Tyranitar)
-    #if OW_BATTLE_ONLY_FORMS
-        OVERWORLD(
-            sPicTable_TyranitarMega,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_TyranitarMega,
-            gShinyOverworldPalette_TyranitarMega
-        )
-    #endif //OW_BATTLE_ONLY_FORMS
+
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sTyranitarLevelUpLearnset,
         .teachableLearnset = sTyranitarTeachableLearnset,

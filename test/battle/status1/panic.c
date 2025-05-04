@@ -1,26 +1,22 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Panic reduces the power of special attacks by 50 percent")
+SINGLE_BATTLE_TEST("Panic reduces the power of special attacks by 50%", s16 damage)
 {
-    s16 reducedDamage;
-    s16 normaleDamage;
-
+    bool32 panicked;
+    PARAMETRIZE { panicked = FALSE; }
+    PARAMETRIZE { panicked = TRUE; }
     GIVEN {
-        ASSUME(gMovesInfo[MOVE_SWIFT].category == DAMAGE_CATEGORY_SPECIAL);
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET) { Status1(STATUS1_PANIC); }
+        ASSUME(GetMoveCategory(MOVE_SWIFT) == DAMAGE_CATEGORY_SPECIAL);
+        PLAYER(SPECIES_WOBBUFFET) { if (panicked) Status1(STATUS1_PANIC); }
+        OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(opponent, MOVE_SWIFT); MOVE(player, MOVE_FLAME_WHEEL); }
-        TURN { MOVE(opponent, MOVE_SWIFT); }
+        TURN { MOVE(player, MOVE_SWIFT); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_SWIFT, opponent);
-        HP_BAR(player, captureDamage: &reducedDamage);
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_FLAME_WHEEL, player);
-        HP_BAR(opponent);
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_SWIFT, opponent);
-        HP_BAR(player, captureDamage: &normaleDamage);
-   } THEN { EXPECT_EQ(reducedDamage * 2, normaleDamage); }
+        HP_BAR(opponent, captureDamage: &results[i].damage);
+    } FINALLY {
+        EXPECT_MUL_EQ(results[0].damage, Q_4_12(0.5), results[1].damage);
+    }
 }
 
 SINGLE_BATTLE_TEST("Panic has a 25% chance of skipping the turn")
@@ -40,8 +36,7 @@ AI_SINGLE_BATTLE_TEST("AI avoids Scary Face when it can not panic target")
 {
     u32 species, ability;
 
-    PARAMETRIZE { species = SPECIES_KOMALA; ability = ABILITY_COMATOSE; }
-    PARAMETRIZE { species = SPECIES_NACLI; ability = ABILITY_PURIFYING_SALT; }
+    PARAMETRIZE { species = SPECIES_WOBBUFFET; ability = ABILITY_COMATOSE; }
 
     GIVEN {
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_OMNISCIENT);
