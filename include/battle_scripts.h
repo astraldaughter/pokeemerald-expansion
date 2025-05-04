@@ -129,6 +129,7 @@ extern const u8 BattleScript_MoveUsedUnfrostbite[];
 extern const u8 BattleScript_DefrostedViaFireMove[];
 extern const u8 BattleScript_FrostbiteHealedViaFireMove[];
 extern const u8 BattleScript_MoveUsedIsParalyzed[];
+extern const u8 BattleScript_MoveUsedIsPanicked[];
 extern const u8 BattleScript_MoveUsedFlinched[];
 extern const u8 BattleScript_PrintUproarOverTurns[];
 extern const u8 BattleScript_ThrashConfuses[];

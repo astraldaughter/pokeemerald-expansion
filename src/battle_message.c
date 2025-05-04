@@ -906,6 +906,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNPANICHEALED]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s panic eased!"),
     [STRINGID_PKMNPANICHEALED2]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s panic eased!"),
     [STRINGID_PKMNPANICHEALEDBY]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} eased its panic!"),
+    [STRINGID_PKMNTOOPANICKEDTOMOVE]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is too panicked to move!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

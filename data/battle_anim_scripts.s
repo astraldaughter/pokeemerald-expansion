@@ -28315,6 +28315,18 @@ gBattleAnimStatus_Nightmare::
 gBattleAnimStatus_Panic::
 	createvisualtask AnimTask_ShakeTargetInPattern, 5, 60, 1, FALSE
 	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER, 12, 4
+	delay 8
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 1
+	delay 8
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 2
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 3
+	delay 8
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 1
+	delay 8
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 2
+	createsprite gTearDropSpriteTemplate, ANIM_ATTACKER, 2, 0, 3
 	waitforvisualfinish
 	end
 

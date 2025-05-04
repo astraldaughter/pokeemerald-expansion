@@ -7229,6 +7229,13 @@ BattleScript_MoveUsedIsParalyzed::
 	cancelmultiturnmoves BS_ATTACKER
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveUsedIsPanicked::
+	printstring STRINGID_PKMNTOOPANICKEDTOMOVE
+	waitmessage B_WAIT_TIME_LONG
+	statusanimation BS_ATTACKER
+	cancelmultiturnmoves BS_ATTACKER
+	goto BattleScript_MoveEnd
+
 BattleScript_PowderMoveNoEffect::
 	attackstring
 	ppreduce

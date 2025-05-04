@@ -3279,6 +3279,7 @@ const u8* FaintClearSetData(u32 battler)
     gProtectStructs[battler].bounceMove = FALSE;
     gProtectStructs[battler].stealMove = FALSE;
     gProtectStructs[battler].prlzImmobility = FALSE;
+    gProtectStructs[battler].pncImmobility = FALSE;
     gProtectStructs[battler].confusionSelfDmg = FALSE;
     gProtectStructs[battler].targetAffected = FALSE;
     gProtectStructs[battler].chargingTurn = FALSE;

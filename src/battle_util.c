@@ -3836,6 +3836,7 @@ static const MoveSuccessOrderCancellers sMoveSuccessOrderCancellers[] =
     [CANCELLER_IMPRISONED] = CancellerImprisoned,
     [CANCELLER_CONFUSED] = CancellerConfused,
     [CANCELLER_PARALYSED] = CancellerParalysed,
+    [CANCELLER_PANICKED] = CancellerPanicked,
     [CANCELLER_BIDE] = CancellerBide,
     [CANCELLER_THAW] = CancellerThaw,
     [CANCELLER_STANCE_CHANGE_2] = CancellerStanceChangeTwo,
