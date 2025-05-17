@@ -21232,6 +21232,55 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Provoke,
     },
 
+    [MOVE_MUDSLIDE] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("MUDSLIDE"),
+        .description = COMPOUND_STRING(
+            "Attacks foes with a viscous torrent of mud. This may lower their accuracy."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_GROUND,
+        .accuracy = 85,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .skyBattleBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_RAIN_DANCE},
+        .battleAnimScript = gBattleAnimMove_MuddyWater,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_KINDLING] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("KINDLING"),
+        .description = COMPOUND_STRING(
+            "Builds a warm fire that heals allies a little for 5 turns. Fire-types are healed more."),
+        .effect = EFFECT_KINDLING,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 0,
+        .pp = 20,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .validApprenticeMove = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .battleAnimScript = gBattleAnimMove_Kindling,
+    },
+
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

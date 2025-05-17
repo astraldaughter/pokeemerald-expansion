@@ -212,6 +212,7 @@ enum
     LIST_SIDE_RAINBOW,
     LIST_SIDE_SEA_OF_FIRE,
     LIST_SIDE_SWAMP,
+    LIST_SIDE_KINDLING,
 };
 
 enum
@@ -389,6 +390,7 @@ static const u8 sText_DamageNonTypes[] = _("Damage Non-Types");
 static const u8 sText_Rainbow[] = _("Rainbow");
 static const u8 sText_SeaOfFire[] = _("Sea of Fire");
 static const u8 sText_Swamp[] = _("Swamp");
+static const u8 sText_Kindling[] = _("Kindling");
 static const u8 sText_CheckBadMove[] = _("Check Bad Move");
 static const u8 sText_TryToFaint[] = _("Try to Faint");
 static const u8 sText_CheckViability[] = _("Check Viability");
@@ -642,6 +644,7 @@ static const struct ListMenuItem sSideStatusListItems[] =
     {sText_Rainbow, LIST_SIDE_RAINBOW},
     {sText_SeaOfFire, LIST_SIDE_SEA_OF_FIRE},
     {sText_Swamp, LIST_SIDE_SWAMP},
+    {sText_Kindling, LIST_SIDE_KINDLING},
 };
 
 static const struct ListMenuItem sAIListItems[] =
@@ -2050,6 +2053,16 @@ static u16 *GetSideStatusValue(struct BattleDebugMenu *data, bool32 changeStatus
                 *(u32 *)(data->modifyArrows.modifiedValPtr) &= ~SIDE_STATUS_SWAMP;
         }
         return &sideTimer->swampTimer;
+    case LIST_SIDE_KINDLING:
+        if (changeStatus)
+        {
+            if (statusTrue)
+                *(u32 *)(data->modifyArrows.modifiedValPtr) |= SIDE_STATUS_KINDLING;
+            else
+                *(u32 *)(data->modifyArrows.modifiedValPtr) &= ~SIDE_STATUS_KINDLING;
+            sideTimer->kindlingBattlerId = data->battlerId;
+        }
+        return &sideTimer->kindlingTimer;
     default:
         return NULL;
     }

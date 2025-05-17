@@ -907,6 +907,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNPANICHEALED2]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s panic eased!"),
     [STRINGID_PKMNPANICHEALEDBY]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE} eased its panic!"),
     [STRINGID_PKMNTOOPANICKEDTOMOVE]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is too panicked to move!"),
+    [STRINGID_KINDLINGLIT]                          = COMPOUND_STRING("A soothing fire was lit on {B_ATK_TEAM2} team's side!"),
+    [STRINGID_KINDLINGENDS]                         = COMPOUND_STRING("{B_ATK_TEAM1} team's fire went out!"),
+    [STRINGID_KINDLINGHEAL]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX2} was healed by a soothing warmth!")
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -948,6 +951,7 @@ const u16 gStartingStatusStringIds[B_MSG_STARTING_STATUS_COUNT] =
     [B_MSG_SET_RAINBOW]          = STRINGID_ARAINBOWAPPEAREDONSIDE,
     [B_MSG_SET_SEA_OF_FIRE]      = STRINGID_SEAOFFIREENVELOPEDSIDE,
     [B_MSG_SET_SWAMP]            = STRINGID_SWAMPENVELOPEDSIDE,
+    [B_MSG_SET_KINDLING]         = STRINGID_KINDLINGLIT,
 };
 
 const u16 gTerrainStringIds[B_MSG_TERRAIN_COUNT] =

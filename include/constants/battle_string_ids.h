@@ -743,6 +743,9 @@
 #define STRINGID_PKMNPANICHEALED2                     741
 #define STRINGID_PKMNPANICHEALEDBY                    742
 #define STRINGID_PKMNTOOPANICKEDTOMOVE                743
+#define STRINGID_KINDLINGLIT                          744
+#define STRINGID_KINDLINGENDS                         745
+#define STRINGID_KINDLINGHEAL                         746
 
 #define BATTLESTRINGS_COUNT                           744
 
@@ -1047,7 +1050,8 @@
 #define B_MSG_SET_RAINBOW           8
 #define B_MSG_SET_SEA_OF_FIRE       9
 #define B_MSG_SET_SWAMP             10
-#define B_MSG_STARTING_STATUS_COUNT 11
+#define B_MSG_SET_KINDLING          11
+#define B_MSG_STARTING_STATUS_COUNT 12
 
 
 // gWrappedStringIds

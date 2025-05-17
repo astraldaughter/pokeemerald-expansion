@@ -2691,6 +2691,17 @@ BattleScript_EffectEmbargo::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectKindling::
+	attackcanceler
+	attackstring
+	ppreduce
+	setkindling BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_KINDLINGLIT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectTailwind::
 	attackcanceler
 	attackstring
@@ -5935,6 +5946,11 @@ BattleScript_TailwindEnds::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_KindlingEnds::
+	printstring STRINGID_KINDLINGENDS
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_TrickRoomEnds::
 	printstring STRINGID_TRICKROOMENDS
 	waitmessage B_WAIT_TIME_LONG
@@ -6718,6 +6734,10 @@ BattleScript_TurnHeal:
 BattleScript_AquaRingHeal::
 	playanimation BS_ATTACKER, B_ANIM_AQUA_RING_HEAL
 	printstring STRINGID_AQUARINGHEAL
+	goto BattleScript_TurnHeal
+
+BattleScript_KindlingHeal::
+	printstring STRINGID_KINDLINGHEAL
 	goto BattleScript_TurnHeal
 
 BattleScript_PrintMonIsRooted::

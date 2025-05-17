@@ -1645,6 +1645,7 @@ enum
     ENDTURN_RAINBOW,
     ENDTURN_SEA_OF_FIRE,
     ENDTURN_SWAMP,
+    ENDTURN_KINDLING,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2141,6 +2142,30 @@ u8 DoFieldEndTurnEffects(void)
                 gBattleStruct->turnSideTracker = 0;
             }
             break;
+        case ENDTURN_KINDLING:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                gBattlerAttacker = gSideTimers[side].kindlingBattlerId;
+                if (gSideStatuses[side] & SIDE_STATUS_KINDLING)
+                {
+                    if (gSideTimers[side].kindlingTimer == gBattleTurnCounter)
+                    {
+                        gSideStatuses[side] &= ~SIDE_STATUS_KINDLING;
+                        BattleScriptExecute(BattleScript_KindlingEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect != 0)
+                    break;
+            }
+            if (!effect)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
         case ENDTURN_FIELD_COUNT:
             effect++;
             break;
@@ -2156,6 +2181,7 @@ enum
     ENDTURN_INGRAIN,
     ENDTURN_UNDERGROUND,
     ENDTURN_AQUA_RING,
+    ENDTURN_KINDLING_HEAL,
     ENDTURN_ABILITIES,
     ENDTURN_ITEMS1,
     ENDTURN_LEECH_SEED,
@@ -2328,6 +2354,25 @@ u8 DoBattlerEndTurnEffects(void)
             {
                 gBattleStruct->moveDamage[battler] = GetDrainedBigRootHp(battler, GetNonDynamaxMaxHP(battler) / 16);
                 BattleScriptExecute(BattleScript_AquaRingHeal);
+                effect++;
+            }
+            gBattleStruct->turnEffectsTracker++;
+            break;
+        case ENDTURN_KINDLING_HEAL: // kindling heal
+            if (IsBattlerAlive(battler) 
+			&& (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_KINDLING)
+			&& !(gStatuses3[battler] & STATUS3_HEAL_BLOCK)
+			&& !IsBattlerAtMaxHp(battler))
+            {
+                if (IS_BATTLER_OF_TYPE(battler, TYPE_FIRE)) // kindling heals fire types more
+                {
+                    gBattleStruct->moveDamage[battler] = GetDrainedBigRootHp(battler, GetNonDynamaxMaxHP(battler) / 8);
+                }
+                else 
+                {
+                    gBattleStruct->moveDamage[battler] = GetDrainedBigRootHp(battler, GetNonDynamaxMaxHP(battler) / 16);			
+                }
+                BattleScriptExecute(BattleScript_KindlingHeal);
                 effect++;
             }
             gBattleStruct->turnEffectsTracker++;
@@ -3508,6 +3553,22 @@ static void CancellerParalysed(u32 *effect)
         // This is removed in FRLG and Emerald for some reason
         //CancelMultiTurnMoves(gBattlerAttacker);
         gBattlescriptCurrInstr = BattleScript_MoveUsedIsParalyzed;
+        gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+        *effect = 1;
+    }
+}
+
+static void CancellerPanicked(u32 *effect)
+{
+    if (!gBattleStruct->isAtkCancelerForCalledMove
+        && (gBattleMons[gBattlerAttacker].status1 & STATUS1_PANIC)
+        && !(B_MAGIC_GUARD == GEN_4 && GetBattlerAbility(gBattlerAttacker) == ABILITY_MAGIC_GUARD)
+        && !RandomPercentage(RNG_PANIC, 75))
+    {
+        gProtectStructs[gBattlerAttacker].pncImmobility = TRUE;
+        // This is removed in FRLG and Emerald for some reason
+        //CancelMultiTurnMoves(gBattlerAttacker);
+        gBattlescriptCurrInstr = BattleScript_MoveUsedIsPanicked;
         gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
         *effect = 1;
     }

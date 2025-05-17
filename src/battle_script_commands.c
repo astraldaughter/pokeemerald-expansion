@@ -603,9 +603,10 @@ static void Cmd_settelekinesis(void);
 static void Cmd_swapstatstages(void);
 static void Cmd_averagestats(void);
 static void Cmd_jumpifoppositegenders(void);
-static void Cmd_unused(void);
+static void Cmd_setkindling(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_callnative(void);
+
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16676,8 +16677,23 @@ static void Cmd_jumpifoppositegenders(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_unused(void)
+static void Cmd_setkindling(void)
 {
+CMD_ARGS(const u8 *failInstr);
+
+    u8 side = GetBattlerSide(gBattlerAttacker);
+
+    if (!(gSideStatuses[side] & SIDE_STATUS_KINDLING))
+    {
+        gSideStatuses[side] |= SIDE_STATUS_KINDLING;
+        gSideTimers[side].kindlingBattlerId = gBattlerAttacker;
+        gSideTimers[side].kindlingTimer = gBattleTurnCounter + 5;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
 }
 
 static void Cmd_tryworryseed(void)
