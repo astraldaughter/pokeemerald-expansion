@@ -1142,7 +1142,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPicYOffset = 14,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_CircledQuestionMark,
+        .backPic = gMonBackPic_Lyndwurm,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 12,
         .backAnimId = BACK_ANIM_NONE,
@@ -1487,6 +1487,61 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(Hoggernaut)
         .levelUpLearnset = sHoggernautLevelUpLearnset,
         .teachableLearnset = sHoggernautTeachableLearnset,
+    },
+
+    [SPECIES_BONNIFIRE] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 65,
+        .baseDefense   = 65,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 95,
+        .baseSpeed     = 30,
+        .types = MON_TYPES(TYPE_FIRE),
+        .catchRate = 149,
+        .expYield = 67,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_WHITE_SMOKE, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("BONNIFIRE"),
+        .cryId = CRY_BONNIFIRE,
+        .natDexNum = NATIONAL_DEX_BONNIFIRE,
+        .categoryName = _("CAMPFIRE"),
+        .height = 6,
+        .weight = 110,
+        .description = COMPOUND_STRING(
+            "BONNIFIRE are known by hikers for their\n"
+            "friendly nature, often happily keeping them\n"
+            "warm on cold mountain nights in exchange for\n"
+            "quality firewood. They communicate with each\n"
+            "other using their own smoke as a signal."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Bonnifire,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Bonnifire,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 10,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Bonnifire,
+        .shinyPalette = gMonShinyPalette_Bonnifire,
+        .iconSprite = gMonIcon_QuestionMark,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sNoneLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+        //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
+        //.formChangeTable = sNoneFormChangeTable,
+        //.perfectIVCount = NUM_STATS,
     },
 
     [SPECIES_MAREEP] =
