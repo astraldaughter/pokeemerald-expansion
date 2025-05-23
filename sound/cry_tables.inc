@@ -2268,6 +2268,7 @@ gCryTable::
 .endif @ P_FAMILY_PECHARUNT
 	cry Cry_Neadough
 	cry Cry_Moldough
+	cry Cry_Bonnifire
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4540,4 +4541,5 @@ gCryTable_Reverse::
 .endif @ P_FAMILY_PECHARUNT
 	cry_reverse Cry_Neadough
 	cry_reverse Cry_Moldough
+	cry_reverse Cry_Bonnifire
 .endif @ P_CRIES_ENABLED

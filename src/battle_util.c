@@ -200,6 +200,15 @@ static const struct BattleWeatherInfo sBattleWeatherInfo[BATTLE_WEATHER_COUNT] =
         .continuesMessage = B_MSG_WEATHER_TURN_STRONG_WINDS,
         .animation = B_ANIM_STRONG_WINDS,
     },
+
+    [BATTLE_WEATHER_THUNDERSTORM] =
+    {
+        .flag = B_WEATHER_THUNDERSTORM,
+        .rock = HOLD_EFFECT_NONE,
+        .endMessage = B_MSG_WEATHER_END_THUNDERSTORM,
+        .continuesMessage = B_MSG_WEATHER_TURN_THUNDERSTORM,
+        .animation = B_ANIM_THUNDERSTORM_CONTINUES,
+    },
 };
 
 static u32 CalcBeatUpPower(void)
@@ -2313,6 +2322,20 @@ u8 DoBattlerEndTurnEffects(void)
                 BattleScriptExecute(BattleScript_DamagingWeather);
                 effect++;
             }
+            else if (gBattleWeather & B_WEATHER_THUNDERSTORM
+                && !IS_BATTLER_ANY_TYPE(gBattlerAttacker, TYPE_ELECTRIC, TYPE_GROUND)
+                && ability != ABILITY_LIGHTNING_ROD
+                && !(gStatuses3[battler] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
+                && RandomChance(RNG_THUNDERSTORM, 1, 2))
+            {
+                gBattleScripting.battler = battler;
+                gBattleStruct->moveDamage[battler] = GetNonDynamaxMaxHP(battler) / 4;
+                if (gBattleStruct->moveDamage[battler] == 0)
+                    gBattleStruct->moveDamage[battler] = 1;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_THUNDERSTORM;
+                BattleScriptExecute(BattleScript_DamagingWeather);
+                effect++;
+            }
             gBattleStruct->turnEffectsTracker++;
             break;
         case ENDTURN_INGRAIN:  // ingrain
@@ -4118,6 +4141,9 @@ bool32 TryChangeBattleWeather(u32 battler, u32 battleWeatherId, bool32 viaAbilit
             gWishFutureKnock.weatherDuration = 0;
         else if (rock != 0 && GetBattlerHoldEffect(battler, TRUE) == rock)
             gWishFutureKnock.weatherDuration = 8;
+        else if (gBattleWeather & B_WEATHER_RAIN_NORMAL
+            && battleWeatherId == BATTLE_WEATHER_THUNDERSTORM)
+            return TRUE;
         else
             gWishFutureKnock.weatherDuration = 5;
         return TRUE;
@@ -4743,8 +4769,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
         {
             switch (GetCurrentWeather())
             {
-            case WEATHER_RAIN:
-            case WEATHER_RAIN_THUNDERSTORM:
+            case WEATHER_RAIN:        
             case WEATHER_DOWNPOUR:
                 if (!(gBattleWeather & B_WEATHER_RAIN))
                 {
@@ -4753,6 +4778,14 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
+            case WEATHER_RAIN_THUNDERSTORM:
+            if (!(gBattleWeather & B_WEATHER_THUNDERSTORM))
+                {
+                    gBattleWeather = B_WEATHER_THUNDERSTORM;
+                    gBattleScripting.animArg1 = B_ANIM_THUNDERSTORM_CONTINUES;
+                    effect++;
+                }
+            break;
             case WEATHER_SANDSTORM:
                 if (!(gBattleWeather & B_WEATHER_SANDSTORM))
                 {
@@ -6668,6 +6701,20 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 gBattleScripting.battler = battler;
                 BattleScriptPushCursorAndCallback(BattleScript_ProtosynthesisActivates);
                 effect++;
+            }
+            break;
+        case ABILITY_STORM_CALL:
+            if (!gDisableStructs[battler].weatherAbilityDone
+             && (gBattleWeather & B_WEATHER_RAIN_NORMAL) && HasWeatherEffect())
+            {
+                if (TryChangeBattleWeather(battler, BATTLE_WEATHER_THUNDERSTORM, TRUE)) 
+                {
+                    gBattleScripting.battler = battler;
+                    gDisableStructs[battler].weatherAbilityDone = TRUE;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_StormCallActivates;
+                    effect++;
+                }
             }
             break;
         }

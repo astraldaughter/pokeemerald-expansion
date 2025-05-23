@@ -6111,6 +6111,10 @@ Cry_Neadough::
 Cry_Moldough::
 	.incbin "sound/direct_sound_samples/cries/moldough.bin"
 
+	.align 2
+Cry_Bonnifire::
+	.incbin "sound/direct_sound_samples/cries/bonnifire.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2

@@ -267,7 +267,6 @@ extern const u8 BattleScript_BufferEndTurn[];
 extern const u8 BattleScript_AquaRingHeal[];
 extern const u8 BattleScript_KindlingHeal[];
 extern const u8 BattleScript_LuckyChantEnds[];
-extern const u8 BattleScript_KindlingEnds[];
 extern const u8 BattleScript_TailwindEnds[];
 extern const u8 BattleScript_KindlingEnds[];
 extern const u8 BattleScript_TrickRoomEnds[];
@@ -866,5 +865,6 @@ extern const u8 BattleScript_EffectSpicyExtract[];
 extern const u8 BattleScript_DamageToQuarterTargetHP[];
 extern const u8 BattleScript_EffectFickleBeam[];
 extern const u8 BattleScript_FickleBeamDoubled[];
+extern const u8 BattleScript_StormCallActivates[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

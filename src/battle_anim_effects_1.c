@@ -3924,6 +3924,7 @@ static void AnimPetalDanceBigFlower_Step(struct Sprite *sprite)
 // arg 1: initial y pixel offset
 // arg 2: target y pixel offset
 // arg 3: duration
+// arg 4: frequency
 void AnimPetalDanceSmallFlower(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);

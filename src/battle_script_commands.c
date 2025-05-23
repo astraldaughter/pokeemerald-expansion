@@ -863,7 +863,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_swapstatstages,                          //0xFA
     Cmd_averagestats,                            //0xFB
     Cmd_jumpifoppositegenders,                   //0xFC
-    Cmd_unused,                                  //0xFD
+    Cmd_setkindling,                             //0xFD
     Cmd_tryworryseed,                            //0xFE
     Cmd_callnative,                              //0xFF
 };
@@ -3467,7 +3467,6 @@ void SetMoveEffect(bool32 primary, bool32 certain)
             if (!CanBePanicked(gEffectBattler))
                 break;
 
-
             statusChanged = TRUE;
             break;
         }
@@ -5944,7 +5943,8 @@ static void PlayAnimation(u32 battler, u8 animId, const u16 *argPtr, const u8 *n
           || animId == B_ANIM_SANDSTORM_CONTINUES
           || animId == B_ANIM_HAIL_CONTINUES
           || animId == B_ANIM_SNOW_CONTINUES
-          || animId == B_ANIM_FOG_CONTINUES)
+          || animId == B_ANIM_FOG_CONTINUES
+          || animId == B_ANIM_THUNDERSTORM_CONTINUES)
     {
         BtlController_EmitBattleAnimation(battler, BUFFER_A, animId, &gDisableStructs[battler], *argPtr);
         MarkBattlerForControllerExec(battler);
@@ -12048,6 +12048,12 @@ static void Cmd_setfieldweather(void)
     case BATTLE_WEATHER_SNOW:
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_SNOW;
         break;
+    case BATTLE_WEATHER_FOG:
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_FOG;
+        break;
+    case BATTLE_WEATHER_THUNDERSTORM:
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_THUNDERSTORM;
+        break;
     }
 
     gBattlescriptCurrInstr = cmd->nextInstr;
@@ -16679,7 +16685,7 @@ static void Cmd_jumpifoppositegenders(void)
 
 static void Cmd_setkindling(void)
 {
-CMD_ARGS(const u8 *failInstr);
+    CMD_ARGS(const u8 *failInstr);
 
     u8 side = GetBattlerSide(gBattlerAttacker);
 

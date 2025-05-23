@@ -7762,6 +7762,15 @@ BattleScript_SandSpitActivates::
 	call BattleScript_ActivateWeatherAbilities
 	return
 
+BattleScript_StormCallActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_THUNDERSTORMBREWED
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_THUNDERSTORM_CONTINUES
+	call BattleScript_ActivateWeatherAbilities
+	return
+
 BattleScript_ShedSkinActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXCUREDYPROBLEM

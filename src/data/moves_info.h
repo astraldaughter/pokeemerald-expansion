@@ -761,7 +761,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("JUMP KICK"),
         .description = COMPOUND_STRING(
             "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself."),
-        .power = 100,
+        .power = 85,
         .effect = EFFECT_RECOIL_IF_MISS,
         .type = TYPE_FIGHTING,
         .accuracy = 95,
@@ -1531,13 +1531,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("SURF"),
         .description = COMPOUND_STRING(
-            "The user attacks everything around it by swamping its surroundings with a giant wave."),
+            "Attacks foes by creating a giant wave and crashing it down on them."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
+        .power = 90,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 15,
-        .target = B_UPDATED_MOVE_DATA >= GEN_4 ? MOVE_TARGET_FOES_AND_ALLY : MOVE_TARGET_BOTH,
+        .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .damagesUnderwater = TRUE,
@@ -3410,7 +3410,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Sharp spikes are shot at the target in rapid succession. They hit 2-5 times in a row."),
         .effect = EFFECT_MULTI_HIT,
         .power = 20,
-        .type = TYPE_NORMAL,
+        .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
@@ -3532,13 +3532,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("HIGH JUMP KICK"),
         .description = COMPOUND_STRING(
             "The target is attacked with a jumping knee kick. If it misses, the user is hurt instead."),
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 130,
-        #elif B_UPDATED_MOVE_DATA == GEN_4
-            .power = 100,
-        #else
-            .power = 85,
-        #endif
+        .power = 100,
         .effect = EFFECT_RECOIL_IF_MISS,
         .type = TYPE_FIGHTING,
         .accuracy = 90,
@@ -6444,7 +6438,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Strikes foe with a crushing attack that lowers its DEFENSE. "),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
+        .power = 20,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 15,
@@ -8535,7 +8529,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_MUDDY_WATER] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MUDDY WATER"),
         .description = COMPOUND_STRING(
             "The user attacks by shooting muddy water at opposing Pokémon. This may lower their accuracy."),
@@ -9105,7 +9099,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_WATER,
-        .accuracy = 100,
+        .accuracy = 0,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -9631,7 +9625,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_FLING] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("FLING"),
         .description = COMPOUND_STRING(
             "The user flings its held item at the target. This move's power and effects depend on the item."),
@@ -10087,7 +10081,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_MAGNET_RISE] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MAGNET RISE"),
         .description = COMPOUND_STRING(
             "The user levitates using electromagnetic force for 5 turns."),
@@ -10387,7 +10381,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BUG BUZZ"),
         .description = COMPOUND_STRING(
-            "The user generates a harsh sound wave by flapping its wings. It may lower the targets SP. DEF."),
+            "The user generates a harsh sound wave by flapping its wings. It may lower the target's SP. DEF."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_BUG,
@@ -11308,9 +11302,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "The user slams the target with its steel-hard head. This may make the target flinch."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 70,
         .type = TYPE_STEEL,
-        .accuracy = 100,
+        .accuracy = 95,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -11970,7 +11964,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_WIDE_GUARD] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("WIDE GUARD"),
         .description = COMPOUND_STRING(
             "The user and its allies are protected from wide-ranging attacks for one turn."),
@@ -11987,7 +11981,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .metronomeBanned = TRUE,
+        // .metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -12332,7 +12326,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_HEAVY_SLAM] =
     {
-        // UNDEXITED
+        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("HEAVY SLAM"),
         .description = COMPOUND_STRING(
             "Slams into the foe with its heavy body. Deals more damage the more the user outweighs the foe."),
