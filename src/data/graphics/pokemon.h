@@ -18375,6 +18375,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Lyndwurm[] = INCBIN_U32("graphics/pokemon/lyndwurm/shiny.gbapal.lz");
     const u8 gMonIcon_Lyndwurm[] = INCBIN_U8("graphics/pokemon/lyndwurm/icon.4bpp");
 
+    const u32 gMonFrontPic_Bonnifire[] = INCBIN_U32("graphics/pokemon/bonnifire/front.4bpp.lz");
+    const u32 gMonPalette_Bonnifire[] = INCBIN_U32("graphics/pokemon/bonnifire/normal.gbapal.lz");
+    const u32 gMonBackPic_Bonnifire[] = INCBIN_U32("graphics/pokemon/bonnifire/back.4bpp.lz");
+    const u32 gMonShinyPalette_Bonnifire[] = INCBIN_U32("graphics/pokemon/bonnifire/shiny.gbapal.lz");
+    const u8 gMonIcon_Bonnifire[] = INCBIN_U8("graphics/pokemon/bonnifire/icon.4bpp");  
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

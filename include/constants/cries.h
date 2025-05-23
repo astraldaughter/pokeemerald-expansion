@@ -2394,6 +2394,7 @@ enum {
 #endif //P_FAMILY_PECHARUNT
     CRY_NEADOUGH,
     CRY_MOLDOUGH,
+    CRY_BONNIFIRE,
     CRY_COUNT,
 };
 
