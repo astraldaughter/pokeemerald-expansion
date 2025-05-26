@@ -22291,7 +22291,7 @@ static const struct LevelUpMove sMoldoughLevelUpLearnset[] = {
 
 static const struct LevelUpMove sBonnifireLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1,  MOVE_EMBER),
-    LEVEL_UP_MOVE(1,  MOVE_SMOKESCREEN)
+    LEVEL_UP_MOVE(1,  MOVE_SMOKESCREEN),
     LEVEL_UP_MOVE(7,  MOVE_SMOG),
     LEVEL_UP_MOVE(12, MOVE_KINDLING),
     LEVEL_UP_MOVE(18, MOVE_FOLLOW_ME),
@@ -22301,4 +22301,4 @@ static const struct LevelUpMove sBonnifireLevelUpLearnset[] = {
     LEVEL_UP_MOVE(38, MOVE_FLAMETHROWER),
     LEVEL_UP_MOVE(41, MOVE_HAZE),
     LEVEL_UP_MOVE(47, MOVE_WOOD_HAMMER),
-}
+};
