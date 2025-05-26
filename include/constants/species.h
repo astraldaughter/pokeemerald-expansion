@@ -1659,7 +1659,7 @@
 #define SPECIES_NEVERMORN                               1540
 #define SPECIES_HOPSTALK                                1541
 #define SPECIES_RUTABUNNY                               1542
-#define SPECIES_SWIRON                                  1543
+#define SPECIES_INGLET                                  1543
 #define SPECIES_HOGWELD                                 1544
 #define SPECIES_HOGGERNAUT                              1545
 #define SPECIES_NEADOUGH                                1546

@@ -1326,7 +1326,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sRutabunnyTeachableLearnset,
     },
 
-    [SPECIES_SWIRON] =
+    [SPECIES_INGLET] =
     {
         .baseHP        = 50,
         .baseAttack    = 65,
@@ -1345,9 +1345,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("SWIRON"),
-        .cryId = CRY_SWIRON,
-        .natDexNum = NATIONAL_DEX_SWIRON,
+        .speciesName = _("INGLET"),
+        .cryId = CRY_INGLET,
+        .natDexNum = NATIONAL_DEX_INGLET,
         .categoryName = _("BEAK"),
         .height = 12,
         .weight = 380,
@@ -1360,25 +1360,25 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .pokemonOffset = 1,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Swiron,
+        .frontPic = gMonFrontPic_Inglet,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 16,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_FIGURE_8,
         .frontAnimDelay = 2,
         .enemyMonElevation = 0,
-        .backPic = gMonBackPic_Swiron,
+        .backPic = gMonBackPic_Inglet,
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 13,
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
-        .palette = gMonPalette_Swiron,
-        .shinyPalette = gMonShinyPalette_Swiron,
-        .iconSprite = gMonIcon_Swiron,
+        .palette = gMonPalette_Inglet,
+        .shinyPalette = gMonShinyPalette_Inglet,
+        .iconSprite = gMonIcon_Inglet,
         .iconPalIndex = 0,
         SHADOW(-4, 6, SHADOW_SIZE_M)
-        FOOTPRINT(Swiron)
-        .levelUpLearnset = sSwironLevelUpLearnset,
-        .teachableLearnset = sSwironTeachableLearnset,
+        FOOTPRINT(Inglet)
+        .levelUpLearnset = sIngletLevelUpLearnset,
+        .teachableLearnset = sIngletTeachableLearnset,
     },
 
     [SPECIES_HOGWELD] =

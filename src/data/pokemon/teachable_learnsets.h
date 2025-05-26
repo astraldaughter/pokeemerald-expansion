@@ -737,7 +737,7 @@ static const u16 sRutabunnyTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sSwironTeachableLearnset[] = {
+static const u16 sIngletTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_DOUBLE_TEAM,

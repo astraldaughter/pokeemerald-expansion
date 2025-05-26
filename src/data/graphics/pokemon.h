@@ -166,12 +166,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u8 gMonIcon_Rutabunny[] = INCBIN_U8("graphics/pokemon/rutabunny/icon.4bpp");
     const u8 gMonFootprint_Rutabunny[] = INCBIN_U8("graphics/pokemon/rutabunny/footprint.1bpp");
 
-    const u32 gMonFrontPic_Swiron[] = INCBIN_U32("graphics/pokemon/swiron/anim_front.4bpp.lz");
-    const u32 gMonPalette_Swiron[] = INCBIN_U32("graphics/pokemon/swiron/normal.gbapal.lz");
-    const u32 gMonBackPic_Swiron[] = INCBIN_U32("graphics/pokemon/swiron/back.4bpp.lz");
-    const u32 gMonShinyPalette_Swiron[] = INCBIN_U32("graphics/pokemon/swiron/shiny.gbapal.lz");
-    const u8 gMonIcon_Swiron[] = INCBIN_U8("graphics/pokemon/swiron/icon.4bpp");
-    const u8 gMonFootprint_Swiron[] = INCBIN_U8("graphics/pokemon/swiron/footprint.1bpp");
+    const u32 gMonFrontPic_Inglet[] = INCBIN_U32("graphics/pokemon/inglet/anim_front.4bpp.lz");
+    const u32 gMonPalette_Inglet[] = INCBIN_U32("graphics/pokemon/inglet/normal.gbapal.lz");
+    const u32 gMonBackPic_Inglet[] = INCBIN_U32("graphics/pokemon/inglet/back.4bpp.lz");
+    const u32 gMonShinyPalette_Inglet[] = INCBIN_U32("graphics/pokemon/inglet/shiny.gbapal.lz");
+    const u8 gMonIcon_Inglet[] = INCBIN_U8("graphics/pokemon/inglet/icon.4bpp");
+    const u8 gMonFootprint_Inglet[] = INCBIN_U8("graphics/pokemon/inglet/footprint.1bpp");
 
     const u32 gMonFrontPic_Hogweld[] = INCBIN_U32("graphics/pokemon/hogweld/anim_front.4bpp.lz");
     const u32 gMonPalette_Hogweld[] = INCBIN_U32("graphics/pokemon/hogweld/normal.gbapal.lz");

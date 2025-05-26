@@ -472,8 +472,8 @@ Cry_Rutabunny::
 	.incbin "sound/direct_sound_samples/cries/rutabunny.bin"
 
 	.align 2
-Cry_Swiron::
-	.incbin "sound/direct_sound_samples/cries/swiron.bin"
+Cry_Inglet::
+	.incbin "sound/direct_sound_samples/cries/inglet.bin"
 
 	.align 2
 Cry_Hogweld::

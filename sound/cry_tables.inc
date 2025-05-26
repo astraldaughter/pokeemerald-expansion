@@ -22,7 +22,7 @@ gCryTable::
 	cry Cry_Rattata
 	cry Cry_Hopstalk
 	cry Cry_Rutabunny
-	cry Cry_Swiron
+	cry Cry_Inglet
 	cry Cry_Hogweld
 	cry Cry_Hoggernaut
 .if P_FAMILY_PIKACHU == TRUE
@@ -2295,7 +2295,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Rattata
 	cry_reverse Cry_Hopstalk
 	cry_reverse Cry_Rutabunny
-	cry_reverse Cry_Swiron
+	cry_reverse Cry_Inglet
 	cry_reverse Cry_Hogweld
 	cry_reverse Cry_Hoggernaut
 .if P_FAMILY_PIKACHU == TRUE
