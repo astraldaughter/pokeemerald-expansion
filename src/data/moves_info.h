@@ -13307,7 +13307,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("DRAGON TAIL"),
         .description = COMPOUND_STRING(
-            "Knocked aways away the target and forces it to switch out. In the wild, ends battle."),
+            "Knocks away the target and forces it to switch out. In the wild, ends battle."),
         .effect = EFFECT_HIT_SWITCH_TARGET,
         .power = 60,
         .type = TYPE_DRAGON,
@@ -21108,29 +21108,25 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_StagnantAir,
     },
 
-    [MOVE_POISON_DARTS] =
+    [MOVE_STORM_SURGE] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("POISON DARTS"),
+        .name = COMPOUND_STRING("STORM SURGE"),
         .description = COMPOUND_STRING(
-            "Fires 4 toxic, needle-like darts at the foe that each may poison it."),
-        .effect = EFFECT_HIT,
-        .power = 20,
-        .type = TYPE_POISON,
-        .accuracy = 100,
-        .pp = 10,
+            "Lunges at the foe at lightning speed. This move always goes first, and always hits if it is raining."),
+        .effect = EFFECT_RAIN_ALWAYS_HIT,
+        .power = 80,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 80,
+        .pp = 5,
         .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .strikeCount = 4,
+        .priority = 2,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_POISON,
-            .chance = 10,
-        }),
+        .battleAnimScript = gBattleAnimMove_StormSurge
     },
     [MOVE_EXPLOIT] =
     {
@@ -21149,30 +21145,30 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Exploit,
     },
 
-    [MOVE_TENDERIZE] =
+    [MOVE_HEART_BREAKER] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("TENDERIZE"),
+        .name = COMPOUND_STRING("HEART BREAKER"),
         .description = COMPOUND_STRING(
-            "Punches to soften up the foe. Lowers DEFENSE. Can only be used on the first turn."),
-        .priority = 2,
+            "Strikes suddenly after charming the foe into dropping its guard. May cause flinching."),
+        .priority = 0,
         .makesContact = TRUE,
-        .punchingMove = TRUE,
-        .effect = EFFECT_FIRST_TURN_ONLY,
-        .power = 70,
-        .type = TYPE_FIGHTING,
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
-            .chance = 100,
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 30,
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = COMBO_STARTER_FAKE_OUT,
-        .contestComboMoves = {0}
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HeartBreaker,
     },
 
     [MOVE_GULP_MISSILE] =

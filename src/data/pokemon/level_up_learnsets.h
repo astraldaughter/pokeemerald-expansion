@@ -163,7 +163,7 @@ static const struct LevelUpMove sTimidnaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(23, MOVE_SLASH),
     LEVEL_UP_MOVE(27, MOVE_AGILITY),
     LEVEL_UP_MOVE(32, MOVE_SUCKER_PUNCH),
-    LEVEL_UP_MOVE(38, MOVE_POISON_DARTS),
+    LEVEL_UP_MOVE(38, MOVE_POISON_JAB),
     LEVEL_UP_END
 };
 
@@ -179,7 +179,7 @@ static const struct LevelUpMove sToxrecLevelUpLearnset[] = {
     LEVEL_UP_MOVE(24, MOVE_SLASH),
     LEVEL_UP_MOVE(29, MOVE_AGILITY),
     LEVEL_UP_MOVE(35, MOVE_SUCKER_PUNCH),
-    LEVEL_UP_MOVE(42, MOVE_POISON_DARTS),
+    LEVEL_UP_MOVE(42, MOVE_POISON_JAB),
     LEVEL_UP_END
 };
 
