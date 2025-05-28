@@ -2432,4 +2432,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Turns rain into a thunderstorm,\ndamaging all types except GROUND\nand ELECTRIC."),
         .aiRating = 3,
     },
+
+    [ABILITY_UNSTOPPABLE] =
+    {
+        .name = _("UNSTOPPABLE"),
+        .description = COMPOUND_STRING("Cannot be prevented from moving\ndue to flinching, paralysis, or\npanic."),
+        .aiRating = 3,
+    },
 };

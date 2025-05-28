@@ -3570,6 +3570,7 @@ static void CancellerParalysed(u32 *effect)
     if (!gBattleStruct->isAtkCancelerForCalledMove
         && (gBattleMons[gBattlerAttacker].status1 & STATUS1_PARALYSIS)
         && !(B_MAGIC_GUARD == GEN_4 && GetBattlerAbility(gBattlerAttacker) == ABILITY_MAGIC_GUARD)
+        && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_UNSTOPPABLE)
         && !RandomPercentage(RNG_PARALYSIS, 75))
     {
         gProtectStructs[gBattlerAttacker].prlzImmobility = TRUE;
@@ -3586,6 +3587,7 @@ static void CancellerPanicked(u32 *effect)
     if (!gBattleStruct->isAtkCancelerForCalledMove
         && (gBattleMons[gBattlerAttacker].status1 & STATUS1_PANIC)
         && !(B_MAGIC_GUARD == GEN_4 && GetBattlerAbility(gBattlerAttacker) == ABILITY_MAGIC_GUARD)
+        && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_UNSTOPPABLE)
         && !RandomPercentage(RNG_PANIC, 75))
     {
         gProtectStructs[gBattlerAttacker].pncImmobility = TRUE;
