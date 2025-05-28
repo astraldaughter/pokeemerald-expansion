@@ -1335,27 +1335,27 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpAttack  = 30,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_STEEL),
-        .catchRate = 90,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 155 : 162,
-        .evYield_Defense = 1,
+        .catchRate = 180,
+        .expYield = 64,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_SNIPER },
-        .bodyColor = BODY_COLOR_BROWN,
+        .eggCycles = 20,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = {ABILITY_STURDY, ABILITY_UNSTOPPABLE, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("INGLET"),
         .cryId = CRY_INGLET,
         .natDexNum = NATIONAL_DEX_INGLET,
-        .categoryName = _("BEAK"),
-        .height = 12,
-        .weight = 380,
+        .categoryName = _("PIG"),
+        .height = 4,
+        .weight = 570,
         .description = COMPOUND_STRING(
-            "Its long neck and elongated beak are\n"
-            "ideal for catching prey in soil or water.\n"
-            "It deftly moves this extended and skinny\n"
-            "beak to pluck prey."),
+            "It is clad in steel armor that protects its\n"
+            "soft body from attacks. To maintain this, it\n"
+            "must eat metal, but due to its small stature, it\n"
+            "can only eat from easily accessible sources like\n"
+            "exposed ore veins or parked mining vehicles."),
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -1379,6 +1379,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(Inglet)
         .levelUpLearnset = sIngletLevelUpLearnset,
         .teachableLearnset = sIngletTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_HOGWELD}),
     },
 
     [SPECIES_HOGWELD] =
@@ -1390,27 +1391,27 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_STEEL),
-        .catchRate = 255,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 62,
-        .evYield_Attack = 1,
+        .catchRate = 90,
+        .expYield = 147,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_SHED_SKIN, ABILITY_UNNERVE },
-        .bodyColor = BODY_COLOR_PURPLE,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = {ABILITY_STURDY, ABILITY_UNSTOPPABLE, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("HOGWELD"),
         .cryId = CRY_HOGWELD,
         .natDexNum = NATIONAL_DEX_HOGWELD,
-        .categoryName = _("SNAKE"),
-        .height = 20,
-        .weight = 69,
+        .categoryName = _("HOG"),
+        .height = 10,
+        .weight = 1250,
         .description = COMPOUND_STRING(
-            "An Hogweld curls itself up in a spiral while\n"
-            "it rests. This position allows it to quickly\n"
-            "respond to an enemy from any direction\n"
-            "with a threat from its upraised head."),
+            "HOGWELD have hair-trigger tempers, and will\n"
+            "often ram vehicles that pass through the rocky\n"
+            "territories they inhabit, percieving them as a\n"
+            "threat to the rich mineral deposits that they\n"
+            "feed upon by breaking open boulders."),
         .pokemonScale = 298,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1433,7 +1434,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(Hogweld)
         .levelUpLearnset = sHogweldLevelUpLearnset,
         .teachableLearnset = sHogweldTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_HOGGERNAUT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HOGGERNAUT}),
     },
 
     [SPECIES_HOGGERNAUT] =
@@ -1445,27 +1446,27 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpAttack  = 57,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_STEEL),
-        .catchRate = 90,
-        .expYield = 157,
-        .evYield_Attack = 2,
+        .catchRate = 45,
+        .expYield = 230,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_SHED_SKIN, ABILITY_UNNERVE },
-        .bodyColor = BODY_COLOR_PURPLE,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
+        .abilities = {ABILITY_STURDY, ABILITY_UNSTOPPABLE, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("HOGGERNAUT"),
         .cryId = CRY_HOGGERNAUT,
         .natDexNum = NATIONAL_DEX_HOGGERNAUT,
-        .categoryName = _("COBRA"),
-        .height = 35,
-        .weight = 650,
+        .categoryName = _("HOG"),
+        .height = 21,
+        .weight = 3950,
         .description = COMPOUND_STRING(
-            "This Pokémon has a terrifically strong\n"
-            "constricting power. It can even flatten\n"
-            "steel oil drums. Once it wraps its body\n"
-            "around its foe, escaping is impossible."),
+            "It possesses incredible strength, capable of\n"
+            "levelling buildings if not kept under control.\n"
+            "Because of this, they are often employed in the\n"
+            "construction industry to clear land for new\n"
+            "property developments."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 296,
@@ -1537,7 +1538,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_QuestionMark,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sNoneLevelUpLearnset,
+        .levelUpLearnset = sBonnifireLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
         //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
         //.formChangeTable = sNoneFormChangeTable,
