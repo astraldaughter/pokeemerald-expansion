@@ -40,7 +40,7 @@ static const struct LevelUpMove sFrondodoLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sTropikoekaLevelUpLearnset[] = {
+static const struct LevelUpMove sOstripalmLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
     LEVEL_UP_MOVE(4, MOVE_LEER),
     LEVEL_UP_MOVE(7, MOVE_PECK),

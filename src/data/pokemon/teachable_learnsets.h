@@ -177,7 +177,7 @@ static const u16 sFrondodoTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sTropikoekaTeachableLearnset[] = {
+static const u16 sOstripalmTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
     MOVE_CUT,

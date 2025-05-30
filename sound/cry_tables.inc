@@ -3,7 +3,7 @@ gCryTable::
 .if P_CRIES_ENABLED == TRUE
 	cry Cry_Kiwee
 	cry Cry_Frondodo
-	cry Cry_Tropikoeka
+	cry Cry_Ostripalm
 	cry Cry_Kindlant
 	cry Cry_Caliante
 	cry Cry_Scornet
@@ -2276,7 +2276,7 @@ gCryTable_Reverse::
 .if P_CRIES_ENABLED == TRUE
 	cry_reverse Cry_Kiwee
 	cry_reverse Cry_Frondodo
-	cry_reverse Cry_Tropikoeka
+	cry_reverse Cry_Ostripalm
 	cry_reverse Cry_Kindlant
 	cry_reverse Cry_Caliante
 	cry_reverse Cry_Scornet

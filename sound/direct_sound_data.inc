@@ -396,8 +396,8 @@ Cry_Frondodo::
 	.incbin "sound/direct_sound_samples/cries/frondodo.bin"
 
 	.align 2
-Cry_Tropikoeka::
-	.incbin "sound/direct_sound_samples/cries/tropikoeka.bin"
+Cry_Ostripalm::
+	.incbin "sound/direct_sound_samples/cries/ostripalm.bin"
 
 	.align 2
 Cry_Kindlant::

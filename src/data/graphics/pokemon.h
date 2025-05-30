@@ -33,12 +33,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u8 gMonIcon_Frondodo[] = INCBIN_U8("graphics/pokemon/frondodo/icon.4bpp");
     const u8 gMonFootprint_Frondodo[] = INCBIN_U8("graphics/pokemon/frondodo/footprint.1bpp");
 
-    const u32 gMonFrontPic_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/anim_front.4bpp.lz");
-    const u32 gMonPalette_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/normal.gbapal.lz");
-    const u32 gMonBackPic_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/back.4bpp.lz");
-    const u32 gMonShinyPalette_Tropikoeka[] = INCBIN_U32("graphics/pokemon/tropikoeka/shiny.gbapal.lz");
-    const u8 gMonIcon_Tropikoeka[] = INCBIN_U8("graphics/pokemon/tropikoeka/icon.4bpp");
-    const u8 gMonFootprint_Tropikoeka[] = INCBIN_U8("graphics/pokemon/tropikoeka/footprint.1bpp");
+    const u32 gMonFrontPic_Ostripalm[] = INCBIN_U32("graphics/pokemon/ostripalm/anim_front.4bpp.lz");
+    const u32 gMonPalette_Ostripalm[] = INCBIN_U32("graphics/pokemon/ostripalm/normal.gbapal.lz");
+    const u32 gMonBackPic_Ostripalm[] = INCBIN_U32("graphics/pokemon/ostripalm/back.4bpp.lz");
+    const u32 gMonShinyPalette_Ostripalm[] = INCBIN_U32("graphics/pokemon/ostripalm/shiny.gbapal.lz");
+    const u8 gMonIcon_Ostripalm[] = INCBIN_U8("graphics/pokemon/ostripalm/icon.4bpp");
+    const u8 gMonFootprint_Ostripalm[] = INCBIN_U8("graphics/pokemon/ostripalm/footprint.1bpp");
 
     const u32 gMonFrontPic_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/anim_front.4bpp.lz");
     const u32 gMonPalette_Kindlant[] = INCBIN_U32("graphics/pokemon/kindlant/normal.gbapal.lz");

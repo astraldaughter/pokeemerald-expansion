@@ -267,10 +267,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(Frondodo)
         .levelUpLearnset = sFrondodoLevelUpLearnset,
         .teachableLearnset = sFrondodoTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TROPIKOEKA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_OSTRIPALM}),
     },
 
-    [SPECIES_TROPIKOEKA] =
+    [SPECIES_OSTRIPALM] =
     {
         .baseHP        = 102,
         .baseAttack    = 110,
@@ -290,9 +290,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("TROPIKOEKA"),
-        .cryId = CRY_TROPIKOEKA,
-        .natDexNum = NATIONAL_DEX_TROPIKOEKA,
+        .speciesName = _("OSTRIPALM"),
+        .cryId = CRY_OSTRIPALM,
+        .natDexNum = NATIONAL_DEX_OSTRIPALM,
         .categoryName = _("LUMBERING"),
         .height = 40,
         .weight = 1000,
@@ -306,23 +306,23 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .pokemonOffset = 0,
         .trainerScale = 388,
         .trainerOffset = 6,
-        .frontPic = gMonFrontPic_Tropikoeka,
+        .frontPic = gMonFrontPic_Ostripalm,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
-        .backPic = gMonBackPic_Tropikoeka,
+        .backPic = gMonBackPic_Ostripalm,
         .backPicSize = MON_COORDS_SIZE(64, 48),
         .backPicYOffset = 5,
         .backAnimId = BACK_ANIM_H_SHAKE,
-        .palette = gMonPalette_Tropikoeka,
-        .shinyPalette = gMonShinyPalette_Tropikoeka,
-        .iconSprite = gMonIcon_Tropikoeka,
+        .palette = gMonPalette_Ostripalm,
+        .shinyPalette = gMonShinyPalette_Ostripalm,
+        .iconSprite = gMonIcon_Ostripalm,
         .iconPalIndex = 1,
-        FOOTPRINT(Tropikoeka)
+        FOOTPRINT(Ostripalm)
         SHADOW(2, 6, SHADOW_SIZE_XL_BATTLE_ONLY)
-        .levelUpLearnset = sTropikoekaLevelUpLearnset,
-        .teachableLearnset = sTropikoekaTeachableLearnset,
+        .levelUpLearnset = sOstripalmLevelUpLearnset,
+        .teachableLearnset = sOstripalmTeachableLearnset,
     },
 
     [SPECIES_KINDLANT] =

@@ -1642,7 +1642,7 @@
 
 #define SPECIES_KIWEE                                   1524
 #define SPECIES_FRONDODO                                1525
-#define SPECIES_TROPIKOEKA                              1526
+#define SPECIES_OSTRIPALM                              1526
 #define SPECIES_KINDLANT                                1527
 #define SPECIES_CALIANTE                                1528
 #define SPECIES_SCORNET                                 1529
