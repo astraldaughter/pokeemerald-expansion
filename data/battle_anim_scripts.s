@@ -285,6 +285,25 @@ gBattleAnimMove_Kindling::
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 0, 12, 0, RGB_RED
 	end
 
+gBattleAnimMove_SpoonBender::
+	loadspritegfx ANIM_TAG_ALERT
+	loadspritegfx ANIM_TAG_BENT_SPOON
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+	call SetPsychicBackground
+	monbg ANIM_DEF_PARTNER
+	createsprite gBentSpoonSpriteTemplate, ANIM_ATTACKER, 20
+	waitforvisualfinish
+	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
+	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 1
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	blendoff
+	clearmonbg ANIM_DEF_PARTNER
+	call UnsetPsychicBg
+	end
+
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_Roost::
 	loadspritegfx ANIM_TAG_WHITE_FEATHER

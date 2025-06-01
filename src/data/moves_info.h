@@ -21270,6 +21270,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Kindling,
     },
 
+    [MOVE_SPOON_BENDER] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("PROVOKE"),
+        .description = COMPOUND_STRING(
+            "Attacks with telekinetic power that can bend metal. Super effective on STEEL types."),
+        .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
+        .power = 65,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_STEEL },
+        .battleAnimScript = gBattleAnimMove_SpoonBender,
+    },
 
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
