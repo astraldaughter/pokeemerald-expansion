@@ -9355,9 +9355,6 @@ static inline u32 CalcMoveBasePower(struct DamageCalculationData *damageCalcData
     case EFFECT_STORED_POWER:
         basePower += (CountBattlerStatIncreases(battlerAtk, TRUE) * 20);
         break;
-    case EFFECT_FLAME_WHEEL:
-        basePower += (CountBattlerSpecificStatIncrease(battlerAtk, STAT_SPEED) * 30);
-        break;
     case EFFECT_ELECTRO_BALL:
         speed = GetBattlerTotalSpeedStat(battlerAtk) / GetBattlerTotalSpeedStat(battlerDef);
         if (speed >= ARRAY_COUNT(sSpeedDiffPowerTable))
@@ -9845,48 +9842,60 @@ static inline u32 CalcAttackStat(struct DamageCalculationData *damageCalcData, u
     atkBaseSpeciesId = GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species);
 
     if (moveEffect == EFFECT_FOUL_PLAY)
-    {
-        if (IsBattleMovePhysical(move))
         {
-            atkStat = gBattleMons[battlerDef].attack;
-            atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
-        }
-        else
-        {
-            atkStat = gBattleMons[battlerDef].spAttack;
-            atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
-        }
-    }
-    else if (moveEffect == EFFECT_BODY_PRESS)
-    {
-        if (IsBattleMovePhysical(move))
-        {
-            atkStat = gBattleMons[battlerAtk].defense;
-            // Edge case: Body Press used during Wonder Room. For some reason, it still uses Defense over Sp.Def, but uses Sp.Def stat changes
-            if (gFieldStatuses & STATUS_FIELD_WONDER_ROOM)
-                atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
+            if (IsBattleMovePhysical(move))
+            {
+                atkStat = gBattleMons[battlerDef].attack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
+            }
             else
-                atkStage = gBattleMons[battlerAtk].statStages[STAT_DEF];
+            {
+                atkStat = gBattleMons[battlerDef].spAttack;
+                atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
+            }
         }
-        else
+    else if (moveEffect == EFFECT_BODY_PRESS)
         {
-            atkStat = gBattleMons[battlerAtk].spDefense;
-            atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
-        }
-    }
-    else
-    {
         if (IsBattleMovePhysical(move))
-        {
-            atkStat = gBattleMons[battlerAtk].attack;
-            atkStage = gBattleMons[battlerAtk].statStages[STAT_ATK];
+            {
+                atkStat = gBattleMons[battlerAtk].defense;
+                // Edge case: Body Press used during Wonder Room. For some reason, it still uses Defense over Sp.Def, but uses Sp.Def stat changes
+                if (gFieldStatuses & STATUS_FIELD_WONDER_ROOM)
+                    atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
+                else
+                    atkStage = gBattleMons[battlerAtk].statStages[STAT_DEF];
+            }
+            else
+            {
+                atkStat = gBattleMons[battlerAtk].spDefense;
+                atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
+            }
         }
-        else
+    else if (moveEffect == EFFECT_SCALE_WITH_BOOSTS_ARG) 
         {
-            atkStat = gBattleMons[battlerAtk].spAttack;
-            atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
+        if (IsBattleMovePhysical(move))
+            {
+                atkStat = gBattleMons[battlerAtk].attack;
+            }
+            else
+            {
+                atkStat = gBattleMons[battlerAtk].spAttack;
+            }
+		atkStage = gBattleMons[battlerAtk].statStages[GetMoveArgStat(move)];
         }
-    }
+    else
+        {
+            if (IsBattleMovePhysical(move))
+            {
+                atkStat = gBattleMons[battlerAtk].attack;
+                atkStage = gBattleMons[battlerAtk].statStages[STAT_ATK];
+            }
+            else
+            {
+                atkStat = gBattleMons[battlerAtk].spAttack;
+                atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
+            }
+        }
 
     // critical hits ignore attack stat's stage drops
     if (damageCalcData->isCrit && atkStage < DEFAULT_STAT_STAGE)

@@ -4456,8 +4456,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FLAME WHEEL"),
         .description = COMPOUND_STRING(
-            "A fiery charge attack that may burn. Boosted for each SPEED boost the user has."),
-        .effect = EFFECT_FLAME_WHEEL,
+            "A fiery charge attack that may burn. Boosted for each SPEED boost the user has rather than ATTACK."),
+        .effect = EFFECT_SCALE_WITH_BOOSTS_ARG,
         .power = 60,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -4465,6 +4465,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = { .stat = STAT_ACC },
         .makesContact = TRUE,
         .thawsUser = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
