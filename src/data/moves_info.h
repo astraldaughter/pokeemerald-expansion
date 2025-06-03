@@ -133,9 +133,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("POUND"),
         .description = COMPOUND_STRING(
-			"The target is physically pounded\n"
-			"with a long tail, a foreleg,\n"
-			"or the like."),
+            "Pounds the foe with\n"
+            "forelegs or tail."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_NORMAL,
@@ -2933,7 +2932,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("LIGHT SCREEN"),
         .description = COMPOUND_STRING(
-            "A wondrous wall of light is put up to reduce damage from special attacks for 5 turns."),
+            "Creates a wondrous wall of light to halve damage from physical attacks for 5 turns."),
         .effect = EFFECT_LIGHT_SCREEN,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -2985,7 +2984,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("REFLECT"),
         .description = COMPOUND_STRING(
-            "A wondrous wall of light is put up to reduce damage from physical attacks for 5 turns."),
+            "Creates a wondrous wall of light to halve damage from physical attacks for 5 turns."),
         .effect = EFFECT_REFLECT,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -16586,10 +16585,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_AURORA_VEIL] =
     {
-        .metronomeBanned = TRUE, // DEXITED
+        // UNDEXITED
         .name = COMPOUND_STRING("AURORA VEIL"),
         .description = COMPOUND_STRING(
-            "Weakens all attacks, but only usable with hail."),
+            "Creates a wondrous wall\n"
+            "of light that reduces\n"
+            "damage by 25% for 5\n"
+            "turns, 50% if it's\n"
+            "hailing.\n"),
         .effect = EFFECT_AURORA_VEIL,
         .power = 0,
         .type = TYPE_ICE,

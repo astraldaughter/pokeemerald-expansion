@@ -10421,8 +10421,16 @@ static inline uq4_12_t GetScreensModifier(u32 move, u32 battlerAtk, u32 battlerD
 
     if (isCrit || abilityAtk == ABILITY_INFILTRATOR || gProtectStructs[battlerAtk].confusionSelfDmg)
         return UQ_4_12(1.0);
-    if (reflect || lightScreen || auroraVeil)
-        return (IsDoubleBattle()) ? UQ_4_12(0.667) : UQ_4_12(0.5);
+    if (reflect || lightScreen)
+        return UQ_4_12(0.5);
+    else if (auroraVeil)
+    {
+        // Aurora Veil reduces damage by 25% if it's not hailing/snowing, and 50% if it is.
+        if (gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW))
+            return UQ_4_12(0.5);
+        else
+            return UQ_4_12(0.75);
+    }
     return UQ_4_12(1.0);
 }
 
