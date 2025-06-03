@@ -4456,7 +4456,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FLAME WHEEL"),
         .description = COMPOUND_STRING(
-            "A fiery charge attack that may burn. Boosted for each SPEED boost the user has rather than ATTACK."),
+            "A fiery charge attack that may burn. Strengthened by user's SPEED boosts instead of ATTACK."),
         .effect = EFFECT_SCALE_WITH_BOOSTS_ARG,
         .power = 60,
         .type = TYPE_FIRE,
@@ -4465,7 +4465,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = { .stat = STAT_ACC },
+        .argument = { .stat = STAT_SPEED },
         .makesContact = TRUE,
         .thawsUser = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
@@ -10524,8 +10524,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FOCUS BLAST"),
         .description = COMPOUND_STRING(
-            "The user heightens its focus and unleashes its power. This may lower the target's SP. DEF."),
-        .effect = EFFECT_HIT,
+            "Focuses aura into a blast to attack. Strengthened by user's ATTACK boosts instead of SP.ATK."),
+        .effect = EFFECT_SCALE_WITH_BOOSTS_ARG,
         .power = 120,
         .type = TYPE_FIGHTING,
         .accuracy = 70,
@@ -10533,6 +10533,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .stat = STAT_ATK },
         .ballisticMove = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
