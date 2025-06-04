@@ -5003,7 +5003,7 @@ static void SetMoveTypeIcons(void)
         if (move != MOVE_NONE)
         {
             type = P_SHOW_DYNAMIC_TYPES ? CheckDynamicMoveType(&sMonSummaryScreen->currentMon, move, 0) : GetMoveType(move);
-            SetTypeSpritePosAndPal(type, 8, 16 + (i * 28), i + SPRITE_ARR_ID_TYPE);
+            SetTypeSpritePosAndPal(type, 8, 24 + (i * 28), i + SPRITE_ARR_ID_TYPE);
         }
         else
         {
