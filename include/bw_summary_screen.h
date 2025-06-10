@@ -15,8 +15,8 @@
                                                             // for reference, Emerald runs at 60FPS by default
 
 // configs
-#define BW_SUMMARY_AUTO_FORMAT_MOVE_DESCRIPTIONS    TRUE                // automatically formats move descriptions to fit the new box size. disable if you want to format them manually
-#define BW_SUMMARY_NATURE_COLORS                    FALSE                // color stats increased or reduced by nature, red = boosted, blue = reduced
+#define BW_SUMMARY_AUTO_FORMAT_MOVE_DESCRIPTIONS    FALSE               // automatically formats move descriptions to fit the new box size. disable if you want to format them manually
+#define BW_SUMMARY_NATURE_COLORS                    FALSE               // color stats increased or reduced by nature, red = boosted, blue = reduced
 #define BW_SUMMARY_NATURE_ARROWS                    FALSE               // arrows to show stats increased or reduced by nature
 #define BW_SUMMARY_CATEGORY_ICONS                   TRUE                // determines whether category (split) icons are shown or not
 #define BW_SUMMARY_IV_EV_DISPLAY                    BW_IV_EV_HIDDEN     // determines how to show IVs and EVs

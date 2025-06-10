@@ -4694,9 +4694,9 @@ static void PrintMoveDetails(u16 move)
             else
             {
                 if (gMovesInfo[move].effect != EFFECT_PLACEHOLDER)
-                    PrintTextOnWindowWithFont(windowId, gMovesInfo[move].description, 2, 0, 0, 0, FONT_SMALL);
+                    PrintTextOnWindowWithFont(windowId, gMovesInfo[move].description, 1, 29, 2, 0, FONT_SMALL_COMPACTED);
                 else
-                    PrintTextOnWindowWithFont(windowId, gNotDoneYetDescription, 2, 0, 0, 0, FONT_SMALL);
+                    PrintTextOnWindowWithFont(windowId, gNotDoneYetDescription, 1, 29, 2, 0, FONT_SMALL_COMPACTED);
             }
 
 
