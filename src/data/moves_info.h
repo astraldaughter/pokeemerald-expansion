@@ -22105,8 +22105,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("KINDLING"),
         .description = COMPOUND_STRING(
             "Builds a warm fire that\n"
-            "heals allies a little for 5\n"
-            "turns. FIRE types are\n"
+            "heals allies a little for\n"
+            "5 turns. FIRE types are\n"
             "healed more.\n"),
         .effect = EFFECT_KINDLING,
         .power = 0,
