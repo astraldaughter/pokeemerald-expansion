@@ -2269,6 +2269,9 @@ gCryTable::
 	cry Cry_Neadough
 	cry Cry_Moldough
 	cry Cry_Bonnifire
+	cry Cry_Cumulamb
+	cry Cry_Nimbaa
+	cry Cry_Ramstrom
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4542,4 +4545,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Neadough
 	cry_reverse Cry_Moldough
 	cry_reverse Cry_Bonnifire
+	cry_reverse Cry_Cumulamb
+	cry_reverse Cry_Nimbaa
+	cry_reverse Cry_Ramstrom
 .endif @ P_CRIES_ENABLED

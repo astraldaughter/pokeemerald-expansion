@@ -1667,8 +1667,11 @@
 #define SPECIES_LYNDWURM                                1548
 #define SPECIES_EARTHWYRM                               1549
 #define SPECIES_BONNIFIRE                               1550
+#define SPECIES_CUMULAMB                                1551
+#define SPECIES_NIMBAA                                  1552
+#define SPECIES_RAMSTROM                                1553
 
-#define SPECIES_EGG                                     (SPECIES_BONNIFIRE + 1)
+#define SPECIES_EGG                                     (SPECIES_RAMSTROM + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

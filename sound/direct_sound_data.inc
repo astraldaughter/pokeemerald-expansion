@@ -6115,6 +6115,18 @@ Cry_Moldough::
 Cry_Bonnifire::
 	.incbin "sound/direct_sound_samples/cries/bonnifire.bin"
 
+	.align 2
+Cry_Cumulamb::
+	.incbin "sound/direct_sound_samples/cries/cumulamb.bin"
+
+	.align 2
+Cry_Nimbaa::
+	.incbin "sound/direct_sound_samples/cries/nimbaa.bin"
+
+	.align 2
+Cry_Ramstrom::
+	.incbin "sound/direct_sound_samples/cries/ramstrom.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2
