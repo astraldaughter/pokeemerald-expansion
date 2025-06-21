@@ -863,6 +863,7 @@ extern const u8 gBattleAnimMove_GulpMissile[];
 extern const u8 gBattleAnimMove_Provoke[];
 extern const u8 gBattleAnimMove_Kindling[];
 extern const u8 gBattleAnimMove_SpoonBender[];
+extern const u8 gBattleAnimMove_Icebreaker[];
 // Z Moves
 extern const u8 gBattleAnimMove_BreakneckBlitz[];
 extern const u8 gBattleAnimMove_AllOutPummeling[];

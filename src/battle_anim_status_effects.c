@@ -444,6 +444,24 @@ void AnimTask_FrozenIceCube(u8 taskId)
     gTasks[taskId].func = AnimTask_FrozenIceCube_Step1;
 }
 
+void AnimTask_OpaqueFrozenIceCube(u8 taskId)
+{
+	// same as AnimTask_FrozenIceCube but without blending
+    s16 x = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) - 32;
+    s16 y = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET) - 36;
+    u8 spriteId;
+
+    if (IsContest())
+        x -= 6;
+
+    spriteId = CreateSprite(&sFrozenIceCubeSpriteTemplate, x, y, 4);
+    if (GetSpriteTileStartByTag(ANIM_TAG_ICE_CUBE) == 0xFFFF)
+        gSprites[spriteId].invisible = TRUE;
+    SetSubspriteTables(&gSprites[spriteId], sFrozenIceCubeSubspriteTable);
+    gTasks[taskId].data[15] = spriteId;
+    gTasks[taskId].func = AnimTask_FrozenIceCube_Step1;
+}
+
 static void AnimTask_FrozenIceCube_Step1(u8 taskId)
 {
     gTasks[taskId].data[1]++;

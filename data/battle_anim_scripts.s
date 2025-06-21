@@ -304,6 +304,31 @@ gBattleAnimMove_SpoonBender::
 	call UnsetPsychicBg
 	end
 
+gBattleAnimMove_Icebreaker::
+    loadspritegfx ANIM_TAG_ICICLE_SPEAR
+    loadspritegfx ANIM_TAG_ICE_CUBE
+    loadspritegfx ANIM_TAG_TORN_METAL
+    createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BG, 0x1, 0x0, 0xA, 0x3C00 @;Royal Blue
+    monbg ANIM_TARGET
+    playsewithpan SE_M_HAIL, SOUND_PAN_TARGET
+    createvisualtask AnimTask_OpaqueFrozenIceCube, 2
+    createsprite gSpriteTemplate_GlacialLance, ANIM_TARGET, 2, 0, 40, 0, 0, 40, 50, 10
+    delay 60
+    createvisualtask AnimTask_FlashAnimTagWithColor, 0x2, ANIM_TAG_ICICLE_SPEAR, 0x4, 0x1, 0x7FFF, 0x10, 0x0, 0x0
+    playsewithpan SE_M_DETECT, SOUND_PAN_TARGET
+    delay 38
+    createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 26, 1
+    createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 0, -8, -12
+    createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 1, 8, -12
+    createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 2, -8, 12
+    createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 3, 8, 12
+    playsewithpan SE_M_BRICK_BREAK, SOUND_PAN_TARGET
+    waitforvisualfinish
+    createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BG, 0x0, 0xA, 0x0, 0x3C00 @;Royal Blue
+    waitforvisualfinish
+    clearmonbg ANIM_TARGET
+    end
+
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_Roost::
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
