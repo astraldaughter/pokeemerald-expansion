@@ -283,8 +283,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("FIRE PUNCH"),
         .description = COMPOUND_STRING(
             "Punches foe with a fiery\n"
-            "fist.\n"
-            "May burn."),
+            "fist. 10% chance to burn.\n"),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_FIRE,
@@ -313,8 +312,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ICE PUNCH"),
         .description = COMPOUND_STRING(
             "Punches foe with a frigid\n"
-            "fist.\n"
-            "May freeze."),
+            "fist. 10% chance to\n"
+            "freeze.\n"),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_ICE,
@@ -342,9 +341,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("THUNDER PUNCH"),
         .description = COMPOUND_STRING(
-            "Punches foe with a\n"
-            "charged fist.\n"
-            "May cause paralysis."),
+            "Punches foe with a frigid\n"
+            "fist. 10% chance to\n"
+            "paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_ELECTRIC,
@@ -712,8 +711,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("STOMP"),
         .description = COMPOUND_STRING(
             "Stomps on the foe with a\n"
-            "big foot. May cause\n"
-            "flinching.\n"),
+            "big foot. 30% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_NORMAL,
@@ -872,8 +871,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("HEADBUTT"),
         .description = COMPOUND_STRING(
             "Charges headfirst into\n"
-            "the foe. May cause\n"
-            "flinching.\n"),
+            "the foe. 30% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_NORMAL,
@@ -997,7 +996,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Drops onto the foe with\n"
             "the user's full weight.\n"
-            "May cause paralysis.\n"),
+            "30% chance to paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_NORMAL,
@@ -1159,8 +1158,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("POISON STING"),
         .description = COMPOUND_STRING(
             "Stabs the foe with a\n"
-            "venomous stinger that\n"
-            "may poison it.\n"),
+            "venomous stinger. 30%\n"
+            "chance to poison.\n"),
         .effect = EFFECT_HIT,
         .power = 15,
         .type = TYPE_POISON,
@@ -1262,7 +1261,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BITE"),
         .description = COMPOUND_STRING(
             "Bites with vicious fangs.\n"
-            "May cause flinching.\n"),
+            "30% chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_DARK,
@@ -1456,8 +1455,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ACID"),
         .description = COMPOUND_STRING(
             "Sprays the enemy with a\n"
-            "harsh acid that may lower\n"
-            "their DEFENSE stats.\n"),
+            "harsh acid. 50% chance to\n"
+            "lower DEFENSE.\n"),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_POISON,
@@ -1482,8 +1481,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("EMBER"),
         .description = COMPOUND_STRING(
-            "Attacks with small flames\n"
-            "that may burn the foe.\n"),
+            "Singes the foe with small\n"
+            "flames. 10% chance to\n"
+            "burn.\n"),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_FIRE,
@@ -1509,8 +1509,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("FLAMETHROWER"),
         .description = COMPOUND_STRING(
             "Scorches the foe with\n"
-            "fiery breath that may\n"
-            "leave a burn.\n"),
+            "fiery breath. 10% chance\n"
+            "to burn.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_FIRE,
@@ -1638,8 +1638,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ICE BEAM"),
         .description = COMPOUND_STRING(
             "Blasts the foe with an\n"
-            "icy beam of energy that\n"
-            "may freeze it.\n"),
+            "icy beam of energy. 10%\n"
+            "chance to freeze.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_ICE,
@@ -1668,10 +1668,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BLIZZARD"),
         .description = COMPOUND_STRING(
             "Summons a raging blizzard\n"
-            "to attack the enemy. This\n"
-            "may freeze them, and\n"
-            "never misses if it is\n"
-            "hailing.\n"),
+            "to attack the enemy.\n"
+            "Never misses in hail.\n"
+            "10% chance to freeze.\n"),
         .effect = B_BLIZZARD_HAIL >= GEN_4 ? EFFECT_BLIZZARD : EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
         .type = TYPE_ICE,
@@ -1699,8 +1698,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("PSYBEAM"),
         .description = COMPOUND_STRING(
             "Attacks with a peculiar\n"
-            "ray that may confuse\n"
-            "the foe.\n"),
+            "ray. 10% chance to\n"
+            "confuse.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_PSYCHIC,
@@ -1727,8 +1726,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BUBBLE BEAM"),
         .description = COMPOUND_STRING(
             "Forcefully sprays bubbles\n"
-            "at the foe, and may lower\n"
-            "its SPEED.\n"),
+            "at the foe. 10% chance to\n"
+            "lower SPEED.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_WATER,
@@ -1754,8 +1753,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("AURORA BEAM"),
         .description = COMPOUND_STRING(
             "Fires a rainbow-colored\n"
-            "beam at the foe that\n"
-            "may lower its ATTACK.\n"),
+            "beam at the foe. 10%\n"
+            "chance to lower ATTACK.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ICE,
@@ -2347,8 +2346,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("THUNDER SHOCK"),
         .description = COMPOUND_STRING(
             "Strikes the foe with a\n"
-            "jolt of electricity that\n"
-            "may cause paralysis.\n"),
+            "jolt of electricity. 10%\n"
+            "chance to paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_ELECTRIC,
@@ -2374,8 +2373,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("THUNDERBOLT"),
         .description = COMPOUND_STRING(
             "Strikes the foe with an\n"
-            "electrical blast that\n"
-            "may cause paralysis.\n"),
+            "electrical blast. 10%\n"
+            "chance to paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_ELECTRIC,
@@ -2427,10 +2426,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("THUNDER"),
         .description = COMPOUND_STRING(
             "Strikes the foe with a\n"
-            "wicked thunderbolt that\n"
-            "may cause paralysis.\n"
-            "This move never misses if\n"
-            "it's raining.\n"),
+            "wicked thunderbolt. Never\n"
+            "misses in rain. 30%\n"
+            "chance to paralyze.\n"),
         .effect = EFFECT_THUNDER,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
         .type = TYPE_ELECTRIC,
@@ -2591,8 +2589,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("CONFUSION"),
         .description = COMPOUND_STRING(
             "Attacks the foe with a\n"
-            "weak telekinetic force\n"
-            "that may confuse it.\n"),
+            "weak telekinetic force.\n"
+            "20% chance to confuse.\n"),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_PSYCHIC,
@@ -2618,8 +2616,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("PSYCHIC"),
         .description = COMPOUND_STRING(
             "Attacks the foe with a\n"
-            "strong telekinetic force\n"
-            "that may lower its\n"
+            "strong telekinetic force.\n"
+            "10% chance to lower\n"
             "SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
@@ -3396,8 +3394,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("LICK"),
         .description = COMPOUND_STRING(
             "Licks the foe with a long\n"
-            "tongue that may cause\n"
-            "paralysis.\n"),
+            "tongue. 30% chance to\n"
+            "paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
         .type = TYPE_GHOST,
@@ -3425,8 +3423,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SMOG"),
         .description = COMPOUND_STRING(
             "Discharges filthy exhaust\n"
-            "gases that may poison\n"
-            "enemies.\n"),
+            "gases at enemies. 40%\n"
+            "chance to poison.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
         .type = TYPE_POISON,
@@ -3452,8 +3450,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SLUDGE"),
         .description = COMPOUND_STRING(
             "Hurls toxic sludge to\n"
-            "inflict damage. May\n"
-            "also poison.\n"),
+            "inflict damage. 30%\n"
+            "chance to poison.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_POISON,
@@ -3479,7 +3477,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BONE CLUB"),
         .description = COMPOUND_STRING(
             "Clubs the foe with a bone.\n"
-            "May cause flinching.\n"),
+            "10% chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_GROUND,
@@ -3505,8 +3503,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("FIRE BLAST"),
         .description = COMPOUND_STRING(
             "Blasts the foe with an\n"
-            "all-consuming fire that\n"
-            "may leave it burned.\n"),
+            "all-consuming fire. 10%\n"
+            "chance to burn.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
         .type = TYPE_FIRE,
@@ -3535,8 +3533,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Surges towards the foe\n"
             "to attack with enough\n"
             "power to scale a\n"
-            "waterfall. May cause\n"
-            "flinching.\n"),
+            "waterfall. 20% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_WATER,
@@ -3968,8 +3966,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Gathers energy on the\n"
             "first turn, then attacks.\n"
-            "High critical-hit ratio,\n"
-            "and may cause flinching.\n"),
+            "High critical-hit ratio.\n"
+            "30% chance to flinch.\n"),
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 140,
         .type = TYPE_FLYING,
@@ -4035,8 +4033,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BUBBLE"),
         .description = COMPOUND_STRING(
             "Sprays bubbles at the\n"
-            "enemy that may also lower\n"
-            "their SPEED stats.\n"),
+            "enemy. 10% chance to\n"
+            "lower SPEED.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 40 : 20,
         .type = TYPE_WATER,
@@ -4062,8 +4060,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("DIZZY PUNCH"),
         .description = COMPOUND_STRING(
             "Hits with rhythmic\n"
-            "punches that may confuse\n"
-            "the foe.\n"),
+            "punches. 20% chance to\n"
+            "confuse.\n"),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_NORMAL,
@@ -4352,8 +4350,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ROCK SLIDE"),
         .description = COMPOUND_STRING(
             "Hurls large boulders at\n"
-            "the foe. May cause\n"
-            "flinching.\n"),
+            "enemies. 30% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_ROCK,
@@ -4380,8 +4378,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("HYPER FANG"),
         .description = COMPOUND_STRING(
             "Attacks with sharp front\n"
-            "fangs. May cause\n"
-            "flinching.\n"),
+            "fangs. 10% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_NORMAL,
@@ -4464,9 +4462,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("TRI ATTACK"),
         .description = COMPOUND_STRING(
-            "Fires three beams at once\n"
-            "that may freeze, burn, or\n"
-            "paralyze the foe.\n"),
+            "Fires three elemental\n"
+            "beams at once. 20% chance\n"
+            "to either freeze, burn,\n"
+            "or paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_NORMAL,
@@ -4781,11 +4780,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("FLAME WHEEL"),
         .description = COMPOUND_STRING(
-            "A fiery charge attack\n"
-            "that may burn.\n"
+            "A fiery charge attack.\n"
             "Strengthened by user's\n"
             "SPEED boosts instead of\n"
-            "ATTACK.\n"),
+            "ATTACK. 10% chance to\n"
+            "burn.\n"),
         .effect = EFFECT_SCALE_WITH_BOOSTS_ARG,
         .power = 60,
         .type = TYPE_FIRE,
@@ -4815,8 +4814,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "An attack that can only\n"
             "be used while the user is\n"
-            "asleep. The loud snoring\n"
-            "may cause flinching.\n"),
+            "asleep. 30% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_SNORE,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 50 : 40,
         .type = TYPE_NORMAL,
@@ -5034,8 +5033,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("POWDER SNOW"),
         .description = COMPOUND_STRING(
             "Attacks with a chilling\n"
-            "gust of powdery snow that\n"
-            "may freeze enemies.\n"),
+            "gust of powdery snow. 10%\n"
+            "chance to freeze.\n"),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_ICE,
@@ -5219,8 +5218,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SLUDGE BOMB"),
         .description = COMPOUND_STRING(
             "Hurls unsanitary sludge\n"
-            "at the foe that may\n"
-            "poison it.\n"),
+            "at the foe. 30% chance\n"
+            "to poison.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_POISON,
@@ -5277,7 +5276,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Sprays ink in the foe's\n"
             "eyes, inflicting damage.\n"
-            "This may also lower its\n"
+            "50% chance to lower\n"
             "accuracy.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
@@ -5819,8 +5818,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SPARK"),
         .description = COMPOUND_STRING(
             "An electrically charged\n"
-            "tackle that may paralyze\n"
-            "the foe.\n"),
+            "tackle. 30% chance to\n"
+            "paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ELECTRIC,
@@ -6260,7 +6259,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Strikes the foe with an\n"
             "incredible blast of\n"
-            "breath that may paralyze.\n"),
+            "breath. 30% chance to\n"
+            "paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_DRAGON,
@@ -6432,8 +6432,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("IRON TAIL"),
         .description = COMPOUND_STRING(
             "Slams the foe with a\n"
-            "steel-hard tail that may\n"
-            "lower its DEFENSE.\n"),
+            "steel-hard tail. 30%\n"
+            "chance to lower DEFENSE.\n"),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_STEEL,
@@ -6461,7 +6461,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("METAL CLAW"),
         .description = COMPOUND_STRING(
             "Rakes the foe with steel\n"
-            "claws. May raise ATTACK.\n"),
+            "claws. 10% chance to\n"
+            "raise ATTACK.\n"),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_STEEL,
@@ -6739,8 +6740,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("CRUNCH"),
         .description = COMPOUND_STRING(
             "Crunches the foe with\n"
-            "sharp fangs. May lower\n"
-            "SP. DEF.\n"),
+            "sharp fangs. 20% chance\n"
+            "to lower SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_DARK,
@@ -6851,9 +6852,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ANCIENT POWER"),
         .description = COMPOUND_STRING(
-            "Attacks with a\n"
-            "prehistoric power that\n"
-            "may raise all stats.\n"),
+            "Attacks the foe with a\n"
+            "prehistoric power. 10%\n"
+            "chance to raise all stats.\n"),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_ROCK,
@@ -6882,7 +6883,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SHADOW BALL"),
         .description = COMPOUND_STRING(
             "Hurls a dark lump at the\n"
-            "foe that may lower\n"
+            "foe. 20% chance to lower\n"
             "SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
@@ -7165,8 +7166,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("HEAT WAVE"),
         .description = COMPOUND_STRING(
             "Blasts enemies with hot\n"
-            "air. This may leave them\n"
-            "with a burn.\n"),
+            "air. 10% chance to burn.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 95 : 100,
         .type = TYPE_FIRE,
@@ -7681,7 +7681,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Plants roots that restore\n"
             "a little HP each turn, but\n"
-            "prevent it from switching\n"),
+            "prevent switching.\n"),
         .effect = EFFECT_INGRAIN,
         .power = 0,
         .type = TYPE_GRASS,
@@ -8491,8 +8491,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("POISON FANG"),
         .description = COMPOUND_STRING(
-            "Bites with toxic fangs\n"
-            "that may badly poison.\n"),
+            "Bites with toxic fangs.\n"
+            "50% chance to badly\n"
+            "poison.\n"),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_POISON,
@@ -8520,8 +8521,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("CRUSH CLAW"),
         .description = COMPOUND_STRING(
             "Tears at the foe with\n"
-            "sharp claws. May lower\n"
-            "DEFENSE.\n"),
+            "sharp claws. 50% chance"
+            "to lower DEFENSE."),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_NORMAL,
@@ -8636,8 +8637,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ASTONISH"),
         .description = COMPOUND_STRING(
             "Attacks while shouting\n"
-            "startlingly. May cause\n"
-            "flinching.\n"),
+            "startlingly. 30% chance\n"
+            "to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 30,
         .type = TYPE_GHOST,
@@ -8864,7 +8865,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Attacks with silvery\n"
             "scales blown by wind.\n"
-            "May raise all stats.\n"),
+            "10% chance to raise all\n"
+            "stats.\n"),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_BUG,
@@ -9078,8 +9080,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("EXTRASENSORY"),
         .description = COMPOUND_STRING(
             "Attacks with an odd,\n"
-            "supernatural power that\n"
-            "may cause flinching.\n"),
+            "supernatural power. 10%\n"
+            "chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
@@ -9452,7 +9454,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Bounces up high on the\n"
             "first turn, then drops\n"
             "on the foe on the next\n"
-            "turn. May paralyze.\n"),
+            "turn. 30% chance to\n"
+            "paralyze.\n"),
         .effect = EFFECT_SEMI_INVULNERABLE,
         .power = 85,
         .type = TYPE_FLYING,
@@ -9511,8 +9514,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("POISON TAIL"),
         .description = COMPOUND_STRING(
             "Attacks with a venomous\n"
-            "tail that may poison.\n"
-            "High critical-hit ratio.\n"),
+            "tail. High critical-hit\n"
+            "ratio. 10% chance to\n"
+            "poison.\n"),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_POISON,
@@ -9785,9 +9789,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("WATER PULSE"),
         .description = COMPOUND_STRING(
             "Attacks with a pulsing\n"
-            "blast of water that may\n"
-            "confuse and cannot be\n"
-            "evaded.\n"),
+            "blast of water that can't\n"
+            "be evaded. 20% chance to\n"
+            "confuse.\n"),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_WATER,
@@ -10927,8 +10931,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("POISON JAB"),
         .description = COMPOUND_STRING(
             "Stabs the foe with a\n"
-            "toxic appendage that may\n"
-            "cause poisoning.\n"),
+            "toxic appendage. 30%\n"
+            "chance to poison.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_POISON,
@@ -11103,7 +11107,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Generates a harsh,\n"
             "damaging sound wave by\n"
             "rapidly flapping wings.\n"
-            "May lower SP. DEF.\n"),
+            "10% chance to lower\n"
+            "SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_BUG,
@@ -11153,8 +11158,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("TYRANT CRUSH"),
         .description = COMPOUND_STRING(
             "A menacingly powerful\n"
-            "crushing attack that may\n"
-            "make the foe flinch.\n"),
+            "crushing attack. 20%\n"
+            "chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_DRAGON,
@@ -11253,7 +11258,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Focuses aura into a blast\n"
             "to attack. Strengthened\n"
             "by user's ATTACK boosts\n"
-            "instead of SP. ATK.\n"),
+            "instead of SP. ATK. 10%\n"
+            "chance to lower SP. DEF.\n"),
         .effect = EFFECT_SCALE_WITH_BOOSTS_ARG,
         .power = 120,
         .type = TYPE_FIGHTING,
@@ -11331,7 +11337,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Makes the ground under\n"
             "the foe erupt violently.\n"
-            "May lower SP. DEF.\n"),
+            "10% chance to lower\n"
+            "SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_GROUND,
@@ -11531,8 +11538,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("THUNDER FANG"),
         .description = COMPOUND_STRING(
             "Bites with electrified\n"
-            "fangs that may paralyze\n"
-            "or cause flinching.\n"),
+            "fangs. 10% chance to\n"
+            "paralyze. 10% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ELECTRIC,
@@ -11564,8 +11572,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ICE FANG"),
         .description = COMPOUND_STRING(
             "Bites with freezing cold\n"
-            "fangs that may freeze or\n"
-            "cause flinching.\n"),
+            "fangs. 10% chance to\n"
+            "freeze. 10% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ICE,
@@ -11597,8 +11606,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("FIRE FANG"),
         .description = COMPOUND_STRING(
             "Bites with flame-cloaked\n"
-            "fangs that may burn or\n"
-            "cause flinching.\n"),
+            "fangs. 10% chance to\n"
+            "burn. 10% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_FIRE,
@@ -11706,8 +11716,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Clears the mind to\n"
             "concentrate psychic\n"
             "power, then headbutts\n"
-            "the foe. May cause\n"
-            "flinching.\n"),
+            "the foe. 20% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
@@ -11883,8 +11893,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Releases a wild electrical\n"
             "charge that strikes all\n"
-            "other POKéMON. May cause\n"
-            "paralysis.\n"),
+            "other POKéMON. 30%\n"
+            "chance to paralyze.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_ELECTRIC,
@@ -12038,7 +12048,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Shoots a torrent of filth\n"
             "and garbage to attack.\n"
-            "May cause poisoning.\n"),
+            "30% chance to poison.\n"),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_POISON,
@@ -12064,8 +12074,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("IRON HEAD"),
         .description = COMPOUND_STRING(
             "Slams the foe with a\n"
-            "steel-hard head. May\n"
-            "cause flinching.\n"),
+            "steel-hard head. 30%\n"
+            "chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_STEEL,
@@ -14877,7 +14887,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ICICLE CRASH"),
         .description = COMPOUND_STRING(
             "Drops large icicles on the\n"
-            "foe. May cause flinching.\n"),
+            "foe. 30% chance to\n"
+            "flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_ICE,
@@ -15562,8 +15573,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("PLAY ROUGH"),
         .description = COMPOUND_STRING(
             "Plays rough with the foe\n"
-            "to attack. May lower\n"
-            "ATTACK.\n"),
+            "to attack. 10% chance to\n"
+            "lower ATTACK.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_FAIRY,
@@ -15612,8 +15623,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("MOONBLAST"),
         .description = COMPOUND_STRING(
             "Attacks with the power of\n"
-            "the moon. May lower\n"
-            "SP. ATK.\n"),
+            "the moon. 30% chance to\n"
+            "lower SP. ATK.\n"),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_FAIRY,
@@ -21805,7 +21816,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Launches startling\n"
             "explosives at the foe 2-5\n"
             "times. Each hit has a\n"
-            "small chance to flinch.\n"),
+            "5% chance to flinch.\n"),
         .effect = EFFECT_MULTI_HIT,
         .power = 15,
         .type = TYPE_FIRE,
@@ -21848,9 +21859,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("SANDBLAST"),
         .description = COMPOUND_STRING(
             "Blasts the foe with\n"
-            "abrasive sand that may\n"
-            "lower its DEFENSE or\n"
-            "accuracy.\n"),
+            "abrasive sand. 30% chance\n"
+            "to lower DEFENSE. 30%\n"
+            "chance to lower accuracy.\n"),
         .effect = EFFECT_HIT,
         .power = 30,
         .type = TYPE_GROUND,
@@ -21994,8 +22005,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Strikes suddenly after\n"
             "charming the foe into\n"
-            "dropping its guard. May\n"
-            "cause flinching.\n"),
+            "dropping its guard. 30%\n"
+            "chance to flinch.\n"),
         .priority = 0,
         .makesContact = TRUE,
         .effect = EFFECT_HIT,
@@ -22077,7 +22088,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Attacks enemies with a\n"
             "viscous torrent of mud.\n"
-            "May lower accuracy.\n"),
+            "30% chance to lower\n"
+            "accuracy.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_GROUND,
