@@ -74,6 +74,262 @@ struct SpeciesItem
     u16 item;
 };
 
+const u8 evLookupTable[253] = {
+	0,
+	1,
+	2,
+	2,
+	2,
+	3,
+	3,
+	3,
+	3,
+	3,
+	4,
+	4,
+	4,
+	4,
+	4,
+	4,
+	4,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	5,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	6,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	7,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	8,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	9,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	10,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	11,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	12,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	13,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	14,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	15,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16,
+	16
+};
+
 static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon);
 static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 personality, u8 substructType);
 static void EncryptBoxMon(struct BoxPokemon *boxMon);
@@ -1731,10 +1987,10 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
     return checksum;
 }
 
-#define CALC_STAT(base, iv, statIndex, field)               \
+#define CALC_STAT(base, iv, ev, statIndex, field)               \
 {                                                               \
     u8 baseStat = gSpeciesInfo[species].base;                   \
-    s32 n = (((2 * baseStat + iv + (63 * (level / 100))) * level) / 100) + 5; \
+    s32 n = (((2 * baseStat + iv + (4 * evLookupTable[ev])) * level) / 100) + 5; \
     n = ModifyStatByNature(nature, n, statIndex);               \
     if (B_FRIENDSHIP_BOOST == TRUE)                             \
         n = n + ((n * 10 * friendship) / (MAX_FRIENDSHIP * 100));\
@@ -1773,7 +2029,7 @@ void CalculateMonStats(struct Pokemon *mon)
     else
     {
         s32 n = 2 * gSpeciesInfo[species].baseHP + hpIV;
-        newMaxHP = (((n + (63 * (level / 100))) * level) / 100) + level + 10;
+        newMaxHP = (((n + (4 * evLookupTable[hpEV])) * level) / 100) + level + 10;
     }
 
     gBattleScripting.levelUpHP = newMaxHP - oldMaxHP;
@@ -1782,11 +2038,11 @@ void CalculateMonStats(struct Pokemon *mon)
 
     SetMonData(mon, MON_DATA_MAX_HP, &newMaxHP);
 
-    CALC_STAT(baseAttack, attackIV, STAT_ATK, MON_DATA_ATK)
-    CALC_STAT(baseDefense, defenseIV, STAT_DEF, MON_DATA_DEF)
-    CALC_STAT(baseSpeed, speedIV, STAT_SPEED, MON_DATA_SPEED)
-    CALC_STAT(baseSpAttack, spAttackIV, STAT_SPATK, MON_DATA_SPATK)
-    CALC_STAT(baseSpDefense, spDefenseIV, STAT_SPDEF, MON_DATA_SPDEF)
+    CALC_STAT(baseAttack, attackIV, attackEV, STAT_ATK, MON_DATA_ATK)
+    CALC_STAT(baseDefense, defenseIV, defenseEV, STAT_DEF, MON_DATA_DEF)
+    CALC_STAT(baseSpeed, speedIV, speedEV, STAT_SPEED, MON_DATA_SPEED)
+    CALC_STAT(baseSpAttack, spAttackIV, spAttackEV, STAT_SPATK, MON_DATA_SPATK)
+    CALC_STAT(baseSpDefense, spDefenseIV, spDefenseEV, STAT_SPDEF, MON_DATA_SPDEF)
 
     // Since a pokemon's maxHP data could either not have
     // been initialized at this point or this pokemon is
@@ -5282,39 +5538,39 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         {
         case STAT_HP:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_HP + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseHP / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_HP * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseHP / 5) * multiplier;
             break;
         case STAT_ATK:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_Attack + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseAttack / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Attack * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseAttack / 5) * multiplier;
             break;
         case STAT_DEF:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_Defense + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseDefense / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Defense * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseDefense / 5) * multiplier;
             break;
         case STAT_SPEED:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_Speed + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseSpeed / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Speed * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseSpeed / 5) * multiplier;
             break;
         case STAT_SPATK:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_SpAttack + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseSpAttack / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_SpAttack * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseSpAttack / 5) * multiplier;
             break;
         case STAT_SPDEF:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF)
-                evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_SpDefense + bonus) * multiplier;
+                evIncrease = ((gSpeciesInfo[defeatedSpecies].baseSpDefense / 5) + bonus) * multiplier;
             else
-                evIncrease = gSpeciesInfo[defeatedSpecies].evYield_SpDefense * multiplier;
+                evIncrease = (gSpeciesInfo[defeatedSpecies].baseSpDefense / 5) * multiplier;
             break;
         }
 
