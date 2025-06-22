@@ -836,3 +836,14 @@ const struct Tileset gTileset_PrimaryGrass =
     .metatileAttributes = gMetatileAttributes_PrimaryGrass,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Hometown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Hometown,
+    .palettes = gTilesetPalettes_Hometown,
+    .metatiles = gMetatiles_Hometown,
+    .metatileAttributes = gMetatileAttributes_Hometown,
+    .callback = NULL,
+};
