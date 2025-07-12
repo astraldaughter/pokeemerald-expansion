@@ -12098,7 +12098,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_MAGNET_BOMB] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("MAGNET BOMB"),
         .description = COMPOUND_STRING(
             "Launches a magnet that strikes without fail."),
@@ -12109,7 +12108,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .ballisticMove = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -22183,6 +22182,67 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_SWORDS_DANCE},
         .battleAnimScript = gBattleAnimMove_Icebreaker,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_GHASTLY_WAIL] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("GHASTLY WAIL"),
+        .description = COMPOUND_STRING(
+            "Screams loudly to\n"
+            "inflict damage. 20%\n"
+            "chance to panic.\n"),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_GHOST,
+        .accuracy = 90,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .soundMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PANIC,
+            .chance = 20,
+        }),
+        .battleAnimScript = gBattleAnimMove_GhastlyWail,
+    },
+
+    [MOVE_LUNACY] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("LUNACY"),
+        .description = COMPOUND_STRING(
+            "A frenzied attack\n"
+            "caused by the light of\n"
+            "the full moon. Confuses\n"
+            "both the user and the\n"
+            "foe.\n"),
+        .effect = EFFECT_HIT,
+        .power = 110,
+        .type = TYPE_FAIRY,
+        .accuracy = 95,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_CONFUSION,
+            .self = TRUE,
+            .chance = 100,
+        },
+        {
+            .moveEffect = MOVE_EFFECT_CONFUSION,
+            .chance = 100,
+        }
+        ),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SWORDS_DANCE},
+        .battleAnimScript = gBattleAnimMove_Lunacy,
         .validApprenticeMove = TRUE,
     },
 

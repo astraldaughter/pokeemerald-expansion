@@ -329,6 +329,65 @@ gBattleAnimMove_Icebreaker::
     clearmonbg ANIM_TARGET
     end
 
+gBattleAnimMove_GhastlyWail::
+	loadspritegfx ANIM_TAG_THIN_RING
+	fadetobg BG_GHOST
+	waitbgfadein
+	monbg ANIM_DEF_PARTNER
+	loopsewithpan SE_M_BUBBLE_BEAM2, SOUND_PAN_TARGET, 10, 4
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 5, ANIM_ATTACKER, 0
+	createsprite gHyperVoiceRingSpriteTemplate, ANIM_ATTACKER, 0, 0x2d, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 1, 0, 6, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 1, 0, 6, 1
+	waitforvisualfinish
+	loopsewithpan SE_M_BUBBLE_BEAM2, SOUND_PAN_TARGET, 10, 4
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 5, ANIM_ATTACKER, 0
+	createsprite gHyperVoiceRingSpriteTemplate, ANIM_ATTACKER, 0, 0x2d, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 1, 0, 6, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 1, 0, 6, 1
+	waitforvisualfinish
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 1, 0, 40, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 1, 0, 40, 1
+	playsewithpan SE_M_NIGHTMARE, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	restorebg
+	waitbgfadein
+	end
+
+gBattleAnimMove_Lunacy::
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_MOON
+	setalpha 0, 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, 0
+	waitforvisualfinish
+	createsprite gMoonSpriteTemplate, ANIM_ATTACKER, 2, 32, 21
+	createvisualtask AnimTask_AlphaFadeIn, 3, 0, 16, 16, 0, 1
+	panse SE_M_BARRIER, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 3, 0
+	delay 40
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 10
+	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 20
+	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 30
+	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 40
+	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 50
+	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 60
+	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 70
+	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 80
+	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 90
+	createvisualtask AnimTask_TranslateMonElliptical, 2, 0, -18, 6, 6, 4
+	createvisualtask AnimTask_TranslateMonElliptical, 2, 1, 18, 6, 6, 4
+	call SubmissionHit
+	call SubmissionHit
+	call SubmissionHit
+	createvisualtask AnimTask_MoonlightEndFade, 2
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_Roost::
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
