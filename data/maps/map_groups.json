@@ -33,7 +33,10 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_TownsAndRoutesCyona",
+    "gMapGroup_DungeonsCyona",
+    "gMapGroup_IndoorSyringa"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -621,5 +624,20 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_TownsAndRoutesCyona": [
+    "SyringaTown",
+    "Route1",
+    "CroccaTown",
+    "Route2",
+    "LagerstroCity",
+    "Route3",
+    "Route4"
+  ],
+  "gMapGroup_DungeonsCyona": [
+    "CrostroForest"
+  ],
+  "gMapGroup_IndoorSyringa": [
+    "SyringaTown_PlayersHouse1F"
   ]
 }

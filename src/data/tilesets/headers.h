@@ -847,3 +847,14 @@ const struct Tileset gTileset_Hometown =
     .metatileAttributes = gMetatileAttributes_Hometown,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_primary_interior_house =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_primary_interior_house,
+    .palettes = gTilesetPalettes_primary_interior_house,
+    .metatiles = gMetatiles_primary_interior_house,
+    .metatileAttributes = gMetatileAttributes_primary_interior_house,
+    .callback = NULL,
+};

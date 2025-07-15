@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_PrimaryGrass[] = INCBIN_U16("data/tilesets/primary
 
 const u16 gMetatiles_Hometown[] = INCBIN_U16("data/tilesets/secondary/hometown/metatiles.bin");
 const u16 gMetatileAttributes_Hometown[] = INCBIN_U16("data/tilesets/secondary/hometown/metatile_attributes.bin");
+
+const u16 gMetatiles_primary_interior_house[] = INCBIN_U16("data/tilesets/primary/primary_interior_house/metatiles.bin");
+const u16 gMetatileAttributes_primary_interior_house[] = INCBIN_U16("data/tilesets/primary/primary_interior_house/metatile_attributes.bin");

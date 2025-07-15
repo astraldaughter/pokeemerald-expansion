@@ -576,6 +576,19 @@ gStdScripts_End::
 	.include "data/maps/Route119_WeatherInstitute_2F/scripts.inc"
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
+	
+	.include "data/maps/SyringaTown/scripts.inc"
+	.include "data/maps/CroccaTown/scripts.inc"
+	.include "data/maps/LagerstroCity/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+	.include "data/maps/Route2/scripts.inc"
+	.include "data/maps/Route3/scripts.inc"
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/CrostroForest/scripts.inc"
+
+	.include "data/maps/SyringaTown_PlayersHouse1F/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

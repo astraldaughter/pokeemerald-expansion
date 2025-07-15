@@ -4420,6 +4420,96 @@
       "secondary_tileset": "gTileset_Hometown",
       "border_filepath": "data/layouts/NewMap1/border.bin",
       "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SYRINGA_TOWN",
+      "name": "SyringaTown_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/SyringaTown/border.bin",
+      "blockdata_filepath": "data/layouts/SyringaTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 30,
+      "height": 20,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CROCCA_TOWN",
+      "name": "CroccaTown_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/CroccaTown/border.bin",
+      "blockdata_filepath": "data/layouts/CroccaTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 40,
+      "height": 26,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAGERSTRO_CITY",
+      "name": "LagerstroCity_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/LagerstroCity/border.bin",
+      "blockdata_filepath": "data/layouts/LagerstroCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 26,
+      "height": 40,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 50,
+      "height": 22,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_CROSTRO_FOREST",
+      "name": "CrostroForest_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PrimaryGrass",
+      "secondary_tileset": "gTileset_Hometown",
+      "border_filepath": "data/layouts/CrostroForest/border.bin",
+      "blockdata_filepath": "data/layouts/CrostroForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_SYRINGA_TOWN_PLAYERS_HOUSE1F",
+      "name": "SyringaTown_PlayersHouse1F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_primary_interior_house",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SyringaTown_PlayersHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/SyringaTown_PlayersHouse1F/map.bin"
     }
   ]
 }
