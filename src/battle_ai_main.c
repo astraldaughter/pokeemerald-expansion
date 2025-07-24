@@ -1216,7 +1216,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_CHARGE:
-            if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP)
+            if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP || gStatuses3[BATTLE_PARTNER(battlerAtk)] & STATUS3_CHARGED_UP)
                 ADJUST_SCORE(-20);
             else if (!HasMoveWithType(battlerAtk, TYPE_ELECTRIC))
                 ADJUST_SCORE(-10);

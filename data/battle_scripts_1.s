@@ -4588,6 +4588,21 @@ BattleScript_EffectBellyDrum::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectOverthink::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPATK, MAX_STAT_STAGE, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	playstatchangeanimation BS_ATTACKER, BIT_SPATK, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_SPATK, MAX_STAT_STAGE, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	printstring STRINGID_OVERTHINK
+	waitmessage B_WAIT_TIME_LONG
+	seteffectprimary MOVE_EFFECT_RECHARGE
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectPsychUp::
 	attackcanceler
 	attackstring

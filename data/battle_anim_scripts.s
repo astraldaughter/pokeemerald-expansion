@@ -285,22 +285,23 @@ gBattleAnimMove_Kindling::
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 0, 12, 0, RGB_RED
 	end
 
-gBattleAnimMove_SpoonBender::
-	loadspritegfx ANIM_TAG_ALERT
-	loadspritegfx ANIM_TAG_BENT_SPOON
+gBattleAnimMove_Brainshock::
+	loadspritegfx ANIM_TAG_BLUE_RING
+	loadspritegfx ANIM_TAG_ELECTRICITY
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	call SetPsychicBackground
-	monbg ANIM_DEF_PARTNER
-	createsprite gBentSpoonSpriteTemplate, ANIM_ATTACKER, 20
+	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_TELEPORT, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 2, 9, 0, 10
+	call PsywaveRings
+	call PsywaveRings
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 1, 4, 0, 12, RGB(31, 18, 31)
+	call PsywaveRings
+	call PsywaveRings
+	call PsywaveRings
+	call PsywaveRings
 	waitforvisualfinish
-	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
-	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
-	waitforvisualfinish
-	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 1
-	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
-	waitforvisualfinish
-	blendoff
-	clearmonbg ANIM_DEF_PARTNER
+	call ElectricityEffect
+	delay 1
 	call UnsetPsychicBg
 	end
 
@@ -386,6 +387,52 @@ gBattleAnimMove_Lunacy::
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
+	end
+
+gBattleAnimMove_Overthink::
+	loadspritegfx ANIM_TAG_GRAY_ORB
+	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_ATTACKER
+	call SetPsychicBackground
+	setalpha 8, 8
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 8, 1, 0, 12, RGB_WHITE
+	createvisualtask AnimTask_StockpileDeformMon, 5
+	call StockpileAbsorb
+	call StockpileAbsorb
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 0, 12, 0, RGB_WHITE
+	delay 1
+	call UnsetPsychicBg
+	end
+
+gBattleAnimMove_DustDevil::
+	loadspritegfx ANIM_TAG_GUST
+	fadetobg BG_ROCK_WRECKER
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 0x5, 0xF000, 0x0, 0x0, 0xffff
+	waitbgfadein
+	createvisualtask AnimTask_BlendParticle, 0x5, ANIM_TAG_GUST, 0x0, 0xA, 0xA, 0x190B
+	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 1, 0, 88, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 1, 0, 88, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_TARGET | F_PAL_DEF_PARTNER), 4, 0, 11, 0x1F
+	call HurricaneGustCentered
+	delay 10
+	call HurricaneGustCentered
+	delay 10
+	call HurricaneGustCentered
+	delay 10
+	call HurricaneGustCentered
+	delay 10
+	call HurricaneGustCentered
+	delay 10
+	call HurricaneGustCentered
+	waitforvisualfinish
+	stopsound
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_TARGET | F_PAL_DEF_PARTNER), 1, 11, 0, 0x1F
+	waitforvisualfinish
+	call UnsetPsychicBg
+	waitforvisualfinish
 	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 4 @@@@@@@@@@@@@@@@@@@@@@@

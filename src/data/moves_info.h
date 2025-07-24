@@ -3477,6 +3477,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("BONE CLUB"),
         .description = COMPOUND_STRING(
             "Clubs the foe with a bone.\n"
+            "Can hit airborne foes. \n"
             "10% chance to flinch.\n"),
         .effect = EFFECT_HIT,
         .power = 65,
@@ -3486,6 +3487,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .ignoreTypeIfFlyingAndUngrounded = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 10,
@@ -5118,7 +5120,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_PANIC,
         .power = 0,
         .type = TYPE_GHOST,
-        .accuracy = 90,
+        .accuracy = 65,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -7475,9 +7477,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("CHARGE"),
         .description = COMPOUND_STRING(
-            "Boosts the power of the\n"
-            "next ELECTRIC attack, as\n"
-            "well as raising SP. DEF.\n"),
+            "Charges power, boosting\n"
+            "the damage of ELECTRIC\n"
+            "moves used by the user\n"
+            "or its allies, as well\n"
+            "as raising SP. DEF.\n"),
         .effect = EFFECT_CHARGE,
         .power = 0,
         .type = TYPE_ELECTRIC,
@@ -7679,9 +7683,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("INGRAIN"),
         .description = COMPOUND_STRING(
-            "Plants roots that restore\n"
-            "a little HP each turn, but\n"
-            "prevent switching.\n"),
+            "Plants strong roots that\n"
+            "heal HP each turn. The\n"
+            "roots prevent escape,\n"
+            "but reduce GROUND-type\n"
+            "damage. Allies take a bit\n"
+            "less GROUND damage too."),
         .effect = EFFECT_INGRAIN,
         .power = 0,
         .type = TYPE_GRASS,
@@ -13138,13 +13145,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SYNCHRONOISE] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("SYNCHRONOISE"),
         .description = COMPOUND_STRING(
-            "An odd shock wave that only damages same-type foes."),
+            "An odd shock wave that\n"
+            "only damages same-type\n"
+            "POKéMON.\n"),
         .effect = EFFECT_SYNCHRONOISE,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 120 : 70,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_MYSTERY,
         .accuracy = 100,
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 10 : 15,
         .target = MOVE_TARGET_FOES_AND_ALLY,
@@ -22134,25 +22142,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Kindling,
     },
 
-    [MOVE_SPOON_BENDER] =
+    [MOVE_BRAINSHOCK] =
     {
         // UNDEXITED
-        .name = COMPOUND_STRING("PROVOKE"),
+        .name = COMPOUND_STRING("BRAINSHOCK"),
         .description = COMPOUND_STRING(
-            "Attacks with telekinetic\n"
-            "power that can bend\n"
-            "metal. Super effective on\n"
-            "STEEL types.\n"),
-        .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
-        .power = 65,
+            "Emits a disorienting\n"
+            "psychic wave to cause\n"
+            "panic.\n"),
+        .effect = EFFECT_PANIC,
+        .power = 0,
         .type = TYPE_PSYCHIC,
-        .accuracy = 0,
-        .pp = 10,
+        .accuracy = 90,
+        .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_SPECIAL,
-        .argument = { .type = TYPE_STEEL },
-        .battleAnimScript = gBattleAnimMove_SpoonBender,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = gBattleAnimMove_Brainshock,
     },
 
     [MOVE_ICEBREAKER] =
@@ -22244,6 +22250,50 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboMoves = {COMBO_STARTER_SWORDS_DANCE},
         .battleAnimScript = gBattleAnimMove_Lunacy,
         .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_OVERTHINK] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("OVERTHINK"),
+        .description = COMPOUND_STRING(
+            "Overstimulates the mind\n"
+            "to maximise SP. ATK. The\n"
+            "user can't move on the\n"
+            "next turn.\n"),
+        .effect = EFFECT_OVERTHINK,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = gBattleAnimMove_Overthink,
+    },
+
+    [MOVE_DUST_DEVIL] =
+    {
+        .name = COMPOUND_STRING("DUST DEVIL"),
+        .description = COMPOUND_STRING(
+            "Whips up a desert wind to\n"
+            "attack the enemy. 30%\n"
+            "to lower accuracy. Always\n"
+            "hits during a sandstorm.\n"),
+        .effect = EFFECT_SAND_ALWAYS_HIT,
+        .power = 100,
+        .type = TYPE_GROUND,
+        .accuracy = 75,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .windMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
+            .chance = 30,
+        }),
+        .battleAnimScript = gBattleAnimMove_DustDevil,
     },
 
     // Z-Moves

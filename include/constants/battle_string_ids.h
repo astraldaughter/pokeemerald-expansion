@@ -746,8 +746,9 @@
 #define STRINGID_KINDLINGLIT                          744
 #define STRINGID_KINDLINGENDS                         745
 #define STRINGID_KINDLINGHEAL                         746
+#define STRINGID_OVERTHINK                            747
 
-#define BATTLESTRINGS_COUNT                           747
+#define BATTLESTRINGS_COUNT                           748
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

@@ -909,7 +909,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNTOOPANICKEDTOMOVE]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} is panicking! It's too scared to move!"),
     [STRINGID_KINDLINGLIT]                          = COMPOUND_STRING("A soothing fire was lit on {B_ATK_TEAM2} team's side!"),
     [STRINGID_KINDLINGENDS]                         = COMPOUND_STRING("{B_ATK_TEAM1} team's fire went out!"),
-    [STRINGID_KINDLINGHEAL]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX2} was healed by a soothing warmth!")
+    [STRINGID_KINDLINGHEAL]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX2} was healed by a soothing warmth!"),
+    [STRINGID_OVERTHINK]                            = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} maximized its SP. ATK!")
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -2285,4 +2285,17 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .encourageEncore = TRUE,
     },
 
+    [EFFECT_OVERTHINK] =
+    {
+        .battleScript = BattleScript_EffectOverthink,
+        .battleTvScore = 7,
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_SAND_ALWAYS_HIT] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+
 };
