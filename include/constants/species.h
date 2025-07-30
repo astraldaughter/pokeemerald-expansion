@@ -1670,8 +1670,13 @@
 #define SPECIES_CUMULAMB                                1551
 #define SPECIES_NIMBAA                                  1552
 #define SPECIES_RAMSTROM                                1553
+#define SPECIES_PUKOO                                   1554
+#define SPECIES_RANKOO                                  1555
+#define SPECIES_PINNIPET                                1556
+#define SPECIES_WALRINCE                                1557
+#define SPECIES_SELKING                                 1558
 
-#define SPECIES_EGG                                     (SPECIES_RAMSTROM + 1)
+#define SPECIES_EGG                                     (SPECIES_SELKING + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

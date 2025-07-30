@@ -2272,6 +2272,13 @@ gCryTable::
 	cry Cry_Cumulamb
 	cry Cry_Nimbaa
 	cry Cry_Ramstrom
+	cry Cry_Pukoo
+	cry Cry_Rankoo
+	cry Cry_Lyndwurm
+	cry Cry_Earthwyrm
+	cry Cry_Pinnipet
+	cry Cry_Walrince
+	cry Cry_Selking
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4548,4 +4555,11 @@ gCryTable_Reverse::
 	cry_reverse Cry_Cumulamb
 	cry_reverse Cry_Nimbaa
 	cry_reverse Cry_Ramstrom
+	cry_reverse Cry_Pukoo
+	cry_reverse Cry_Rankoo
+	cry_reverse Cry_Lyndwurm
+	cry_reverse Cry_Earthwyrm
+	cry_reverse Cry_Pinnipet
+	cry_reverse Cry_Walrince
+	cry_reverse Cry_Selking
 .endif @ P_CRIES_ENABLED

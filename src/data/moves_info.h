@@ -11015,10 +11015,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_AQUA_TAIL] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("AQUA TAIL"),
         .description = COMPOUND_STRING(
-            "The user swings its tail like a wave to attack."),
+            "Attacks with a tail swung\n"
+            "like a raging wave that\n"
+            "crashes down on the foe.\n"),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_WATER,

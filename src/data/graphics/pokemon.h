@@ -18406,6 +18406,36 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u8 gMonIcon_Ramstrom[] = INCBIN_U8("graphics/pokemon/ramstrom/icon.4bpp");  
     const u8 gMonFootprint_Ramstrom[] = INCBIN_U8("graphics/pokemon/ramstrom/footprint.1bpp");
 
+    const u32 gMonFrontPic_Pukoo[] = INCBIN_U32("graphics/pokemon/pukoo/front.4bpp.lz");
+    const u32 gMonPalette_Pukoo[] = INCBIN_U32("graphics/pokemon/pukoo/normal.gbapal.lz");
+    const u32 gMonBackPic_Pukoo[] = INCBIN_U32("graphics/pokemon/pukoo/back.4bpp.lz");
+    const u32 gMonShinyPalette_Pukoo[] = INCBIN_U32("graphics/pokemon/pukoo/shiny.gbapal.lz");
+    const u8 gMonIcon_Pukoo[] = INCBIN_U8("graphics/pokemon/pukoo/icon.4bpp");  
+
+    const u32 gMonFrontPic_Rankoo[] = INCBIN_U32("graphics/pokemon/rankoo/front.4bpp.lz");
+    const u32 gMonPalette_Rankoo[] = INCBIN_U32("graphics/pokemon/rankoo/normal.gbapal.lz");
+    const u32 gMonBackPic_Rankoo[] = INCBIN_U32("graphics/pokemon/rankoo/back.4bpp.lz");
+    const u32 gMonShinyPalette_Rankoo[] = INCBIN_U32("graphics/pokemon/rankoo/shiny.gbapal.lz");
+    const u8 gMonIcon_Rankoo[] = INCBIN_U8("graphics/pokemon/rankoo/icon.4bpp");  
+
+    const u32 gMonFrontPic_Pinnipet[] = INCBIN_U32("graphics/pokemon/pinnipet/front.4bpp.lz");
+    const u32 gMonPalette_Pinnipet[] = INCBIN_U32("graphics/pokemon/pinnipet/normal.gbapal.lz");
+    const u32 gMonBackPic_Pinnipet[] = INCBIN_U32("graphics/pokemon/pinnipet/back.4bpp.lz");
+    const u32 gMonShinyPalette_Pinnipet[] = INCBIN_U32("graphics/pokemon/pinnipet/shiny.gbapal.lz");
+    const u8 gMonIcon_Pinnipet[] = INCBIN_U8("graphics/pokemon/pinnipet/icon.4bpp"); 
+
+    const u32 gMonFrontPic_Walrince[] = INCBIN_U32("graphics/pokemon/walrince/front.4bpp.lz");
+    const u32 gMonPalette_Walrince[] = INCBIN_U32("graphics/pokemon/walrince/normal.gbapal.lz");
+    const u32 gMonBackPic_Walrince[] = INCBIN_U32("graphics/pokemon/walrince/back.4bpp.lz");
+    const u32 gMonShinyPalette_Walrince[] = INCBIN_U32("graphics/pokemon/walrince/shiny.gbapal.lz");
+    const u8 gMonIcon_Walrince[] = INCBIN_U8("graphics/pokemon/walrince/icon.4bpp"); 
+
+    const u32 gMonFrontPic_Selking[] = INCBIN_U32("graphics/pokemon/selking/front.4bpp.lz");
+    const u32 gMonPalette_Selking[] = INCBIN_U32("graphics/pokemon/selking/normal.gbapal.lz");
+    const u32 gMonBackPic_Selking[] = INCBIN_U32("graphics/pokemon/selking/back.4bpp.lz");
+    const u32 gMonShinyPalette_Selking[] = INCBIN_U32("graphics/pokemon/selking/shiny.gbapal.lz");
+    const u8 gMonIcon_Selking[] = INCBIN_U8("graphics/pokemon/selking/icon.4bpp"); 
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

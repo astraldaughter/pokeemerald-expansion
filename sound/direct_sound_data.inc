@@ -6127,6 +6127,34 @@ Cry_Nimbaa::
 Cry_Ramstrom::
 	.incbin "sound/direct_sound_samples/cries/ramstrom.bin"
 
+	.align 2
+Cry_Pukoo::
+	.incbin "sound/direct_sound_samples/cries/pukoo.bin"
+
+	.align 2
+Cry_Rankoo::
+	.incbin "sound/direct_sound_samples/cries/rankoo.bin"
+
+	.align 2
+Cry_Lyndwurm::
+	.incbin "sound/direct_sound_samples/cries/lyndwurm.bin"
+
+	.align 2
+Cry_Earthwyrm::
+	.incbin "sound/direct_sound_samples/cries/earthwyrm.bin"
+
+	.align 2
+Cry_Pinnipet::
+	.incbin "sound/direct_sound_samples/cries/pinnipet.bin"
+
+	.align 2
+Cry_Walrince::
+	.incbin "sound/direct_sound_samples/cries/walrince.bin"
+
+	.align 2
+Cry_Selking::
+	.incbin "sound/direct_sound_samples/cries/selking.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2
