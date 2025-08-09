@@ -9540,7 +9540,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (gSpecialStatuses[battlerAtk].gemBoost)
         modifier = uq4_12_multiply(modifier, uq4_12_add(UQ_4_12(1.0), PercentToUQ4_12(gSpecialStatuses[battlerAtk].gemParam)));
-    if (((gStatuses3[battlerAtk] & STATUS3_CHARGED_UP) || (gStatuses3[BATTLE_PARTNER(battlerAtk)] & STATUS3_CHARGED_UP)) && moveType == TYPE_ELECTRIC)
+    if (((gStatuses3[battlerAtk] & STATUS3_CHARGED_UP) || (gStatuses3[BATTLE_PARTNER(battlerAtk)] & STATUS3_CHARGED_UP)) && (moveType == TYPE_ELECTRIC || moveEffect == EFFECT_CHARGE_BOOSTED))
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (gStatuses3[battlerAtk] & STATUS3_ME_FIRST)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));

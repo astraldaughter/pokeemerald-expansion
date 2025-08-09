@@ -12108,8 +12108,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("MAGNET BOMB"),
         .description = COMPOUND_STRING(
-            "Launches a magnet that strikes without fail."),
-        .effect = EFFECT_HIT,
+            "Launches a magnetic pulse\n"
+            "that never misses. Deals\n"
+            "more damage if the user\n"
+            "or its ally have used\n"
+            "CHARGE.\n"),
+        .effect = EFFECT_CHARGE_BOOSTED,
         .power = 60,
         .type = TYPE_STEEL,
         .accuracy = 0,
