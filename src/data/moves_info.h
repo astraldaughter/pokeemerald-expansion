@@ -16129,10 +16129,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_DAZZLING_GLEAM] =
     {
-        .metronomeBanned = TRUE, // DEXITED
         .name = COMPOUND_STRING("DAZZLING GLEAM"),
         .description = COMPOUND_STRING(
-            "Damages foes by emitting a bright flash."),
+            "Damages foes by emitting\n"
+            "a bright flash.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FAIRY,
