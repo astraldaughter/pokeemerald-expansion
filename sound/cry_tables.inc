@@ -2279,6 +2279,8 @@ gCryTable::
 	cry Cry_Pinnipet
 	cry Cry_Walrince
 	cry Cry_Selking
+	cry Cry_Minieral
+	cry Cry_Diabuncle
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4562,4 +4564,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Pinnipet
 	cry_reverse Cry_Walrince
 	cry_reverse Cry_Selking
+	cry_reverse Cry_Minieral
+	cry_reverse Cry_Diabuncle
 .endif @ P_CRIES_ENABLED

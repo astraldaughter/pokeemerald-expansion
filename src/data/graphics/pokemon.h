@@ -18436,6 +18436,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Selking[] = INCBIN_U32("graphics/pokemon/selking/shiny.gbapal.lz");
     const u8 gMonIcon_Selking[] = INCBIN_U8("graphics/pokemon/selking/icon.4bpp"); 
 
+    const u32 gMonFrontPic_Minieral[] = INCBIN_U32("graphics/pokemon/minieral/front.4bpp.lz");
+    const u32 gMonPalette_Minieral[] = INCBIN_U32("graphics/pokemon/minieral/normal.gbapal.lz");
+    const u32 gMonBackPic_Minieral[] = INCBIN_U32("graphics/pokemon/minieral/back.4bpp.lz");
+    const u32 gMonShinyPalette_Minieral[] = INCBIN_U32("graphics/pokemon/minieral/shiny.gbapal.lz");
+    const u8 gMonIcon_Minieral[] = INCBIN_U8("graphics/pokemon/minieral/icon.4bpp"); 
+
+    const u32 gMonFrontPic_Diabuncle[] = INCBIN_U32("graphics/pokemon/diabuncle/front.4bpp.lz");
+    const u32 gMonPalette_Diabuncle[] = INCBIN_U32("graphics/pokemon/diabuncle/normal.gbapal.lz");
+    const u32 gMonBackPic_Diabuncle[] = INCBIN_U32("graphics/pokemon/diabuncle/back.4bpp.lz");
+    const u32 gMonShinyPalette_Diabuncle[] = INCBIN_U32("graphics/pokemon/diabuncle/shiny.gbapal.lz");
+    const u8 gMonIcon_Diabuncle[] = INCBIN_U8("graphics/pokemon/diabuncle/icon.4bpp"); 
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

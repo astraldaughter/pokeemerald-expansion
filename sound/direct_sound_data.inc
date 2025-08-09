@@ -6155,6 +6155,14 @@ Cry_Walrince::
 Cry_Selking::
 	.incbin "sound/direct_sound_samples/cries/selking.bin"
 
+	.align 2
+Cry_Minieral::
+	.incbin "sound/direct_sound_samples/cries/minieral.bin"
+
+	.align 2
+Cry_Diabuncle::
+	.incbin "sound/direct_sound_samples/cries/diabuncle.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2

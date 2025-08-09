@@ -503,14 +503,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("PINNIPET"),
         .cryId = CRY_PINNIPET,
         .natDexNum = NATIONAL_DEX_PINNIPET,
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("SEAL"),
         .height = 0,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
-            "It is currently under investigation.\n"
-            "No detailed information is available\n"
-            "at this time."),
+            "It has an incredibly friendly and affectionate\n"
+            "temperament, leading to it being a popular pet\n"
+            "in the colder regions where it lives. The horn\n"
+            "on its head, despite its size, can still hurt\n"
+            "during the rough play PINNIPET sometimes enjoy."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -554,14 +555,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("WALRINCE"),
         .cryId = CRY_WALRINCE,
         .natDexNum = NATIONAL_DEX_WALRINCE,
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("SEAL"),
         .height = 0,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
-            "It is currently under investigation.\n"
-            "No detailed information is available\n"
-            "at this time."),
+            "WALRINCE develops a significantly haughtier\n"
+            "disposition as it matures. Trainers who raise\n"
+            "one can often find it disobeying commands if\n"
+            "it doesn't respect them or their strategies in\n"
+            "battle, making it an unreliable partner."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -605,14 +607,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("SELKING"),
         .cryId = CRY_SELKING,
         .natDexNum = NATIONAL_DEX_SELKING,
-        .categoryName = _("UNKNOWN"),
+        .categoryName = _("ICEBREAKER"),
         .height = 0,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
-            "It is currently under investigation.\n"
-            "No detailed information is available\n"
-            "at this time."),
+            "In the far north where SELKING lives, it can\n"
+            "pierce through icebergs with its impressive\n"
+            "horn. Fishermen who went out into the icy\n"
+            "seas often brought SELKING with them to carve\n"
+            "a passageway through the ice sheets."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -2350,5 +2353,107 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(Gigalith)
         .levelUpLearnset = sGigalithLevelUpLearnset,
         .teachableLearnset = sGigalithTeachableLearnset,
+    },
+
+    [SPECIES_MINIERAL] =
+    {
+        .baseHP        = 35,
+        .baseAttack    = 45,
+        .baseDefense   = 40,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 50,
+        .baseSpeed     = 40,
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
+        .catchRate = 190,
+        .expYield = 57,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_TELEPATHY },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("MINIERAL"),
+        .cryId = CRY_MINIERAL,
+        .natDexNum = NATIONAL_DEX_MINIERAL,
+        .categoryName = _("JEWEL"),
+        .height = 5,
+        .weight = 124,
+        .description = COMPOUND_STRING(
+            "It dwells in mineral-rich caves underground,\n"
+            "and often burrows into active mines. It is\n"
+            "not uncommon for an over-eager miner to spot\n"
+            "what they believe to be a beautiful jewel, only\n"
+            "to discover that it is just a MINIERAL."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Minieral,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 16,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_Minieral,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 13,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Minieral,
+        .shinyPalette = gMonShinyPalette_Minieral,
+        .iconSprite = gMonIcon_Minieral,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sMinieralLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+    },
+
+    [SPECIES_DIABUNCLE] =
+    {
+        .baseHP        = 50,
+        .baseAttack    = 65,
+        .baseDefense   = 75,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 85,
+        .baseSpeed     = 80,
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
+        .catchRate = 75,
+        .expYield = 161,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_TELEPATHY },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("DIABUNCLE"),
+        .cryId = CRY_DIABUNCLE,
+        .natDexNum = NATIONAL_DEX_DIABUNCLE,
+        .categoryName = _("JEWEL"),
+        .height = 12,
+        .weight = 540,
+        .description = COMPOUND_STRING(
+            "DIABUNCLE enjoys leading wayward miners astray\n"
+            "with the glimmer of the gems on its body, deeper\n"
+            "into the caves where it lives. Once they have\n"
+            "been led far enough, the whole pack attacks and\n"
+            "steals any shiny trinkets the poor soul has."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Diabuncle,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_Diabuncle,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 4,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Diabuncle,
+        .shinyPalette = gMonShinyPalette_Diabuncle,
+        .iconSprite = gMonIcon_Diabuncle,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sDiabuncleLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
     },
 };

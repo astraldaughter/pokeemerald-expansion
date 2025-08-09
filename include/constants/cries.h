@@ -2405,6 +2405,8 @@ enum {
     CRY_PINNIPET,
     CRY_WALRINCE,
     CRY_SELKING,
+    CRY_MINIERAL,
+    CRY_DIABUNCLE,
     CRY_COUNT,
 };
 
