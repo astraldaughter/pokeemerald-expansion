@@ -504,8 +504,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_PINNIPET,
         .natDexNum = NATIONAL_DEX_PINNIPET,
         .categoryName = _("SEAL"),
-        .height = 0,
-        .weight = 0,
+        .height = 6,
+        .weight = 305,
         .description = COMPOUND_STRING(
             "It has an incredibly friendly and affectionate\n"
             "temperament, leading to it being a popular pet\n"
@@ -556,8 +556,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_WALRINCE,
         .natDexNum = NATIONAL_DEX_WALRINCE,
         .categoryName = _("SEAL"),
-        .height = 0,
-        .weight = 0,
+        .height = 11,
+        .weight = 876,
         .description = COMPOUND_STRING(
             "WALRINCE develops a significantly haughtier\n"
             "disposition as it matures. Trainers who raise\n"
@@ -608,8 +608,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_SELKING,
         .natDexNum = NATIONAL_DEX_SELKING,
         .categoryName = _("ICEBREAKER"),
-        .height = 0,
-        .weight = 0,
+        .height = 17,
+        .weight = 1655,
         .description = COMPOUND_STRING(
             "In the far north where SELKING lives, it can\n"
             "pierce through icebergs with its impressive\n"
@@ -637,113 +637,107 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sNoneTeachableLearnset,
     },
 
-    [SPECIES_TIMIDNA] =
+    [SPECIES_LOVERET] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 50,
-        .baseDefense   = 40,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 40,
+        .baseHP        = 50,
+        .baseAttack    = 30,
+        .baseDefense   = 35,
+        .baseSpAttack  = 30,
         .baseSpDefense = 40,
+        .baseSpeed     = 70,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
-        .expYield = 56,
-        .evYield_Speed = 1,
+        .expYield = 51,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_IMMUNITY, ABILITY_NONE, ABILITY_RATTLED},
-        .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("TIMIDNA"),
-        .cryId = CRY_TIMIDNA,
-        .natDexNum = NATIONAL_DEX_TIMIDNA,
-        .categoryName = _("QUILL"),
-        .height = 3,
-        .weight = 41,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_RUN_AWAY, ABILITY_FRIEND_GUARD },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("LOVERET"),
+        .cryId = CRY_LOVERET,
+        .natDexNum = NATIONAL_DEX_LOVERET,
+        .categoryName = _("RABBIT"),
+        .height = 5,
+        .weight = 75,
         .description = COMPOUND_STRING(
-            "It prefers to avoid confrontation, and will\n"
-            "usually curl up into a spiky ball to protect\n"
-            "itself from attackers. To this end, its diet\n"
-            "consists mostly of berries that are often toxic\n"
-            "to other Pokémon."),
-        .pokemonScale = 549,
-        .pokemonOffset = 22,
+            "On their own, LOVERET are individually very\n"
+            "weak, so they live in huge warrens together for\n"
+            "protection. Even still, they are easy prey, so\n"
+            "they have adapted by having an incredibly high\n"
+            "birth rate to replace any unlucky individuals."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Timidna,
-        .frontPicSize = MON_COORDS_SIZE(40, 40),
-        .frontPicYOffset = 16,
+        .frontPic = gMonFrontPic_Loveret,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 12,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .frontAnimId = ANIM_SWING_CONCAVE,
-        .backPic = gMonBackPic_Timidna,
-        .backPicSize = MON_COORDS_SIZE(56, 40),
-        .backPicYOffset = 14,
-        .backAnimId = BACK_ANIM_H_SLIDE,
-        .palette = gMonPalette_Timidna,
-        .shinyPalette = gMonShinyPalette_Timidna,
-        .iconSprite = gMonIcon_Timidna,
-        .iconPalIndex = 1,
-        SHADOW(4, 1, SHADOW_SIZE_S)
-        FOOTPRINT(Timidna)
-        .levelUpLearnset = sTimidnaLevelUpLearnset,
-        .teachableLearnset = sTimidnaTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_TOXREC}),
+        .backPic = gMonBackPic_Loveret,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Loveret,
+        .shinyPalette = gMonShinyPalette_Loveret,
+        .iconSprite = gMonIcon_Loveret,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sLoveretLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_CUPIN}),
     },
 
-    [SPECIES_TOXREC] =
+    [SPECIES_CUPIN] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 90,
-        .baseDefense   = 60,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 55,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_POISON),
-        .catchRate = 120,
+        .baseHP        = 85,
+        .baseAttack    = 70,
+        .baseDefense   = 50,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 60,
+        .baseSpeed     = 115,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 127,
         .expYield = 150,
-        .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_POISON_POINT, ABILITY_NONE, ABILITY_MERCILESS },
-        .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("TOXREC"),
-        .cryId = CRY_TOXREC,
-        .natDexNum = NATIONAL_DEX_TOXREC,
-        .categoryName = _("TOXIC QUILL"),
-        .height = 7,
-        .weight = 223,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_RUN_AWAY, ABILITY_FRIEND_GUARD },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("CUPIN"),
+        .cryId = CRY_CUPIN,
+        .natDexNum = NATIONAL_DEX_CUPIN,
+        .categoryName = _("RABBIT"),
+        .height = 11,
+        .weight = 410,
         .description = COMPOUND_STRING(
-            "Its quills secrete toxins that it absorbs from\n"
-            "its diet of poisonous berries and fruits. It has\n"
-            "developed a territorial temperament, and will\n"
-            "use both its toxic quills and imposing displays\n"
-            "of aggression to ward off intruders."),
-        .pokemonScale = 350,
-        .pokemonOffset = 18,
+            "LOVERET that live for many years eventually\n"
+            "become CUPIN. These POKéMON are often solitary\n"
+            "by nature, but will come to the aid of any\n"
+            "LOVERET that find themselves in danger and\n"
+            "fight off the attacker."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Toxrec,
-        .frontPicSize = MON_COORDS_SIZE(40, 40),
-        .frontPicYOffset = 9,
+        .frontPic = gMonFrontPic_Cupin,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 6,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .frontAnimId = ANIM_SWING_CONCAVE,
-        .backPic = gMonBackPic_Toxrec,
-        .backPicSize = MON_COORDS_SIZE(40, 48),
-        .backPicYOffset = 7,
-        .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
-        .palette = gMonPalette_Toxrec,
-        .shinyPalette = gMonShinyPalette_Toxrec,
-        .iconSprite = gMonIcon_Toxrec,
-        .iconPalIndex = 1,
-        SHADOW(3, 0, SHADOW_SIZE_S)
-        FOOTPRINT(Toxrec)
-        .levelUpLearnset = sToxrecLevelUpLearnset,
-        .teachableLearnset = sToxrecTeachableLearnset,
+        .backPic = gMonBackPic_Cupin,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 9,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Cupin,
+        .shinyPalette = gMonShinyPalette_Cupin,
+        .iconSprite = gMonIcon_Cupin,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sCupinLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
     },
 
     [SPECIES_LINTSECT] =
@@ -2104,8 +2098,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_PUKOO,
         .natDexNum = NATIONAL_DEX_PUKOO,
         .categoryName = _("DECEPTIVE"),
-        .height = 0,
-        .weight = 0,
+        .height = 6,
+        .weight = 204,
         .description = COMPOUND_STRING(
             "PUKOO try to disguise themselves as lost eggs to\n"
             "infiltrate the nests of other POKéMON. Once\n"
@@ -2155,8 +2149,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_RANKOO,
         .natDexNum = NATIONAL_DEX_RANKOO,
         .categoryName = _("RANCID"),
-        .height = 0,
-        .weight = 0,
+        .height = 15,
+        .weight = 485,
         .description = COMPOUND_STRING(
 			"RANKOO deposit their young in the nests of\n"
             "other POKéMON shortly after birth so they\n"
@@ -2404,6 +2398,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sMinieralLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_DIABUNCLE}),
     },
 
     [SPECIES_DIABUNCLE] =

@@ -18448,6 +18448,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Diabuncle[] = INCBIN_U32("graphics/pokemon/diabuncle/shiny.gbapal.lz");
     const u8 gMonIcon_Diabuncle[] = INCBIN_U8("graphics/pokemon/diabuncle/icon.4bpp"); 
 
+    const u32 gMonFrontPic_Loveret[] = INCBIN_U32("graphics/pokemon/loveret/front.4bpp.lz");
+    const u32 gMonPalette_Loveret[] = INCBIN_U32("graphics/pokemon/loveret/normal.gbapal.lz");
+    const u32 gMonBackPic_Loveret[] = INCBIN_U32("graphics/pokemon/loveret/back.4bpp.lz");
+    const u32 gMonShinyPalette_Loveret[] = INCBIN_U32("graphics/pokemon/loveret/shiny.gbapal.lz");
+    const u8 gMonIcon_Loveret[] = INCBIN_U8("graphics/pokemon/loveret/icon.4bpp");     
+
+    const u32 gMonFrontPic_Cupin[] = INCBIN_U32("graphics/pokemon/cupin/front.4bpp.lz");
+    const u32 gMonPalette_Cupin[] = INCBIN_U32("graphics/pokemon/cupin/normal.gbapal.lz");
+    const u32 gMonBackPic_Cupin[] = INCBIN_U32("graphics/pokemon/cupin/back.4bpp.lz");
+    const u32 gMonShinyPalette_Cupin[] = INCBIN_U32("graphics/pokemon/cupin/shiny.gbapal.lz");
+    const u8 gMonIcon_Cupin[] = INCBIN_U8("graphics/pokemon/cupin/icon.4bpp");     
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

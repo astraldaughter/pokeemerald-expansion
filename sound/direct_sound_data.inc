@@ -6163,6 +6163,14 @@ Cry_Minieral::
 Cry_Diabuncle::
 	.incbin "sound/direct_sound_samples/cries/diabuncle.bin"
 
+	.align 2
+Cry_Loveret::
+	.incbin "sound/direct_sound_samples/cries/loveret.bin"
+
+	.align 2
+Cry_Cupin::
+	.incbin "sound/direct_sound_samples/cries/cupin.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2

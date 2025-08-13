@@ -1677,8 +1677,10 @@
 #define SPECIES_SELKING                                 1558
 #define SPECIES_MINIERAL                                1559
 #define SPECIES_DIABUNCLE                               1560
+#define SPECIES_LOVERET                                 1561
+#define SPECIES_CUPIN                                   1562
 
-#define SPECIES_EGG                                     (SPECIES_DIABUNCLE + 1)
+#define SPECIES_EGG                                     (SPECIES_CUPIN + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
