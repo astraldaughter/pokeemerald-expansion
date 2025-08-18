@@ -758,15 +758,9 @@ gCryTable::
 	cry Cry_Volbeat
 	cry Cry_Illumise
 .endif @ P_FAMILY_VOLBEAT_ILLUMISE
-.if P_FAMILY_ROSELIA == TRUE
-.if P_GEN_4_CROSS_EVOS == TRUE
 	cry Cry_Budew
-.endif @ P_GEN_4_CROSS_EVOS
 	cry Cry_Roselia
-.if P_GEN_4_CROSS_EVOS == TRUE
 	cry Cry_Roserade
-.endif @ P_GEN_4_CROSS_EVOS
-.endif @ P_FAMILY_ROSELIA
 .if P_FAMILY_GULPIN == TRUE
 	cry Cry_Gulpin
 	cry Cry_Swalot

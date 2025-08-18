@@ -2359,23 +2359,17 @@ Cry_Illumise::
 	.incbin "sound/direct_sound_samples/cries/illumise.bin"
 .endif @ P_FAMILY_VOLBEAT_ILLUMISE
 
-.if P_FAMILY_ROSELIA == TRUE
-.if P_GEN_4_CROSS_EVOS == TRUE
 	.align 2
 Cry_Budew::
 	.incbin "sound/direct_sound_samples/cries/budew.bin"
-.endif @ P_GEN_4_CROSS_EVOS
 
 	.align 2
 Cry_Roselia::
 	.incbin "sound/direct_sound_samples/cries/roselia.bin"
 
-.if P_GEN_4_CROSS_EVOS == TRUE
 	.align 2
 Cry_Roserade::
 	.incbin "sound/direct_sound_samples/cries/roserade.bin"
-.endif @ P_GEN_4_CROSS_EVOS
-.endif @ P_FAMILY_ROSELIA
 
 .if P_FAMILY_GULPIN == TRUE
 	.align 2

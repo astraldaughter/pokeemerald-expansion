@@ -14888,8 +14888,6 @@ static const u16 sIllumiseTeachableLearnset[] = {
 };
 #endif //P_FAMILY_VOLBEAT_ILLUMISE
 
-#if P_FAMILY_ROSELIA
-#if P_GEN_4_CROSS_EVOS
 static const u16 sBudewTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
@@ -14916,7 +14914,6 @@ static const u16 sBudewTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_GEN_4_CROSS_EVOS
 
 static const u16 sRoseliaTeachableLearnset[] = {
     MOVE_ATTRACT,
@@ -14948,7 +14945,6 @@ static const u16 sRoseliaTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-#if P_GEN_4_CROSS_EVOS
 static const u16 sRoseradeTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
@@ -14978,8 +14974,6 @@ static const u16 sRoseradeTeachableLearnset[] = {
     MOVE_SWORDS_DANCE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_GEN_4_CROSS_EVOS
-#endif //P_FAMILY_ROSELIA
 
 #if P_FAMILY_GULPIN
 static const u16 sGulpinTeachableLearnset[] = {

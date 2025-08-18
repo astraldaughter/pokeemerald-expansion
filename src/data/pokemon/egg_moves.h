@@ -2824,8 +2824,6 @@ static const u16 sIllumiseEggMoveLearnset[] = {
 };
 #endif //P_FAMILY_VOLBEAT_ILLUMISE
 
-#if P_FAMILY_ROSELIA
-#if P_GEN_4_CROSS_EVOS
 static const u16 sBudewEggMoveLearnset[] = {
     MOVE_SPIKES,
     MOVE_SYNTHESIS,
@@ -2842,7 +2840,6 @@ static const u16 sBudewEggMoveLearnset[] = {
     MOVE_GRASS_WHISTLE,
     MOVE_UNAVAILABLE,
 };
-#endif //P_GEN_4_CROSS_EVOS
 static const u16 sRoseliaEggMoveLearnset[] = {
     MOVE_SPIKES,
     MOVE_SYNTHESIS,
@@ -2860,7 +2857,7 @@ static const u16 sRoseliaEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_ROSELIA
+
 
 #if P_FAMILY_GULPIN
 static const u16 sGulpinEggMoveLearnset[] = {
