@@ -22301,6 +22301,30 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_DustDevil,
     },
 
+    [MOVE_THORN_WHIP] =
+    {
+        .name = COMPOUND_STRING("THORN WHIP"),
+        .description = COMPOUND_STRING(
+            "Lashes the foe with\n"
+            "poisonous, thorny vines.\n"
+            "Hits twice. Each hit has\n"
+            "a 20% chance to poison.\n"),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_GRASS,
+        .accuracy = 95,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .strikeCount = 2,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_POISON,
+            .chance = 20,
+        }),
+        .battleAnimScript = gBattleAnimMove_ThornWhip,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {
