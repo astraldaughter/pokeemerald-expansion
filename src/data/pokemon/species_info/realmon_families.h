@@ -172,6 +172,171 @@ const struct SpeciesInfo gSpeciesInfoRealmons[] =
         .levelUpLearnset = sRoseradeLevelUpLearnset,
         .teachableLearnset = sRoseradeTeachableLearnset,
     },
+
+    [SPECIES_LOTAD] =
+    {
+        .baseHP        = 40,
+        .baseAttack    = 30,
+        .baseDefense   = 30,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 50,
+        .types = MON_TYPES(TYPE_WATER, TYPE_GRASS),
+        .catchRate = 255,
+        .expYield = 44,
+        .evYield_SpDefense = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_GRASS),
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH, ABILITY_OWN_TEMPO },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("LOTAD"),
+        .cryId = CRY_LOTAD,
+        .natDexNum = NATIONAL_DEX_LOTAD,
+        .categoryName = _("WATER WEED"),
+        .height = 5,
+        .weight = 26,
+        .description = COMPOUND_STRING(
+            "LOTAD live in clean ponds and lakes, floating on\n"
+            "the surface and acting as ferries for small\n"
+            "POKéMON that can't swim. Rarely, it will travel\n"
+            "in search of a new pond to live in, since it\n"
+            "becomes weak if its leaf dies."),
+        .pokemonScale = 406,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Lotad,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 14 : 13,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Lotad,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 15 : 12,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_Lotad,
+        .shinyPalette = gMonShinyPalette_Lotad,
+        .iconSprite = gMonIcon_Lotad,
+        .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 4,
+        SHADOW(2, -3, SHADOW_SIZE_S)
+        FOOTPRINT(Lotad)
+        .levelUpLearnset = sLotadLevelUpLearnset,
+        .teachableLearnset = sLotadTeachableLearnset,
+        .eggMoveLearnset = sLotadEggMoveLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_LOMBRE}),
+    },
+
+    [SPECIES_LOMBRE] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 50,
+        .baseDefense   = 50,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_WATER, TYPE_GRASS),
+        .catchRate = 120,
+        .expYield = 119,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_GRASS),
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH, ABILITY_OWN_TEMPO },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("LOMBRE"),
+        .cryId = CRY_LOMBRE,
+        .natDexNum = NATIONAL_DEX_LOMBRE,
+        .categoryName = _("JOLLY"),
+        .height = 12,
+        .weight = 325,
+        .description = COMPOUND_STRING(
+            "A nocturnal POKéMON, it becomes active in the\n"
+            "evenings. It is mischievous by nature and plays\n"
+            "tricks by jumping out of rivers to startle\n"
+            "people or by tugging on anglers' fishing lines\n"
+            "from below the water's surface to annoy them."),
+        .pokemonScale = 277,
+        .pokemonOffset = 9,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Lombre,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Lombre,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 6,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_Lombre,
+        .shinyPalette = gMonShinyPalette_Lombre,
+        .iconSprite = gMonIcon_Lombre,
+        .iconPalIndex = 1,
+        SHADOW(4, 2, SHADOW_SIZE_S)
+        FOOTPRINT(Lombre)
+        .levelUpLearnset = sLombreLevelUpLearnset,
+        .teachableLearnset = sLombreTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_LUDICOLO}),
+    },
+
+    [SPECIES_LUDICOLO] =
+    {
+        .baseHP        = 80,
+        .baseAttack    = 70,
+        .baseDefense   = 70,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_WATER, TYPE_GRASS),
+        .catchRate = 45,
+        .expYield = 216,
+        .evYield_SpDefense = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_GRASS),
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH, ABILITY_OWN_TEMPO },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("LUDICOLO"),
+        .cryId = CRY_LUDICOLO,
+        .natDexNum = NATIONAL_DEX_LUDICOLO,
+        .categoryName = _("CAREFREE"),
+        .height = 15,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "LUDICOLO become energized by cheerful and\n"
+            "festive music and begins to dance along. It is\n"
+            "known to appear when it hears children singing\n"
+            "on hiking outings. In battle, its carefree\n"
+            "attitude means it will face foes without fear."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 268,
+        .trainerOffset = -1,
+        .frontPic = gMonFrontPic_Ludicolo,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SLOW,
+        .backPic = gMonBackPic_Ludicolo,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 6,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_Ludicolo,
+        .shinyPalette = gMonShinyPalette_Ludicolo,
+        .iconSprite = gMonIcon_Ludicolo,
+        .iconPalIndex = 1,
+        SHADOW(-3, 14, SHADOW_SIZE_M)
+        FOOTPRINT(Ludicolo)
+        .levelUpLearnset = sLudicoloLevelUpLearnset,
+        .teachableLearnset = sLudicoloTeachableLearnset,
+    },
 #ifdef __INTELLISENSE__
 };
 #endif
