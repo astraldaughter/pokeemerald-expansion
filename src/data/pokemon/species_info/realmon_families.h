@@ -310,7 +310,7 @@ const struct SpeciesInfo gSpeciesInfoRealmons[] =
         .height = 15,
         .weight = 550,
         .description = COMPOUND_STRING(
-            "LUDICOLO become energized by cheerful and\n"
+            "LUDICOLO becomes energized by cheerful and\n"
             "festive music and begins to dance along. It is\n"
             "known to appear when it hears children singing\n"
             "on hiking outings. In battle, its carefree\n"
