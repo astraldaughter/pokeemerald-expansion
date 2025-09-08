@@ -235,7 +235,8 @@ struct SpecialStatus
     // End of byte
     u8 enduredDamage:1;
     u32 extraMoveUsed:1;
-    u8 padding:6;
+    u8 bulletSeedState:1;
+    u8 padding:5;
 };
 
 struct SideTimer

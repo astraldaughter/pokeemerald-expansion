@@ -9220,9 +9220,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("BULLET SEED"),
         .description = COMPOUND_STRING(
-            "Forcefully fires seeds at\n"
-            "the foe 2-5 times.\n"),
-        .effect = EFFECT_MULTI_HIT,
+            "The user eats its BERRY,\n"
+            "then spits the seeds at\n"
+            "the foe 2-5 times. Fails\n"
+            "if the user doesn't have\n"
+            "a BERRY.\n"),
+        .effect = EFFECT_BULLET_SEED,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 25 : 10,
         .type = TYPE_GRASS,
         .accuracy = 100,

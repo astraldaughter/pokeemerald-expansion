@@ -3760,7 +3760,7 @@ static void CancellerExplodingDamp(u32 *effect)
 
 static void CancellerMultihitMoves(u32 *effect)
 {
-    if (GetMoveEffect(gCurrentMove) == EFFECT_MULTI_HIT)
+    if (GetMoveEffect(gCurrentMove) == EFFECT_MULTI_HIT || GetMoveEffect(gCurrentMove) == EFFECT_BULLET_SEED)
     {
         u32 ability = GetBattlerAbility(gBattlerAttacker);
 

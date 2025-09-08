@@ -867,5 +867,6 @@ extern const u8 BattleScript_EffectFickleBeam[];
 extern const u8 BattleScript_FickleBeamDoubled[];
 extern const u8 BattleScript_StormCallActivates[];
 extern const u8 BattleScript_EffectOverthink[];
+extern const u8 BattleScript_EffectBulletSeed[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

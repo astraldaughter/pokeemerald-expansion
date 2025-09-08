@@ -4603,6 +4603,25 @@ BattleScript_EffectOverthink::
 	seteffectprimary MOVE_EFFECT_RECHARGE
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectBulletSeed::
+	attackcanceler
+	attackstring
+	saveattacker
+	savetarget
+	ppreduce
+	jumpifnotberry BS_ATTACKER, BattleScript_ButItFailed
+	setbyte sBERRY_OVERRIDE, 1
+	orword gHitMarker, HITMARKER_DISABLE_ANIMATION
+	consumeberry BS_ATTACKER, TRUE
+	bicword gHitMarker, HITMARKER_DISABLE_ANIMATION
+	setbyte sBERRY_OVERRIDE, 0
+	removeitem BS_ATTACKER
+	restoreattacker
+	restoretarget
+	flushtextbox
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
 BattleScript_EffectPsychUp::
 	attackcanceler
 	attackstring

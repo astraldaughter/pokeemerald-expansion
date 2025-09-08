@@ -10234,9 +10234,13 @@ static void Cmd_various(void)
     case VARIOUS_JUMP_IF_NOT_BERRY:
     {
         VARIOUS_ARGS(const u8 *jumpInstr);
-        if (ItemId_GetPocket(gBattleMons[battler].item) == POCKET_BERRIES)
+        if ((ItemId_GetPocket(gBattleMons[battler].item) == POCKET_BERRIES) || gSpecialStatuses[battler].bulletSeedState == TRUE)
+        {
+            // We set bulletSeedState to TRUE to allow Bullet Seed to continue after one hit.
+            gSpecialStatuses[battler].bulletSeedState = TRUE;
             gBattlescriptCurrInstr = cmd->nextInstr;
-        else
+        }
+            else
             gBattlescriptCurrInstr = cmd->jumpInstr;
         return;
     }

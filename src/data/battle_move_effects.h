@@ -2304,4 +2304,10 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_BULLET_SEED] =
+    {
+        .battleScript = BattleScript_EffectBulletSeed,
+        .battleTvScore = 1,
+    },
+
 };
