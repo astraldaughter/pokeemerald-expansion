@@ -44,8 +44,8 @@ const struct UCoords8 sBattlerCoords[][MAX_BATTLERS_COUNT] =
     },
     { // Double battle
         { 32, 80 },
-        { 200, 40 },
-        { 90, 88 },
+        { 200, 32 },
+        { 90, 80 },
         { 152, 32 },
     },
 };
