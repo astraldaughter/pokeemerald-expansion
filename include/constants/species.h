@@ -1679,8 +1679,10 @@
 #define SPECIES_DIABUNCLE                               1560
 #define SPECIES_LOVERET                                 1561
 #define SPECIES_CUPIN                                   1562
+#define SPECIES_SCARLASS                                1563
+#define SPECIES_RAIDINHOOD                              1564
 
-#define SPECIES_EGG                                     (SPECIES_CUPIN + 1)
+#define SPECIES_EGG                                     (SPECIES_RAIDINHOOD + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

@@ -2403,6 +2403,8 @@ enum {
     CRY_DIABUNCLE,
     CRY_LOVERET,
     CRY_CUPIN,
+    CRY_SCARLASS,
+    CRY_RAIDINHOOD,
     CRY_COUNT,
 };
 

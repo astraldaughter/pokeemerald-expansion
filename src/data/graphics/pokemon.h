@@ -18393,6 +18393,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Cupin[] = INCBIN_U32("graphics/pokemon/cupin/shiny.gbapal.lz");
     const u8 gMonIcon_Cupin[] = INCBIN_U8("graphics/pokemon/cupin/icon.4bpp");     
 
+    const u32 gMonFrontPic_Scarlass[] = INCBIN_U32("graphics/pokemon/scarlass/front.4bpp.lz");
+    const u32 gMonPalette_Scarlass[] = INCBIN_U32("graphics/pokemon/scarlass/normal.gbapal.lz");
+    const u32 gMonBackPic_Scarlass[] = INCBIN_U32("graphics/pokemon/scarlass/back.4bpp.lz");
+    const u32 gMonShinyPalette_Scarlass[] = INCBIN_U32("graphics/pokemon/scarlass/shiny.gbapal.lz");
+    const u8 gMonIcon_Scarlass[] = INCBIN_U8("graphics/pokemon/scarlass/icon.4bpp");   
+
+    const u32 gMonFrontPic_Raidinhood[] = INCBIN_U32("graphics/pokemon/raidinhood/front.4bpp.lz");
+    const u32 gMonPalette_Raidinhood[] = INCBIN_U32("graphics/pokemon/raidinhood/normal.gbapal.lz");
+    const u32 gMonBackPic_Raidinhood[] = INCBIN_U32("graphics/pokemon/raidinhood/back.4bpp.lz");
+    const u32 gMonShinyPalette_Raidinhood[] = INCBIN_U32("graphics/pokemon/raidinhood/shiny.gbapal.lz");
+    const u8 gMonIcon_Raidinhood[] = INCBIN_U8("graphics/pokemon/raidinhood/icon.4bpp");   
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

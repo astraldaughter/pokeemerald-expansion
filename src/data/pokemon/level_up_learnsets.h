@@ -22475,6 +22475,7 @@ static const struct LevelUpMove sLoveretLevelUpLearnset[] = {
     LEVEL_UP_MOVE(50, MOVE_LUNACY),
     LEVEL_UP_END
 };
+
 static const struct LevelUpMove sCupinLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1,  MOVE_POUND),
     LEVEL_UP_MOVE(1,  MOVE_GROWL),
@@ -22489,5 +22490,35 @@ static const struct LevelUpMove sCupinLevelUpLearnset[] = {
     LEVEL_UP_MOVE(48, MOVE_SUPER_FANG),
     LEVEL_UP_MOVE(54, MOVE_JUMP_KICK),
     LEVEL_UP_MOVE(59, MOVE_LUNACY),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sScarlassLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1,  MOVE_SCRATCH),
+    LEVEL_UP_MOVE(5,  MOVE_LEER),
+    LEVEL_UP_MOVE(9,  MOVE_SCARY_FACE),
+    LEVEL_UP_MOVE(13, MOVE_CHARM),
+    LEVEL_UP_MOVE(17, MOVE_FURY_SWIPES),
+    LEVEL_UP_MOVE(21, MOVE_BITE),
+    LEVEL_UP_MOVE(25, MOVE_MOONLIGHT),
+    LEVEL_UP_MOVE(33, MOVE_MOONBLAST),
+    LEVEL_UP_MOVE(41, MOVE_PLAY_ROUGH),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sRaidinhoodLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(0,  MOVE_HOWL),
+    LEVEL_UP_MOVE(1,  MOVE_SCRATCH),
+    LEVEL_UP_MOVE(5,  MOVE_LEER),
+    LEVEL_UP_MOVE(9,  MOVE_SCARY_FACE),
+    LEVEL_UP_MOVE(13, MOVE_CHARM),
+    LEVEL_UP_MOVE(17, MOVE_FURY_SWIPES),
+    LEVEL_UP_MOVE(21, MOVE_BITE),
+    LEVEL_UP_MOVE(25, MOVE_MOONLIGHT),
+    LEVEL_UP_MOVE(30, MOVE_CRUSH_CLAW),
+    LEVEL_UP_MOVE(35, MOVE_MOONBLAST),
+    LEVEL_UP_MOVE(40, MOVE_CRUNCH),
+    LEVEL_UP_MOVE(45, MOVE_PLAY_ROUGH),
+    LEVEL_UP_MOVE(50, MOVE_LUNACY),
     LEVEL_UP_END
 };

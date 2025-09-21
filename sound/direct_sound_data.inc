@@ -6165,6 +6165,14 @@ Cry_Loveret::
 Cry_Cupin::
 	.incbin "sound/direct_sound_samples/cries/cupin.bin"
 
+	.align 2
+Cry_Scarlass::
+	.incbin "sound/direct_sound_samples/cries/scarlass.bin"
+
+	.align 2
+Cry_Raidinhood::
+	.incbin "sound/direct_sound_samples/cries/raidinhood.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2

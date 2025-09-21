@@ -2277,6 +2277,8 @@ gCryTable::
 	cry Cry_Diabuncle
 	cry Cry_Loveret
 	cry Cry_Cupin
+	cry Cry_Scarlass
+	cry Cry_Raidinhood
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4564,4 +4566,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Diabuncle
 	cry_reverse Cry_Loveret
 	cry_reverse Cry_Cupin
+	cry_reverse Cry_Scarlass
+	cry_reverse Cry_Raidinhood
 .endif @ P_CRIES_ENABLED
