@@ -216,3 +216,6 @@ const u16 gMetatileAttributes_Hometown[] = INCBIN_U16("data/tilesets/secondary/h
 
 const u16 gMetatiles_primary_interior_house[] = INCBIN_U16("data/tilesets/primary/primary_interior_house/metatiles.bin");
 const u16 gMetatileAttributes_primary_interior_house[] = INCBIN_U16("data/tilesets/primary/primary_interior_house/metatile_attributes.bin");
+
+const u16 gMetatiles_GardenCity[] = INCBIN_U16("data/tilesets/secondary/garden_city/metatiles.bin");
+const u16 gMetatileAttributes_GardenCity[] = INCBIN_U16("data/tilesets/secondary/garden_city/metatile_attributes.bin");
