@@ -869,6 +869,7 @@ extern const u8 gBattleAnimMove_Lunacy[];
 extern const u8 gBattleAnimMove_Overthink[];
 extern const u8 gBattleAnimMove_DustDevil[];
 extern const u8 gBattleAnimMove_ThornWhip[];
+extern const u8 gBattleAnimMove_Slobber[];
 // Z Moves
 extern const u8 gBattleAnimMove_BreakneckBlitz[];
 extern const u8 gBattleAnimMove_AllOutPummeling[];

@@ -9503,7 +9503,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
     switch (moveEffect)
     {
     case EFFECT_FACADE:
-        if (gBattleMons[battlerAtk].status1 & (STATUS1_BURN | STATUS1_PSN_ANY | STATUS1_PARALYSIS | STATUS1_FROSTBITE))
+        if (gBattleMons[battlerAtk].status1 & (STATUS1_BURN | STATUS1_PSN_ANY | STATUS1_PARALYSIS | STATUS1_FROSTBITE | STATUS1_PANIC))
             modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
         break;
     case EFFECT_BRINE:
@@ -9532,6 +9532,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
             && gBattleMons[battlerDef].item != ITEM_NONE
             && CanBattlerGetOrLoseItem(battlerDef, gBattleMons[battlerDef].item))
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+        break;
+    case EFFECT_MALICE_WAVE:
+        if (gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
         break;
     }
 
@@ -10443,6 +10447,13 @@ static inline uq4_12_t GetScreensModifier(u32 move, u32 battlerAtk, u32 battlerD
     return UQ_4_12(1.0);
 }
 
+static inline uq4_12_t GetRolloutModifier(u32 battlerDef, bool32 isCrit)
+{
+    if (!isCrit && gDisableStructs[battlerDef].rolloutTimer > 0)
+        return UQ_4_12(0.75);
+    return UQ_4_12(1.0);
+}
+
 static inline uq4_12_t GetCollisionCourseElectroDriftModifier(u32 move, uq4_12_t typeEffectivenessModifier)
 {
     if (GetMoveEffect(move) == EFFECT_COLLISION_COURSE && typeEffectivenessModifier >= UQ_4_12(1.5))
@@ -10595,6 +10606,7 @@ static inline uq4_12_t GetOtherModifiers(struct DamageCalculationData *damageCal
     DAMAGE_MULTIPLY_MODIFIER(GetAirborneModifier(move, battlerDef));
     DAMAGE_MULTIPLY_MODIFIER(GetRootedModifier(move, battlerDef));
     DAMAGE_MULTIPLY_MODIFIER(GetScreensModifier(move, battlerAtk, battlerDef, isCrit, abilityAtk));
+    DAMAGE_MULTIPLY_MODIFIER(GetRolloutModifier(battlerDef, isCrit));
     DAMAGE_MULTIPLY_MODIFIER(GetCollisionCourseElectroDriftModifier(move, typeEffectivenessModifier));
 
     if (unmodifiedAttackerSpeed >= unmodifiedDefenderSpeed)

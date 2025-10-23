@@ -3395,7 +3395,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Licks the foe with a long\n"
             "tongue. 30% chance to\n"
-            "paralyze.\n"),
+            "panic.\n"),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
         .type = TYPE_GHOST,
@@ -3406,7 +3406,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .moveEffect = MOVE_EFFECT_PANIC,
             .chance = 30,
         }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
@@ -5711,10 +5711,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         // UNDEXITED
         .name = COMPOUND_STRING("ROLLOUT"),
         .description = COMPOUND_STRING(
-            "Continuously rolls into\n"
-            "the foe for 5 turns with\n"
-            "increasing power each\n"
-            "time it hits.\n"),
+            "A continuous rolling\n"
+            "attack that increases\n"
+            "each time it hits. The\n"
+            "user takes less damage\n"
+            "while using this move.\n"),
         .effect = EFFECT_ROLLOUT,
         .power = 30,
         .type = TYPE_ROCK,
@@ -6264,7 +6265,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "breath. 30% chance to\n"
             "paralyze.\n"),
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 75,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 20,
@@ -6742,7 +6743,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("CRUNCH"),
         .description = COMPOUND_STRING(
             "Crunches the foe with\n"
-            "sharp fangs. 20% chance\n"
+            "sharp fangs. 30% chance\n"
             "to lower SP. DEF.\n"),
         .effect = EFFECT_HIT,
         .power = 80,
@@ -6756,7 +6757,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .bitingMove = TRUE,
             .additionalEffects = ADDITIONAL_EFFECTS({
                 .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
-                .chance = 20,
+                .chance = 30,
             }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -22326,6 +22327,60 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 20,
         }),
         .battleAnimScript = gBattleAnimMove_ThornWhip,
+    },
+
+    [MOVE_SLOBBER] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("SLOBBER"),
+        .description = COMPOUND_STRING(
+            "Licks the foe with a\n"
+            "sticky tongue. Lowers\n"
+            "Speed.\n"),
+        .effect = EFFECT_HIT,
+        .power = 30,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Slobber,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_MALICE_WAVE] =
+    {
+        // UNDEXITED
+        .name = COMPOUND_STRING("MALICE WAVE"),
+        .description = COMPOUND_STRING(
+            "Emits a dark wave of pure\n"
+            "malice to engulf foes.\n"
+            "Power is doubled if the\n"
+            "user is at low HP.\n"),
+        .effect = EFFECT_MALICE_WAVE,
+        .power = 70,
+        .type = TYPE_DARK,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_LAST,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_DarkPulse,
+        .validApprenticeMove = TRUE,
     },
 
     // Z-Moves
