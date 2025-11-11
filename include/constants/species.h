@@ -1681,8 +1681,11 @@
 #define SPECIES_CUPIN                                   1562
 #define SPECIES_SCARLASS                                1563
 #define SPECIES_RAIDINHOOD                              1564
+#define SPECIES_FILAMIN                                 1565
+#define SPECIES_FILAMAX                                 1566
+#define SPECIES_INCANDELUX                              1567
 
-#define SPECIES_EGG                                     (SPECIES_RAIDINHOOD + 1)
+#define SPECIES_EGG                                     (SPECIES_INCANDELUX + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

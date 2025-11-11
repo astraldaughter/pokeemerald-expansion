@@ -2453,7 +2453,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sNoneTeachableLearnset,
     },
 
-[SPECIES_SCARLASS] =
+    [SPECIES_SCARLASS] =
     {
         .baseHP        = 50,
         .baseAttack    = 60,
@@ -2504,7 +2504,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sNoneTeachableLearnset,
     },
 
-[SPECIES_RAIDINHOOD] =
+    [SPECIES_RAIDINHOOD] =
     {
         .baseHP        = 90,
         .baseAttack    = 120,
@@ -2554,4 +2554,157 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .levelUpLearnset = sRaidinhoodLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
     },  
+
+    [SPECIES_FILAMIN] =
+    {
+        .baseHP        = 45,
+        .baseAttack    = 40,
+        .baseDefense   = 65,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 52,
+        .baseSpeed     = 55,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 255,
+        .expYield = 67,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STATIC, ABILITY_ILLUMINATE, ABILITY_VOLT_ABSORB},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("FILAMIN"),
+        .cryId = CRY_POLIWAG,
+        .natDexNum = NATIONAL_DEX_FILAMIN,
+        .categoryName = _("UNKNOWN"),
+        .height = 0,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "This is a newly discovered Pokémon.\n"
+            "It is currently under investigation.\n"
+            "No detailed information is available\n"
+            "at this time."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .enemyMonElevation = 15,
+        .frontPic = gMonFrontPic_Filamin,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 15,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_Filamin,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Filamin,
+        .shinyPalette = gMonShinyPalette_Filamin,
+        .iconSprite = gMonIcon_Filamin,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sFilaminLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+    },
+
+    [SPECIES_FILAMAX] =
+    {
+        .baseHP        = 65,
+        .baseAttack    = 60,
+        .baseDefense   = 75,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 72,
+        .baseSpeed     = 75,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 255,
+        .expYield = 67,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STATIC, ABILITY_ILLUMINATE, ABILITY_VOLT_ABSORB},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("FILAMAX"),
+        .cryId = CRY_POLIWAG,
+        .natDexNum = NATIONAL_DEX_FILAMAX,
+        .categoryName = _("UNKNOWN"),
+        .height = 0,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "This is a newly discovered Pokémon.\n"
+            "It is currently under investigation.\n"
+            "No detailed information is available\n"
+            "at this time."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .enemyMonElevation = 5,
+        .frontPic = gMonFrontPic_Filamax,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_Filamax,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 7,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Filamax,
+        .shinyPalette = gMonShinyPalette_Filamax,
+        .iconSprite = gMonIcon_Filamax,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sFilamaxLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+    },
+	
+	[SPECIES_INCANDELUX] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 85,
+        .baseDefense   = 65,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 77,
+        .baseSpeed     = 85,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FIRE),
+        .catchRate = 255,
+        .expYield = 67,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_STATIC, ABILITY_ILLUMINATE, ABILITY_VOLT_ABSORB},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("INCANDELUX"),
+        .cryId = CRY_POLIWAG,
+        .natDexNum = NATIONAL_DEX_INCANDELUX,
+        .categoryName = _("UNKNOWN"),
+        .height = 0,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "This is a newly discovered Pokémon.\n"
+            "It is currently under investigation.\n"
+            "No detailed information is available\n"
+            "at this time."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .enemyMonElevation = 1,
+        .frontPic = gMonFrontPic_Incandelux,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_Incandelux,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Incandelux,
+        .shinyPalette = gMonShinyPalette_Incandelux,
+        .iconSprite = gMonIcon_Incandelux,
+        .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sIncandeluxLevelUpLearnset,
+        .teachableLearnset = sNoneTeachableLearnset,
+    },
 };
